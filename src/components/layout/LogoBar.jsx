@@ -30,7 +30,7 @@ export default function LogoBar() {
           </p>
         </div>
 
-        {/* Right: NAAC badge + Apply Now */}
+        {/* Right: NAAC badge */}
         <div className="flex-shrink-0 flex flex-col items-end gap-2">
           <div className="flex items-center gap-2 bg-amber-50 border border-amber-300 rounded-lg px-3 py-1.5">
             <div className="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0">
@@ -41,12 +41,6 @@ export default function LogoBar() {
               <div className="text-amber-600 text-[10px] leading-tight">Accreditation Applied</div>
             </div>
           </div>
-          <Link
-            to="/admissions"
-            className="inline-flex px-5 py-2 bg-accent-400 text-primary-900 text-sm font-semibold rounded-lg hover:bg-accent-300 transition-colors font-body"
-          >
-            Apply Now
-          </Link>
         </div>
       </div>
     </div>

@@ -33,19 +33,20 @@ export default function Footer() {
                   href={COLLEGE_INFO.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent-400 hover:text-primary-900 transition-all duration-300"
+                  className="w-11 h-11 rounded-lg bg-[#FF0000] flex items-center justify-center hover:opacity-80 transition-all duration-300"
                   aria-label="YouTube"
                 >
-                  <FaYoutube />
+                  <FaYoutube className="text-white text-2xl" />
                 </a>
                 <a
                   href={COLLEGE_INFO.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent-400 hover:text-primary-900 transition-all duration-300"
+                  className="w-11 h-11 rounded-lg flex items-center justify-center hover:opacity-80 transition-all duration-300"
+                  style={{ background: 'linear-gradient(135deg, #833AB4, #E1306C, #FCAF45)' }}
                   aria-label="Instagram"
                 >
-                  <FaInstagram />
+                  <FaInstagram className="text-white text-2xl" />
                 </a>
               </div>
             </div>

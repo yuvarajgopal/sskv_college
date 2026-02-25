@@ -37,19 +37,19 @@ export default function TopBar() {
             href={COLLEGE_INFO.youtube}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/70 hover:text-accent-400 transition-colors"
+            className="hover:opacity-80 transition-opacity"
             aria-label="YouTube"
           >
-            <FaYoutube />
+            <FaYoutube className="text-[#FF0000] text-2xl" />
           </a>
           <a
             href={COLLEGE_INFO.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/70 hover:text-accent-400 transition-colors"
+            className="hover:opacity-80 transition-opacity"
             aria-label="Instagram"
           >
-            <FaInstagram />
+            <FaInstagram className="text-[#E1306C] text-2xl" />
           </a>
         </div>
       </div>

@@ -10,7 +10,7 @@ const slides = [
     title: 'SSKV College of Arts & Science for Women',
     subtitle: 'Empowering Women Through Quality Education — Affiliated to University of Madras, Kanchipuram',
     cta1: { label: 'Explore Programs', href: '/academics' },
-    cta2: { label: 'Apply Now', href: '/admissions' },
+    cta2: { label: 'Contact Us', href: '/contact' },
   },
   {
     image: images.home.welcomeSection,
