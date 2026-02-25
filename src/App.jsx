@@ -8,6 +8,11 @@ const AcademicsPage = lazy(() => import('./pages/AcademicsPage'));
 const AdmissionsPage = lazy(() => import('./pages/AdmissionsPage'));
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
+const NAACPage = lazy(() => import('./pages/NAACPage'));
+const IQACPage = lazy(() => import('./pages/IQACPage'));
+const MandatoryDisclosuresPage = lazy(() => import('./pages/MandatoryDisclosuresPage'));
+const ApplicationFormPage = lazy(() => import('./pages/ApplicationFormPage'));
+const FeesPage = lazy(() => import('./pages/FeesPage'));
 
 function PageLoader() {
   return (
@@ -32,6 +37,11 @@ export default function App() {
             <Route path="/admissions" element={<AdmissionsPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/naac" element={<NAACPage />} />
+            <Route path="/iqac" element={<IQACPage />} />
+            <Route path="/mandatory-disclosures" element={<MandatoryDisclosuresPage />} />
+            <Route path="/apply" element={<ApplicationFormPage />} />
+            <Route path="/fees" element={<FeesPage />} />
           </Route>
         </Routes>
       </Suspense>

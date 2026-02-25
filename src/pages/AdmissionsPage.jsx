@@ -91,9 +91,14 @@ export default function AdmissionsPage() {
         breadcrumb="Admissions"
         bannerImage={images.admissions.banner}
       >
-        <Button variant="gold" size="lg">
-          Download Application Form
-        </Button>
+        <div className="flex flex-wrap gap-3 justify-center">
+          <Button variant="gold" size="lg" href="/apply">
+            Apply Online
+          </Button>
+          <Button variant="outline" size="lg" href="/fees">
+            Pay Fees
+          </Button>
+        </div>
       </Hero>
 
       {/* Admission Process Steps */}

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { FaYoutube, FaInstagram, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
-import { navLinks } from '../../data/navigation';
+import { FaYoutube, FaInstagram, FaMapMarkerAlt, FaPhone, FaEnvelope, FaExternalLinkAlt } from 'react-icons/fa';
+import { navLinks, quickLinks, externalLinks } from '../../data/navigation';
 import { departments } from '../../data/departments';
 import { COLLEGE_INFO } from '../../utils/constants';
 
@@ -12,27 +12,29 @@ export default function Footer() {
 
       <div className="section-padding pb-8">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6">
+
             {/* Column 1: About */}
-            <div>
+            <div className="lg:col-span-1">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-accent-400 flex items-center justify-center flex-shrink-0">
                   <span className="text-primary-900 font-heading font-bold text-lg">S</span>
                 </div>
                 <div>
-                  <div className="font-heading font-bold text-lg leading-tight">SSKV College</div>
+                  <div className="font-heading font-bold text-base leading-tight">SSKV College</div>
                   <div className="text-white/60 text-xs">Arts & Science for Women</div>
                 </div>
               </div>
-              <p className="text-white/60 text-sm leading-relaxed mb-4">
-                Empowering women through quality education since our inception. Affiliated to the University of Madras, offering diverse programs in Arts, Science, and Commerce.
+              <p className="text-white/60 text-xs leading-relaxed mb-4">
+                Empowering women through quality education. Affiliated to University of Madras, offering diverse programs in Arts, Science, and Commerce.
               </p>
               <div className="flex gap-3">
                 <a
                   href={COLLEGE_INFO.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent-400 hover:text-primary-900 transition-all duration-300"
+                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent-400 hover:text-primary-900 transition-all duration-300"
+                  aria-label="YouTube"
                 >
                   <FaYoutube />
                 </a>
@@ -40,7 +42,8 @@ export default function Footer() {
                   href={COLLEGE_INFO.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent-400 hover:text-primary-900 transition-all duration-300"
+                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent-400 hover:text-primary-900 transition-all duration-300"
+                  aria-label="Instagram"
                 >
                   <FaInstagram />
                 </a>
@@ -49,32 +52,43 @@ export default function Footer() {
 
             {/* Column 2: Quick Links */}
             <div>
-              <h3 className="font-heading font-bold text-lg mb-4">Quick Links</h3>
-              <ul className="space-y-2">
+              <h3 className="font-heading font-bold text-base mb-4 text-accent-400">Quick Links</h3>
+              <ul className="space-y-1.5">
                 {navLinks.map((link) => (
                   <li key={link.path}>
                     <Link
                       to={link.path}
                       className="text-white/60 hover:text-accent-400 transition-colors text-sm"
                     >
-                      {link.label}
+                      › {link.label}
                     </Link>
                   </li>
                 ))}
+                <li className="pt-1 border-t border-white/10 mt-2">
+                  {quickLinks.map((link) => (
+                    <Link
+                      key={link.path}
+                      to={link.path}
+                      className="block text-white/60 hover:text-accent-400 transition-colors text-sm mt-1.5"
+                    >
+                      › {link.label}
+                    </Link>
+                  ))}
+                </li>
               </ul>
             </div>
 
             {/* Column 3: Departments */}
             <div>
-              <h3 className="font-heading font-bold text-lg mb-4">Departments</h3>
-              <ul className="space-y-2">
+              <h3 className="font-heading font-bold text-base mb-4 text-accent-400">Departments</h3>
+              <ul className="space-y-1.5">
                 {departments.slice(0, 6).map((dept) => (
                   <li key={dept.id}>
                     <Link
                       to="/academics"
                       className="text-white/60 hover:text-accent-400 transition-colors text-sm"
                     >
-                      {dept.degree}
+                      › {dept.degree}
                     </Link>
                   </li>
                 ))}
@@ -86,21 +100,47 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Column 4: Contact */}
+            {/* Column 4: Important Links */}
             <div>
-              <h3 className="font-heading font-bold text-lg mb-4">Contact Us</h3>
+              <h3 className="font-heading font-bold text-base mb-4 text-accent-400">Important Links</h3>
+              <ul className="space-y-1.5">
+                {externalLinks.map((link) => (
+                  <li key={link.url}>
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-white/60 hover:text-accent-400 transition-colors text-sm"
+                    >
+                      <FaExternalLinkAlt className="text-[10px] flex-shrink-0" />
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 5: Contact */}
+            <div>
+              <h3 className="font-heading font-bold text-base mb-4 text-accent-400">Contact Us</h3>
               <ul className="space-y-3">
-                <li className="flex gap-3 text-sm">
-                  <FaMapMarkerAlt className="text-accent-400 mt-1 flex-shrink-0" />
-                  <span className="text-white/60">{COLLEGE_INFO.name}, {COLLEGE_INFO.location}</span>
+                <li className="flex gap-2 text-sm">
+                  <FaMapMarkerAlt className="text-accent-400 mt-0.5 flex-shrink-0 text-xs" />
+                  <span className="text-white/60 text-xs leading-relaxed">
+                    {COLLEGE_INFO.name},<br />Kilambi, Kanchipuram — 631 551
+                  </span>
                 </li>
-                <li className="flex gap-3 text-sm">
-                  <FaPhone className="text-accent-400 mt-1 flex-shrink-0" />
-                  <span className="text-white/60">{COLLEGE_INFO.phone.join(' / ')}</span>
+                <li className="flex gap-2 text-sm">
+                  <FaPhone className="text-accent-400 mt-0.5 flex-shrink-0 text-xs" />
+                  <div className="text-white/60 text-xs">
+                    {COLLEGE_INFO.phone.map((p) => (
+                      <div key={p}>{p}</div>
+                    ))}
+                  </div>
                 </li>
-                <li className="flex gap-3 text-sm">
-                  <FaEnvelope className="text-accent-400 mt-1 flex-shrink-0" />
-                  <div className="text-white/60">
+                <li className="flex gap-2 text-sm">
+                  <FaEnvelope className="text-accent-400 mt-0.5 flex-shrink-0 text-xs" />
+                  <div className="text-white/60 text-xs">
                     {COLLEGE_INFO.email.map((email) => (
                       <a key={email} href={`mailto:${email}`} className="block hover:text-accent-400 transition-colors">
                         {email}
@@ -115,10 +155,21 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10 py-5 px-4 md:px-8">
-        <div className="container-custom flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-white/40">
-          <p>&copy; {new Date().getFullYear()} {COLLEGE_INFO.shortName}. All rights reserved.</p>
-          <p>Affiliated to {COLLEGE_INFO.affiliation}</p>
+      <div className="border-t border-white/10 py-4 px-4 md:px-8">
+        <div className="container-custom">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/40">
+            <p>&copy; {new Date().getFullYear()} {COLLEGE_INFO.shortName}. All rights reserved.</p>
+            <p className="text-center">
+              Affiliated to {COLLEGE_INFO.affiliation} | Anti-Ragging Helpline:{' '}
+              <span className="text-accent-400 font-semibold">1800-180-5522</span>
+            </p>
+            <div className="flex items-center gap-2">
+              <div className="w-5 h-5 rounded-full bg-amber-500 flex items-center justify-center">
+                <span className="text-white font-bold text-[9px]">N</span>
+              </div>
+              <span>NAAC Accreditation Applied</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

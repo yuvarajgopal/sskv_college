@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaChalkboardTeacher, FaHandshake, FaStar, FaArrowRight } from 'react-icons/fa';
-import Hero from '../components/shared/Hero';
+import { FaGraduationCap, FaChalkboardTeacher, FaHandshake, FaStar, FaArrowRight, FaUserTie } from 'react-icons/fa';
 import Button from '../components/shared/Button';
 import SectionHeading from '../components/shared/SectionHeading';
 import AnimatedSection from '../components/shared/AnimatedSection';
@@ -8,9 +7,11 @@ import Card from '../components/shared/Card';
 import Marquee from '../components/shared/Marquee';
 import StatsBar from '../components/sections/StatsBar';
 import DepartmentGrid from '../components/sections/DepartmentGrid';
-import EventsTimeline from '../components/sections/EventsTimeline';
 import CTABanner from '../components/sections/CTABanner';
 import VideoEmbed from '../components/sections/VideoEmbed';
+import HeroCarousel from '../components/sections/HeroCarousel';
+import NoticeBoard from '../components/sections/NoticeBoard';
+import QuickLinks from '../components/sections/QuickLinks';
 import { events } from '../data/events';
 import { videos, images } from '../data/media';
 
@@ -40,25 +41,13 @@ const features = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
-      <Hero
-        title="SSKV College of Arts & Science for Women"
-        subtitle="Empowering Women Through Quality Education — Affiliated to University of Madras, Kanchipuram"
-        height="full"
-        bannerImage={images.home.hero}
-      >
-        <Button variant="gold" size="lg" href="/academics" icon={FaGraduationCap}>
-          Explore Programs
-        </Button>
-        <Button variant="outline" size="lg" href="/admissions">
-          Apply Now
-        </Button>
-      </Hero>
+      {/* 1. Hero Carousel */}
+      <HeroCarousel />
 
-      {/* Event Marquee */}
+      {/* 2. Marquee ticker */}
       <Marquee items={events.slice(0, 5)} />
 
-      {/* Welcome Section */}
+      {/* 3. Welcome / About section */}
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -89,7 +78,7 @@ export default function HomePage() {
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                   <img
                     src={images.home.welcomeSection}
-                    alt="SSKV College Students"
+                    alt="SSKV College Campus"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/30 to-transparent flex items-end">
@@ -100,7 +89,6 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-                {/* Decorative accent */}
                 <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent-400/20 rounded-2xl -z-10" />
               </div>
             </AnimatedSection>
@@ -108,11 +96,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Bar */}
+      {/* 4. Stats Bar */}
       <StatsBar />
 
-      {/* Programs Section */}
-      <section className="section-padding bg-neutral-50">
+      {/* 5. Notice Board */}
+      <NoticeBoard />
+
+      {/* 6. Programs section */}
+      <section className="section-padding bg-white">
         <div className="container-custom mx-auto">
           <SectionHeading
             title="Academic Programs"
@@ -127,7 +118,46 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose SSKV */}
+      {/* 7. Principal's Message */}
+      <section className="section-padding bg-primary-50">
+        <div className="container-custom mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+            <AnimatedSection direction="left" className="lg:col-span-1 flex justify-center">
+              <div className="relative">
+                <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-accent-400 shadow-xl bg-primary-100 flex items-center justify-center">
+                  <FaUserTie className="text-7xl text-primary-300" />
+                </div>
+                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-accent-400 text-primary-900 text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap shadow">
+                  Principal
+                </div>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection direction="right" className="lg:col-span-2">
+              <span className="inline-block px-4 py-1.5 bg-accent-50 text-accent-700 text-sm font-semibold rounded-full mb-4">
+                From the Principal&apos;s Desk
+              </span>
+              <blockquote className="text-2xl md:text-3xl font-heading font-semibold text-primary-800 mb-6 leading-snug italic">
+                &ldquo;Education is not the filling of a pail, but the lighting of a fire.&rdquo;
+              </blockquote>
+              <p className="text-neutral-600 leading-relaxed mb-4">
+                At SSKV College, we believe in nurturing not just academic brilliance but also character,
+                creativity, and compassion. Our dedicated faculty and vibrant campus environment ensure
+                that every student reaches her fullest potential.
+              </p>
+              <p className="text-neutral-600 leading-relaxed mb-6">
+                We remain committed to the vision of empowering women through holistic, value-based education
+                that prepares them for the challenges of a dynamic world.
+              </p>
+              <div>
+                <p className="font-heading font-bold text-primary-800">Dr. [Name]</p>
+                <p className="text-neutral-500 text-sm">Principal, SSKV College of Arts & Science for Women</p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Why Choose SSKV */}
       <section className="section-padding bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900">
         <div className="container-custom mx-auto">
           <SectionHeading
@@ -150,7 +180,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Campus Life Video */}
+      {/* 9. Quick Links — external govt/UGC links */}
+      <QuickLinks />
+
+      {/* 10. Campus Life Video */}
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto">
           <SectionHeading
@@ -164,20 +197,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Events */}
-      <section className="section-padding bg-neutral-50">
-        <div className="container-custom mx-auto">
-          <SectionHeading
-            title="Upcoming Events"
-            subtitle="Stay updated with the latest happenings at SSKV College"
-          />
-          <div className="max-w-3xl mx-auto">
-            <EventsTimeline limit={5} />
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
+      {/* 11. CTA Banner */}
       <CTABanner />
     </>
   );
