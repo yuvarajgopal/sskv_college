@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaPhone, FaEnvelope, FaYoutube, FaInstagram } from 'react-icons/fa';
+import { FaPhone, FaEnvelope } from 'react-icons/fa';
 import { COLLEGE_INFO } from '../../utils/constants';
 
 export default function TopBar() {
@@ -31,25 +31,6 @@ export default function TopBar() {
           </Link>
           <a href="#anti-ragging" className="text-white/70 hover:text-accent-400 transition-colors">
             Anti-Ragging
-          </a>
-          <div className="w-px h-4 bg-white/20" />
-          <a
-            href={COLLEGE_INFO.youtube}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-80 transition-opacity"
-            aria-label="YouTube"
-          >
-            <FaYoutube className="text-[#FF0000] text-2xl" />
-          </a>
-          <a
-            href={COLLEGE_INFO.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-80 transition-opacity"
-            aria-label="Instagram"
-          >
-            <FaInstagram className="text-[#E1306C] text-2xl" />
           </a>
         </div>
       </div>

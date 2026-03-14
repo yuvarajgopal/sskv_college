@@ -11,6 +11,7 @@ export const departments = [
     color: '#e74c3c',
     duration: '3 Years',
     eligibility: '+2 in any stream',
+    link: '/departments/tamil',
   },
   {
     id: 'english',
@@ -22,6 +23,7 @@ export const departments = [
     color: '#3498db',
     duration: '3 Years',
     eligibility: '+2 in any stream',
+    link: '/departments/english',
   },
   {
     id: 'computer-science',
@@ -34,6 +36,7 @@ export const departments = [
     duration: '3 Years',
     eligibility: '+2 with Maths/CS',
     shifts: ['Shift I', 'Shift II'],
+    link: '/departments/computer-science',
   },
   {
     id: 'cs-ai',
@@ -45,6 +48,7 @@ export const departments = [
     color: '#9b59b6',
     duration: '3 Years',
     eligibility: '+2 with Maths/CS',
+    link: '/departments/cs-ai',
   },
   {
     id: 'mathematics',
@@ -56,6 +60,7 @@ export const departments = [
     color: '#f39c12',
     duration: '3 Years',
     eligibility: '+2 with Maths',
+    link: '/departments/mathematics',
   },
   {
     id: 'bca',
@@ -68,6 +73,7 @@ export const departments = [
     duration: '3 Years',
     eligibility: '+2 in any stream',
     shifts: ['Shift I', 'Shift II'],
+    link: '/departments/bca',
   },
   {
     id: 'bcom-general',
@@ -80,6 +86,7 @@ export const departments = [
     duration: '3 Years',
     eligibility: '+2 Commerce',
     shifts: ['Shift I', 'Shift II'],
+    link: '/departments/bcom-general',
   },
   {
     id: 'bcom-af',
@@ -91,6 +98,7 @@ export const departments = [
     color: '#16a085',
     duration: '3 Years',
     eligibility: '+2 Commerce',
+    link: '/departments/bcom-af',
   },
   {
     id: 'bcom-cs',
@@ -102,6 +110,7 @@ export const departments = [
     color: '#2980b9',
     duration: '3 Years',
     eligibility: '+2 Commerce',
+    link: '/departments/bcom-cs',
   },
   {
     id: 'bba',
@@ -113,6 +122,7 @@ export const departments = [
     color: '#8e44ad',
     duration: '3 Years',
     eligibility: '+2 in any stream',
+    link: '/departments/bba',
   },
   {
     id: 'criminology',
@@ -124,6 +134,7 @@ export const departments = [
     color: '#c0392b',
     duration: '3 Years',
     eligibility: '+2 in any stream',
+    link: '/departments/criminology',
   },
 ];
 

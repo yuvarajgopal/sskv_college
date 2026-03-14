@@ -42,6 +42,14 @@ export const images = {
     leadership: '/images/gallery/img7.jpg', // Faculty and leadership group photo
   },
 
+  // Leadership Photos
+  leadership: {
+    president: '/images/leadership/president.jpg',
+    vicePresident: '/images/leadership/vice-president.jpg',
+    secretary: '/images/leadership/secretary.jpg',
+    principal: '/images/leadership/principal.jpg',
+  },
+
   // Academics Page Images
   academics: {
     banner: '/images/academics/banner.jpg', // Students gathering in auditorium

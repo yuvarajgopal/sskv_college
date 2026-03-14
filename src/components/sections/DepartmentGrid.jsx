@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Card from '../shared/Card';
 import { departments, categories } from '../../data/departments';
@@ -53,14 +54,27 @@ export default function DepartmentGrid({ limit, showFilter = true }) {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
             >
-              <Card
-                variant="department"
-                title={dept.degree}
-                description={dept.description}
-                icon={dept.icon}
-                color={dept.color}
-                badge={dept.shifts ? `${dept.shifts.length} Shifts` : null}
-              />
+              {dept.link ? (
+                <Link to={dept.link} className="block h-full">
+                  <Card
+                    variant="department"
+                    title={dept.degree}
+                    description={dept.description}
+                    icon={dept.icon}
+                    color={dept.color}
+                    badge={dept.shifts ? `${dept.shifts.length} Shifts` : null}
+                  />
+                </Link>
+              ) : (
+                <Card
+                  variant="department"
+                  title={dept.degree}
+                  description={dept.description}
+                  icon={dept.icon}
+                  color={dept.color}
+                  badge={dept.shifts ? `${dept.shifts.length} Shifts` : null}
+                />
+              )}
             </motion.div>
           ))}
         </AnimatePresence>

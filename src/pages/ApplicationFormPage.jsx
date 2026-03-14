@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaCheck, FaSpinner, FaDownload, FaCheckCircle, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaCheck, FaSpinner, FaDownload, FaCheckCircle, FaPhone, FaEnvelope, FaFilePdf } from 'react-icons/fa';
 import { departments } from '../data/departments';
 import { COLLEGE_INFO } from '../utils/constants';
 import { generateApplicationPDF } from '../utils/pdfGenerator';
@@ -710,6 +710,43 @@ export default function ApplicationFormPage() {
       <div className="bg-primary-800 py-10 text-center text-white">
         <h1 className="font-heading text-3xl md:text-4xl font-bold">Online Application Form</h1>
         <p className="mt-2 text-primary-200 text-sm">SSKV College of Arts & Science for Women — Admissions 2026–2027</p>
+      </div>
+
+      {/* Download banner */}
+      <div className="bg-accent-50 border-b border-accent-100">
+        <div className="container-custom mx-auto max-w-2xl px-4 py-4">
+          <p className="text-xs font-semibold text-primary-700 uppercase tracking-wide mb-3">Download Before You Apply</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href="/pdfs/application-form-2026-27.pdf"
+              download
+              className="flex items-center gap-3 flex-1 bg-white border border-accent-200 rounded-xl px-4 py-3 hover:shadow-md transition-shadow group"
+            >
+              <div className="w-9 h-9 rounded-lg bg-primary-50 flex items-center justify-center flex-shrink-0">
+                <FaFilePdf className="text-primary-700 text-base" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-bold text-primary-800 font-heading leading-tight">Application Form 2026–27</p>
+                <p className="text-xs text-neutral-400 mt-0.5">Printable admission form (PDF)</p>
+              </div>
+              <FaDownload className="text-primary-400 group-hover:text-primary-700 transition-colors flex-shrink-0" />
+            </a>
+            <a
+              href="/pdfs/prospectus-2025-26.pdf"
+              download
+              className="flex items-center gap-3 flex-1 bg-white border border-accent-200 rounded-xl px-4 py-3 hover:shadow-md transition-shadow group"
+            >
+              <div className="w-9 h-9 rounded-lg bg-accent-50 flex items-center justify-center flex-shrink-0">
+                <FaFilePdf className="text-accent-600 text-base" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-bold text-primary-800 font-heading leading-tight">Prospectus 2025–26</p>
+                <p className="text-xs text-neutral-400 mt-0.5">Courses, fees & college handbook (PDF)</p>
+              </div>
+              <FaDownload className="text-accent-400 group-hover:text-accent-600 transition-colors flex-shrink-0" />
+            </a>
+          </div>
+        </div>
       </div>
 
       <StepIndicator currentStep={step} />
