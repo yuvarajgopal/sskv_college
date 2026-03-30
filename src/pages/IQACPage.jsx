@@ -5,15 +5,23 @@ import AnimatedSection from '../components/shared/AnimatedSection';
 import { images } from '../data/media';
 
 const iqacMembers = [
-  { role: 'Chairperson', name: 'Principal, SSKV College', designation: 'Ex-officio' },
-  { role: 'Coordinator', name: 'Dr. [Name]', designation: 'IQAC Coordinator' },
-  { role: 'Management Representative', name: 'Shri. [Name]', designation: 'Secretary, SSKV Trust' },
-  { role: 'Faculty Member', name: 'Dr. [Name]', designation: 'Department of Computer Science' },
-  { role: 'Faculty Member', name: 'Dr. [Name]', designation: 'Department of Commerce' },
-  { role: 'Faculty Member', name: 'Dr. [Name]', designation: 'Department of English' },
-  { role: 'Alumni Representative', name: '[Name]', designation: 'Alumni Association' },
-  { role: 'Student Representative', name: '[Name]', designation: 'Student Council President' },
-  { role: 'Industry Expert', name: '[Name]', designation: 'External Expert' },
+  { role: 'Chairman', name: 'Dr. K. Thirumamagal, ', designation: 'Principal' },
+  { role: 'Member', name: 'Dr. Sumanth C Raman', designation: 'Management Representative' },
+  { role: 'IQAC Coordinator', name: 'Dr. J. Seethalakshmi', designation: '' },
+  { role: 'Criterion I  Curriculum Design', name: 'Ms. J. Suganthi', designation: 'Department of Mathematics' },
+  { role: 'Criterion II  Faculty Resources', name: 'Ms. R. Ramya', designation: 'Department of Computer Science' },
+  { role: 'Criterion III Infrastructure', name: 'Ms. R. K. Ramya', designation: 'Department of Computer Applications' },
+  { role: 'Criterion IV Financial Resources & Management', name: 'Ms. P. Anandhalakshmi', designation: 'Department of Commerce (General)' },
+  { role: 'Criterion V Learning and Teaching', name: 'Dr. P. Revathi', designation: 'Department of Business Administration' },
+  { role: 'Criterion VI Extended Curriculum Engagement', name: 'Dr. P. Meenakshi', designation: 'Department of Commerce (Corporate Secretaryship)' },
+  { role: 'Criterion VII Governance and Administration', name: 'Ms. J. Ramani', designation: 'Department of Commerce (Accounting & Finance)' },
+  { role: 'Criterion VIII Student Outcomes', name: 'Ms. Dr. B. Valli', designation: 'Department of Tamil' },
+  { role: '	Criterion IX Research and Innovation Outcomes', name: 'Ms. H. Anusha', designation: 'Department of English' },
+  { role: 'Criterion X Sustainability Outcomes', name: 'Dr. E. Kalaiselvi', designation: 'Library' },
+  { role: 'member', name: 'Ms. Shenbagam', designation: 'Alumni Association' },
+  { role: 'Student Representative', name: 'Ms. Kokilavani', designation: 'Parent Stakeholder' },
+  { role: 'Administrative Officer', name: 'Mr. T. V. Jaganathan', designation: 'Office Superintendent' },
+   { role: 'Assistant', name: 'Ms. Gayathri', designation: 'Office Clerk' },
 ];
 
 const initiatives = [

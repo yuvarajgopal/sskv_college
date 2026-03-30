@@ -5,17 +5,54 @@ import AnimatedSection from '../../components/shared/AnimatedSection';
 import CTABanner from '../../components/sections/CTABanner';
 
 const management = [
-  { name: 'Dr. C.K. Raman',       designation: 'Secretary'      },
-  { name: 'Dr. Sumanth C. Raman', designation: 'Joint Secretary' },
-  { name: 'Dr. Prasanth',         designation: 'Treasurer'       },
-  { name: 'Dr. K. Thirumamagal',  designation: 'Principal'       },
+  { 
+    name: 'Dr. C.K. Raman', 
+    designation: 'Secretary', 
+    photo: '/images/management/secretary.jpg'
+  },
+  { 
+    name: 'Dr. Sumanth C. Raman', 
+    designation: 'Joint Secretary', 
+    photo: '/images/management/joint-secretary.jpg'
+  },
+  { 
+    name: 'Dr. Prasanth',   
+    designation: 'Treasurer', 
+    photo: '/images/management/prasanth.jpg'
+  },
+  { 
+    name: 'Dr. K. Thirumamagal', 
+    designation: 'Principal', 
+    photo: '/images/management/principal.jpg'
+  },
 ];
 
 const staff = [
-  { name: 'Ms. S. Gayathri',          designation: 'Head Clerk'                      },
-  { name: 'Ms. S. Latha',             designation: 'Clerk — Account Section'          },
-  { name: 'Ms. Radha',                designation: 'Clerk — Student Section / Admission' },
-  { name: 'Mr. Sanjay Kumar Acharya', designation: 'Clerk — Accounts Section'         },
+  { 
+    name: 'Mr. T.V.Jaganath',  
+    designation: 'Office Superindent', 
+    photo: '/images/staff/jaganath.jpg'
+  },
+  { 
+    name: 'Ms. S. Gayathri',           
+    designation: 'Head Clerk', 
+    photo: '/images/staff/gayathri.jpg'
+  },
+  { 
+    name: 'Ms. S. Latha',   
+    designation: 'Clerk — Account Section', 
+    photo: '/images/staff/latha.jpg'
+  },
+  { 
+    name: 'Ms. Radha',   
+    designation: 'Clerk — Student Section / Admission', 
+    photo: '/images/staff/radha.jpg'
+  },
+  { 
+    name: 'Mr. Sanjay Kumar Acharya', 
+    designation: 'Clerk — Accounts Section',
+    photo: '/images/staff/sanjay.jpg'
+  },
 ];
 
 export default function FinanceSectionPage() {
@@ -37,9 +74,13 @@ export default function FinanceSectionPage() {
             {management.map((m, i) => (
               <AnimatedSection key={m.name} delay={i * 0.08}>
                 <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-xl p-6 text-white text-center">
-                  <div className="w-14 h-14 rounded-full bg-accent-400/20 flex items-center justify-center mx-auto mb-3">
-                    <FaUserTie className="text-2xl text-accent-400" />
-                  </div>
+                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-3">
+  <img 
+    src={m.photo} 
+    alt={m.name} 
+    className="w-full h-full object-cover"
+  />
+</div>
                   <h3 className="font-bold font-heading text-base leading-snug">{m.name}</h3>
                   <p className="text-accent-400 text-xs font-semibold mt-2">{m.designation}</p>
                 </div>
@@ -53,9 +94,13 @@ export default function FinanceSectionPage() {
             {staff.map((s, i) => (
               <AnimatedSection key={s.name} delay={i * 0.08}>
                 <div className="flex items-center gap-4 bg-neutral-50 hover:bg-accent-50 transition-colors duration-300 rounded-xl p-5 border border-neutral-100">
-                  <div className="w-11 h-11 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0">
-                    <FaUserCog className="text-primary-600" />
-                  </div>
+                  <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+  <img 
+    src={s.photo} 
+    alt={s.name} 
+    className="w-full h-full object-cover"
+  />
+</div>
                   <div>
                     <h4 className="font-bold text-primary-800 text-sm font-heading">{s.name}</h4>
                     <p className="text-neutral-500 text-xs mt-0.5">{s.designation}</p>

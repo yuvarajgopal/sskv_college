@@ -11,50 +11,52 @@ const categories = [
     name: 'Student Welfare & Safety',
     icon: FaShieldAlt,
     color: '#e74c3c',
-    policies: [
-      { title: 'Anti-Ragging Policy',                file: 'anti-ragging-policy.pdf',          available: false },
-      { title: 'Sexual Harassment Policy (ICC)',      file: 'sexual-harassment-policy.pdf',     available: false },
-      { title: 'Grievance Redressal Policy',          file: 'grievance-redressal-policy.pdf',   available: false },
-      { title: 'Student Code of Conduct',             file: 'student-code-of-conduct.pdf',      available: false },
+      policies: [
+      { title: 'Anti-Ragging Policy', file: 'anti-ragging-policy.pdf', available: true },
+      { title: 'Sexual Harassment Policy (ICC)', file: 'sexual-harassment-policy.pdf', available: true },
+      { title: 'Grievance Redressal Policy', file: 'grievance-redressal-policy.pdf', available: true },
+      { title: 'Student Code of Conduct', file: 'student-code-of-conduct.pdf', available: true },
     ],
   },
   {
+     name: 'Academic Policies',
+    icon: FaBook,
+    color: '#3498db',
+    policies: [
+      { title: 'Admission Policy', file: 'admission-policy.pdf', available: true },
+      { title: 'Examination Policy', file: 'examination-policy.pdf', available: true },
+      { title: 'Fee Refund Policy', file: 'fee-refund-policy.pdf', available: true },
+      { title: 'Library Policy', file: 'library-policy.pdf', available: true },
+      { title: 'IQAC Policy', file: 'iqac-policy.pdf', available: true },
+    ],
+  },
+    {
     name: 'Academic Policies',
     icon: FaBook,
     color: '#3498db',
     policies: [
-      { title: 'Admission Policy',                    file: 'admission-policy.pdf',             available: false },
-      { title: 'Examination Policy',                  file: 'examination-policy.pdf',           available: false },
-      { title: 'Fee Refund Policy',                   file: 'fee-refund-policy.pdf',            available: false },
-      { title: 'Library Policy',                      file: 'library-policy.pdf',               available: false },
-      { title: 'IQAC Policy',                         file: 'iqac-policy.pdf',                  available: false },
+      { title: 'Admission Policy', file: 'admission-policy.pdf', available: true },
+      { title: 'Examination Policy', file: 'examination-policy.pdf', available: true },
+      { title: 'Fee Refund Policy', file: 'fee-refund-policy.pdf', available: true },
+      { title: 'Library Policy', file: 'library-policy.pdf', available: true },
+      { title: 'IQAC Policy', file: 'iqac-policy.pdf', available: true },
     ],
   },
-  {
-    name: 'Administration & Governance',
-    icon: FaGavel,
-    color: '#8e44ad',
-    policies: [
-      { title: 'Reservation Policy',                  file: 'reservation-policy.pdf',           available: false },
-      { title: 'Right to Information (RTI)',          file: 'rti-policy.pdf',                   available: false },
-      { title: 'Faculty Code of Conduct',             file: 'faculty-code-of-conduct.pdf',      available: false },
-    ],
-  },
-  {
+    {
     name: 'Sustainability & Infrastructure',
     icon: FaLeaf,
     color: '#27ae60',
     policies: [
-      { title: 'Environmental Policy',                file: 'environmental-policy.pdf',         available: false },
-      { title: 'IT Usage Policy',                     file: 'it-usage-policy.pdf',              available: false },
+      { title: 'Environmental Policy', file: 'environmental-policy.pdf', available: true },
+      { title: 'IT Usage Policy', file: 'it-usage-policy.pdf', available: true },
     ],
   },
-  {
+   {
     name: 'Placement & Industry',
     icon: FaBriefcase,
     color: '#e67e22',
     policies: [
-      { title: 'Placement Policy',                    file: 'placement-policy.pdf',             available: false },
+      { title: 'Placement Policy', file: 'placement-policy.pdf', available: true },
     ],
   },
 ];

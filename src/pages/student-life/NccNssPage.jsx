@@ -8,14 +8,31 @@ const nssInfo = {
   coordinator: 'Dr. B. Amudha',
   qualification: 'M.Sc., M.Phil., Ph.D., Assistant Professor',
   dept: 'Department of Mathematics',
-  about: 'The National Service Scheme (NSS) at SSKV College encourages students to participate in community service, social outreach, and national development activities. Through NSS, students develop leadership, social responsibility, and civic consciousness while contributing meaningfully to society.',
+
+  about: `Our NSS is very active and organizes lectures and events that sensitize students to the values promoted globally by NSS. Every year, our students participate in the Geneva competition organized by the University of Madras. 
+
+Tree planting, organizing awareness rallies, and fieldwork are some of the key programmes carried out regularly. The unit is guided by a dedicated team under the leadership of the NSS Coordinator.`,
+
   activities: [
-    'Community service and village adoption programmes',
-    'Health awareness and free medical camps',
-    'Environmental conservation and tree plantation drives',
-    'Blood donation camps and awareness campaigns',
-    'Literacy and adult education initiatives',
-    'NSS special camps and residential programmes',
+    {
+      title: "NSS Activities (June 2018 – March 2019)",
+      content: `The NSS aims to develop the inner potential of students and transform them into socially responsible individuals. Regular activities and special camps are conducted focusing on educational, social, and community development.
+
+The unit actively engages in cleanliness drives, tree plantation, and social service activities in the adopted village Kooram, Kanchipuram.`,
+      points: [
+        "100 students enrolled as NSS volunteers for the academic year 2018–2019",
+        "Cleanliness drives conducted in college premises, canteen, and garden",
+        "Plantation of around 60 saplings within the campus"
+      ]
+    },
+    {
+      title: "Swachh Bharat Mission Program (1–15 September)",
+      content: `Swachh Bharat Abhiyan is a Government of India initiative aimed at ensuring cleanliness and sanitation across the nation. The programme promotes the vision of a clean and healthy India.
+
+Under this initiative, NSS volunteers organized “Swachhta Pakhwada” from 1st to 15th September to create awareness about hygiene and sanitation among students and the surrounding community.`,
+      points: [],
+      extra: `Every year, a series of activities highlight the active NSS calendar. These initiatives stand as a testament to the commitment and contribution of our volunteers towards society.`
+    }
   ],
 };
 
@@ -36,16 +53,48 @@ export default function NccNssPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <AnimatedSection direction="left">
-                <p className="text-neutral-600 leading-relaxed mb-6">{nssInfo.about}</p>
+                
+                {/* About Section */}
+                <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-6">
+                  <h3 className="font-bold text-primary-800 mb-2">About NSS</h3>
+                  <p className="text-sm text-neutral-600 leading-relaxed whitespace-pre-line">
+                    {nssInfo.about}
+                  </p>
+                </div>
+
+                {/* Activities */}
                 <h3 className="text-base font-bold text-primary-800 font-heading mb-3">Activities</h3>
-                <div className="space-y-2">
+
+                <div className="space-y-4">
                   {nssInfo.activities.map((a, i) => (
-                    <div key={i} className="flex items-start gap-3 bg-neutral-50 rounded-lg px-4 py-3 border border-neutral-100">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent-400 flex-shrink-0 mt-2" />
-                      <span className="text-sm text-neutral-700">{a}</span>
-                    </div>
+                    <AnimatedSection key={i}>
+                      <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
+
+                        <h3 className="font-bold text-primary-800 mb-2">{a.title}</h3>
+
+                        <p className="text-sm text-neutral-600 mb-3 whitespace-pre-line">
+                          {a.content}
+                        </p>
+
+                        {a.points.length > 0 && (
+                          <ul className="list-disc pl-5 text-sm text-neutral-600 space-y-2">
+                            {a.points.map((p, idx) => (
+                              <li key={idx}>{p}</li>
+                            ))}
+                          </ul>
+                        )}
+
+                        {a.extra && (
+                          <p className="text-sm text-neutral-600 mt-4 whitespace-pre-line">
+                            {a.extra}
+                          </p>
+                        )}
+
+                      </div>
+                    </AnimatedSection>
                   ))}
                 </div>
+
               </AnimatedSection>
             </div>
 
@@ -60,9 +109,9 @@ export default function NccNssPage() {
               <div className="grid grid-cols-2 gap-3 mt-4">
                 {[
                   { icon: FaHandsHelping, label: 'Community Service' },
-                  { icon: FaLeaf,         label: 'Environment' },
-                  { icon: FaHeart,        label: 'Health Camps' },
-                  { icon: FaFlag,         label: 'NSS Camps' },
+                  { icon: FaLeaf, label: 'Environment' },
+                  { icon: FaHeart, label: 'Health Camps' },
+                  { icon: FaFlag, label: 'NSS Camps' },
                 ].map((item, i) => (
                   <div key={i} className="bg-primary-50 rounded-xl p-4 text-center border border-primary-100">
                     <item.icon className="text-primary-700 text-xl mx-auto mb-1.5" />
@@ -71,11 +120,15 @@ export default function NccNssPage() {
                 ))}
               </div>
             </AnimatedSection>
+
           </div>
         </div>
       </section>
 
-      <CTABanner title="Serve. Lead. Grow." subtitle="NSS at SSKV College shapes students into compassionate, responsible citizens." />
+      <CTABanner
+        title="Serve. Lead. Grow."
+        subtitle="NSS at SSKV College shapes students into compassionate, responsible citizens."
+      />
     </>
   );
 }

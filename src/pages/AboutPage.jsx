@@ -11,6 +11,7 @@ const leadership = [
   { name: 'President', designation: 'President', photo: '/images/leadership/president.jpg', message: 'Leading the institution towards excellence in education and holistic development.' },
   { name: 'Vice-President', designation: 'Vice-President', photo: '/images/leadership/vice-president.jpg', message: 'Committed to creating opportunities for women through quality education.' },
   { name: 'Secretary', designation: 'Secretary', photo: '/images/leadership/secretary.jpg', message: 'Ensuring administrative excellence and institutional growth.' },
+    { name: 'Joint Secretary', designation: 'Joint Secretary', photo: '/images/leadership/joint-secretary.jpg', message: 'Ensuring administrative excellence and institutional growth.' },
   { name: 'Principal', designation: 'Principal', photo: '/images/leadership/principal.jpg', message: 'Fostering academic rigor and nurturing talent in every student.' },
 ];
 
@@ -275,23 +276,36 @@ export default function AboutPage() {
 
       {/* Leadership */}
       <section id="leadership" className="section-padding bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900">
-        <div className="container-custom mx-auto">
-          <SectionHeading title="Our Leadership" subtitle="Guided by experienced administrators committed to educational excellence" light />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {leadership.map((leader, index) => (
-              <AnimatedSection key={leader.designation} delay={index * 0.1}>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10">
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center mx-auto mb-4 overflow-hidden">
-                    <LeaderPhoto photo={leader.photo} designation={leader.designation} />
-                  </div>
-                  <h3 className="text-lg font-bold text-white font-heading">{leader.designation}</h3>
-                  <p className="text-white/60 text-sm mt-3 leading-relaxed">{leader.message}</p>
-                </div>
-              </AnimatedSection>
-            ))}
+  <div className="container-custom mx-auto">
+    <SectionHeading 
+      title="Our Leadership" 
+      subtitle="Guided by experienced administrators committed to educational excellence" 
+      light 
+    />
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+      {leadership.map((leader, index) => (
+        <AnimatedSection key={leader.designation} delay={index * 0.1}>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10">
+            
+            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center mx-auto mb-4 overflow-hidden">
+              <LeaderPhoto photo={leader.photo} designation={leader.designation} />
+            </div>
+
+            <h3 className="text-lg font-bold text-white font-heading">
+              {leader.designation}
+            </h3>
+
+            <p className="text-white/60 text-sm mt-3 leading-relaxed">
+              {leader.message}
+            </p>
+
           </div>
-        </div>
-      </section>
+        </AnimatedSection>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Group of Institutions */}
       <section id="institutions" className="section-padding bg-white">

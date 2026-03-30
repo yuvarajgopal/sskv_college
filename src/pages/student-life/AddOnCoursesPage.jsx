@@ -29,6 +29,14 @@ const courses = [
     dept: 'Departments of Computer Science & Computer Applications',
     color: '#27ae60',
   },
+  {
+    icon: FaLaptopCode,
+    title: 'Data Analytics using AI',
+    short: 'DA-Ai',
+    desc: 'It is an innovative and practical program designed to equip students with essential skills in analyzing data through advanced Artificial Intelligence (AI) technologies. Offered as an add-on course by the BCA, BSc, and AI departments, this program aims to bridge the gap between theoretical knowledge and real-world applications, preparing students for careers in data science, analytics, and AI-driven decision making.',
+    dept: 'The Department pf BSc AI ,BSC CS Shift-2 and BCA shift-2 Offers an add-on course "Data Analysis Using AI Tools". ',
+    color: '#27ae60',
+  },
 ];
 
 export default function AddOnCoursesPage() {
