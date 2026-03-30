@@ -22,10 +22,10 @@ export default function YrcPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const images = [
-    '../../../public/images/yrc1.jpg',
-    '../../../public/images/yrc2.jpg',
-    '../../../public/images/yrc3.jpg',
-    '../../../public/images/yrc4.jpg'
+    'images/yrc1.jpg',
+    'images/yrc2.jpg',
+    'images/yrc3.jpg',
+    'images/yrc4.jpg'
   ];
 
   useEffect(() => {
