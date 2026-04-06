@@ -76,21 +76,18 @@ export default function AboutPage() {
                 Genesis & Growth
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                SSKV College of Arts and Science for Women was established with a noble vision of
-                providing quality higher education to women in Kanchipuram and surrounding areas.
-                Located in Kilambi, Kanchipuram, the college has grown to become a trusted institution
-                offering diverse academic programs.
+                When, in the year 1904, one Shri Somasundara Sastry, a visionary, founded a school for girls in Kanchipuram little would he have realized that one day his school, like the banyan tree, would send new educational roots from its branches so that they would develop into strong trunks. It was, in a way, in keeping with the character of the town, Kanchipuram, that a school was founded here.
               </p>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                Affiliated to the prestigious University of Madras, our college follows the Choice Based
-                Credit System (CBCS) and offers 11 undergraduate programs spanning Arts, Science,
-                Commerce, and Professional streams. Our institution is part of a group of 5 educational
-                institutions under a single dedicated management.
+                But to found a school for girls in 1904, now, in retrospect, seems an act of courage, an act, animated by hope that favored intellect over established prejudices and an act which also embellished the truth in Winston Churchill’s statement that a man is as big as his decisions. History, as Carlyle said, is the essence of innumerable biographies and the history of the growth of the original SSKV School from a single entity to five schools and a college today is actually the biographies of several people who strove to sustain the small beginning of 1904. 
               </p>
               <p className="text-neutral-600 leading-relaxed">
-                With 70+ experienced faculty members, modern infrastructure, and a commitment to
-                holistic development, SSKV College continues to shape confident, skilled, and socially
-                responsible women leaders.
+                The stability of public favour has been prevailing upon the SSKV brand since the beginning because successive office bearers of the Conjeevaram Hindu Educational Society (under whose aegis all the institutions are run) have been as committed as they have been assiduous in their task of institution building. Of these, mention may be made of Shri C R Pattabhi Raman, the son of Sir Sri C P Ramaswami Aiyar, the illustrious Dewan of the erstwhile princely State of Travancore. Mr. A. R. Jagannathan the son-in-law of Shri C R Pattabhi Raman and Dr. Vengudi Ramamurthy. 
+              </p>
+               <p className="text-neutral-600 leading-relaxed">
+                It is only proper that now the President of the Governing Body is Dr. Nanditha Krishna, the great grand daughter of Sir Sri C P Ramaswami Aiyar and who is a well-known personality in Chennai. Under her guidance combined with the industry of Dr. C.K. Raman, the Secretary and the benign influence of Mrs. Umadevi, Joint Secretary, a giant step was taken in 2007 when a College exclusively for women was founded thereby creating an important signpost in the history of SSKV institutions.
+
+. 
               </p>
             </AnimatedSection>
 
@@ -132,13 +129,13 @@ export default function AboutPage() {
             <AnimatedSection>
               <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-8 border border-primary-100 mb-8">
                 <p className="text-neutral-700 leading-relaxed text-base mb-4">
-                  Goals, as everybody knows, can be short term and long term. A long term goal includes many short term goals. Our long term goal is to grow into one of the finest educational institutions in Tamil Nadu where girls while they acquire knowledge will also grow into complete women; where shall prevail truth, honesty, uprightness, love and goodness.
+                  Goals, as everybody knows, can be short term and long term. A long term goal includes many short term goals. Our long term goal is to grow into one of the finest educational institutions in Tamil Nadu where girls while they acquire knowledge will also grow into complete women; where shall prevail truth, honesty, uprightness, love and goodness. 
                 </p>
                 <p className="text-neutral-700 leading-relaxed text-base mb-4">
-                  Our first task in terms of small goals is to strengthen the academic competence of our faculty. We are also aware that we need to develop in students knowledge and understanding; cognitive, transferable and practical skills. What is, perhaps, more important, is the creation of proper context and ambience for learning where meaningful education will take place.
+                  Our first task in terms of small goals is to strengthen the academic competence of our faculty. They are young and the college is just seven years old. We are also aware that we need to develop in students knowledge and understanding; cognitive, transferable and practical skills. What is, perhaps, more important, is the creation of proper context and ambience for learning where meaningful education will take place. Therefore, our catchword is “freedom.” 
                 </p>
                 <p className="text-neutral-700 leading-relaxed text-base">
-                  Therefore, our catchword is <span className="font-semibold text-primary-800">"freedom."</span> The entire academic atmosphere in SSKV College is characterized by freedom — freedom not unbridled but controlled by responsibility. We strongly believe that no meaningful education, particularly, of girls will take place where oppression and tyranny rule.
+                  The entire academic atmosphere in SSKV College is characterized by freedom, freedom not unbridled but controlled by responsibility. We strongly believe that no meaningful education, particularly, of girls will take place where oppression and tyranny rule. This spirit of freedom is well illustrated in our College Song.
                 </p>
               </div>
             </AnimatedSection>
@@ -199,9 +196,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-primary-800 font-heading mb-4">Our Vision</h3>
                 <p className="text-neutral-600 leading-relaxed">
-                  To empower women through quality education, fostering academic excellence,
-                  ethical values, and holistic development, enabling them to become leaders and
-                  contribute meaningfully to society.
+                    The aim of the College is to offer to women education that will transform them into liberal minded human beings who shall remain at the cutting edge of knowledge; who shall endeavour to free their minds of bigotry and obstinacy; who shall develop a disinterested attitude where emotions are involved; who shall be able to distinguish between right and wrong without taking recourse to either of the two extremes of relationism and absolutism, and who, in all these endeavours, shall not forget the abiding grace of God who rules the world.
                 </p>
               </div>
             </AnimatedSection>
@@ -212,28 +207,10 @@ export default function AboutPage() {
                   <FaBullseye className="text-2xl text-primary-700" />
                 </div>
                 <h3 className="text-2xl font-bold text-primary-800 font-heading mb-4">Our Mission</h3>
-                <ul className="space-y-3 text-neutral-600">
-                  <li className="flex gap-2">
-                    <span className="text-accent-400 mt-1">•</span>
-                    Provide accessible, quality higher education for women
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-accent-400 mt-1">•</span>
-                    Promote research aptitude and innovative thinking
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-accent-400 mt-1">•</span>
-                    Develop employable skills through industry collaborations
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-accent-400 mt-1">•</span>
-                    Instill ethical values and social responsibility
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-accent-400 mt-1">•</span>
-                    Foster holistic development through co-curricular activities
-                  </li>
-                </ul>
+                <p className="text-neutral-600 leading-relaxed">
+                   Our mission is to empower women through a transformative education that nurtures liberal thought, intellectual curiosity, and moral discernment. We strive to cultivate individuals who are free from prejudice and rigidity, who approach emotions with balanced objectivity, and who are guided by integrity avoiding both moral absolutism and excessive relativism. In all pursuits, we encourage a deep awareness of the divine grace that governs life and inspires purposeful living.  
+                </p>
+              
               </div>
             </AnimatedSection>
           </div>
@@ -249,17 +226,17 @@ export default function AboutPage() {
           />
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
-              { icon: '🌱', text: 'Students plant saplings once every 15 days on campus or in nearby villages — over 2,000 saplings planted. On Independence Day and Republic Day, students donate saplings as a symbol of environmental responsibility.' },
-              { icon: '🌾', text: 'Separate garden spaces are allotted for final-year students from all nine departments to cultivate fruits, vegetables, and spinach. Harvested produce is sold to staff, giving students hands-on entrepreneurship experience.' },
-              { icon: '♻️', text: 'Plastic is completely banned on campus. YRC students distribute paper bags to the canteen every 15 days. Silver and glass bottles replace plastic water bottles at all official functions.' },
-              { icon: '📚', text: 'Latecomers stay back after college hours to read books or articles in the library. The next day they present what they read at morning assembly. No fines are collected — discipline through positive reinforcement.' },
-              { icon: '🧠', text: 'Several clubs have been formed to improve general knowledge. The Quiz Club has students conducting quizzes for their peers, fostering peer learning and critical thinking.' },
-              { icon: '🎓', text: 'A Bodhi Centre has been established to enhance faculty knowledge by regularly inviting subject experts to conduct academic enrichment sessions.' },
-              { icon: '🎵', text: 'Cultural events such as Margazhi Peruvizha, Pongal, and Navaratri are organized every year under the Indian Knowledge System banner to promote awareness of Indian culture and traditions.' },
-              { icon: '🪡', text: 'Practical, hands-on training courses such as Aari embroidery and Silambam are offered alongside the academic curriculum to develop creativity, fitness, and vocational skills.' },
-              { icon: '🤖', text: 'Recognizing the importance of AI in today\'s world, the college offers Artificial Intelligence as an add-on course for students after regular class hours.' },
-              { icon: '🪙', text: 'To encourage research, training is provided in Kalvettu (epigraphy) and exhibitions on Indian coins are organized during Republic Day celebrations.' },
-              { icon: '🏃', text: 'A Fitness Club promotes "Healthy Youth, Healthy India." Students are sensitized to the importance of cereals and millets, and prepare healthy millet-based food to sell during Republic Day celebrations.' },
+              { icon: '🌱', text: 'Students are encouraged to plant saplings once every 15 days, either on the college campus or in the villages proposed to be adopted by the institution. As part of this initiative, more than 2,000 saplings have been planted both on campus and in nearby villages.' },
+              { icon: '🌾', text: 'On the occasions of Independence Day and Republic Day, students donate saplings as a symbol of environmental responsibility.' },
+              { icon: '♻️', text: 'Separate garden spaces have been allotted on the campus for final-year students from all nine departments. They cultivate fruits, vegetables, and spinach. After harvest, the produce is sold to faculty members, office staff, and housekeeping staff, helping students gain practical exposure to entrepreneurship.' },
+              { icon: '🧠', text: 'Instead of merely observing “No Plastic Day,” the institution actively educates students about the harmful effects of plastic usage. Plastic has been completely banned on campus. YRC students distribute paper bags to the canteen every 15 days, thereby reducing plastic usage. The college has also stopped purchasing plastic water bottles and now uses silver and glass bottles for all official functions.' },
+              { icon: '🎓', text: 'To discourage late coming and promote reading habits, latecomers are required to stay back after college hours and read books or articles in the library. The following day, they present what they have read during the morning assembly. No fines are collected for any such activities.' },
+              { icon: '🪡', text: 'A Bodhi Centre has been established to enhance the academic knowledge of faculty members by inviting subject experts for regular sessions.' },
+              { icon: '🤖', text: 'To promote awareness of Indian culture and traditions, the college organizes cultural events such as Margazhi Peruvizha, Pongal, and Navaratri every year under the Indian Knowledge System banner.' },
+              { icon: '🪙', text: 'Practical, hands-on training courses such as Aari embroidery and Silambam are offered to students in addition to their academic curriculum.' },
+               { icon: '🪙', text: 'Recognizing the importance of Artificial Intelligence in today’s world, the college offers AI as an add-on course for students after regular class hours.' },
+                { icon: '🪙', text: 'To encourage research among students, training is provided in Kalvettu (epigraphy), and exhibitions on Indian coins are organized during Republic Day celebrations.' },
+              { icon: '🏃', text: 'To promote the theme “Healthy Youth, Healthy India,” a Fitness Club has been established. Students are sensitized to the importance of cereals and millets. As part of this initiative, students prepare healthy millet-based food and sell it during Republic Day celebrations.' },
             ].map((item, i) => (
               <AnimatedSection key={i} delay={i * 0.05}>
                 <div className="flex items-start gap-4 bg-neutral-50 hover:bg-accent-50 transition-colors duration-300 rounded-xl p-5 border border-neutral-100 h-full">
@@ -342,7 +319,7 @@ export default function AboutPage() {
             <AnimatedSection>
               <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white mb-10">
                 <p className="leading-relaxed text-white/85 text-base">
-                  SSKV College of Arts and Science for Women stands distinct for its holistic and value-based approach to women's education, where academic excellence is complemented by environmental responsibility, cultural preservation, entrepreneurship, health awareness, research orientation, digital competence, wellness practices such as Yoga and Carnatic music, and a strong sports culture. The institution believes that true education goes beyond textbooks and actively integrates life skills, social responsibility, physical fitness, mental wellness, and ethical values into the learning process.
+                 SSKV College of Arts and Science for Women stands distinct for its holistic and value-based approach to women’s education, where academic excellence is complemented by environmental responsibility, cultural preservation, entrepreneurship, health awareness, research orientation, digital competence, wellness practices such as Yoga, Carnatic music, and a strong sports culture. The institution believes that true education goes beyond textbooks and examinations and therefore actively integrates life skills, social responsibility, physical fitness, mental wellness, and ethical values into the learning process. Through a wide range of structured initiatives, the college empowers women students to become confident, socially responsible, culturally rooted, and future-ready citizens.
                 </p>
               </div>
             </AnimatedSection>
@@ -353,62 +330,67 @@ export default function AboutPage() {
                 {
                   icon: '🌱',
                   title: 'Environmental Sustainability',
-                  text: 'Students plant saplings once every fifteen days on campus or in nearby villages — over 2,000 saplings planted so far. Plastic has been completely banned; YRC volunteers supply paper bags to the canteen, and silver/glass bottles replace plastic at all functions.',
+                  text: 'One of the most remarkable features of the institution is its strong commitment to environmental sustainability. Students are encouraged to plant saplings once every fifteen days either within the college campus or in nearby villages proposed to be adopted by the institution. This regular green initiative has resulted in the plantation of more than 2,000 saplings so far. By involving students directly in tree plantation, the college nurtures environmental consciousness, responsibility towards nature, and a sense of ownership for the surrounding ecosystem. The initiative not only enhances the green cover of the campus and villages but also instills sustainable habits among students.',
                 },
                 {
                   icon: '🌾',
                   title: 'Entrepreneurship through Campus Gardening',
-                  text: 'Final-year students from all nine departments cultivate fruits, vegetables, and spinach in dedicated garden plots. Harvested produce is sold to faculty and staff, giving students hands-on experience in cultivation, marketing, teamwork, and financial management.',
+                  text: 'Entrepreneurial skills are nurtured through a unique campus gardening initiative. Separate garden spaces have been allotted for final-year students from all nine departments to cultivate fruits, vegetables, and spinach. After harvest, the produce is sold to faculty members, office staff, and housekeeping staff. This activity exposes students to basic concepts of cultivation, marketing, teamwork, and financial management, helping them understand entrepreneurship in a practical and meaningful way.',
                 },
                 {
                   icon: '📚',
                   title: 'Discipline & Reading Habits',
-                  text: 'Instead of fines for latecoming, students read books or articles in the library after college hours and present their learning at the next morning assembly — building communication skills, reading habits, and confidence through positive reinforcement.',
+                  text: 'Discipline and reading habits are promoted through an innovative, non-punitive system. Instead of collecting fines for latecoming, students are asked to stay back after college hours and read books or articles in the library. The next day, they present their learning during the morning assembly. This practice improves communication skills, encourages reading, and builds confidence while maintaining discipline through positive reinforcement.',
                 },
                 {
                   icon: '🧠',
                   title: 'Quiz Club & Peer Learning',
-                  text: 'The Quiz Club enables students to conduct quizzes for their peers, promoting critical thinking, teamwork, and intellectual curiosity well beyond the classroom.',
+                  text: 'To enhance general knowledge and leadership qualities, the college has established several student clubs. The Quiz Club, in particular, enables students to conduct quizzes for their peers, promoting peer learning, critical thinking, and teamwork. Such platforms help students develop confidence and intellectual curiosity beyond the classroom.',
                 },
                 {
                   icon: '🎓',
                   title: 'Bodhi Centre — Faculty Development',
-                  text: 'Subject experts are invited to conduct academic enrichment sessions, keeping faculty updated with recent developments in their disciplines and ensuring consistently high teaching standards.',
+                  text: 'Faculty development is strengthened through the Bodhi Centre, which invites subject experts to conduct academic enrichment sessions. These programmes help faculty members stay updated with recent developments in their disciplines and improve teaching effectiveness, ensuring high academic standards for students.',
                 },
                 {
                   icon: '🎵',
                   title: 'Indian Culture & Traditions (IKS)',
-                  text: 'Annual celebrations of Margazhi Peruvizha, Pongal, and Navaratri; Carnatic music training; and regular Yoga sessions promote physical, mental, and emotional well-being alongside deep cultural rootedness.',
+                  text: 'The institution strongly promotes Indian culture and traditions through activities under the Indian Knowledge System (IKS) banner. Annual celebrations such as Margazhi Peruvizha, Pongal, and Navaratri expose students to traditional music, dance, rituals, and values. Carnatic music training is provided to nurture classical music appreciation and performance skills among students. Regular Yoga sessions are also conducted to promote physical, mental, and emotional well-being, helping students manage stress, improve concentration, and maintain a healthy lifestyle. The institution strongly promotes Indian culture and traditions through activities under the Indian Knowledge System (IKS) banner. Annual celebrations such as Margazhi Peruvizha, Pongal, and Navaratri expose students to traditional music, dance, rituals, and values. Carnatic music training is provided to nurture classical music appreciation and performance skills among students. Regular Yoga sessions are also conducted to promote physical, mental, and emotional well-being, helping students manage stress, improve concentration, and maintain a healthy lifestyle.',
                 },
                 {
                   icon: '🪡',
                   title: 'Practical Skill Development',
-                  text: 'Hands-on courses in Aari embroidery (creativity & vocation) and Silambam (fitness, discipline & self-defence) complement the academic curriculum.',
+                  text: 'Practical skill development is another hallmark of the institution. Hands-on training courses such as Aari embroidery and Silambam are offered in addition to the academic curriculum. Aari work nurtures creativity and vocational skills, while Silambam enhances physical fitness, discipline, and self-defense.',
                 },
                 {
                   icon: '🤖',
                   title: 'Digital Literacy — AI Add-On Course',
-                  text: 'Artificial Intelligence is offered as an add-on course after regular class hours, equipping students with foundational technological knowledge for a technology-driven future.',
+                  text: 'Recognizing the importance of digital literacy, the college offers Artificial Intelligence (AI) as an add-on course after regular class hours. This initiative equips students with basic technological knowledge and prepares them for future career opportunities in a technology-driven world.',
                 },
                 {
                   icon: '🪙',
                   title: 'Research Orientation',
-                  text: 'Training in Kalvettu (epigraphy) and exhibitions on Indian coins during Republic Day celebrations spark interest in history, archaeology, and analytical investigation.',
+                  text: 'To encourage research orientation, the institution provides training in Kalvettu (epigraphy) and organizes exhibitions on Indian coins during Republic Day celebrations. These activities spark interest in history, archaeology, and research, helping students develop analytical and investigative skills.',
                 },
                 {
                   icon: '🌾',
                   title: 'Health Awareness — Fitness Club',
-                  text: 'Under the theme "Healthy Youth, Healthy India," students prepare and sell millet-based healthy food during Republic Day celebrations, combining nutrition education with entrepreneurship.',
+                  text: 'Health awareness is further promoted through the Fitness Club under the theme “Healthy Youth, Healthy India.” Students are sensitized to the nutritional value of cereals and millets. They prepare healthy millet-based food items and sell them during Republic Day celebrations, combining health education with entrepreneurship and community engagement.',
                 },
                 {
                   icon: '🏑',
                   title: 'Sports Culture & House System',
-                  text: 'The entire student body is divided into four sports houses ensuring maximum participation. The college has emerged as Hockey Champions for three consecutive years, building teamwork, leadership, and confidence.',
+                  text: 'A distinctive feature of the institution is its strong sports culture. The entire student strength is divided into four sports houses, ensuring maximum participation in both on-campus and off-campus sports events. This house system motivates students to take part actively, discover their hidden talents, and develop teamwork and leadership skills. The institution firmly believes that participation itself is a powerful learning experience, and hence encourages even beginners to compete. As a result of these consistent efforts, the college has emerged as the champions in hockey for the last three consecutive years, bringing pride to the institution and boosting students’ confidence.',
                 },
                 {
                   icon: '🇮🇳',
                   title: 'National Values & Social Responsibility',
-                  text: 'On Independence Day and Republic Day, students donate saplings as a symbol of patriotism and environmental care, integrating civic responsibility into campus life.',
+                  text: 'National values and social responsibility are integrated into campus life. On Independence Day and Republic Day, students donate saplings as a symbol of patriotism and environmental care. Such activities remind students of their responsibility toward the nation and the environment.',
+                },
+                {
+                  icon: '🇮D',
+                  title: 'institutional distinctiveness',
+                  text: 'Overall, the institutional distinctiveness of SSKV College of Arts and Science for Women lies in its integrated model of education that blends sustainability, cultural heritage, wellness, skill development, entrepreneurship, research exposure, digital competence, and sports excellence. By nurturing both the mind and body through academics, Yoga, music, cultural practices, and athletics, the institution creates well-rounded, confident, and socially responsible women graduates. Through these initiatives, the college prepares students who are environmentally conscious, culturally rooted, physically fit, technologically skilled, mentally resilient, and socially responsible. This unique blend of tradition, innovation, and values makes SSKV College of Arts and Science for Women truly distinctive in its mission to empower women and contribute to nation-building.',
                 },
               ].map((item, i) => (
                 <AnimatedSection key={item.title} delay={i * 0.05}>
@@ -464,8 +446,46 @@ export default function AboutPage() {
                     <p className="text-neutral-600 leading-relaxed text-sm">{item.text}</p>
                   </div>
                 </div>
+                
               </AnimatedSection>
             ))}
+            {/* Annual Reports */}
+<section className="section-padding bg-white">
+  <div className="container-custom mx-auto">
+    
+    <SectionHeading
+      title="Annual Reports"
+      subtitle="Download the latest annual reports of SSKV College"
+    />
+
+    <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-6">
+      
+      <a
+        href="/annual_report/annual-report-2022-23.docx" target="_blank"
+        rel="noopener noreferrer"
+        className="px-6 py-3 bg-primary-700 text-white rounded-lg shadow hover:bg-primary-800 transition font-semibold"
+      >
+        Annual Report 2022 - 23
+      </a>
+
+      <a
+         href="/docs/annual-report-2023-24.docx" target="_blank"
+        rel="noopener noreferrer"
+        className="px-6 py-3 bg-primary-700 text-white rounded-lg shadow hover:bg-primary-800 transition font-semibold"
+      >
+        Annual Report 2023 - 24
+      </a>
+
+      <a href="/annual_report/annual-report-2024-25.docx" target="_blank"
+        rel="noopener noreferrer"
+        className="px-6 py-3 bg-primary-700 text-white rounded-lg shadow hover:bg-primary-800 transition font-semibold"
+      >
+        Annual Report 2024 - 25
+      </a>
+
+    </div>
+  </div>
+</section>
             <AnimatedSection delay={0.5}>
               <div className="bg-primary-900 rounded-xl p-6 text-white text-center">
                 <p className="leading-relaxed text-white/85">

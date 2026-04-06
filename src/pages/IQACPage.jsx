@@ -75,13 +75,19 @@ export default function IQACPage() {
             <AnimatedSection direction="left">
               <SectionHeading title="About IQAC" subtitle="" className="text-left items-start" />
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The Internal Quality Assurance Cell (IQAC) was established as per the guidelines of the
-                National Assessment and Accreditation Council (NAAC). The IQAC acts as a nodal agency
-                of the institution for coordinating quality-related activities.
+                The difference between what one can do and what one should do is the difference between lethargy and initiative. Norman Richard, Vice President of Xerox Corporation, once said, “The quest for quality is a race without a finishing line.”
               </p>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The prime task of the IQAC is to develop a system for conscious, consistent, and catalytic
-                improvement in the overall performance of institutions.
+                Inspired by this thought, the initiative to establish the Internal Quality Assurance Cell (IQAC) was taken in the year 2012, even though the institution was only five years old at that time. While the establishment of IQAC becomes mandatory only after NAAC accreditation, the College proactively constituted the cell to promote quality consciousness among all stakeholders, including the management.
+              </p>
+              <p className="text-neutral-600 leading-relaxed mb-4">
+                This initiative has yielded rich dividends, as the faculty members are now well aware of NAAC expectations, assessment criteria, quality parameters, and areas requiring improvement. Gradually, the institution has been enhancing its infrastructural facilities and sensitizing all stakeholders to the importance of quality education and effective logistics.
+              </p>
+                <p className="text-neutral-600 leading-relaxed mb-4">
+                The College is also planning to establish Quality Circles, and the process of quality initiation has already begun. The IQAC Coordinator plays a very active role and is involved in all aspects of academics and administration. It is noteworthy that the institution is a young college, with the average age of the faculty being around 30 years.
+              </p>
+                <p className="text-neutral-600 leading-relaxed mb-4">
+                The institution has also undertaken a SWOT analysis, albeit on a modest scale. The management has shown sensitivity towards identifying and establishing important milestones for institutional growth. As the proverb goes, “Slow and steady wins the race,” and the College is progressing cautiously, yet confidently, in the right direction.
               </p>
               <h3 className="font-heading font-bold text-lg text-primary-800 mb-3">Objectives</h3>
               <ul className="space-y-2">
