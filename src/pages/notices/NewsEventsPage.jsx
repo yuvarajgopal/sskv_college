@@ -2,6 +2,7 @@ import { FaStar, FaCalendarAlt } from 'react-icons/fa';
 import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
+import { images } from '../../data/media';
 
 // ── Add news & events here: { title, date, category, desc } ─────────────────
 const items = [];
@@ -10,7 +11,7 @@ const items = [];
 export default function NewsEventsPage() {
   return (
     <>
-      <Hero title="News, Events & Achievements" subtitle="Celebrating milestones, events, and accomplishments at SSKV College" height="medium" breadcrumb="Notices › News & Events" />
+      <Hero title="News, Events & Achievements" subtitle="Celebrating milestones, events, and accomplishments at SSKV College" height="medium" breadcrumb="Notices › News & Events" bannerImage={images.about.banner} />
       <section className="section-padding bg-neutral-50">
         <div className="container-custom mx-auto max-w-3xl">
           <SectionHeading title="News & Recent Achievements" />

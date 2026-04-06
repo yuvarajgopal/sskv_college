@@ -139,7 +139,6 @@ export default function YrcPage() {
               <h3 className="font-bold text-primary-800 mb-4">YRC Annual Reports</h3>
               <div className="flex flex-wrap justify-center gap-3">
 
-                <a href="/docs/annual-report-2022-23.docx" target="_blank"
                 <a href="/docs/yrc-2022-2023.docx" target="_blank"
                   className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">
                   YRC Annual Report 2022–23

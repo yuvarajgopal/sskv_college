@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 
+const DEFAULT_BANNER = '/images/about/banner.jpg';
+
 export default function Hero({ title, subtitle, height = 'full', breadcrumb, bannerImage, children, overlay = true }) {
+  const resolvedBanner = bannerImage || DEFAULT_BANNER;
   const isInnerPage = height !== 'full' && breadcrumb;
 
   return (
@@ -8,18 +11,14 @@ export default function Hero({ title, subtitle, height = 'full', breadcrumb, ban
       {/* Inner page banner */}
       {isInnerPage && (
         <section className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden -mt-20 pt-20">
-          {/* Background image or gradient fallback */}
-          {bannerImage ? (
-            <div className="absolute inset-0">
-              <img
-                src={bannerImage}
-                alt={title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ) : (
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-800 via-primary-700 to-primary-900" />
-          )}
+          {/* Background image */}
+          <div className="absolute inset-0">
+            <img
+              src={resolvedBanner}
+              alt={title}
+              className="w-full h-full object-cover"
+            />
+          </div>
 
           {/* Decorative blurs */}
           <div className="absolute inset-0 overflow-hidden">
@@ -73,19 +72,15 @@ export default function Hero({ title, subtitle, height = 'full', breadcrumb, ban
       {/* Full-height hero (homepage) */}
       {!isInnerPage && (
         <section className={`relative ${height === 'full' ? 'min-h-screen -mt-20' : height === 'medium' ? 'min-h-[50vh]' : 'min-h-[35vh]'} flex items-center overflow-hidden`}>
-          {/* Background image if provided, otherwise gradient */}
-          {bannerImage ? (
-            <div className="absolute inset-0">
-              <img
-                src={bannerImage}
-                alt={title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-primary-800/70 to-primary-700/80" />
-            </div>
-          ) : (
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700" />
-          )}
+          {/* Background image */}
+          <div className="absolute inset-0">
+            <img
+              src={resolvedBanner}
+              alt={title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-primary-800/70 to-primary-700/80" />
+          </div>
 
           {/* Decorative elements */}
           <div className="absolute inset-0 overflow-hidden">

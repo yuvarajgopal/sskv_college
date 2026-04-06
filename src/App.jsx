@@ -25,6 +25,9 @@ const BComAFDepartmentPage = lazy(() => import('./pages/departments/BComAFDepart
 const BComCSDepartmentPage = lazy(() => import('./pages/departments/BComCSDepartmentPage'));
 const BBADepartmentPage = lazy(() => import('./pages/departments/BBADepartmentPage'));
 const CriminologyDepartmentPage = lazy(() => import('./pages/departments/CriminologyDepartmentPage'));
+const BCAShiftIIDepartmentPage = lazy(() => import('./pages/departments/BCAShiftIIDepartmentPage'));
+const CSShiftIIDepartmentPage = lazy(() => import('./pages/departments/CSShiftIIDepartmentPage'));
+const BComGeneralShiftIIDepartmentPage = lazy(() => import('./pages/departments/BComGeneralShiftIIDepartmentPage'));
 const ComingSoonPage = lazy(() => import('./pages/ComingSoonPage'));
 const PolicyDocumentsPage = lazy(() => import('./pages/PolicyDocumentsPage'));
 const CollegeTimelinePage = lazy(() => import('./pages/CollegeTimelinePage'));
@@ -44,6 +47,13 @@ const OrganogramPage = lazy(() => import('./pages/administration/OrganogramPage'
 const LibraryPage = lazy(() => import('./pages/LibraryPage'));
 const AcademicCollaborationsPage = lazy(() => import('./pages/AcademicCollaborationsPage'));
 const AcademicCalendarPage = lazy(() => import('./pages/AcademicCalendarPage'));
+const AISHEPage = lazy(() => import('./pages/AISHEPage'));
+const NIRFPage = lazy(() => import('./pages/NIRFPage'));
+const StatutesOrdinancesPage = lazy(() => import('./pages/StatutesOrdinancesPage'));
+const AnnualAccountsReportPage = lazy(() => import('./pages/AnnualAccountsReportPage'));
+const FeeRefundPolicyPage = lazy(() => import('./pages/FeeRefundPolicyPage'));
+const DownloadApplicationPage = lazy(() => import('./pages/DownloadApplicationPage'));
+const ProspectusPage = lazy(() => import('./pages/ProspectusPage'));
 const ResearchDevelopmentPage = lazy(() => import('./pages/ResearchDevelopmentPage'));
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 const EntrepreneurshipCellPage = lazy(() => import('./pages/EntrepreneurshipCellPage'));
@@ -60,6 +70,11 @@ const HealthFacilitiesPage = lazy(() => import('./pages/student-life/HealthFacil
 const AntiRaggingPage = lazy(() => import('./pages/student-life/AntiRaggingPage'));
 const EqualOpportunityCellPage = lazy(() => import('./pages/student-life/EqualOpportunityCellPage'));
 const DifferentlyAbledPage = lazy(() => import('./pages/student-life/DifferentlyAbledPage'));
+const SEDGCellPage = lazy(() => import('./pages/student-life/SEDGCellPage'));
+const MusicArtsPage = lazy(() => import('./pages/student-life/MusicArtsPage'));
+const SilambamPage = lazy(() => import('./pages/student-life/SilambamPage'));
+const SkillTrainingBhumiPage = lazy(() => import('./pages/student-life/SkillTrainingBhumiPage'));
+const HandInHandPage = lazy(() => import('./pages/student-life/HandInHandPage'));
 // Alumnae
 const AlumnaePage = lazy(() => import('./pages/AlumnaePage'));
 // Notices
@@ -71,6 +86,18 @@ const ReservationRosterPage = lazy(() => import('./pages/notices/ReservationRost
 // Activities & Infrastructure
 const IndustryAcademiaPage = lazy(() => import('./pages/IndustryAcademiaPage'));
 const ClubsPage = lazy(() => import('./pages/ClubsPage'));
+const EVSClubPage = lazy(() => import('./pages/clubs/EVSClubPage'));
+const RotaryClubPage = lazy(() => import('./pages/clubs/RotaryClubPage'));
+const QuizClubPage = lazy(() => import('./pages/clubs/QuizClubPage'));
+const CulturalClubPage = lazy(() => import('./pages/clubs/CulturalClubPage'));
+const LiteraryClubPage = lazy(() => import('./pages/clubs/LiteraryClubPage'));
+const ElectoralLiteracyClubPage = lazy(() => import('./pages/clubs/ElectoralLiteracyClubPage'));
+const FitnessClubPage = lazy(() => import('./pages/clubs/FitnessClubPage'));
+const TalentExpClubPage = lazy(() => import('./pages/clubs/TalentExpClubPage'));
+const OutreachClubPage = lazy(() => import('./pages/clubs/OutreachClubPage'));
+const SupportClubPage = lazy(() => import('./pages/clubs/SupportClubPage'));
+const ConsumerClubPage = lazy(() => import('./pages/clubs/ConsumerClubPage'));
+const ValueEducationClubPage = lazy(() => import('./pages/clubs/ValueEducationClubPage'));
 const InfrastructurePage = lazy(() => import('./pages/InfrastructurePage'));
 const TransportPage = lazy(() => import('./pages/TransportPage'));
 
@@ -114,6 +141,9 @@ export default function App() {
             <Route path="/departments/bcom-cs" element={<BComCSDepartmentPage />} />
             <Route path="/departments/bba" element={<BBADepartmentPage />} />
             <Route path="/departments/criminology" element={<CriminologyDepartmentPage />} />
+            <Route path="/departments/bca-shift-ii" element={<BCAShiftIIDepartmentPage />} />
+            <Route path="/departments/computer-science-shift-ii" element={<CSShiftIIDepartmentPage />} />
+            <Route path="/departments/bcom-general-shift-ii" element={<BComGeneralShiftIIDepartmentPage />} />
             <Route path="/coming-soon" element={<ComingSoonPage />} />
             <Route path="/policy-documents" element={<PolicyDocumentsPage />} />
             <Route path="/about/timeline" element={<CollegeTimelinePage />} />
@@ -133,6 +163,13 @@ export default function App() {
             <Route path="/library" element={<LibraryPage />} />
             <Route path="/academic-collaborations" element={<AcademicCollaborationsPage />} />
             <Route path="/academic-calendar" element={<AcademicCalendarPage />} />
+            <Route path="/aishe" element={<AISHEPage />} />
+            <Route path="/nirf" element={<NIRFPage />} />
+            <Route path="/statutes-ordinances" element={<StatutesOrdinancesPage />} />
+            <Route path="/annual-accounts" element={<AnnualAccountsReportPage />} />
+            <Route path="/fee-refund-policy" element={<FeeRefundPolicyPage />} />
+            <Route path="/download-application" element={<DownloadApplicationPage />} />
+            <Route path="/prospectus" element={<ProspectusPage />} />
             <Route path="/research-development" element={<ResearchDevelopmentPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/entrepreneurship-cell" element={<EntrepreneurshipCellPage />} />
@@ -149,6 +186,11 @@ export default function App() {
             <Route path="/student-life/anti-ragging" element={<AntiRaggingPage />} />
             <Route path="/student-life/equal-opportunity-cell" element={<EqualOpportunityCellPage />} />
             <Route path="/student-life/differently-abled" element={<DifferentlyAbledPage />} />
+            <Route path="/student-life/sedg-cell" element={<SEDGCellPage />} />
+            <Route path="/student-life/music-arts" element={<MusicArtsPage />} />
+            <Route path="/student-life/silambam" element={<SilambamPage />} />
+            <Route path="/student-life/skill-training-bhumi" element={<SkillTrainingBhumiPage />} />
+            <Route path="/student-life/skill-training-hand-in-hand" element={<HandInHandPage />} />
             {/* Alumnae */}
             <Route path="/alumnae" element={<AlumnaePage />} />
             {/* Notices */}
@@ -160,6 +202,18 @@ export default function App() {
             {/* Activities & Infrastructure */}
             <Route path="/industry-academia" element={<IndustryAcademiaPage />} />
             <Route path="/clubs" element={<ClubsPage />} />
+            <Route path="/clubs/evs" element={<EVSClubPage />} />
+            <Route path="/clubs/rotary" element={<RotaryClubPage />} />
+            <Route path="/clubs/quiz" element={<QuizClubPage />} />
+            <Route path="/clubs/cultural" element={<CulturalClubPage />} />
+            <Route path="/clubs/literary" element={<LiteraryClubPage />} />
+            <Route path="/clubs/electoral-literacy" element={<ElectoralLiteracyClubPage />} />
+            <Route path="/clubs/fitness" element={<FitnessClubPage />} />
+            <Route path="/clubs/talent-exp" element={<TalentExpClubPage />} />
+            <Route path="/clubs/outreach" element={<OutreachClubPage />} />
+            <Route path="/clubs/support" element={<SupportClubPage />} />
+            <Route path="/clubs/consumer" element={<ConsumerClubPage />} />
+            <Route path="/clubs/value-education" element={<ValueEducationClubPage />} />
             <Route path="/infrastructure" element={<InfrastructurePage />} />
             <Route path="/transport" element={<TransportPage />} />
           </Route>

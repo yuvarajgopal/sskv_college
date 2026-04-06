@@ -9,10 +9,11 @@ import { videos, images } from '../data/media';
 
 const galleryCategories = [
   { id: 'all', label: 'All', icon: FaImage },
-  { id: 'campus', label: 'Campus', icon: FaCamera },
-  { id: 'events', label: 'Events', icon: FaCalendarAlt },
-  { id: 'students', label: 'Students', icon: FaUserGraduate },
-  { id: 'achievements', label: 'Achievements', icon: FaTrophy },
+  { id: 'national-events', label: 'National Events', icon: FaCamera },
+  { id: 'festival-celebrations', label: 'Festivals', icon: FaCalendarAlt },
+  { id: 'academic-events', label: 'Academic Events', icon: FaUserGraduate },
+  { id: 'sports', label: 'Sports', icon: FaTrophy },
+  { id: 'nss-yrc', label: 'NSS / YRC', icon: FaImage },
 ];
 
 export default function GalleryPage() {
