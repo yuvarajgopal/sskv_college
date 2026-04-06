@@ -7,7 +7,7 @@ export default function Hero({ title, subtitle, height = 'full', breadcrumb, ban
     <>
       {/* Inner page banner */}
       {isInnerPage && (
-        <section className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden">
+        <section className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden -mt-20 pt-20">
           {/* Background image or gradient fallback */}
           {bannerImage ? (
             <div className="absolute inset-0">
@@ -72,7 +72,7 @@ export default function Hero({ title, subtitle, height = 'full', breadcrumb, ban
 
       {/* Full-height hero (homepage) */}
       {!isInnerPage && (
-        <section className={`relative ${height === 'full' ? 'min-h-screen' : height === 'medium' ? 'min-h-[50vh]' : 'min-h-[35vh]'} flex items-center overflow-hidden`}>
+        <section className={`relative ${height === 'full' ? 'min-h-screen -mt-20' : height === 'medium' ? 'min-h-[50vh]' : 'min-h-[35vh]'} flex items-center overflow-hidden`}>
           {/* Background image if provided, otherwise gradient */}
           {bannerImage ? (
             <div className="absolute inset-0">

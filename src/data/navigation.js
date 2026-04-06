@@ -6,8 +6,8 @@ export const navLinks = [
     path: '/about',
     children: [
       { label: 'About SSKV',                    path: '/about' },
-      { label: 'Goals & Visions',               path: '/about?section=goals' },
-      { label: 'Group of Institutions',         path: '/about?section=institutions' },
+      { label: 'Goals & Visions',               path: '/about/goals' },
+      { label: 'Group of Institutions',         path: '/about/institutions' },
       { label: 'Best Practices',                path: '/about?section=best-practices' },
       { label: 'Policy Documents',              path: '/policy-documents' },
       { label: 'Institutional Distinctiveness', path: '/about?section=distinctiveness' },
@@ -22,11 +22,11 @@ export const navLinks = [
     path: '/administration',
     children: [
       { label: 'College Governing Body',              path: '/administration/governing-body' },
-      { label: 'President',                           path: '/administration?section=president' },
-      { label: 'Vice-President',                      path: '/administration?section=vice-president' },
-      { label: "Secretary's Message",                 path: '/administration?section=secretary' },
-      { label: "Joint Secretary's Message",           path: '/administration?section=joint-secretary' },
-      { label: "Principal's Message",                 path: '/administration?section=principal' },
+      { label: 'President',                           path: '/administration/president' },
+      { label: 'Vice-President',                      path: '/administration/vice-president' },
+      { label: "Secretary's Message",                 path: '/administration/secretary' },
+      { label: 'Joint Secretary',                     path: '/administration/joint-secretary' },
+      { label: "Principal's Message",                 path: '/administration/principal' },
       { label: 'Chief Superintendent of Examination', path: '/administration/chief-superintendent' },
       { label: 'Finance Section',                     path: '/administration/finance' },
       { label: 'Executive Committee',                 path: '/administration/executive-committee' },
@@ -39,13 +39,13 @@ export const navLinks = [
     label: 'Academics',
     path: '/academics',
     children: [
-      { label: 'Departments / Programmes Offered', path: '/academics' },
+      { label: 'Programs Offered',              path: '/academics' },
       { label: 'Academic Calendar',             path: '/academic-calendar' },
       { label: 'CBCS Regulations',              url: 'https://www.unom.ac.in/index.php?route=admission/cbcssyllabus' },
-      { label: 'CBCS Statutes & Ordinances',    url: 'https://www.unom.ac.in/index.php?route=academic/cbcs' },
-      { label: 'Library',                       path: '/library' },
+      { label: 'CBCS Statutes/Ordinances',      url: 'https://www.unom.ac.in/index.php?route=academic/cbcs' },
+      { label: 'Departments',                   path: '/academics' },
       { label: 'IQAC',                          path: '/iqac' },
-      { label: 'NIRF',                          path: '/naac' },
+      { label: 'Library',                       path: '/library' },
       { label: 'Academic Collaborations',       path: '/academic-collaborations' },
     ],
   },
@@ -63,7 +63,7 @@ export const navLinks = [
   },
 
   {
-    label: 'Research & Development',
+    label: 'Research and Development Cell',
     path: '/research-development',
     children: [
       { label: 'Research & Development', path: '/research-development' },
@@ -73,14 +73,12 @@ export const navLinks = [
   },
 
   {
-    label: 'Student Life',
+    label: 'Students Life',
     path: '/student-life/culturals',
     children: [
       { label: 'Culturals',                        path: '/student-life/culturals' },
       { label: 'Add On Courses',                   path: '/student-life/add-on-courses' },
       { label: 'Sports',                           path: '/student-life/sports' },
-      { label: 'NCC / NSS',                        path: '/student-life/ncc-nss' },
-      { label: 'YRC',                              path: '/student-life/yrc' },
       { label: 'Placement Cell',                   path: '/student-life/placement-cell' },
       { label: 'Grievance Redressal',              path: '/student-life/grievance-redressal' },
       { label: 'Indian Knowledge System',          path: '/student-life/indian-knowledge-system' },
@@ -102,7 +100,7 @@ export const navLinks = [
   },
 
   {
-    label: 'Notices',
+    label: 'Information and Notices',
     path: '/notices/circulars',
     children: [
       { label: 'Circular & Notices',    path: '/notices/circulars' },
@@ -114,25 +112,7 @@ export const navLinks = [
   },
 
   {
-    label: 'Activities',
-    path: '/industry-academia',
-    children: [
-      { label: 'Industry Academia Collaboration', path: '/industry-academia' },
-      { label: 'Clubs',                           path: '/clubs' },
-    ],
-  },
-
-  {
-    label: 'Infrastructure',
-    path: '/infrastructure',
-    children: [
-      { label: 'Infrastructure & Facilities', path: '/infrastructure' },
-      { label: 'College Transport',           path: '/transport' },
-    ],
-  },
-
-  {
-    label: 'Gallery',
+    label: 'Picture Gallery',
     path: '/gallery',
     children: [
       { label: 'National Events',        path: '/gallery' },
@@ -143,7 +123,40 @@ export const navLinks = [
     ],
   },
 
-  { label: 'Contact Us', path: '/contact' },
+  {
+    label: 'Contact Us',
+    path: '/contact',
+    children: [
+      { label: 'Contact Information',    path: '/contact' },
+    ],
+  },
+
+  {
+    label: 'Units',
+    path: '/student-life/ncc-nss',
+    children: [
+      { label: 'NCC / NSS',             path: '/student-life/ncc-nss' },
+      { label: 'YRC',                   path: '/student-life/yrc' },
+    ],
+  },
+
+  {
+    label: 'Infrastructure & Facilities',
+    path: '/infrastructure',
+    children: [
+      { label: 'Infrastructure & Facilities', path: '/infrastructure' },
+      { label: 'College Transport',           path: '/transport' },
+    ],
+  },
+
+  {
+    label: 'Co-curricular Activities',
+    path: '/industry-academia',
+    children: [
+      { label: 'Industry Academia Collaboration', path: '/industry-academia' },
+      { label: 'Clubs',                           path: '/clubs' },
+    ],
+  },
 ];
 
 export const quickLinks = [

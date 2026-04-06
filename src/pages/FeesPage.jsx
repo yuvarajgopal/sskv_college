@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaDownload, FaInfoCircle, FaSpinner, FaCheckCircle } from 'react-icons/fa';
 import { departments } from '../data/departments';
+import Hero from '../components/shared/Hero';
 import AnimatedSection from '../components/shared/AnimatedSection';
 import SectionHeading from '../components/shared/SectionHeading';
+import { images } from '../data/media';
 import { generateReceiptPDF } from '../utils/pdfGenerator';
 import { loadRazorpayScript, openCheckout } from '../utils/razorpay';
 
@@ -338,15 +340,13 @@ function PaymentForm() {
 export default function FeesPage() {
   return (
     <>
-      {/* Hero */}
-      <div className="bg-primary-800 py-14 text-center text-white">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-          <h1 className="font-heading text-3xl md:text-4xl font-bold">Fee Payment Portal</h1>
-          <p className="mt-2 text-primary-200 text-sm">
-            SSKV College of Arts & Science for Women — Pay fees online, download receipts instantly
-          </p>
-        </motion.div>
-      </div>
+      <Hero
+        title="Prospectus with Fees"
+        subtitle="Pay fees online, download receipts instantly"
+        height="medium"
+        breadcrumb="Admissions › Fees"
+        bannerImage={images.admissions.banner}
+      />
 
       {/* Fee Structure */}
       <section className="section-padding bg-white">

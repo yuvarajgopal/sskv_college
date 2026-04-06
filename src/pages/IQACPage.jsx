@@ -66,6 +66,7 @@ export default function IQACPage() {
         subtitle="Striving for continuous quality improvement in all academic and administrative activities"
         bannerImage={images.about.building}
         height="medium"
+        breadcrumb="Academics › IQAC"
       />
 
       {/* About IQAC */}

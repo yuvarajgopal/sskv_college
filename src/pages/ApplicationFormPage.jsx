@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaCheck, FaSpinner, FaDownload, FaCheckCircle, FaPhone, FaEnvelope, FaFilePdf } from 'react-icons/fa';
 import { departments } from '../data/departments';
 import { COLLEGE_INFO } from '../utils/constants';
+import Hero from '../components/shared/Hero';
+import { images } from '../data/media';
 import { generateApplicationPDF } from '../utils/pdfGenerator';
 import { sendApplicationEmail } from '../utils/emailService';
 import { loadRazorpayScript, openCheckout } from '../utils/razorpay';
@@ -705,12 +707,14 @@ export default function ApplicationFormPage() {
   }
 
   return (
-    <div className="min-h-screen bg-neutral-50">
-      {/* Hero */}
-      <div className="bg-primary-800 py-10 text-center text-white">
-        <h1 className="font-heading text-3xl md:text-4xl font-bold">Online Application Form</h1>
-        <p className="mt-2 text-primary-200 text-sm">SSKV College of Arts & Science for Women — Admissions 2026–2027</p>
-      </div>
+    <>
+      <Hero
+        title="Online Application Form"
+        subtitle="SSKV College of Arts & Science for Women — Admissions 2026–2027"
+        height="medium"
+        breadcrumb="Admissions › Application Form"
+        bannerImage={images.admissions.banner}
+      />
 
       {/* Download banner */}
       <div className="bg-accent-50 border-b border-accent-100">
@@ -800,6 +804,6 @@ export default function ApplicationFormPage() {
           )}
         </div>
       </div>
-    </div>
+    </>
   );
 }
