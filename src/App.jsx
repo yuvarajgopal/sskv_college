@@ -28,7 +28,14 @@ const CriminologyDepartmentPage = lazy(() => import('./pages/departments/Crimino
 const ComingSoonPage = lazy(() => import('./pages/ComingSoonPage'));
 const PolicyDocumentsPage = lazy(() => import('./pages/PolicyDocumentsPage'));
 const CollegeTimelinePage = lazy(() => import('./pages/CollegeTimelinePage'));
+const GoalsVisionPage = lazy(() => import('./pages/GoalsVisionPage'));
+const GroupInstitutionsPage = lazy(() => import('./pages/GroupInstitutionsPage'));
 const GoverningBodyPage = lazy(() => import('./pages/administration/GoverningBodyPage'));
+const PresidentPage = lazy(() => import('./pages/administration/PresidentPage'));
+const VicePresidentPage = lazy(() => import('./pages/administration/VicePresidentPage'));
+const SecretaryPage = lazy(() => import('./pages/administration/SecretaryPage'));
+const JointSecretaryPage = lazy(() => import('./pages/administration/JointSecretaryPage'));
+const PrincipalPage = lazy(() => import('./pages/administration/PrincipalPage'));
 const ChiefSuperintendentPage = lazy(() => import('./pages/administration/ChiefSuperintendentPage'));
 const FinanceSectionPage = lazy(() => import('./pages/administration/FinanceSectionPage'));
 const ExecutiveCommitteePage = lazy(() => import('./pages/administration/ExecutiveCommitteePage'));
@@ -110,7 +117,14 @@ export default function App() {
             <Route path="/coming-soon" element={<ComingSoonPage />} />
             <Route path="/policy-documents" element={<PolicyDocumentsPage />} />
             <Route path="/about/timeline" element={<CollegeTimelinePage />} />
+            <Route path="/about/goals" element={<GoalsVisionPage />} />
+            <Route path="/about/institutions" element={<GroupInstitutionsPage />} />
             <Route path="/administration/governing-body" element={<GoverningBodyPage />} />
+            <Route path="/administration/president" element={<PresidentPage />} />
+            <Route path="/administration/vice-president" element={<VicePresidentPage />} />
+            <Route path="/administration/secretary" element={<SecretaryPage />} />
+            <Route path="/administration/joint-secretary" element={<JointSecretaryPage />} />
+            <Route path="/administration/principal" element={<PrincipalPage />} />
             <Route path="/administration/chief-superintendent" element={<ChiefSuperintendentPage />} />
             <Route path="/administration/finance" element={<FinanceSectionPage />} />
             <Route path="/administration/executive-committee" element={<ExecutiveCommitteePage />} />

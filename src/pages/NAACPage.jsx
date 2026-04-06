@@ -27,6 +27,7 @@ export default function NAACPage() {
         subtitle="National Assessment and Accreditation Council — Quality Assurance in Higher Education"
         bannerImage={images.about.banner}
         height="medium"
+        breadcrumb="Academics › NAAC"
       />
 
       {/* Accreditation Status Card */}

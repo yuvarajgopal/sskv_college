@@ -1,151 +1,108 @@
-import { FaBalanceScale, FaEnvelope, FaUserShield, FaClipboardList } from 'react-icons/fa';
+import { FaOm, FaBook, FaFilePdf, FaUserShield } from 'react-icons/fa';
 import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
 import CTABanner from '../../components/sections/CTABanner';
 
-const coordinator = { 
-  name: 'Ms. H. Anusha', 
-  qualification: 'M.A., M.Phil., SET., Assistant Professor, Head', 
-  dept: 'Department of English' 
-};
-
-const process = [
-  { step: '01', title: 'Submit Grievance', desc: 'Students may submit grievances in writing to the Grievance Redressal Committee or the designated coordinator.' },
-  { step: '02', title: 'Acknowledgement', desc: 'The committee acknowledges receipt and assigns it for review.' },
-  { step: '03', title: 'Inquiry & Resolution', desc: 'A fair inquiry is conducted and resolution is communicated.' },
+const topics = [
+  'Foundations of Indian philosophy and ethics',
+  'Introduction to Yoga, Ayurveda, and wellness practices',
+  'Vedic mathematics and ancient scientific perspectives',
+  'Cultural heritage and literature from the Indian tradition',
 ];
 
-export default function GrievanceRedressalPage() {
+const reports = [
+  { label: 'IKS Report 2022–2023', href: '/pdfs/iks-2022-2023.pdf' },
+  { label: 'IKS Report 2023–2024', href: '/pdfs/iks-2023-2024.pdf' },
+  { label: 'IKS Report 2024–2025', href: '/pdfs/iks-2024-2025.pdf' },
+  { label: 'IKS Report 2025–2026', href: '/pdfs/iks-2025-2026.pdf' },
+];
+
+export default function IndianKnowledgeSystemPage() {
   return (
     <>
       <Hero
-        title="Student Grievance Redressal"
-        subtitle="A fair and transparent mechanism to address student concerns at SSKV College"
+        title="Indian Knowledge System"
+        subtitle="Preserving and promoting India's rich intellectual heritage through education"
         height="medium"
-        breadcrumb="Student Life › Grievance Redressal"
+        breadcrumb="Student Life › Indian Knowledge System"
       />
 
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto max-w-4xl">
 
-          <SectionHeading title="Grievance Redressal Committee" />
+          <SectionHeading title="Indian Knowledge Systems (IKS)" />
 
           {/* INTRO */}
           <AnimatedSection>
-            <p className="text-neutral-600 leading-relaxed mb-8">
-              SSKV College ensures that every student grievance is handled with fairness, transparency, and confidentiality.
-              The committee provides a safe and supportive platform for addressing concerns effectively.
+            <p className="text-neutral-600 leading-relaxed mb-6">
+              Indian Knowledge Systems (IKS) at SSKV College of Arts &amp; Science for Women reflects the
+              college&apos;s alignment with national educational goals to expose students to India&apos;s traditional
+              knowledge and cultural legacy — through curriculum integration, value education, and academic
+              activities, giving students exposure to India&apos;s traditional wisdom and how it connects with
+              contemporary life and thought. This could include:
             </p>
           </AnimatedSection>
 
-          {/* PROCESS */}
-          <div className="space-y-4 mb-10">
-            {process.map((p, i) => (
-              <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="flex items-start gap-5 bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
-                  <div className="w-12 h-12 rounded-xl bg-primary-800 text-accent-400 font-bold flex items-center justify-center">
-                    {p.step}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-primary-800">{p.title}</h3>
-                    <p className="text-sm text-neutral-600">{p.desc}</p>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          {/* VISION */}
+          {/* TOPICS */}
           <AnimatedSection>
-            <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-6">
-              <h3 className="font-bold text-primary-800 mb-2">Vision</h3>
-              <p className="text-sm text-neutral-600">
-                To create a safe, inclusive, and student-centric academic environment where grievances are addressed promptly, fairly, and transparently.
-              </p>
-            </div>
-          </AnimatedSection>
-
-          {/* MISSION */}
-          <AnimatedSection>
-            <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-6">
-              <h3 className="font-bold text-primary-800 mb-2">Mission</h3>
-              <p className="text-sm text-neutral-600">
-                To safeguard student rights and dignity through effective grievance handling, ensuring trust, accountability, and harmony.
-              </p>
-            </div>
-          </AnimatedSection>
-
-          {/* OBJECTIVES */}
-          <AnimatedSection>
-            <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-10">
-              <h3 className="font-bold text-primary-800 mb-2">Objectives</h3>
-              <ul className="list-disc pl-5 text-sm text-neutral-600 space-y-2">
-                <li>Provide a structured grievance platform</li>
-                <li>Ensure timely and confidential resolution</li>
-                <li>Promote a safe and fair environment</li>
-                <li>Uphold ethics and justice</li>
-                <li>Enhance student confidence</li>
-                <li>Create awareness of grievance procedures</li>
-                <li>Prevent recurrence through corrective actions</li>
+            <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-8">
+              <ul className="space-y-3">
+                {topics.map((topic, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <FaOm className="text-accent-400 mt-1 flex-shrink-0" />
+                    <span className="text-neutral-700">{topic}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </AnimatedSection>
 
-          {/* COMMITTEE TABLE */}
           <AnimatedSection>
-            <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-10 overflow-x-auto">
-              <h3 className="font-bold text-primary-800 mb-4">Student Grievance Redressal Committee</h3>
-              <table className="w-full text-sm border border-neutral-200">
-                <thead className="bg-primary-800 text-white">
-                  <tr>
-                    <th className="px-4 py-2">Name</th>
-                    <th className="px-4 py-2">Designation</th>
-                    <th className="px-4 py-2">Role</th>
-                    <th className="px-4 py-2">Contact</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-t"><td className="px-4 py-2">Dr. K. Thirumamagal</td><td className="px-4 py-2">Principal</td><td className="px-4 py-2">Chairperson</td><td className="px-4 py-2">9994745157</td></tr>
-                  <tr className="border-t"><td className="px-4 py-2">Ms. V. Suganthi</td><td className="px-4 py-2">HOD, BCA</td><td className="px-4 py-2">Member</td><td className="px-4 py-2">9787414810</td></tr>
-                  <tr className="border-t"><td className="px-4 py-2">Ms. H. Anusha</td><td className="px-4 py-2">HOD, English</td><td className="px-4 py-2">Member</td><td className="px-4 py-2">9894285506</td></tr>
-                  <tr className="border-t"><td className="px-4 py-2">Ms. D. Chitra</td><td className="px-4 py-2">Faculty</td><td className="px-4 py-2">Member</td><td className="px-4 py-2">7207337005</td></tr>
-                  <tr className="border-t"><td className="px-4 py-2">Dr. P. Priyadharshini</td><td className="px-4 py-2">Faculty</td><td className="px-4 py-2">Member</td><td className="px-4 py-2">8973050034</td></tr>
-                  <tr className="border-t"><td className="px-4 py-2">Ms. S. Aarthi</td><td className="px-4 py-2">Student (AI)</td><td className="px-4 py-2">Student Member</td><td className="px-4 py-2">—</td></tr>
-                </tbody>
-              </table>
-            </div>
+            <p className="text-neutral-600 leading-relaxed mb-10">
+              These elements help students appreciate India&apos;s long-standing intellectual traditions
+              alongside their regular academics.
+            </p>
           </AnimatedSection>
 
-          {/* 🔥 IKS REPORT BUTTONS */}
+          {/* IKS REPORTS */}
           <AnimatedSection>
-            <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-10 text-center">
+            <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-10">
               <h3 className="font-bold text-primary-800 mb-4">IKS Reports</h3>
-              <div className="flex flex-wrap justify-center gap-3">
-                <a href="/pdfs/iks-2022-2023.pdf" target="_blank" className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">IKS Report 2022–2023</a>
-                <a href="/pdfs/iks-2023-2024.pdf" target="_blank" className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">IKS Report 2023–2024</a>
-                <a href="/pdfs/iks-2024-2025.pdf" target="_blank" className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">IKS Report 2024–2025</a>
-                <a href="/pdfs/iks-2025-2026.pdf" target="_blank" className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">IKS Report 2025–2026</a>
+              <div className="flex flex-wrap gap-3">
+                {reports.map((report) => (
+                  <a
+                    key={report.href}
+                    href={report.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-primary-800 text-white rounded-lg text-sm hover:bg-primary-700 transition-colors"
+                  >
+                    <FaFilePdf />
+                    {report.label}
+                  </a>
+                ))}
               </div>
             </div>
           </AnimatedSection>
 
-          {/* COORDINATOR */}
+          {/* NATIONAL TASK FORCE SURVEY */}
           <AnimatedSection>
-            <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-6 text-white flex items-center gap-5">
-              <FaUserShield className="text-2xl text-accent-400" />
-              <div>
-                <p className="text-xs text-accent-400 font-bold">Coordinator</p>
-                <h3 className="font-bold">{coordinator.name}</h3>
-                <p className="text-xs text-white/60">{coordinator.qualification}</p>
-              </div>
+            <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-10">
+              <h3 className="font-bold text-primary-800 mb-2">National Task Force</h3>
+              <p className="text-sm text-neutral-600">
+                Survey on Students Mental Health
+              </p>
             </div>
           </AnimatedSection>
 
         </div>
       </section>
 
-      <CTABanner title="Your Voice Matters" subtitle="We ensure every concern is heard and resolved." />
+      <CTABanner
+        title="Discover India's Heritage"
+        subtitle="Explore the richness of Indian knowledge traditions at SSKV College."
+      />
     </>
   );
 }
