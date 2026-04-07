@@ -46,9 +46,16 @@ const programDetails = [
   { label: 'Degree',        value: 'Bachelor of Commerce (B.Com)' },
   { label: 'Specialisation', value: 'Commerce (General)' },
   { label: 'Duration',      value: '3 Years (6 Semesters)' },
-  { label: 'Eligibility',   value: '+2 Commerce' },
+  { label: 'Eligibility',   value: 'Must have studied Commerce & Accountancy at HSC. 20% seats reserved for Commerce Vocational Stream.' },
   { label: 'Affiliation',   value: 'University of Madras' },
   { label: 'Curriculum',    value: 'CBCS — Choice Based Credit System' },
+    { label: 'Syllabus',     value: (<a
+        href="/pdfs/bcom_general.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white-600 underline hover:text-orange-800">UG Syllabus</a>
+    )
+  },
 ];
 
 const outcomes = [
@@ -85,22 +92,51 @@ export default function BComGeneralDepartmentPage() {
                 About the Department
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The Department of Commerce at SSKV College of Arts and Science for Women offers a
-                well-rounded B.Com (General) program that provides students with a thorough grounding
-                in commerce, accounting, economics, and business management. This program is the
-                cornerstone of commerce education and a stepping stone to prestigious professional
-                qualifications.
+               When Thomas Jefferson famously said “Commerce with all nations, alliance with none, should be our motto” he made a subtle 
+               distinction between economics and politics. Much water has flowed in the river James in Charlottesville (Jefferson’s birth place) 
+               since then. Today alliance or no alliance commerce forms the major inducement to any meeting of Heads of two States. 
+               Within the context of liberal education in Arts & Science colleges grew commerce education. Commerce education provides 
+               for a proper handling of trade, commerce & industry. But today with globalization becoming the mantra commerce education 
+               gives leverage to the students to opt for several areas when they go for post graduation. And this is one course whose 
+               validity will remain as long as mankind lives on mother earth.
               </p>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                Running across two shifts to meet the high demand, the department covers financial
-                accounting, cost accounting, business law, income tax, auditing, corporate governance,
-                and management principles. Students graduate with both theoretical knowledge and
-                practical skills relevant to today's business environment.
+                  So, we give education in commerce with two streams. The department of commerce (General) was established in 2007 with the 
+                  founding of the college and since year one we always received full complement of students. And thanks to our management 
+                  till 2011 the course fee for a semester was only 4,000/- we believe in giving a holistic commerce education so that 
+                  students can choose their career and we give them a proper base. Our sister department, The Accounting and Finance stream 
+                  established in 2011 is our strength too in the sense that there is a healthy competition between the two streams and each 
+                  tream complements the other in good measure. Till 2013 the association activities of the departments were held along with 
+                  B.Com Accounting and Finance and Business Administration. This year (2014) we added a new feather on our cap by introducing M.Com.
               </p>
+      
+               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Objectives
+              </h2>
               <p className="text-neutral-600 leading-relaxed">
-                The department's experienced faculty combine academic rigour with industry insights,
-                preparing students to enter the workforce with confidence or pursue professional
-                courses like CA, CS, CMA, or MBA.
+                Our primary goal is to develop competent, confident, and capable graduates who are ready to take on leadership roles in the business world. We aim to:
+                Offer an in-depth understanding of commerce and its various branches.
+                Enhance  students  creativity, analytical thinking, and decision-making  abilities.
+                Familiarize students with digital tools, financial software, and industry-relevant technologies.
+                Conduct regular assessments to help students measure their progress and achieve academic goals.
+                Encourage students to engage in research and develop innovative solutions to real-world business problems.
+                Guide students in their academic projects through expert mentorship.
+                Prepare students for competitive and professional exams like CA, ICWA, and  CMA.
+                Equip students with communication and leadership skills for better job prospects.
+
+<br></br>
+<br></br>
+              </p>
+               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+               Department Activities
+               </h2>
+              <p className="text-neutral-600 leading-relaxed">
+              The B.Com (General) Department of SSKV College of Arts and Science for Women organized various academic and co-curricular 
+              events to enhance students knowledge, skills, and overall personality development. These events included seminars, workshops, 
+              guest lectures, and competitions that helped students gain practical exposure and a better understanding of the business 
+              and commerce environment. The programs encouraged active participation, teamwork, and leadership qualities, enabling students 
+              to apply theoretical concepts to real-world situations. Through these initiatives, the department aimed to promote holistic 
+              development and prepare students for future academic and professional challenges. 
               </p>
             </AnimatedSection>
 

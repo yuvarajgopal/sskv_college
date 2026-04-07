@@ -49,12 +49,19 @@ function FacultyPhoto({ src, name, size = 'md' }) {
 }
 
 const programDetails = [
-  { label: 'Degree',        value: 'Bachelor of Arts (B.A.)' },
+  { label: 'Degree', value: 'Bachelor of Arts (B.A.)' },
   { label: 'Specialisation', value: 'Tamil Language & Literature' },
-  { label: 'Duration',      value: '3 Years (6 Semesters)' },
-  { label: 'Eligibility',   value: '+2 in any stream' },
-  { label: 'Affiliation',   value: 'University of Madras' },
-  { label: 'Curriculum',    value: 'CBCS — Choice Based Credit System' },
+  { label: 'Duration', value: '3 Years (6 Semesters)' },
+  { label: 'Eligibility', value: 'Preference to Tamil at HSC.' },
+  { label: 'Affiliation', value: 'University of Madras' },
+  { label: 'Curriculum', value: 'CBCS — Choice Based Credit System' },
+  { label: 'Syllabus',     value: (<a
+        href="/pdfs/tamil-syllabus.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white-600 underline hover:text-orange-800">UG Syllabus</a>
+    )
+  },
 ];
 
 const outcomes = [
@@ -64,6 +71,11 @@ const outcomes = [
   'Research and writing skills for academic and professional pursuits',
   'Cultural understanding of Tamil heritage, history, and traditions',
   'Career readiness for teaching, writing, translation, and civil services',
+];
+
+const offered = [
+  'Bachelor of Arts (B.A.,)',
+  'Master of Arts(M.A.,)',
 ];
 
 export default function TamilDepartmentPage() {
@@ -84,28 +96,17 @@ export default function TamilDepartmentPage() {
               <span className="inline-block px-4 py-1.5 bg-red-50 text-red-700 text-sm font-semibold rounded-full mb-4">
                 Arts — 3 Year Program
               </span>
+              
+               <p className="text-neutral-600 leading-relaxed mb-4">
+                நாம் மொழிக்குள் இருக்கிறோம். மொழிதான் மனிதனை பிற உயிர்களிடமிருந்து வேறுபடுத்திக் காண்பிக்கிறது. மொழி என்பது தொல்லுயிர் எச்சத்தின் கவிதையென்று செல்லி பகர்ந்தார் மொழியால் நாம் மொழியப்படுகிறோம். தொல்காப்பியர் தொட்டு வள்ளுவப் பெருந்தகையனாருடன் சேர்ந்து இளங்கோவடிகள் கம்பர் வளர்த்த தமிழ் இன்று மொழியின் இயல்புக்கேற்றவாறு காலத்தின் கட்டாயத்தினால் மாறுபட்டு வந்து கொண்டிருக்கிறது. இலக்கண மரபை குறிக்கும் பொழுது பவணந்தி முனிவர். “பழையன கழிதலும் புதியன புகுதலும் வழவல கால வகையினானே" என்று சொன்னது மொழிக்கும் பொருந்தும் இன்று அறிவியலும் அறிவியல் சார்ந்த தகவல் தொழில்நுட்பமும் வளர்ந்தாலும் இலக்கியம் படிப்பதில் நமக்கு ஆர்வம் இருக்கிறது. மற்ற மொழியின் இலக்கியங்களில் காணமுடியாத முழுமைத்தனம் நமது தமிழ் மொழி இலக்கியத்தில்தான் உள்ளது. ஆங்கில இலக்கிய விமர்சகர் சேக்ஸ்பியரை திரும்பவும் கண்டு பிடிக்கவேண்டும் என்பார். அவ்வகையில் நமது பழைய இலக்கியங்களை சங்கஇலக்கியங்களை அகம் புறம் வகுத்தவர்களை அன்றிலிருந்து இன்று வரை நமது உள்ளத்தில் தாக்கங்கள் ஏற்படுத்திய இலக்கிய கர்த்தாக்களை மறுபடியும் கண்டுப்பிடிக்க வேண்டும். "இறைவனை வேண்டுதல் வேண்டாமை இலான் - இருமைத்தன்மை அற்றவன்". என்று எந்த மொழியிலும் புலவன் சொன்னதாகத் தெரியவில்லை. உழவனுக்கு ஏற்றம் கொடுத்து பதிவு செய்தோர்கள் எவ்வளவு மற்ற மொழிகளில் உள்ளனர் எனத் தெரியவில்லை. “ஆசைக்கோர் அளவில்லை அகிலமெல்லாம் கட்டி ஆளினும் கடல் மிதிலே ஆணை செலவே நினைவர்” என்றார் தாயுமானவர் உண்மைதான் எஸ்.எஸ்.கே.வி மகளீர் கல்லூரியின் தமிழ்த்துறை ஆசிரியர்கள் ஏழுவருடம் கல்லூரி தொடங்கியது முதல் நன்குக்கால் ஊன்றிக்கொண்டு தமிழ்க்கடலில் ஆணை செலுத்த முடியாதென்றாலும் தமிழ்க்கடலில் பயணம் செய்யும் பொருட்டு இவ்வருடம்(2014) தமிழை முதன்மைப்பாடமாக அறிமுகப்படுத்துகிறோம். 
+              </p>
               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
-                About the Department
+                Department Activities
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The Department of Tamil at SSKV College of Arts and Science for Women is dedicated to
-                nurturing a deep love and scholarly understanding of the Tamil language and its vast
-                literary heritage. Tamil, one of the world's oldest classical languages, forms the
-                cultural backbone of the region, and this department ensures that tradition is carried
-                forward with academic rigour.
+               The Department of Tamil at SSKV College of Arts and Science for Women actively promotes Tamil language, literature, and culture through various academic and co-curricular activities. The department organizes seminars, guest lectures, literary competitions, and cultural programs to enhance students’ linguistic skills and literary appreciation. Special activities such as Tamil Mandram, poetry recitation, essay writing, and celebrations of Tamil festivals help nurture creativity and cultural awareness among students. The department also encourages participation in intercollegiate events and community-oriented programs to strengthen students confidence and social responsibility. 
               </p>
-              <p className="text-neutral-600 leading-relaxed mb-4">
-                Students are trained in classical Tamil literature (Sangam, Bhakti, and medieval
-                texts), modern prose and poetry, linguistics, and grammar. The department actively
-                encourages research, cultural expression, and participation in literary competitions
-                that bring recognition to both students and the institution.
-              </p>
-              <p className="text-neutral-600 leading-relaxed">
-                With a dedicated team of 14 qualified faculty members — including four Ph.D holders —
-                the department provides a rich academic environment where language, culture, and
-                scholarship flourish together.
-              </p>
-            </AnimatedSection>
+                          </AnimatedSection>
 
             {/* Program details card */}
             <AnimatedSection direction="right">
@@ -170,7 +171,7 @@ export default function TamilDepartmentPage() {
                 <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-6 flex items-center gap-5 text-white">
                   <FacultyPhoto src={f.photo} name={f.name} size="lg" />
                   <div className="flex-1">
-                    <div className="text-xs font-semibold text-red-400 uppercase tracking-wide mb-1">Head of Department</div>
+                    <div className="text-xs font-semibold text-red-400 Sentence Case tracking-wide mb-1">Head of Department</div>
                     <h3 className="text-lg font-bold font-heading">{f.name}</h3>
                     <p className="text-white/70 text-sm mt-0.5">{f.qualification}</p>
                     <a

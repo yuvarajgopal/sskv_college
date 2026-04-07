@@ -26,9 +26,16 @@ const programDetails = [
   { label: 'Degree',        value: 'Bachelor of Computer Applications (BCA)' },
   { label: 'Shift',         value: 'Shift II (Evening)' },
   { label: 'Duration',      value: '3 Years (6 Semesters)' },
-  { label: 'Eligibility',   value: '+2 in any stream' },
+  { label: 'Eligibility',   value: 'Pass HSC with Mathematics / Business Math / CS.' },
   { label: 'Affiliation',   value: 'University of Madras' },
   { label: 'Curriculum',    value: 'CBCS — Choice Based Credit System' },
+    { label: 'Syllabus',     value: (<a
+        href="/pdfs/bca_syllabus.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white-600 underline hover:text-orange-800">UG Syllabus</a>
+    )
+  },
 ];
 
 const outcomes = [

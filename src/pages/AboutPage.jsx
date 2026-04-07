@@ -31,11 +31,11 @@ function LeaderPhoto({ photo, designation }) {
 }
 
 const institutions = [
-  'SSKV College of Arts & Science for Women',
-  'SSKV Higher Secondary School',
-  'SSKV Matriculation School',
-  'SSKV Primary School',
-  'SSKV Nursery & Primary School',
+  'S.S.K.V Higher Secondary School,6-7-8, Collah Chatram Street,Kanchipuram',
+  'S.S.K.V Matriculation Girls Higher Secondary School, 124-125 West Raja Street,Kanchipuram.',
+  'S.S.K.V Matriculation boys Higher Secondary School, 124-125 Kailasanather Tample Street,Kanchipuram.',
+  'S.S.K.V Pre-Primary School, Mahanadu Dharmarayar Street,Kanchipuram.',
+  'S.S.K.V Elementary School,A.B.C Kamakshi Amman West Mada Street,Kanchipuram',
 ];
 
 export default function AboutPage() {
@@ -82,12 +82,10 @@ export default function AboutPage() {
                 But to found a school for girls in 1904, now, in retrospect, seems an act of courage, an act, animated by hope that favored intellect over established prejudices and an act which also embellished the truth in Winston Churchill’s statement that a man is as big as his decisions. History, as Carlyle said, is the essence of innumerable biographies and the history of the growth of the original SSKV School from a single entity to five schools and a college today is actually the biographies of several people who strove to sustain the small beginning of 1904. 
               </p>
               <p className="text-neutral-600 leading-relaxed">
-                The stability of public favour has been prevailing upon the SSKV brand since the beginning because successive office bearers of the Conjeevaram Hindu Educational Society (under whose aegis all the institutions are run) have been as committed as they have been assiduous in their task of institution building. Of these, mention may be made of Shri C R Pattabhi Raman, the son of Sir Sri C P Ramaswami Aiyar, the illustrious Dewan of the erstwhile princely State of Travancore. Mr. A. R. Jagannathan the son-in-law of Shri C R Pattabhi Raman and Dr. Vengudi Ramamurthy. 
-              </p>
+                The stability of public favour has been prevailing upon the SSKV brand since the beginning because successive office bearers of the Conjeevaram Hindu Educational Society (under whose aegis all the institutions are run) have been as committed as they have been assiduous in their task of institution building. Of these, mention may be made of Shri C R Pattabhi Raman, the son of Sir Sri C P Ramaswami Aiyar, the illustrious Dewan of the erstwhile princely State of Travancore. Mr. A. R. Jagannathan the son-in-law of Shri C R Pattabhi Raman and Dr. Vengudi Ramamurthy.
+              </p> <br />
                <p className="text-neutral-600 leading-relaxed">
-                It is only proper that now the President of the Governing Body is Dr. Nanditha Krishna, the great grand daughter of Sir Sri C P Ramaswami Aiyar and who is a well-known personality in Chennai. Under her guidance combined with the industry of Dr. C.K. Raman, the Secretary and the benign influence of Mrs. Umadevi, Joint Secretary, a giant step was taken in 2007 when a College exclusively for women was founded thereby creating an important signpost in the history of SSKV institutions.
-
-. 
+                It is only proper that now the President of the Governing Body is Dr. Nanditha Krishna, the great grand daughter of Sir Sri C P Ramaswami Aiyar and who is a well-known personality in Chennai. Under her guidance combined with the industry of Dr. C.K. Raman, the Secretary and the benign influence of Mrs. Umadevi, Joint Secretary, a giant step was taken in 2007 when a College exclusively for women was founded thereby creating an important signpost in the history of SSKV institutions. 
               </p>
             </AnimatedSection>
 
@@ -132,10 +130,10 @@ export default function AboutPage() {
                   Goals, as everybody knows, can be short term and long term. A long term goal includes many short term goals. Our long term goal is to grow into one of the finest educational institutions in Tamil Nadu where girls while they acquire knowledge will also grow into complete women; where shall prevail truth, honesty, uprightness, love and goodness. 
                 </p>
                 <p className="text-neutral-700 leading-relaxed text-base mb-4">
-                  Our first task in terms of small goals is to strengthen the academic competence of our faculty. They are young and the college is just seven years old. We are also aware that we need to develop in students knowledge and understanding; cognitive, transferable and practical skills. What is, perhaps, more important, is the creation of proper context and ambience for learning where meaningful education will take place. Therefore, our catchword is “freedom.” 
+                 Our first task in terms of small goals is to strengthen the academic competence of our faculty. They are young and the college is just seven years old. We are also aware that we need to develop in students knowledge and understanding; cognitive, transferable and practical skills. What is, perhaps, more important, is the creation of proper context and ambience for learning where meaningful education will take place.
                 </p>
                 <p className="text-neutral-700 leading-relaxed text-base">
-                  The entire academic atmosphere in SSKV College is characterized by freedom, freedom not unbridled but controlled by responsibility. We strongly believe that no meaningful education, particularly, of girls will take place where oppression and tyranny rule. This spirit of freedom is well illustrated in our College Song.
+                 Therefore, our catchword is “freedom.” The entire academic atmosphere in SSKV College is characterized by freedom, freedom not unbridled but controlled by responsibility. We strongly believe that no meaningful education, particularly, of girls will take place where oppression and tyranny rule. This spirit of freedom is well illustrated in our College Song. 
                 </p>
               </div>
             </AnimatedSection>
@@ -156,6 +154,7 @@ export default function AboutPage() {
                     <p className="mb-1">And join us one and all</p>
                     <p className="mb-1">We're the jolliest girls of SSKV</p>
                     <p>the toast of Kanchipuram</p>
+                    <p>Oh, we the girls of SSKV        	(Chorus),</p>
                   </div>
                   <div>
                     <p className="mb-1">2. We gather here in college</p>
@@ -166,6 +165,7 @@ export default function AboutPage() {
                     <p className="mb-1">Our problems disappear</p>
                     <p className="mb-1">And as we work diligently</p>
                     <p>we've no concern or fear</p>
+                   <p>Oh, we the girls of SSKV  	       	(Chorus)</p> 
                   </div>
                   <div>
                     <p className="mb-1">3. It's fun to be in college</p>
@@ -176,6 +176,7 @@ export default function AboutPage() {
                     <p className="mb-1">we're hives of industry</p>
                     <p className="mb-1">So that altogether</p>
                     <p>we are a fine community</p>
+                    <p>Oh, we the girls of SSKV (Chorus) </p>
                   </div>
                 </div>
               </div>

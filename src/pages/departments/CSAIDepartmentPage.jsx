@@ -9,7 +9,7 @@ const BASE_PHOTO  = '/images/faculty/cs-ai/';
 const BASE_RESUME = '/pdfs/faculty/cs-ai/';
 
 const faculty = [
-  { name: 'Dr. J. Seethalakshmi', qualification: 'M.C.A., M.Phil., Ph.D.',      role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}dr-j-seethalakshmi.jpg`, resume: `${BASE_RESUME}dr-j-seethalakshmi.pdf` },
+  { name: 'Dr. J. Seethalakshmi', qualification: 'M.C.A., M.Phil., Ph.D.',      role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}dr-j-seethalakshmi.PNG`, resume: `${BASE_RESUME}dr-j-seethalakshmi.pdf` },
   { name: 'Dr. V. Vanitha',       qualification: 'M.C.A., M.Phil., Ph.D., NET', role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-v-vanitha.jpg`,        resume: `${BASE_RESUME}dr-v-vanitha.pdf` },
 ];
 
@@ -40,9 +40,16 @@ const programDetails = [
   { label: 'Degree',        value: 'Bachelor of Science (B.Sc.)' },
   { label: 'Specialisation', value: 'Computer Science with Artificial Intelligence' },
   { label: 'Duration',      value: '3 Years (6 Semesters)' },
-  { label: 'Eligibility',   value: '+2 with Maths / Computer Science' },
+  { label: 'Eligibility',   value: 'Same as B.Sc CS.' },
   { label: 'Affiliation',   value: 'University of Madras' },
   { label: 'Curriculum',    value: 'CBCS — Choice Based Credit System' },
+   { label: 'Syllabus',     value: (<a
+        href="/pdfs/bsc_ai_syllabus.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white-600 underline hover:text-orange-800">UG Syllabus</a>
+    )
+  },
 ];
 
 const outcomes = [
@@ -79,21 +86,45 @@ export default function CSAIDepartmentPage() {
                 About the Department
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The B.Sc. Computer Science with Artificial Intelligence program at SSKV College is a
-                forward-looking, industry-aligned course designed to equip students with the skills
-                to thrive in the age of intelligent systems. This program blends core computer science
-                principles with cutting-edge AI and machine learning techniques.
+                The Artificial Intelligence (AI) Department at SSKV College was inaugurated in 2024 with the vision to nurture 
+                future-ready professionals equipped to excel in the rapidly evolving field of artificial intelligence. Committed 
+                to academic excellence and innovative research, the department aims to provide undergraduate students with a solid 
+                foundation in AI, data science, machine learning, and related disciplines.
               </p>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                Students learn to build intelligent applications, work with large datasets, and apply
-                machine learning models to solve complex real-world problems. The curriculum covers
-                Python, data science, neural networks, natural language processing, and cloud-based AI
-                platforms — skills that are among the most sought-after in today's job market.
+                With dedicated faculty members who are experts in their fields, modern infrastructure, and strategic industry 
+                collaborations, the AI Department at SSKV College aims to become a leading center for undergraduate education 
+                and research in artificial intelligence. The department envisions producing competent AI professionals who contribute 
+                positively to society and drive technological advancement.
               </p>
+               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Vision  
+              </h2>
               <p className="text-neutral-600 leading-relaxed">
-                With hands-on lab sessions, industry-relevant projects, and faculty with expertise in
-                AI and emerging technologies, graduates are prepared for high-growth careers in AI
-                research, data science, and tech innovation.
+                To empower undergraduate students with a strong foundation in artificial intelligence, inspiring them to 
+                become innovative thinkers and responsible professionals who can contribute to technological progress and societal betterment.
+              </p>
+               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Mission   
+              </h2>
+              <p className="text-neutral-600 leading-relaxed">
+                Our mission is to provide undergraduate students with comprehensive AI education that combines theoretical knowledge and practical skills. 
+                We aim to foster curiosity, critical thinking, and creativity through hands-on projects, industry exposure, and collaborative learning. 
+                We are committed to preparing students to excel in the rapidly evolving field of AI, with a focus on ethical practices and real-world problem-solving.
+              </p>
+              <br></br>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Objectives  
+              </h2>
+              <p className="text-neutral-600 leading-relaxed">
+
+              <ul>  <li>To design and deliver an engaging curriculum that introduces core AI concepts, programming, and data analysis suitable for undergraduates.</li>
+                    <li>To provide practical training through labs, projects, and internships that enable students to apply AI techniques to real-world problems.</li>
+                    <li>To promote teamwork, innovation, and critical thinking among students through competitions, hackathons, and research opportunities.</li>
+                    <li>To build industry partnerships for internships, guest lectures, and project collaborations.</li>
+                    <li>To instill ethical awareness and social responsibility in the development and deployment of AI solutions.</li>
+                    <li>To inspire students to pursue further studies or careers in AI, research, or related fields.</li>
+</ul>
               </p>
             </AnimatedSection>
 
@@ -160,7 +191,7 @@ export default function CSAIDepartmentPage() {
                 <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-6 flex items-center gap-5 text-white">
                   <FacultyPhoto src={f.photo} name={f.name} size="lg" />
                   <div className="flex-1">
-                    <div className="text-xs font-semibold text-purple-400 uppercase tracking-wide mb-1">Head of Department</div>
+                    <div className="text-xs font-semibold text-purple-400 Sentence case tracking-wide mb-1">Head of Department</div>
                     <h3 className="text-lg font-bold font-heading">{f.name}</h3>
                     <p className="text-white/70 text-sm mt-0.5">{f.qualification}</p>
                     <a

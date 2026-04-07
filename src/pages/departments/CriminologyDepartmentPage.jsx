@@ -39,9 +39,16 @@ const programDetails = [
   { label: 'Degree',        value: 'Bachelor of Arts (B.A.)' },
   { label: 'Specialisation', value: 'Criminology & Criminal Justice' },
   { label: 'Duration',      value: '3 Years (6 Semesters)' },
-  { label: 'Eligibility',   value: '+2 in any stream' },
+  { label: 'Eligibility',   value: 'Pass any group in HSC.' },
   { label: 'Affiliation',   value: 'University of Madras' },
   { label: 'Curriculum',    value: 'CBCS — Choice Based Credit System' },
+   { label: 'Syllabus',     value: (<a
+        href="/pdfs/crim_syllabus.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white-600 underline hover:text-orange-800">UG Syllabus</a>
+    )
+  },
 ];
 
 const outcomes = [
@@ -78,21 +85,24 @@ export default function CriminologyDepartmentPage() {
                 About the Department
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The Department of Criminology & Criminal Justice at SSKV College of Arts and Science
-                for Women offers a unique and socially significant B.A. Criminology program. This
-                program is one of the few in the region that provides a dedicated academic exploration
-                of crime, deviance, law, and the criminal justice system.
+                The Department of Computer Science was established in 2007 to promote advancements in the study and application of computation, 
+                to train the students to become innovators and problem-solvers. To encourage students in designing, developing, and applying 
+                computing solutions for the real-world challenges. By upholding ethical principles and contributing to societal progress.
               </p>
+               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Vision
+              </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                Students study criminological theories, criminal law, forensic science basics,
-                victimology, penology, and crime prevention strategies. The program combines social
-                science perspectives with legal knowledge, providing graduates with a well-rounded
-                understanding of crime and its impact on society.
+                To be at the forefront of Computer Science ensuring to produce highly competent graduates who uphold strong ethical values 
+                and are committed to contributing to the development of a vibrant nation.
               </p>
+               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Mission
+              </h2>
               <p className="text-neutral-600 leading-relaxed">
-                With guest lectures by legal and law enforcement professionals, field visits, and
-                a faculty team with expertise in social science and law, graduates are prepared for
-                careers in policing, law, social work, research, and civil services.
+                To strengthen the core competence in Computer Science technology through logical and analytical learning.
+                To familiarize students with the state of art technologies within the realm of Computer Science.
+                To produce successful graduates with personal and professional responsibilities and commitment. 
               </p>
             </AnimatedSection>
 

@@ -25,9 +25,16 @@ const programDetails = [
   { label: 'Degree',        value: 'B.Sc. Computer Science' },
   { label: 'Shift',         value: 'Shift II (Evening)' },
   { label: 'Duration',      value: '3 Years (6 Semesters)' },
-  { label: 'Eligibility',   value: '+2 with Mathematics' },
+  { label: 'Eligibility',   value: 'Mathematics at +2 required.' },
   { label: 'Affiliation',   value: 'University of Madras' },
   { label: 'Curriculum',    value: 'CBCS — Choice Based Credit System' },
+   { label: 'Syllabus',     value: (<a
+        href="/pdfs/bsc_cs_syllabus.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white-600 underline hover:text-orange-800">UG Syllabus</a>
+    )
+  },
 ];
 
 const outcomes = [

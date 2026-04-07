@@ -62,7 +62,8 @@ export default function GrievanceRedressalPage() {
             <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-6">
               <h3 className="font-bold text-primary-800 mb-2">Vision</h3>
               <p className="text-sm text-neutral-600 leading-relaxed">
-                To create a safe, inclusive, and student-centric academic environment where grievances are addressed promptly, fairly, and transparently, ensuring the overall well-being and holistic development of students.
+                To create a safe, inclusive, and student-centric academic environment where grievances are addressed promptly, fairly, and transparently, 
+                ensuring the overall well-being and holistic development of students.
               </p>
             </div>
           </AnimatedSection>
@@ -72,8 +73,9 @@ export default function GrievanceRedressalPage() {
             <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-6">
               <h3 className="font-bold text-primary-800 mb-2">Mission</h3>
               <p className="text-sm text-neutral-600 leading-relaxed">
-                The Students Grievance Redressal Committee is committed to safeguarding the rights and dignity of students by providing an effective mechanism for receiving, examining, and resolving grievances. 
-                It fosters trust, accountability, and harmony within the institution through fair practices and timely redressal.
+                The Students Grievance Redressal Committee is committed to safeguarding the rights and dignity of students by providing an 
+                effective mechanism for receiving, examining, and resolving grievances. The committee aims to foster trust, accountability, 
+                and harmony within the institution through fair practices and timely redressal.
               </p>
             </div>
           </AnimatedSection>
@@ -83,13 +85,13 @@ export default function GrievanceRedressalPage() {
             <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-10">
               <h3 className="font-bold text-primary-800 mb-2">Objectives</h3>
               <ul className="list-disc pl-5 text-sm text-neutral-600 space-y-2">
-                <li>Provide a structured platform for students to voice grievances</li>
-                <li>Ensure timely, impartial, and confidential resolution</li>
-                <li>Promote a safe and discrimination-free environment</li>
-                <li>Uphold institutional ethics and natural justice</li>
-                <li>Enhance student confidence in the system</li>
-                <li>Create awareness about grievance procedures</li>
-                <li>Prevent recurrence through corrective actions</li>
+                <li>To provide a structured and accessible platform for students to voice their grievances without fear or bias.</li>
+                <li>To ensure timely, impartial, and confidential redressal of student complaints.</li>
+                <li>To promote a healthy academic and social environment free from discrimination, harassment, or injustice.</li>
+                <li>To uphold the principles of natural justice and institutional ethics while resolving grievances.</li>
+                <li>To enhance student satisfaction and confidence in the institutional support system.</li>
+                <li>To create awareness among students about grievance redressal procedures and mechanisms.</li>
+                <li>To prevent recurrence of grievances through corrective and preventive measures.</li>
               </ul>
             </div>
           </AnimatedSection>

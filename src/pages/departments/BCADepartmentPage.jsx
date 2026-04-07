@@ -13,15 +13,15 @@ const faculty = [
   { name: 'R.K. Ramya',           qualification: 'M.Sc., M.Phil.',           role: 'Assistant Professor & HOD',           isHod: true, photo: `${BASE_PHOTO}rk-ramya.jpg`,              resume: `${BASE_RESUME}rk-ramya.pdf` },
   { name: 'Dr. V. Priya',         qualification: 'M.C.A., M.Phil., Ph.D.',   role: 'Assistant Professor',                              photo: `${BASE_PHOTO}dr-v-priya.jpg`,            resume: `${BASE_RESUME}dr-v-priya.pdf` },
   // Shift II
-  { name: 'Dr. P. Priyadharshini', qualification: 'M.C.A., M.Phil., Ph.D.',  role: 'Assistant Professor & HOD (Shift II)',             photo: `${BASE_PHOTO}dr-p-priyadharshini.jpg`,   resume: `${BASE_RESUME}dr-p-priyadharshini.pdf` },
-  { name: 'Ms. A. Yazhini',       qualification: 'MCA., NET',                role: 'Assistant Professor',                              photo: `${BASE_PHOTO}a-yazhini.jpg`,             resume: `${BASE_RESUME}a-yazhini.pdf` },
+  { name: 'Dr. P. Priyadharshini', qualification: 'M.C.A., M.Phil., Ph.D.',  role: 'Assistant Professor & HOD (Shift II)',   isHod: true,   photo: `${BASE_PHOTO}priyadharshini.jpg`,   resume: `${BASE_RESUME}priyadharshini.pdf` },
+  { name: 'Ms. A. Yazhini',       qualification: 'MCA., NET',                role: 'Assistant Professor (Shift II)',                              photo: `${BASE_PHOTO}yazhini.jpg`,             resume: `${BASE_RESUME}Yazhini.pdf` },
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
   const [failed, setFailed] = useState(false);
   const sizeClass = size === 'lg'
     ? 'w-24 h-24 text-4xl'
-    : 'w-14 h-14 text-2xl';
+    : 'w-24 h-24 text-2xl';
 
   if (!failed) {
     return (
@@ -44,9 +44,15 @@ const programDetails = [
   { label: 'Degree',        value: 'Bachelor of Computer Applications (BCA)' },
   { label: 'Specialisation', value: 'Computer Applications' },
   { label: 'Duration',      value: '3 Years (6 Semesters)' },
-  { label: 'Eligibility',   value: '+2 in any stream' },
+  { label: 'Eligibility',   value: 'Pass HSC with Mathematics / Business Math / CS.' },
   { label: 'Affiliation',   value: 'University of Madras' },
   { label: 'Curriculum',    value: 'CBCS — Choice Based Credit System' },
+  { label: 'Syllabus',     value: (<a href="/pdfs/bca_syllabus.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white-600 underline hover:text-orange-800"> UG Syllabus</a>
+    )
+  },
 ];
 
 const outcomes = [
@@ -83,20 +89,74 @@ export default function BCADepartmentPage() {
                 About the Department
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The Department of BCA at SSKV College of Arts and Science for Women offers a professionally
-                oriented Bachelor of Computer Applications program designed to produce competent, job-ready
-                IT professionals. Open to students from all streams, BCA is a gateway to the tech industry
-                without requiring a science background.
+                Next to the Industrial Revolution the revolution that has changed our whole perception of the world, knowledge 
+                and consciousness and which has changed the global economic scene is computer revolution. Here in our college we 
+                understand the value of this new dimension and bring that understanding to our thinking and living. The departments 
+                of Computer Application and Computer Science were established when the college was founded in 2007. The two departments, 
+                though different in the sense pure science and applied science are different, work cohesively as one unit not withstanding 
+                the fact that the ontological status of each department is maintained. “Where success is concerned, people are not 
+                measured in inches, or pounds, or college degrees, or family background, they are measured by the size of their 
+                thinking,” said J.M. Cupello, the quality management expert and six zigma masterBlack Belt. The development 
+                in computer science is so fast that we have to be on our toes not to lose ourselves in obsolescence. Taking this 
+                into consideration the faculty of the two departments strive to be at the cutting edge of knowledge and sensitize 
+                our students to the impartance of analytical and application of acquired knowledge. 
               </p>
+              <br></br>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The program runs across two shifts to cater to the high demand, combining programming,
-                software development, database management, and web technologies with business application
-                skills. Students undertake live projects and practical assignments that mirror real-world
-                software development environments.
+               The course typically spans three years, divided into six semesters, covering topics like programming languages, 
+               database management, web development, and computer networks. BCA prepares students for careers in software development, 
+               system analysis, and IT consulting. It also offers a solid foundation for pursuing higher studies like 
+               MCA or MBA in IT-related fields. The program emphasizes both theoretical knowledge and practical skills 
+               through projects and internships. Graduates of BCA can find employment in IT companies, tech startups, banks, 
+               and government agencies. The curriculum is regularly updated to include the latest industry trends and technologies. 
+               BCA is ideal for students who want to build a strong career in the rapidly evolving tech industry. Overall, 
+               it is a valuable degree for those aspiring to become IT professionals, software engineers, or entrepreneurs 
+               in the digital space.or 
               </p>
+              <br></br>
+
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Vision
+              </h2>
               <p className="text-neutral-600 leading-relaxed">
-                Graduates are well-equipped to pursue careers in software companies, IT services, or to
-                continue their studies through MCA, MBA (IT), or related postgraduate programs.
+               The Department aims to foster a dynamic teaching and learning environment that empowers students to become 
+               competent professionals, ready to serve the computing industry and contribute meaningfully to the socio-economic 
+               development of the nation.
+              </p>
+              <br></br>
+
+               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Mission
+              </h2>
+              <p className="text-neutral-600 leading-relaxed">
+               We provide high-quality education in computer applications through a curriculum aligned with industry needs.
+               Preparing students for successful careers in IT and allied sectors.
+               Encouraging students in academic excellence and innovation. 	
+               <br></br>
+              </p>
+               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Objectives
+              </h2>
+              <p className="text-neutral-600 leading-relaxed">
+               To ensure students graduate with strong technical and analytical skills, ready to face real-world challenges.<br></br>
+               To achieve consistent academic excellence through mentoring and performance tracking.<br></br>
+               To support students in securing placements in reputed IT companies and 	organizations.<br></br>
+               To motivate students to achieve top university ranks and gold medals.<br></br>
+               To foster soft skills, leadership abilities, and a lifelong learning mindset.<br></br>
+               To create an environment that encourages creativity, collaboration, and a sense of social responsibility.<br></br>
+              </p>
+
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Department Activities
+              </h2>
+               <p className="text-neutral-600 leading-relaxed">
+               The Department of BCA at SSKV College of Arts and Science for Women focuses on developing students computing skills, 
+               programming knowledge, and application-oriented learning. The department organizes seminars, workshops, guest lectures, 
+               and hands-on training programs in areas such as programming, web development, and emerging technologies. Various activities 
+               like coding contests, project exhibitions, and technical quizzes help enhance students practical skills and innovation.
+              The department also encourages participation in intercollegiate technical events, internships, and career guidance programs 
+              to prepare students for the IT industry. 
+               <br></br>
               </p>
             </AnimatedSection>
 
@@ -166,7 +226,7 @@ export default function BCADepartmentPage() {
                 <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-6 flex items-center gap-5 text-white">
                   <FacultyPhoto src={f.photo} name={f.name} size="lg" />
                   <div className="flex-1">
-                    <div className="text-xs font-semibold text-teal-400 uppercase tracking-wide mb-1">Head of Department</div>
+                    <div className="text-xs font-semibold text-teal-400 sentence case tracking-wide mb-1">Head of Department</div>
                     <h3 className="text-lg font-bold font-heading">{f.name}</h3>
                     <p className="text-white/70 text-sm mt-0.5">{f.qualification}</p>
                     <a

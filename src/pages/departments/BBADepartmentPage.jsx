@@ -13,13 +13,14 @@ const faculty = [
   { name: 'D. Geethanjali',  qualification: 'M.B.A., NET',                               role: 'Assistant Professor',               photo: `${BASE_PHOTO}d-geethanjali.jpg`,  resume: `${BASE_RESUME}d-geethanjali.pdf` },
   { name: 'S. Janani',       qualification: 'M.B.A',                                     role: 'Assistant Professor',               photo: `${BASE_PHOTO}s-janani.jpg`,       resume: `${BASE_RESUME}s-janani.pdf` },
   { name: 'S. Kavitha',      qualification: 'M.Com',                                     role: 'Assistant Professor',               photo: `${BASE_PHOTO}s-kavitha.jpg`,      resume: `${BASE_RESUME}s-kavitha.pdf` },
+   { name: 'Ms.R,KAYALVIZHI', qualification: 'MBA.,',                                    role: 'Assistant Professor',               photo: `${BASE_PHOTO}kayalizhi.jpg`,      resume: `${BASE_RESUME}kayil_bba.pdf` },
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
   const [failed, setFailed] = useState(false);
   const sizeClass = size === 'lg'
     ? 'w-24 h-24 text-4xl'
-    : 'w-14 h-14 text-2xl';
+    : 'w-24 h-24 text-2xl';
 
   if (!failed) {
     return (
@@ -42,9 +43,16 @@ const programDetails = [
   { label: 'Degree',        value: 'Bachelor of Business Administration (BBA)' },
   { label: 'Specialisation', value: 'Business Administration' },
   { label: 'Duration',      value: '3 Years (6 Semesters)' },
-  { label: 'Eligibility',   value: '+2 in any stream' },
+  { label: 'Eligibility',   value: '80% Commerce + Accountancy at HSC. 10% (Other) 10% Vocational.' },
   { label: 'Affiliation',   value: 'University of Madras' },
-  { label: 'Curriculum',    value: 'CBCS — Choice Based Credit System' },
+  { label: 'Curriculum',    value: 'bba-syllabus' },
+  { label: 'Syllabus',     value: (<a
+        href="/pdfs/bba_syllabus.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white-600 underline hover:text-orange-800"> UG Syllabus</a>
+    )
+  },
 ];
 
 const outcomes = [
@@ -81,21 +89,52 @@ export default function BBADepartmentPage() {
                 About the Department
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The Department of BBA at SSKV College of Arts and Science for Women offers a dynamic
-                Bachelor of Business Administration program that prepares students for the fast-paced
-                world of business. Open to students from any stream, BBA is the ideal starting point
-                for an ambitious career in management, entrepreneurship, or corporate leadership.
+              Management education is a transformative journey that builds responsible, globally minded leaders. We nurture personal growth through 
+              confidence and discipline, leading to career growth marked by adaptability and innovation. True leadership rests on values and balance—integrity, 
+              empathy, and resilience. With curriculum aligned to global industry needs and enriched by internships and real-world exposure. We are preparing 
+              students for tomorrow’s challenges. Through holistic development in academics, sports, and culture, We shape visionaries, entrepreneurs, and change-makers.
               </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Vision of the Department
+              </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The curriculum spans management principles, marketing, finance, human resources,
-                operations, and entrepreneurship. Students also develop soft skills through seminars,
-                group projects, industry visits, and case study analysis — experience that gives them
-                a real-world perspective on business challenges.
+                “Shaping Leaders, Inspiring Growth, Building Futures”
+                Education is the most powerful weapon which you can use to change the world – Nelson Mandela
               </p>
+               <br></br>
+               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Vision
+              </h2>
               <p className="text-neutral-600 leading-relaxed">
-                BBA graduates from SSKV College are equipped to enter the workforce directly in
-                managerial roles, start their own ventures, or pursue postgraduate studies through
-                MBA programs at leading institutions.
+                Personal and Career Growth – Building confidence, adaptability and leadership.
+                irtues and Emotional Balance – Instilling integrity, empathy and resilience.
+                Global Industry Relevance – Aligning knowledge with modern industrial needs.
+                Holistic Development – Fostering talent through sports, culture, and co-curricular
+                Leadership for Tomorrow – Shaping thinkers, innovators, and global citizens .
+              </p>
+                   <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Mission
+              </h2>
+               <br></br>
+              <p className="text-neutral-600 leading-relaxed">
+                Pdeveloped leaders who can shape the future with knowledge, values, and vision.
+                1. “Beyond Knowledge, Towards Leadership.”
+                2. “Educating Minds, Shaping Futures.”
+                3. “From Classrooms to Global Boardrooms.”
+                4. “Empowering Growth, Inspiring Change.”
+                5. “Where Learning Meets Leadership.”
+                6. “Knowledge, Virtue, and Vision for Tomorrow.”
+              </p>
+              <br></br>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Objectives
+              </h2>
+              <p className="text-neutral-600 leading-relaxed">
+                The Department of English at SSKV College of Arts and Science for Women is committed to developing students’ language proficiency, 
+                communication skills, and literary understanding. The department organizes seminars, workshops, guest lectures, 
+                and literary activities such as debates, elocution, essay writing, and drama to enrich academic learning. 
+                Through English Club activities and interactive sessions, students are encouraged to improve their confidence and creativity.
+                 The department also motivates students to participate in intercollegiate competitions and skill-development programs for overall personality development.
               </p>
             </AnimatedSection>
 

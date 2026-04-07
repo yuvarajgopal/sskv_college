@@ -64,14 +64,26 @@ export default function PlacementCellPage() {
             <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-8">
               <h3 className="font-bold text-primary-800 mb-3">Overview</h3>
               <p className="text-sm text-neutral-600 leading-relaxed mb-4">
-                The Placement Cell of the college was established on 11 August 2010 with Ms. K. Krishnaveni as Alumnae & Placement Officer. 
-                To strengthen the activities of the cell, the placement officer underwent training conducted by the University of Madras.
+                The Placement Cell of the college was established on 11Aug, 2010 with Ms K. Krishnaveni as Alumnae & Placement Officer. 
+                With a view to strengthening the activities of the cell the placement officer underwent a training programme for career 
+                guidance counsellors organized by the University of Madras on sep 8, 2010. Since then ,the cell has been functioning with 
+                the sole aim of finding maximum number of placements for the students.In this connection, the Dean himself gives best care 
+                by conducting classes on leadership and employability skills for the students.
               </p>
               <p className="text-sm text-neutral-600 leading-relaxed mb-4">
-                The Dean actively supports the cell by conducting sessions on leadership and employability skills.
+                In the academic year 2011-2012 one more training programme was attended by the placement officer conducted by TCS, when 
+                the University of Madras organized campus interviews for colleges. On 21st Jan, 2012, 58 students of our college took 
+                part in the campus interview organized by Wipro technologies in which 285 students from thirteen colleges participated. 
+                Out of these 285 students only ten cleared the first round and out of these ten, three were from our college. In the final 
+                round of interview Papitha of BCA was selected for the job. When one considers that totally only three were finally selected, 
+                this is a great achievement for the college.
               </p>
               <p className="text-sm text-neutral-600 leading-relaxed">
-                Students have successfully secured placements through campus drives conducted by leading companies like Wipro and TCS.
+                On 12th Feb, 2012 we sent 50 students of our college to participate in the campus interview organized by Tata Consultancy Services 
+                for their BPO wing. Out of 1100 students three of our students cleared the first two rounds. Finally, A.Athilabanu of BCA was 
+                selected for the job Since then the cell has been active by sensitizing the students to the importance of employability skills. 
+                2013 a few students were placed in government and private sectors. Every year a one day programme on employability skills is 
+                conducted for all the 3rd year students besides the usual training programmes.
               </p>
             </div>
           </AnimatedSection>
@@ -81,7 +93,8 @@ export default function PlacementCellPage() {
             <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-6">
               <h3 className="font-bold text-primary-800 mb-2">Vision</h3>
               <p className="text-sm text-neutral-600">
-                Empower every female student with skills, confidence, and a global outlook to build a successful career.
+                Empower every female student with skills, confidence, and a global outlook so she can launch a successful career. 
+                The placement cell aspires to boost employability, nurture professionalism, hard work, and integrity for women across all sectors.
               </p>
             </div>
           </AnimatedSection>
@@ -91,11 +104,11 @@ export default function PlacementCellPage() {
             <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-6">
               <h3 className="font-bold text-primary-800 mb-2">Mission</h3>
               <ul className="list-disc pl-5 text-sm text-neutral-600 space-y-2">
-                <li>Aim for 100% placement</li>
-                <li>Bridge academics and industry</li>
-                <li>Provide training in aptitude & HR skills</li>
-                <li>Conduct mock interviews</li>
-                <li>Build industry connections</li>
+                <li>Aim for 100% placement by fostering dedication, positive attitude, and active participation of students.</li>
+                <li>Bridge the gap between academic learning and industry demands through curated programs that build a solid professional foundation.</li>
+                <li>Deliver company-specific training in technical, aptitude, and soft-skill areas, including mock interviews, group discussions, and HR preparation, using expert trainers</li>
+                <li>Generate extensive placement opportunities, support off-campus drives, and build strong ties with industry and corporate partners.</li>
+                <li>Enhance communication, soft skills, and career planning, while encouraging higher studies and competitive exams (CAT, GATE, GRE, etc.).</li>
                 <li>Enhance communication skills</li>
               </ul>
             </div>
@@ -106,12 +119,11 @@ export default function PlacementCellPage() {
             <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-8">
               <h3 className="font-bold text-primary-800 mb-2">Objectives</h3>
               <ul className="list-disc pl-5 text-sm text-neutral-600 space-y-2">
-                <li>Training in aptitude, technical, and soft skills</li>
-                <li>Resume building and interview preparation</li>
-                <li>Coordinate placement drives</li>
-                <li>Career guidance support</li>
-                <li>Encourage entrepreneurship</li>
-                <li>Continuous improvement</li>
+                <li>Skill Development: Provide targeted training in aptitude, technical, and soft skills, plus resume building and interview techniques.</li>
+                <li> Industry Liaison: Invite companies for pre-placement talks, coordinate recruitment cycles, and maintain strong HR relationships.</li>
+                <li>Student Support: Offer career counseling, resources for competitive exams, and facilitate on- and off-campus recruitment participation.</li>
+                <li>Entrepreneurship: Encourage students to explore start-up ideas and business strategies, fostering a creator mindset.</li>
+                <li>Monitoring & Improvement: Track placement statistics, gather feedback, and continuously refine training to meet evolving industry needs.</li>
               </ul>
             </div>
           </AnimatedSection>
@@ -122,27 +134,27 @@ export default function PlacementCellPage() {
               <h3 className="font-bold text-primary-800 mb-4">Placement Reports</h3>
               <div className="flex flex-wrap justify-center gap-3">
 
-                <a href="/excel/placement-2024.xlsx" target="_blank"
+                <a href="/placement/placement_detail_2024.xlsx.xlsx" target="_blank"
                   className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">
                   Placement Report 2024
                 </a>
 
-                <a href="/excel/campus-selection-2023-2024.xlsx" target="_blank"
+                <a href="/placement/2020-23.xlsx" target="_blank"
                   className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">
                   2023–2024 Selected Student List
                 </a>
 
-                <a href="/excel/report-2020-2023.xlsx" target="_blank"
+                <a href="/placement/2021-24.xlsx" target="_blank"
                   className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">
                   2020–2023 Report
                 </a>
 
-                <a href="/excel/report-2021-2024.xlsx" target="_blank"
+                <a href="/placement/2021-24.xlsx" target="_blank"
                   className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">
                   2021–2024 Report
                 </a>
 
-                <a href="/excel/report-2022-2025.xlsx" target="_blank"
+                <a href="/placement/2021-24.xlsx" target="_blank"
                   className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">
                   2022–2025 Report
                 </a>

@@ -19,7 +19,7 @@ function FacultyPhoto({ src, name, size = 'md' }) {
   const [failed, setFailed] = useState(false);
   const sizeClass = size === 'lg'
     ? 'w-24 h-24 text-4xl'
-    : 'w-14 h-14 text-2xl';
+    : 'w-24 h-24 text-2xl';
 
   if (!failed) {
     return (
@@ -42,9 +42,16 @@ const programDetails = [
   { label: 'Degree',        value: 'Bachelor of Commerce (B.Com)' },
   { label: 'Specialisation', value: 'Accounting & Finance' },
   { label: 'Duration',      value: '3 Years (6 Semesters)' },
-  { label: 'Eligibility',   value: '+2 Commerce' },
+  { label: 'Eligibility',   value: 'Must have studied Commerce & Accountancy at HSC.' },
   { label: 'Affiliation',   value: 'University of Madras' },
   { label: 'Curriculum',    value: 'CBCS — Choice Based Credit System' },
+    { label: 'Syllabus',     value: (<a
+        href="/pdfs/bcom_af_syllabus.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white-600 underline hover:text-orange-800">UG Syllabus</a>
+    )
+  },
 ];
 
 const outcomes = [
@@ -81,21 +88,60 @@ export default function BComAFDepartmentPage() {
                 About the Department
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The B.Com (Accounting & Finance) program at SSKV College is a specialized commerce
-                course designed for students with a strong interest in financial management, investment,
-                and accounting practice. This program goes beyond general commerce to provide in-depth
-                expertise in the financial domain.
+                Benjamin Franklin’s (among several of his brilliant statements), “No nation was ever required by trade” best illustrates 
+                the fact that commerce started when man set foot on this planet. As everyone knows commerce is a popular course. What with kanchipuram’s 
+                neighbourhood becoming the hub of business the city is getting transformed. No wonder there are opportunities for the right 
+                people and thus since the founding of the college in 2007 the demand for seats in commerce has been growing.
               </p>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The curriculum covers advanced financial accounting, corporate finance, banking and
-                insurance, stock markets, derivatives, and financial reporting standards. Students
-                develop strong analytical and quantitative skills that are directly applicable in
-                today's financial services industry.
+                Therefore, to cater to the needs of demand a second stream in B.Com Accountancy & finance was started in 2011. Since then there has 
+                been no looking back. A healthy competition between the students of B.Com (General) and B.Com (Accounting and Finance) 
+                has made students more competitive. Of course, we do work in tandem and the spirit of bonhomie exists between the two streams. 
+                The vision of the department is to offer excellent education so that in keeping with the government’s policy of “make in India”, 
+                we are able to turn out entrepreneurs and not mere graduates.
               </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Vision
+              </h2>
               <p className="text-neutral-600 leading-relaxed">
-                Graduates are well-positioned for careers in banking, investment firms, accounting
-                firms, insurance, and financial consultancy, or to pursue professional courses such
-                as CA, CFA, CMA, or MBA in Finance.
+                The department aim is to emerge as a premier hub of commerce education in accounting and finance by imparting globally relevant knowledge, 
+                fostering innovation, and nurturing responsible professionals who contribute to business excellence, economic development, and societal progress.
+              </p>
+               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Mission
+              </h2>
+              <p className="text-neutral-600 leading-relaxed">
+                We provide value-based and industry-oriented education in accounting, auditing,taxation, banking, and finance.
+                We bridge the gap between academic learning and professional practice through research, training, and consultancy.
+                We collaborate with industries, professional bodies, and academic institutions for mutual growth and student empowerment.
+              </p>
+              <br></br>
+               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Objectives
+              </h2>
+              <p className="text-neutral-600 leading-relaxed">
+                To impart comprehensive knowledge of commerce, accounting standards, financial management, and corporate practices.
+                To provide practical exposure through internships, industrial visits, live projects,and case studies.
+                To equip students with skills to excel in professional courses like CA, CMA, CS,ACCA, CFA, MBA, etc.
+                To prepare students for careers in accounting, auditing, banking, taxation, insurance,investment, and financial services.
+                To strengthen communication, analytical, and problem-solving skills for effective professional performance.
+                To inculcate ethical values, social commitment, and environmental consciousness in future business leaders.
+                To promote research culture among faculty and students in emerging areas like fintech, taxation reforms, forensic accounting, and  global financial systems.
+                To organize seminars, workshops, guest lectures, and value-added courses for holistic development.
+                To enhance employability and entrepreneurial skills through skill development programs.
+                To foster teamwork, leadership, and corporate social responsibility (CSR) initiatives.
+                <br></br>
+                <br></br>
+              </p>
+               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Department Activities
+              </h2>
+              <p className="text-neutral-600 leading-relaxed">
+                The B.Com (Accounting & Finance) Department of SSKV College of Arts and Science for Women organized various academic and co-curricular 
+                events to strengthen students’ knowledge in accounting, finance, and related professional areas. These events included seminars, workshops, 
+                guest lectures, and competitions that enhanced practical skills, analytical thinking, and industry awareness. The programs encouraged active 
+                participation and hands-on learning, helping students connect theoretical concepts with real-world financial practices. Through these initiatives, 
+                the department aimed to develop competent, confident, and career-ready professionals in the field of accounting and finance. 
               </p>
             </AnimatedSection>
 
@@ -162,7 +208,7 @@ export default function BComAFDepartmentPage() {
                 <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-6 flex items-center gap-5 text-white">
                   <FacultyPhoto src={f.photo} name={f.name} size="lg" />
                   <div className="flex-1">
-                    <div className="text-xs font-semibold text-emerald-400 uppercase tracking-wide mb-1">Head of Department</div>
+                    <div className="text-xs font-semibold text-emerald-400 sentence case tracking-wide mb-1">Head of Department</div>
                     <h3 className="text-lg font-bold font-heading">{f.name}</h3>
                     <p className="text-white/70 text-sm mt-0.5">{f.qualification}</p>
                     <a

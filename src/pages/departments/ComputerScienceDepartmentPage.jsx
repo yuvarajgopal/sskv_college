@@ -13,8 +13,8 @@ const faculty = [
   { name: 'R. Ramya',      qualification: 'M.Sc., M.Phil.',         role: 'Assistant Professor & HOD',           isHod: true, photo: `${BASE_PHOTO}r-ramya.jpg`,      resume: `${BASE_RESUME}r-ramya.pdf` },
   { name: 'Ms. V. Suganthi', qualification: 'M.C.A., M.Phil.',      role: 'Assistant Professor',                              photo: `${BASE_PHOTO}v-suganthi.jpg`,    resume: `${BASE_RESUME}v-suganthi.pdf` },
   // Shift II
-  { name: 'R. Anitha',     qualification: 'MCA., M.Phil., SET., NET', role: 'Assistant Professor & HOD (Shift II)',             photo: `${BASE_PHOTO}r-anitha.jpg`,      resume: `${BASE_RESUME}r-anitha.pdf` },
-  { name: 'Dr. C. Sudha',  qualification: 'MCA., M.Phil., Ph.D.',   role: 'Assistant Professor',                              photo: `${BASE_PHOTO}dr-c-sudha.jpg`,    resume: `${BASE_RESUME}dr-c-sudha.pdf` },
+  { name: 'U.Aishwarya',     qualification: 'MCA.,',                role: 'Assistant Professor',             photo: `${BASE_PHOTO}u_ashiwarya.jpg`,      resume: `${BASE_RESUME}u_ashiwarya.pdf` },
+  
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
@@ -44,9 +44,16 @@ const programDetails = [
   { label: 'Degree',        value: 'Bachelor of Science (B.Sc.)' },
   { label: 'Specialisation', value: 'Computer Science' },
   { label: 'Duration',      value: '3 Years (6 Semesters)' },
-  { label: 'Eligibility',   value: '+2 with Maths / Computer Science' },
+  { label: 'Eligibility',   value: 'Mathematics at +2 required.' },
   { label: 'Affiliation',   value: 'University of Madras' },
   { label: 'Curriculum',    value: 'CBCS — Choice Based Credit System' },
+  { label: 'Syllabus',     value: (<a
+        href="/pdfs/bsc_cs_syllabus.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white-600 underline hover:text-orange-800">UG Syllabus</a>
+    )
+  },
 ];
 
 const outcomes = [
@@ -89,17 +96,21 @@ export default function ComputerScienceDepartmentPage() {
                 ever-evolving world of technology.
               </p>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The department runs two shifts to accommodate more aspiring students, reflecting the
-                high demand for quality computer science education. The curriculum covers core areas
-                such as programming, data structures, databases, networks, operating systems, and
-                software engineering.
+                 <h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Vision
+              </h3>
+               To be at the forefront of Computer Science ensuring to produce highly competent graduates who uphold strong ethical values and are committed to contributing to the development of a vibrant nation.
               </p>
               <p className="text-neutral-600 leading-relaxed">
-                Supported by well-equipped computer laboratories and experienced faculty, students gain
-                the technical skills and problem-solving mindset needed to excel in the IT industry
-                or pursue higher studies.
+                 <h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Mision
+              </h3>
+                To strengthen the core competence in Computer Science technology through logical and analytical learning.<br></br>
+                To familiarize students with the state of art technologies within the realm of Computer Science.<br></br>
+                To produce successful graduates with personal and professional responsibilities and commitment. 
               </p>
             </AnimatedSection>
+            
 
             {/* Program details card */}
             <AnimatedSection direction="right">
@@ -129,6 +140,8 @@ export default function ComputerScienceDepartmentPage() {
           </div>
         </div>
       </section>
+
+      
 
       {/* Program Outcomes */}
       <section className="section-padding bg-green-50">

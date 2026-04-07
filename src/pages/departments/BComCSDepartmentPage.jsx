@@ -10,13 +10,15 @@ const BASE_RESUME = '/pdfs/faculty/bcom-cs/';
 
 const faculty = [
   { name: 'Dr. P. Meenakshi', qualification: 'M.Com., M.Phil., NET., MBA., Ph.D.', role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}dr-p-meenakshi.jpg`, resume: `${BASE_RESUME}dr-p-meenakshi.pdf` },
+  { name: 'Dr. P.Rubalakshmia', qualification: 'M.B.A., M.Phil.', role: 'Assistant Professor',  photo: `${BASE_PHOTO}r_rublakshmi.JPG`,       resume: `${BASE_RESUME}r-rubalakshmi.pdf` },
+  { name: 'Dr. S.Jayashree', qualification: 'M.com (cs), M.phil, SET.,', role: 'Assistant Professor ',  photo: `${BASE_PHOTO}s_jayashree.jpg`, resume: `${BASE_RESUME}s_jayashree.pdf` },
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
   const [failed, setFailed] = useState(false);
   const sizeClass = size === 'lg'
     ? 'w-24 h-24 text-4xl'
-    : 'w-14 h-14 text-2xl';
+    : 'w-24 h-24 text-2xl';
 
   if (!failed) {
     return (
@@ -39,9 +41,16 @@ const programDetails = [
   { label: 'Degree',        value: 'Bachelor of Commerce (B.Com)' },
   { label: 'Specialisation', value: 'Commerce with Computer Science' },
   { label: 'Duration',      value: '3 Years (6 Semesters)' },
-  { label: 'Eligibility',   value: '+2 Commerce' },
+  { label: 'Eligibility',   value: 'Must have studied Commerce & Accountancy at HSC.' },
   { label: 'Affiliation',   value: 'University of Madras' },
   { label: 'Curriculum',    value: 'CBCS — Choice Based Credit System' },
+     { label: 'Syllabus',     value: (<a
+        href="/pdfs/bcom_cs_syllabus.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white-600 underline hover:text-orange-800">UG Syllabus</a>
+    )
+  },
 ];
 
 const outcomes = [
@@ -60,7 +69,7 @@ export default function BComCSDepartmentPage() {
   return (
     <>
       <Hero
-        title="Commerce with Computer Science"
+        title="Commerce with Corporate Secretaryship"
         subtitle="B.Com (CS) — Combining the power of commerce and technology for the digital economy"
         height="medium"
         breadcrumb="Academics › B.Com (CS)"
@@ -78,21 +87,20 @@ export default function BComCSDepartmentPage() {
                 About the Department
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The B.Com (Computer Science) program at SSKV College bridges the worlds of commerce and
-                technology. In an era where businesses depend on digital systems, IT-savvy commerce
-                graduates are among the most sought-after professionals in the job market.
+                As there has been a growing demand for the B.Com Course this year we introduced B.com ( Corporate Secretaryship ) and the response has been good. 
+                The advantage this stream has over other streams of B.Com is that this is internship oriented and as such has a wider scope of employment in the industry 
               </p>
+               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Department Activities
+              </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The curriculum integrates core commerce subjects — accounting, taxation, business law,
-                and management — with computer science subjects such as programming, database management,
-                e-commerce, and information systems. This dual expertise makes graduates highly versatile
-                and employable.
+               The B.Com (General) Department of SSKV College of Arts and Science for Women organized various academic and co-curricular events to enhance students’ knowledge,
+                skills, and overall personality development. These events included seminars, workshops, guest lectures, and competitions that helped students gain practical 
+                exposure and a better understanding of the business and commerce environment. The programs encouraged active participation, teamwork, and leadership qualities,
+                 enabling students to apply theoretical concepts to real-world situations. Through these initiatives, the department aimed to promote holistic development 
+                 and prepare students for future academic and professional challenges. 
               </p>
-              <p className="text-neutral-600 leading-relaxed">
-                Students benefit from dedicated labs, industry-relevant software training, and a
-                faculty team skilled in both domains, ensuring they graduate ready for the
-                technology-driven business world.
-              </p>
+            
             </AnimatedSection>
 
             {/* Program details card */}

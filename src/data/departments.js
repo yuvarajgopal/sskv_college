@@ -10,8 +10,10 @@ export const departments = [
     icon: FaBook,
     color: '#e74c3c',
     duration: '3 Years',
-    eligibility: '+2 in any stream',
+    eligibility: 'Preference to Tamil at HSC.',
+     syllabus: '/pdfs/tamil-syllabus.pdf',
     link: '/departments/tamil',
+   
   },
   {
     id: 'english',
@@ -24,6 +26,7 @@ export const departments = [
     duration: '3 Years',
     eligibility: '+2 in any stream',
     link: '/departments/english',
+    syllabus: '/pdfs/english-syllabus.pdf',
   },
   {
     id: 'computer-science',
@@ -37,6 +40,7 @@ export const departments = [
     eligibility: '+2 with Maths/CS',
     shifts: ['Shift I', 'Shift II'],
     link: '/departments/computer-science',
+    syllabus: '/pdfs/cs-syllabus.pdf',
   },
   {
     id: 'cs-ai',
@@ -49,6 +53,7 @@ export const departments = [
     duration: '3 Years',
     eligibility: '+2 with Maths/CS',
     link: '/departments/cs-ai',
+    syllabus: '/pdfs/cs-ai-syllabus.pdf',
   },
   {
     id: 'mathematics',
@@ -61,6 +66,7 @@ export const departments = [
     duration: '3 Years',
     eligibility: '+2 with Maths',
     link: '/departments/mathematics',
+    syllabus: '/pdfs/maths-syllabus.pdf',
   },
   {
     id: 'bca',
@@ -74,6 +80,7 @@ export const departments = [
     eligibility: '+2 in any stream',
     shifts: ['Shift I', 'Shift II'],
     link: '/departments/bca',
+    syllabus: '/pdfs/bca-syllabus.pdf',
   },
   {
     id: 'bcom-general',
@@ -87,6 +94,7 @@ export const departments = [
     eligibility: '+2 Commerce',
     shifts: ['Shift I', 'Shift II'],
     link: '/departments/bcom-general',
+    syllabus: '/pdfs/bcom-general-syllabus.pdf',
   },
   {
     id: 'bcom-af',
@@ -99,6 +107,7 @@ export const departments = [
     duration: '3 Years',
     eligibility: '+2 Commerce',
     link: '/departments/bcom-af',
+    syllabus: '/pdfs/bcom-af-syllabus.pdf',
   },
   {
     id: 'bcom-cs',
@@ -110,7 +119,9 @@ export const departments = [
     color: '#2980b9',
     duration: '3 Years',
     eligibility: '+2 Commerce',
+    syllabus: '/pdfs/bcom-cs-syllabus.pdf',
     link: '/departments/bcom-cs',
+    
   },
   {
     id: 'bba',
@@ -123,6 +134,7 @@ export const departments = [
     duration: '3 Years',
     eligibility: '+2 in any stream',
     link: '/departments/bba',
+    syllabus: '/pdfs/bba-syllabus.pdf',
   },
   {
     id: 'criminology',
@@ -135,6 +147,7 @@ export const departments = [
     duration: '3 Years',
     eligibility: '+2 in any stream',
     link: '/departments/criminology',
+    syllabus: '/pdfs/criminology-syllabus.pdf',
   },
 ];
 

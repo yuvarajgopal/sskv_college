@@ -15,14 +15,16 @@ const faculty = [
   { name: 'S. Komala',        qualification: 'M.Sc., M.Phil.',               role: 'Assistant Professor',               photo: `${BASE_PHOTO}s-komala.jpg`,        resume: `${BASE_RESUME}s-komala.pdf` },
   { name: 'B. Premalatha',    qualification: 'M.Sc., M.Phil., B.Ed.',        role: 'Assistant Professor',               photo: `${BASE_PHOTO}b-premalatha.jpg`,    resume: `${BASE_RESUME}b-premalatha.pdf` },
   { name: 'Dr. B. Amudha',    qualification: 'M.Sc., M.Phil., B.Ed., Ph.D', role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-b-amudha.jpg`,     resume: `${BASE_RESUME}dr-b-amudha.pdf` },
-  { name: 'Ms. M. Lavanya',   qualification: 'M.Sc., M.Phil., SET',          role: 'Assistant Professor',               photo: `${BASE_PHOTO}m-lavanya.jpg`,       resume: `${BASE_RESUME}m-lavanya.pdf` },
+  { name: 'Ms. M. Lavanya',   qualification: 'M.Sc., M.Phil., SET',          role: 'Assistant Professor',               photo: `${BASE_PHOTO}ms-m-lavanya.jpg`,       resume: `${BASE_RESUME}m-lavanya.pdf` },
+   { name: 'D.Saraswathi',    qualification: 'M.Sc., M.Phil., SET', role: 'Assistant Professor',               photo: `${BASE_PHOTO}d_saraswathi.jpg`,     resume: `${BASE_RESUME}d_saraswathi.pdf` },
+    { name: 'S.Gayathri',    qualification: 'MSc.,', role: 'Assistant Professor',               photo: `${BASE_PHOTO}s_gayathri.jpg`,     resume: `${BASE_RESUME}gayathri.pdf` },
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
   const [failed, setFailed] = useState(false);
   const sizeClass = size === 'lg'
     ? 'w-24 h-24 text-4xl'
-    : 'w-14 h-14 text-2xl';
+    : 'w-24 h-24 text-2xl';
 
   if (!failed) {
     return (
@@ -45,9 +47,16 @@ const programDetails = [
   { label: 'Degree',        value: 'Bachelor of Science (B.Sc.)' },
   { label: 'Specialisation', value: 'Mathematics' },
   { label: 'Duration',      value: '3 Years (6 Semesters)' },
-  { label: 'Eligibility',   value: '+2 with Mathematics' },
+  { label: 'Eligibility',   value: 'Mathematics at +2 level.' },
   { label: 'Affiliation',   value: 'University of Madras' },
   { label: 'Curriculum',    value: 'CBCS — Choice Based Credit System' },
+   { label: 'Syllabus',     value: (<a
+        href="/pdfs/bsc_math_syllabus.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white-600 underline hover:text-orange-800">UG Syllabus</a>
+    )
+  },
 ];
 
 const outcomes = [
@@ -84,21 +93,49 @@ export default function MathematicsDepartmentPage() {
                 About the Department
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The Department of Mathematics at SSKV College of Arts and Science for Women provides a
-                rigorous and comprehensive education in pure and applied mathematics. Mathematics is the
-                universal language of science and technology, and this department ensures students build
-                a deep, lasting mastery of its principles.
+                Galileo averred that the great book of Nature is written in the language of Mathematics. 
+                This has been the perception of Mathematics in the academia both in the East and the West all these years. 
+                However, the articles written by Professor C.I Raju in the Hindu exhorting us to decolonize Mathematics education 
+                in the country set us all thinking. Professor Raju set the dialectical ball rolling on the tussle between Metaphysics 
+                and Empiricism and since reading those articles we have started reflecting on the issue of Mathematics education. 
+                Whatever may be the debate it is arguably true that today mathematics underpins all branches of knowledge. 
+                We in S.S.K.V college recognize the value of mathematics and as such we try to motivate our students 
+                to love Mathematics and to understand the aesthetics of Mathematics. Our Mathematics Association, “ Mathematica” 
+                organizes every year events and we try to get the best Mathematics faculty around either to inaugurate 
+                the association or to give talks on Mathematics. We have an MOU with SCSVMV University, Enathur,Kanchipuram.
               </p>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The curriculum spans classical branches such as algebra, calculus, and analysis as well
-                as applied areas including statistics, operations research, and numerical methods.
-                Students are encouraged to approach problems creatively and reason with precision,
-                skills that are invaluable across virtually every profession.
+                 Our students fare well in the University examinations with several of them scoring centum in several papers. 
+                 Faculty whose average age is 30, know that we have miles to go before we can leap. Our priorities are first to clear NET 
+                 and then make the department vie with the best for a place with them.
               </p>
+              <br></br>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Vision
+              </h2>
               <p className="text-neutral-600 leading-relaxed">
-                Our dedicated faculty inspire intellectual curiosity and academic ambition, preparing
-                students for careers in education, research, finance, and government services, or for
-                advanced postgraduate studies.
+                The Department of Mathematics aims to cultivate a passion for Mathematical thinking and discovery, 
+                empowering learners to apply analytical, logical and creative problem-solving skills for academic 
+                excellence and real-world challenges.
+              </p>
+              <br></br>
+               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Mision
+              </h2>
+              <p className="text-neutral-600 leading-relaxed">
+                The Department of Mathematics offers programs that build students conceptual understanding, computational skills, 
+                and persistence in applying quantitative reasoning to personal and professional contexts. We provide stimulating 
+                experiences for the Students that prepare them for careers in teaching, research and practical applications of mathematics. 
+              </p>
+              <br></br>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+                Objective
+              </h2>
+              <p className="text-neutral-600 leading-relaxed">
+                <ul><li>Foster creativity, critical thinking, and active learning.</li>
+                <li>Promote equity, inclusion, and diversity, especially among underrepresented 	groups in mathematics.</li>
+                <li>Support faculty growth as teachers and scholars through research and professional engagement.</li>
+                <li>Encourage close student faculty interaction through mentoring and research opportunities.</li></ul>
               </p>
             </AnimatedSection>
 
@@ -165,7 +202,7 @@ export default function MathematicsDepartmentPage() {
                 <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-6 flex items-center gap-5 text-white">
                   <FacultyPhoto src={f.photo} name={f.name} size="lg" />
                   <div className="flex-1">
-                    <div className="text-xs font-semibold text-amber-400 uppercase tracking-wide mb-1">Head of Department</div>
+                    <div className="text-xs font-semibold text-amber-400 Sentence Case tracking-wide mb-1">Head of Department</div>
                     <h3 className="text-lg font-bold font-heading">{f.name}</h3>
                     <p className="text-white/70 text-sm mt-0.5">{f.qualification}</p>
                     <a

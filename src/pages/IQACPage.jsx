@@ -18,8 +18,8 @@ const iqacMembers = [
   { role: 'Criterion VIII Student Outcomes', name: 'Ms. Dr. B. Valli', designation: 'Department of Tamil' },
   { role: '	Criterion IX Research and Innovation Outcomes', name: 'Ms. H. Anusha', designation: 'Department of English' },
   { role: 'Criterion X Sustainability Outcomes', name: 'Dr. E. Kalaiselvi', designation: 'Library' },
-  { role: 'member', name: 'Ms. Shenbagam', designation: 'Alumni Association' },
-  { role: 'Student Representative', name: 'Ms. Kokilavani', designation: 'Parent Stakeholder' },
+  { role: 'member', name: 'Ms. Shenbagam', designation: 'Alumni' },
+  { role: 'Member', name: 'Ms. Kokilavani', designation: 'Parent Stakeholder' },
   { role: 'Administrative Officer', name: 'Mr. T. V. Jaganathan', designation: 'Office Superintendent' },
    { role: 'Assistant', name: 'Ms. Gayathri', designation: 'Office Clerk' },
 ];
@@ -90,14 +90,58 @@ export default function IQACPage() {
                 <p className="text-neutral-600 leading-relaxed mb-4">
                 The institution has also undertaken a SWOT analysis, albeit on a modest scale. The management has shown sensitivity towards identifying and establishing important milestones for institutional growth. As the proverb goes, “Slow and steady wins the race,” and the College is progressing cautiously, yet confidently, in the right direction.
               </p>
+              
+              <h3 className="font-heading font-bold text-lg text-primary-800 mb-3">The primary aim of IQAC is</h3>
+              
+              <p className="text-neutral-600 leading-relaxed mb-4">
+                To ensure quality culture as the prime concern for the Higher Education Institutions through institutionalizing and internalizing all the initiatives taken with internal and external support. Objective
+              </p>
+              <br></br>
               <h3 className="font-heading font-bold text-lg text-primary-800 mb-3">Objectives</h3>
               <ul className="space-y-2">
                 {[
-                  'To develop quality benchmarks for the academic and administrative activities',
-                  'To facilitate the creation of a learner-centric environment',
-                  'To prepare the Annual Quality Assurance Report (AQAR)',
-                  'To initiate and promote research, consultancy, and extension activities',
-                  'To ensure continuous improvement in all academic and administrative activities',
+                  'To develop a system for conscious, consistent and catalytic action to improve the academic and administrative performance of the institution.',
+                  'To promote measures for institutional functioning towards quality enhancement through internalization of quality culture and institutionalization of best practices.',
+                  
+                ].map((obj) => (
+                  <li key={obj} className="flex items-start gap-2 text-neutral-600 text-sm">
+                    <FaCheckCircle className="text-green-500 mt-0.5 flex-shrink-0" />
+                    {obj}
+                  </li>
+                ))}
+              </ul>
+              <br></br>
+              <h3 className="font-heading font-bold text-lg text-primary-800 mb-3">IQAC shall evolve mechanisms and procedures for</h3>
+              <ul className="space-y-2">
+                {[
+                  'Ensuring timely, efficient and progressive performance of academic, administrative and financial tasks.',
+                  'Relevant and quality academic/ research programmes.',
+                  'Equitable access to and affordability of academic programmes for various sections of society; d) Optimization and  integration of modern methods of teaching and learning.',
+                  'The credibility of assessment and evaluation process.',
+                  'Ensuring the adequacy, maintenance and proper allocation of support structure and services.',
+                   'Sharing of research findings and networking with other institutions in India and abroad.',
+                ].map((obj) => (
+                  <li key={obj} className="flex items-start gap-2 text-neutral-600 text-sm">
+                    <FaCheckCircle className="text-green-500 mt-0.5 flex-shrink-0" />
+                    {obj}
+                  </li>
+                ))}
+              </ul>
+<br></br>
+              <h3 className="font-heading font-bold text-lg text-primary-800 mb-3">Functions</h3>
+              <ul className="space-y-2">
+                {[
+                  'Development and application of quality benchmarks',
+                  'Parameters for various academic and administrative activities of the institution.',
+                  'Facilitating the creation of a learner-centric environment conducive to quality education and faculty maturation to adopt the required knowledge and technology for participatory teaching and learning process.',
+                  'Collection and analysis of feedback from all stakeholders on quality-related institutional processes.',
+                  'Dissemination of information on various quality parameters to all stakeholders.',
+                   'Organization of inter and intra institutional workshops, seminars on quality related themes and promotion of quality circles.',
+                  'Documentation of the various programmes/activities leading to quality improvement.',
+                  'Acting as a nodal agency of the Institution for coordinating quality-related activities, including adoption and dissemination of best practices.',
+                   'Development and maintenance of institutional database through MIS for the purpose of maintaining /enhancing the institutional quality.',
+                  'Periodical conduct of Academic and Administrative Audit and its follow-up.',
+                  'Preparation and submission of the Annual Quality Assurance Report (AQAR) as per guidelines and parameters of NAAC.',
                 ].map((obj) => (
                   <li key={obj} className="flex items-start gap-2 text-neutral-600 text-sm">
                     <FaCheckCircle className="text-green-500 mt-0.5 flex-shrink-0" />

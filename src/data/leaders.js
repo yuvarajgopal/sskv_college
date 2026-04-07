@@ -61,11 +61,12 @@ export const leaders = [
     org: 'SSKV College of Arts and Science for Women',
     photo: '/images/leadership/principal.jpg',
     bio: [
-      'Dr. K. Thirumamagal serves as the Principal In Charge of SSKV College of Arts and Science for Women, Kanchipuram. She brings years of academic leadership and dedication to the role, guiding the institution\'s day-to-day academic and administrative operations.',
-      'Under her leadership, the college continues to uphold its commitment to high academic standards while fostering a supportive and inclusive learning environment for all students.',
-      'She works closely with faculty, management, and students to implement innovative academic programmes, strengthen research initiatives, and ensure that the institution remains aligned with the University of Madras curriculum and regulatory requirements.',
+      'I transitioned to college in 2010 and eventually rose to the position of Principal in 2021.  SSKV, a pioneer and forerunner in the field of womens education since 1904, started a college in the year 2007. A teacher is always a learner.',
+      'We, as a college, provide an environment that encourages experimentation, collaboration and professional development to foster innovation and creativity among faculty members.  Our aim is to strive to give holistic education.  We believe that education extends beyond the classroom and we strive to provide opportunities that inspire our students to become confident, capable leaders in their chosen fields.',
+      'We give opportunities to students to engage in community services, allowing them to develop a sense of social responsibility.  We promote self-confidence and assertiveness in girls by encouraging them to speak up, take risks and pursue their passions without fear of judgment or discrimination. Today, employability has become a key factor in higher education.  Communicative competence ensures easy employability.',
+      'We are making efforts to improve the communicative competence of the students in three years time. Our vision is to empower students to realize their fullest potential, and we impart life lessons to them beyond academics.',
     ],
-    message: 'Every student who walks through our doors carries with her immense potential. Our role as educators is to provide the right environment, the right guidance, and the right opportunities so that each one of them can realise her full potential and go on to lead a life of purpose and achievement.',
+    message: ' I am the eldest daughter of visionary parents who prioritized education for all their three daughters.  I am proud to be the first woman in my family to graduate.  My journey with SSKV began in 2006 when I joined the school.',
   },
 ];
 
