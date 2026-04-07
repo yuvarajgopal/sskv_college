@@ -27,6 +27,12 @@ export default function YrcPage() {
     'images/yrc3.jpg',
     'images/yrc4.jpg'
   ];
+  const reports = [
+  { label: 'YRC Annual Report 2022-23', href: '/pdfs/yrc/YRC ANNUAL REPORT (2022-2023).docx' },
+  { label: 'YRC Annual Report 2023-24', href: '/pdfs/yrc/YRCAnnual Report (2023-2024).docx' },
+  { label: 'YRC Annual Report 2024-25', href: '/pdfs/yrc/YRC Annual report.pdf' },
+
+];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -105,7 +111,7 @@ export default function YrcPage() {
               <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
                 <h3 className="font-bold text-primary-800 mb-2">Mission</h3>
                 <p className="text-sm text-neutral-600">
-                  To promote humanitarian values among youth by encouraging voluntary service and social responsibility.
+                  To promote humanitarian values among youth by encouraging voluntary service, health awareness, social responsibility, and preparedness to serve humanity without discrimination.
                 </p>
               </div>
             </AnimatedSection>
@@ -114,7 +120,7 @@ export default function YrcPage() {
               <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
                 <h3 className="font-bold text-primary-800 mb-2">Vision</h3>
                 <p className="text-sm text-neutral-600">
-                  To build a compassionate and service-oriented generation committed to humanitarian values.
+                  To build a compassionate, responsible, and service-oriented generation of youth committed to humanitarian principles, national service, and global peace.
                 </p>
               </div>
             </AnimatedSection>
@@ -123,10 +129,14 @@ export default function YrcPage() {
               <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
                 <h3 className="font-bold text-primary-800 mb-2">Objectives</h3>
                 <ul className="list-disc pl-5 text-sm text-neutral-600 space-y-2">
-                  <li>Promote humanitarian service</li>
-                  <li>Encourage health awareness</li>
-                  <li>Develop leadership and responsibility</li>
-                  <li>Support community service activities</li>
+                  <li>To instill the spirit of humanitarian service among young people.</li>
+                  <li>To promote health, hygiene, and sanitation awareness in the community.</li>
+                  <li>To encourage voluntary blood donation and first-aid training.</li>
+                  <li>To develop leadership qualities, discipline, and civic responsibility among youth.</li>
+                 <li> To prepare youth to respond effectively during emergencies and disasters.</li>
+                 <li> To promote national integration, peace, and international understanding.</li>
+                 <li> To support vulnerable and marginalized sections of society through social service activities..</li>
+                  <li> To spread awareness about Red Cross principles and values.</li>
                 </ul>
               </div>
             </AnimatedSection>

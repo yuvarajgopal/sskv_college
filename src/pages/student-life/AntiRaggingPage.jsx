@@ -72,6 +72,7 @@ export default function AntiRaggingPage() {
               <div>
                 <p className="font-bold text-amber-800 text-sm">UGC Anti-Ragging Helpline</p>
                 <p className="text-amber-700 text-sm font-semibold mt-0.5">1800-180-5522 (Toll-Free)</p>
+                <p className="text-amber-700 text-sm font-semibold mt-0.5">contact no- 9524598802</p>
               </div>
             </div>
           </AnimatedSection>

@@ -26,10 +26,24 @@ export default function MusicArtsPage() {
           <SectionHeading title="Music and Arts Programme" />
           <AnimatedSection>
             <p className="text-neutral-600 leading-relaxed mb-4">
-              The Music and Arts value-added course at SSKV College is designed to nurture the creative talents of students beyond their regular academic curriculum. This programme offers structured training in music, painting, drawing, and various art forms, providing students with a well-rounded educational experience.
+             "கலை மற்றும் இசை, தமிழரின் கலாச்சாரத்தின் உயிர். பலவிதமான கலைகள், நடனம், இசை, ஓவியம், சிற்பம் என தமிழ் மரபில் சிறந்து விளங்குகின்றன. இசை, நமது உணர்வுகளை வெளிப்படுத்துவதற்கும், கதைகளைச் சொல்வதற்கும் பயன்படுகின்றது." 
             </p>
+            <h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">Vision</h3>
             <p className="text-neutral-600 leading-relaxed mb-8">
-              Students enrolled in this course get opportunities to perform during college events such as Culturals, Pongal celebrations, Navaratri festivals, and inter-college competitions. The programme is guided by experienced instructors who help students explore and refine their artistic abilities.
+              To inspire and empower students to master Silambam, preserving Tamil heritage while fostering strength, discipline, and confidence. The vision is to see young learners grow into skilled, respectful, and resilient individuals who carry forward this ancient martial art with pride and honor.
+            </p>
+<h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">Mision</h3>
+            <p className="text-neutral-600 leading-relaxed mb-8">
+              To preserve and promote the ancient Tamil martial art of Silambam by training students in its techniques, discipline, and cultural values. The mission is to build physical fitness, mental focus, self-defense skills, and confidence while connecting youth to their heritage. It also aims to instill respect, perseverance, and teamwork through regular practice and competitions.
+            </p>
+            <h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">Objectives</h3>
+            <p className="text-neutral-600 leading-relaxed mb-8">
+              To teach self-defense skills and build confidence.<br></br>
+              To improve physical fitness, flexibility, and coordination.<br></br>
+To preserve and promote Tamil cultural heritage.<br></br>
+To instill discipline, focus, and mental strength.<br></br>
+To encourage teamwork, respect, and leadership qualities.<br></br>
+To prepare students for competitions and demonstrations at local, state, and national levels.<br></br>
             </p>
           </AnimatedSection>
         </div>

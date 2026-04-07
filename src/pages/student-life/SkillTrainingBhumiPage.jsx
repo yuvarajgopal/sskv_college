@@ -26,10 +26,11 @@ export default function SkillTrainingBhumiPage() {
           <SectionHeading title="About the Programme" />
           <AnimatedSection>
             <p className="text-neutral-600 leading-relaxed mb-4">
-              SSKV College has partnered with Bhumi, one of India's largest youth volunteer non-profit organisations, to provide structured skill training programmes for students. Bhumi's mission is to bridge the educational gap and empower young people with essential life and career skills.
+              Inauguration of Skill Training and Job Readiness Programme conducted in association with "BHUMI" , 
+              India's largest Independent Youth Volunteer Non- Profit Organisation.
             </p>
             <p className="text-neutral-600 leading-relaxed mb-8">
-              The programme covers a range of soft skills and employability training modules designed to complement academic learning and prepare students for the competitive job market. Sessions are conducted regularly throughout the academic year.
+              Dr. Reetha Dinesh, Senior Consultant Trainer, Ignite Skill-Ed, Bhumi, gave a special talk on "Youth Skill Upgradation."
             </p>
           </AnimatedSection>
         </div>

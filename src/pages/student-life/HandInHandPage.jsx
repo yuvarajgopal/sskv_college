@@ -26,10 +26,10 @@ export default function HandInHandPage() {
           <SectionHeading title="About the Training" />
           <AnimatedSection>
             <p className="text-neutral-600 leading-relaxed mb-4">
-              SSKV College collaborates with Hand in Hand Academy to provide professional training sessions for students. Hand in Hand is a well-established organisation known for its work in education, skill training, job creation, and women's empowerment across India.
+              The SSKV College and Hand in Hand Academy have recently signed a Memorandum of Understanding (MoU) to collaborate on providing skill training programs for students. This partnership aims to equip students with practical skills and industry-relevant knowledge,enhancing their employability and overall career prospects.
             </p>
             <p className="text-neutral-600 leading-relaxed mb-8">
-              The training sessions focus on developing practical skills that complement classroom learning, including entrepreneurship development, digital skills, financial literacy, and workplace readiness. These sessions are designed to enhance the employability of students and encourage self-employment.
+              Through this MoU, both institutions will work together to design and implement comprehensive training modules, organize workshops, and facilitate internships. The initiative reflects a shared commitment to empowering youth with the necessary competencies to excel in the competitive job market, thereby fostering their holistic development and contributing to the community’s socio-economic growth.
             </p>
           </AnimatedSection>
         </div>
