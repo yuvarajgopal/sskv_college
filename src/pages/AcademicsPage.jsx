@@ -1,11 +1,90 @@
-import { FaBookOpen, FaLightbulb, FaCertificate, FaMusic, FaDrum, FaPaintBrush, FaLaptop, FaChartBar, FaUsers } from 'react-icons/fa';
+import { FaBookOpen, FaLightbulb, FaCertificate, FaMusic, FaDrum, FaPaintBrush, FaLaptop, FaChartBar, FaUsers, FaFilePdf } from 'react-icons/fa';
 import Hero from '../components/shared/Hero';
 import SectionHeading from '../components/shared/SectionHeading';
 import AnimatedSection from '../components/shared/AnimatedSection';
-import Card from '../components/shared/Card';
-import DepartmentGrid from '../components/sections/DepartmentGrid';
 import CTABanner from '../components/sections/CTABanner';
 import { images } from '../data/media';
+
+// ── PROGRAMMES DATA ──────────────────────────────────────────────────────────
+const programmes = [
+  {
+    sl: 1, shift: 'Shift I',
+    ug: 'B.Com (General)', pg: 'M.Com (General)', dept: 'Commerce',
+    ugElig: 'Must have studied Commerce & Accountancy at HSC. 20% seats reserved for Commerce Vocational Stream.',
+    pgElig: 'B.Com or equivalent degree with minimum 50% marks (40% for SC/ST) from UNOM or any recognized university.',
+    ugSyllabus: '/pdfs/bcom_general.pdf', pgSyllabus: '/pdfs/mcom_syllabus.pdf',
+  },
+  {
+    sl: 2, shift: 'Shift I',
+    ug: 'B.Com (Accounting & Finance)', pg: '–', dept: 'Commerce (A&F)',
+    ugElig: 'Must have studied Commerce & Accountancy at HSC.',
+    pgElig: '–',
+    ugSyllabus: '/pdfs/bcom_af_syllabus.pdf', pgSyllabus: null,
+  },
+  {
+    sl: 3, shift: 'Shift I',
+    ug: 'B.Com (Corporate Secretaryship)', pg: '–', dept: 'Commerce (CS)',
+    ugElig: 'Must have studied Commerce & Accountancy at HSC.',
+    pgElig: '–',
+    ugSyllabus: '/pdfs/bcom_cs_syllabus.pdf', pgSyllabus: null,
+  },
+  {
+    sl: 4, shift: 'Shift I',
+    ug: 'BBA', pg: '–', dept: 'Business Administration',
+    ugElig: '80% Commerce + Accountancy at HSC. 10% Other + 10% Vocational.',
+    pgElig: '–',
+    ugSyllabus: '/pdfs/bba_syllabus.pdf', pgSyllabus: null,
+  },
+  {
+    sl: 5, shift: 'Shift I',
+    ug: 'BCA', pg: '–', dept: 'Computer Applications',
+    ugElig: 'Pass HSC with Mathematics / Business Math / CS.',
+    pgElig: '–',
+    ugSyllabus: '/pdfs/bca_syllabus.pdf', pgSyllabus: null,
+  },
+  {
+    sl: 6, shift: 'Shift I',
+    ug: 'B.Sc (Computer Science)', pg: '–', dept: 'Computer Science',
+    ugElig: 'Mathematics at +2 required.',
+    pgElig: '–',
+    ugSyllabus: '/pdfs/bsc_cs_syllabus.pdf', pgSyllabus: null,
+  },
+  {
+    sl: 7, shift: 'Shift I',
+    ug: 'B.Sc (Mathematics)', pg: '–', dept: 'Mathematics',
+    ugElig: 'Mathematics at +2 level.',
+    pgElig: '–',
+    ugSyllabus: '/pdfs/bsc_math_syllabus.pdf', pgSyllabus: null,
+  },
+  {
+    sl: 8, shift: 'Shift I',
+    ug: 'B.Sc (Criminology & Criminal Justice)', pg: '–', dept: 'Criminology',
+    ugElig: 'Pass any group in HSC.',
+    pgElig: '–',
+    ugSyllabus: '/pdfs/crim_syllabus.pdf', pgSyllabus: null,
+  },
+  {
+    sl: 9, shift: 'Shift I',
+    ug: 'B.Sc (CS with AI)', pg: '–', dept: 'Computer Science with AI',
+    ugElig: 'Same as B.Sc CS.',
+    pgElig: '–',
+    ugSyllabus: '/pdfs/bsc_ai_syllabus.pdf', pgSyllabus: null,
+  },
+  {
+    sl: 10, shift: 'Shift I',
+    ug: 'B.A (English)', pg: 'M.A (English)', dept: 'English',
+    ugElig: 'Preference to English at HSC.',
+    pgElig: 'B.A English or equivalent degree with minimum 50% marks (40% for SC/ST) as per UNOM norms.',
+    ugSyllabus: '/pdfs/ba_english_syllabus.pdf', pgSyllabus: null,
+  },
+  {
+    sl: 11, shift: 'Shift I',
+    ug: 'B.A (Tamil)', pg: 'M.A (Tamil)', dept: 'Tamil',
+    ugElig: 'Preference to Tamil at HSC.',
+    pgElig: 'B.A Tamil or equivalent degree with minimum 50% marks (40% for SC/ST) as per UNOM norms.',
+    ugSyllabus: '/pdfs/tamil-syllabus.pdf', pgSyllabus: null,
+  },
+];
 
 const highlights = [
   {
@@ -41,48 +120,82 @@ const facilities = [
   { title: 'Internet Connectivity', description: 'High-speed internet access across campus for research and learning.' },
 ];
 
+function SyllabusLink({ href, label }) {
+  if (!href) return null;
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1 text-xs font-semibold text-primary-700 hover:text-accent-600 transition-colors"
+    >
+      <FaFilePdf className="text-red-500" /> {label}
+    </a>
+  );
+}
+
 export default function AcademicsPage() {
   return (
     <>
       <Hero
-        title="Academic Programs"
-        subtitle="11 undergraduate programs across Arts, Science, Commerce, and Professional streams"
+        title="Programmes Offered"
+        subtitle="UG & PG Courses Offered (2025–26) with Eligibility & Syllabus"
         height="medium"
-        breadcrumb="Academics"
+        breadcrumb="Academics › Programmes Offered"
         bannerImage={images.academics.banner}
       />
 
-      {/* All Departments */}
+      {/* ── PROGRAMMES TABLE ──────────────────────────────────────────────── */}
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto">
           <SectionHeading
-            title="Our Programs"
-            subtitle="Explore our diverse range of academic programs designed for career success"
+            title="UG & PG Courses Offered (2025–26)"
+            subtitle="Eligibility criteria and syllabus links for all programmes"
           />
-          <DepartmentGrid showFilter={true} />
+
+          <AnimatedSection>
+            <div className="overflow-x-auto rounded-2xl border border-neutral-200 shadow-sm">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-primary-900 text-white text-xs">
+                    <th className="px-4 py-3 text-left font-heading whitespace-nowrap">Sl. No</th>
+                    <th className="px-4 py-3 text-left font-heading whitespace-nowrap">Shift</th>
+                    <th className="px-4 py-3 text-left font-heading whitespace-nowrap">Course (UG)</th>
+                    <th className="px-4 py-3 text-left font-heading whitespace-nowrap">PG Course</th>
+                    <th className="px-4 py-3 text-left font-heading whitespace-nowrap">Department</th>
+                    <th className="px-4 py-3 text-left font-heading min-w-[200px]">UG Eligibility</th>
+                    <th className="px-4 py-3 text-left font-heading min-w-[200px]">PG Eligibility (as per UNOM)</th>
+                    <th className="px-4 py-3 text-left font-heading whitespace-nowrap">Syllabus</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {programmes.map((p, i) => (
+                    <tr key={p.sl} className={`border-t border-neutral-100 ${i % 2 === 0 ? 'bg-white' : 'bg-neutral-50'} hover:bg-primary-50/50 transition-colors`}>
+                      <td className="px-4 py-3 text-neutral-500 font-heading font-bold">{p.sl}</td>
+                      <td className="px-4 py-3 whitespace-nowrap">
+                        <span className="inline-block px-2 py-0.5 bg-primary-100 text-primary-800 text-xs font-semibold rounded">{p.shift}</span>
+                      </td>
+                      <td className="px-4 py-3 font-semibold text-primary-800">{p.ug}</td>
+                      <td className="px-4 py-3 text-neutral-600">{p.pg}</td>
+                      <td className="px-4 py-3 text-neutral-600 whitespace-nowrap">{p.dept}</td>
+                      <td className="px-4 py-3 text-neutral-600 text-xs leading-relaxed">{p.ugElig}</td>
+                      <td className="px-4 py-3 text-neutral-600 text-xs leading-relaxed">{p.pgElig}</td>
+                      <td className="px-4 py-3">
+                        <div className="flex flex-col gap-1">
+                          <SyllabusLink href={p.ugSyllabus} label="UG Syllabus" />
+                          <SyllabusLink href={p.pgSyllabus} label="PG Syllabus" />
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
-      {/* Academic Highlights */}
-      <section className="section-padding bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900">
-        <div className="container-custom mx-auto">
-          <SectionHeading title="Academic Excellence" light />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {highlights.map((item, index) => (
-              <AnimatedSection key={item.title} delay={index * 0.1}>
-                <Card
-                  variant="feature"
-                  title={item.title}
-                  description={item.description}
-                  icon={item.icon}
-                />
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Shift II Programs */}
+      {/* ── SHIFT II ──────────────────────────────────────────────────────── */}
       <section className="section-padding bg-neutral-50">
         <div className="container-custom mx-auto">
           <SectionHeading
@@ -101,7 +214,7 @@ export default function AcademicsPage() {
                     Shift II Available
                   </div>
                   <h3 className="text-lg font-bold text-primary-800 font-heading">{program.degree}</h3>
-                  <p className="text-neutral-500 text-sm mt-2">3 Year Program • Evening Session</p>
+                  <p className="text-neutral-500 text-sm mt-2">3 Year Program — Evening Session</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -109,7 +222,25 @@ export default function AcademicsPage() {
         </div>
       </section>
 
-      {/* Value-Added Courses */}
+      {/* ── ACADEMIC HIGHLIGHTS ───────────────────────────────────────────── */}
+      <section className="section-padding bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900">
+        <div className="container-custom mx-auto">
+          <SectionHeading title="Academic Excellence" light />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {highlights.map((item, index) => (
+              <AnimatedSection key={item.title} delay={index * 0.1}>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 h-full">
+                  <item.icon className="text-3xl text-accent-400 mb-3" />
+                  <h3 className="font-heading font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">{item.description}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── VALUE-ADDED COURSES ───────────────────────────────────────────── */}
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto">
           <SectionHeading
@@ -137,7 +268,7 @@ export default function AcademicsPage() {
         </div>
       </section>
 
-      {/* Academic Facilities */}
+      {/* ── ACADEMIC FACILITIES ───────────────────────────────────────────── */}
       <section className="section-padding bg-neutral-50">
         <div className="container-custom mx-auto">
           <SectionHeading title="Academic Facilities" />

@@ -42,11 +42,46 @@ const primaryLinks = [
     children: [
       { label: 'Programs Offered', path: '/academics' },
       { label: 'Academic Calendar', path: '/academic-calendar' },
-      { label: 'CBCS Regulations', url: 'https://www.unom.ac.in/index.php?route=admission/cbcssyllabus' },
-      { label: 'CBCS Statutes/Ordinances', url: 'https://www.unom.ac.in/index.php?route=academic/cbcs' },
-      { label: 'Departments', path: '/academics' },
-      { label: 'IQAC', path: '/iqac' },
-      { label: 'Library', path: '/library' },
+      { label: 'CBCS Regulations', path: '/cbcs-regulations' },
+      { label: 'CBCS', url: 'https://www.unom.ac.in/index.php?route=academic/cbcs' },
+      { label: 'Statutes/Ordinances Pertaining to Admissions/Academics', path: '/statutes-ordinances' },
+      {
+        label: 'Departments',
+        path: '/academics',
+        children: [
+          { label: 'Tamil',                                    path: '/departments/tamil' },
+          { label: 'English',                                  path: '/departments/english' },
+          { label: 'Computer Science',                         path: '/departments/computer-science' },
+          { label: 'Mathematics',                              path: '/departments/mathematics' },
+          { label: 'BCA',                                      path: '/departments/bca' },
+          { label: 'B.Com (General)',                           path: '/departments/bcom-general' },
+          { label: 'B.Com (CS)',                                path: '/departments/bcom-cs' },
+          { label: 'B.Com (A&F)',                               path: '/departments/bcom-af' },
+          { label: 'B.B.A',                                    path: '/departments/bba' },
+          { label: 'Computer Science with AI',                 path: '/departments/cs-ai' },
+          { label: 'Criminology and Criminal Justice Science', path: '/departments/criminology' },
+          { label: 'BCA (Shift II)',                            path: '/departments/bca-shift-ii' },
+          { label: 'Computer Science (Shift II)',              path: '/departments/computer-science-shift-ii' },
+          { label: 'B.Com General (Shift II)',                  path: '/departments/bcom-general-shift-ii' },
+        ],
+      },
+      {
+        label: 'IQAC',
+        path: '/iqac',
+        children: [
+          { label: 'AISHE', path: '/aishe' },
+        ],
+      },
+      { label: 'NIRF', path: '/nirf' },
+      {
+        label: 'Library',
+        path: '/library',
+        children: [
+          { label: 'About',                 path: '/library/about' },
+          { label: 'Faculty',               path: '/library/faculty' },
+          { label: 'Annual Report - Library', path: '/library/annual-report' },
+        ],
+      },
       { label: 'Academic Collaborations', path: '/academic-collaborations' },
     ],
   },
@@ -62,6 +97,91 @@ const primaryLinks = [
     ],
   },
 ];
+
+function DropdownChildItem({ child, onClose }) {
+  const [subOpen, setSubOpen] = useState(false);
+  const subRef = useRef(null);
+  const subTimeout = useRef(null);
+
+  if (!child.children) {
+    if (child.url) {
+      return (
+        <a
+          key={child.label}
+          href={child.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={onClose}
+          className="block px-4 py-2 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
+        >
+          {child.label} ↗
+        </a>
+      );
+    }
+    return (
+      <Link
+        key={child.label}
+        to={child.path}
+        onClick={onClose}
+        className="block px-4 py-2 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
+      >
+        {child.label}
+      </Link>
+    );
+  }
+
+  return (
+    <div
+      ref={subRef}
+      className="relative"
+      onMouseEnter={() => { clearTimeout(subTimeout.current); setSubOpen(true); }}
+      onMouseLeave={() => { subTimeout.current = setTimeout(() => setSubOpen(false), 150); }}
+    >
+      <button
+        className="w-full flex items-center justify-between px-4 py-2 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
+        onClick={() => setSubOpen((s) => !s)}
+      >
+        {child.label}
+        <FaChevronRight className="text-[10px] ml-2" />
+      </button>
+      <AnimatePresence>
+        {subOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: -6 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -6 }}
+            transition={{ duration: 0.15 }}
+            className="absolute left-full top-0 ml-1 bg-primary-900 border border-white/10 rounded-lg shadow-2xl min-w-[260px] py-1.5 z-50 max-h-[70vh] overflow-y-auto"
+          >
+            {child.children.map((sub) =>
+              sub.url ? (
+                <a
+                  key={sub.label}
+                  href={sub.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={onClose}
+                  className="block px-4 py-2 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
+                >
+                  {sub.label} ↗
+                </a>
+              ) : (
+                <Link
+                  key={sub.label}
+                  to={sub.path}
+                  onClick={onClose}
+                  className="block px-4 py-2 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
+                >
+                  {sub.label}
+                </Link>
+              )
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
 
 function DropdownNavItem({ link, isActive }) {
   const [open, setOpen] = useState(false);
@@ -85,6 +205,8 @@ function DropdownNavItem({ link, isActive }) {
     timeoutRef.current = setTimeout(() => setOpen(false), 150);
   };
 
+  const closeAll = () => setOpen(false);
+
   return (
     <div ref={ref} className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Link
@@ -105,29 +227,9 @@ function DropdownNavItem({ link, isActive }) {
             transition={{ duration: 0.15 }}
             className="absolute top-full left-0 mt-1 bg-primary-900 border border-white/10 rounded-lg shadow-2xl min-w-[220px] py-1.5 z-50"
           >
-            {link.children.map((child) =>
-              child.url ? (
-                <a
-                  key={child.label}
-                  href={child.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setOpen(false)}
-                  className="block px-4 py-2 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
-                >
-                  {child.label} ↗
-                </a>
-              ) : (
-                <Link
-                  key={child.label}
-                  to={child.path}
-                  onClick={() => setOpen(false)}
-                  className="block px-4 py-2 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
-                >
-                  {child.label}
-                </Link>
-              )
-            )}
+            {link.children.map((child) => (
+              <DropdownChildItem key={child.label} child={child} onClose={closeAll} />
+            ))}
           </motion.div>
         )}
       </AnimatePresence>
@@ -187,17 +289,23 @@ function MoreDropdown({ links }) {
               ))}
             </div>
             {activeSubmenu && (
-              <div className="min-w-[210px] py-1">
+              <div className="min-w-[210px] py-1 max-h-[70vh] overflow-y-auto">
                 {links
                   .find((l) => l.label === activeSubmenu)
-                  ?.children?.map((child) =>
-                    child.url ? (
+                  ?.children?.map((child) => {
+                    const closeAll = () => { setOpen(false); setActiveSubmenu(null); };
+                    if (child.children) {
+                      return (
+                        <DropdownChildItem key={child.label} child={child} onClose={closeAll} />
+                      );
+                    }
+                    return child.url ? (
                       <a
                         key={child.label}
                         href={child.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={() => { setOpen(false); setActiveSubmenu(null); }}
+                        onClick={closeAll}
                         className="block px-4 py-2.5 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
                       >
                         {child.label} ↗
@@ -206,15 +314,93 @@ function MoreDropdown({ links }) {
                       <Link
                         key={child.label}
                         to={child.path}
-                        onClick={() => { setOpen(false); setActiveSubmenu(null); }}
+                        onClick={closeAll}
                         className="block px-4 py-2.5 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
                       >
                         {child.label}
                       </Link>
-                    )
-                  )}
+                    );
+                  })}
               </div>
             )}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+function MobileChildItem({ child, onNavigate }) {
+  const [subOpen, setSubOpen] = useState(false);
+
+  if (!child.children) {
+    if (child.url) {
+      return (
+        <a
+          href={child.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={onNavigate}
+          className="block px-4 py-1.5 text-sm text-white/60 hover:text-accent-400 transition-colors"
+        >
+          {child.label} ↗
+        </a>
+      );
+    }
+    return (
+      <Link
+        to={child.path}
+        onClick={onNavigate}
+        className="block px-4 py-1.5 text-sm text-white/60 hover:text-accent-400 transition-colors"
+      >
+        {child.label}
+      </Link>
+    );
+  }
+
+  return (
+    <div>
+      <button
+        onClick={() => setSubOpen((o) => !o)}
+        className="flex items-center gap-1 px-4 py-1.5 text-sm text-white/60 hover:text-accent-400 transition-colors"
+      >
+        {child.label}
+        <FaChevronDown className={`text-[9px] transition-transform duration-200 ${subOpen ? 'rotate-180' : ''}`} />
+      </button>
+      <AnimatePresence>
+        {subOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="pb-1 flex flex-col items-center pl-4">
+              {child.children.map((sub) =>
+                sub.url ? (
+                  <a
+                    key={sub.label}
+                    href={sub.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={onNavigate}
+                    className="block px-4 py-1 text-xs text-white/50 hover:text-accent-400 transition-colors"
+                  >
+                    {sub.label} ↗
+                  </a>
+                ) : (
+                  <Link
+                    key={sub.label}
+                    to={sub.path}
+                    onClick={onNavigate}
+                    className="block px-4 py-1 text-xs text-white/50 hover:text-accent-400 transition-colors"
+                  >
+                    {sub.label}
+                  </Link>
+                )
+              )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -258,29 +444,9 @@ function MobileAccordionItem({ link, onNavigate, isActive }) {
             className="overflow-hidden"
           >
             <div className="pb-2 flex flex-col items-center">
-              {link.children.map((child) =>
-                child.url ? (
-                  <a
-                    key={child.label}
-                    href={child.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={onNavigate}
-                    className="block px-4 py-1.5 text-sm text-white/60 hover:text-accent-400 transition-colors"
-                  >
-                    {child.label} ↗
-                  </a>
-                ) : (
-                  <Link
-                    key={child.label}
-                    to={child.path}
-                    onClick={onNavigate}
-                    className="block px-4 py-1.5 text-sm text-white/60 hover:text-accent-400 transition-colors"
-                  >
-                    {child.label}
-                  </Link>
-                )
-              )}
+              {link.children.map((child) => (
+                <MobileChildItem key={child.label} child={child} onNavigate={onNavigate} />
+              ))}
             </div>
           </motion.div>
         )}
