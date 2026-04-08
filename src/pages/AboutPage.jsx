@@ -65,7 +65,7 @@ export default function AboutPage() {
       />
 
       {/* Our Story */}
-      <section className="section-padding bg-white">
+      <section id="genesis" className="section-padding bg-white">
         <div className="container-custom mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection direction="left">
@@ -451,7 +451,7 @@ export default function AboutPage() {
               </AnimatedSection>
             ))}
             {/* Annual Reports */}
-<section className="section-padding bg-white">
+<section id="annual-reports" className="section-padding bg-white">
   <div className="container-custom mx-auto">
     
     <SectionHeading
