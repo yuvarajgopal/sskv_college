@@ -1,23 +1,24 @@
-import { FaHandsHelping, FaGraduationCap, FaRupeeSign, FaBook } from 'react-icons/fa';
+import { FaHandsHelping, FaGraduationCap, FaRupeeSign, FaBook, FaFileAlt } from 'react-icons/fa';
 import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
 import CTABanner from '../../components/sections/CTABanner';
 
 const objectives = [
-  'Identify and support students from socio-economically disadvantaged backgrounds.',
-  'Facilitate access to government scholarships and financial aid schemes.',
-  'Provide academic mentoring, remedial coaching, and career guidance.',
-  'Ensure equal participation in all academic and co-curricular activities.',
-  'Create awareness about welfare schemes and educational entitlements.',
-  'Conduct counselling sessions to address academic and personal challenges.',
+'To identify students from socio-economically disadvantaged backgrounds and provide them with necessary academic and financial support.',
+'To create awareness about government scholarships, welfare schemes, and institutional support facilities.',
+'To organize mentoring, remedial coaching, and counseling programmes for academic improvement.',
+'To promote skill development and career guidance activities for better employability.',
+'To ensure equal participation of disadvantaged students in curricular, co-curricular, and extracurricular activities.',
+'To provide a supportive and inclusive campus environment that respects diversity and social equity.',
+'To address issues related to discrimination, financial constraints, and social challenges faced by students.',
 ];
 
 const initiatives = [
-  { icon: FaRupeeSign, title: 'Scholarship Assistance', desc: 'Guidance for availing state and central government scholarships including BC/MBC/SC/ST scholarships and first-generation graduate schemes.' },
-  { icon: FaBook, title: 'Remedial Coaching', desc: 'Additional academic support through remedial classes and peer learning programmes for students who need extra assistance.' },
-  { icon: FaGraduationCap, title: 'Career Guidance', desc: 'Special career counselling sessions, competitive exam coaching, and soft skills training for holistic development.' },
-  { icon: FaHandsHelping, title: 'Mentoring Programme', desc: 'One-on-one mentoring by faculty members to guide students through academic and personal challenges.' },
+  { icon: FaRupeeSign, title: 'Scholarship Assistance', desc: 'Guidance for government scholarships including BC/MBC/SC/ST schemes.' },
+  { icon: FaBook, title: 'Remedial Coaching', desc: 'Additional academic support through remedial classes.' },
+  { icon: FaGraduationCap, title: 'Career Guidance', desc: 'Career counselling, competitive coaching, and soft skills training.' },
+  { icon: FaHandsHelping, title: 'Mentoring Programme', desc: 'One-on-one mentoring by faculty members.' },
 ];
 
 export default function SEDGCellPage() {
@@ -30,43 +31,137 @@ export default function SEDGCellPage() {
         breadcrumb="Student Life › SEDG Cell"
       />
 
+      {/* 1. ABOUT */}
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto max-w-4xl">
           <SectionHeading title="About the SEDG Cell" />
           <AnimatedSection>
             <p className="text-neutral-600 leading-relaxed mb-8">
-              The Socio Economically Disadvantaged Group (SEDG) Cell at SSKV College is committed to ensuring that students from economically weaker sections, first-generation learners, and socially disadvantaged communities receive the support they need to succeed in higher education. The cell works in coordination with government agencies, NGOs, and institutional bodies to provide comprehensive support.
+              The Socio Economically Disadvantaged Group (SEDG) Cell at SSKV College supports students from economically weaker and disadvantaged backgrounds with academic, financial, and personal assistance.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      <section className="section-padding bg-neutral-50">
-        <div className="container-custom mx-auto">
-          <SectionHeading title="Our Initiatives" subtitle="Programmes and support systems for disadvantaged students" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {initiatives.map((item, i) => (
-              <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="bg-white border border-neutral-200 rounded-xl p-6 hover:shadow-md transition-shadow h-full">
-                  <item.icon className="text-3xl text-primary-700 mb-3" />
-                  <h3 className="font-heading font-bold text-primary-800 mb-2">{item.title}</h3>
-                  <p className="text-neutral-600 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              </AnimatedSection>
-            ))}
+      {/* 2. VISION & MISSION */}
+      <section className="section-padding bg-white">
+        <div className="container-custom mx-auto max-w-4xl">
+          <SectionHeading title="Vision & Mission" />
+
+          <div className="space-y-5">
+            <AnimatedSection>
+              <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
+                <h3 className="font-bold text-primary-800 mb-2">Vision</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">
+                  To empower socio-economically disadvantaged students through equal access to education and opportunities.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection>
+              <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
+                <h3 className="font-bold text-primary-800 mb-2">Mission</h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">
+                  To support disadvantaged students through academic assistance, financial guidance, and skill development initiatives.
+                </p>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
+      {/* 3 & 4. COMMITTEE + REPORTS */}
+      <section className="section-padding bg-neutral-50">
+        <div className="container-custom mx-auto max-w-4xl">
+
+          <SectionHeading title="SEDG Cell Committee" />
+
+          {/* TABLE */}
+          <AnimatedSection>
+            <div className="overflow-x-auto mb-8">
+              <table className="w-full border border-neutral-300 rounded-xl overflow-hidden">
+                <thead className="bg-primary-900 text-white text-sm">
+                  <tr>
+                    <th className="p-3 text-left">Name</th>
+                    <th className="p-3 text-left">Designation</th>
+                    <th className="p-3 text-left">Role</th>
+                    <th className="p-3 text-left">Contact</th>
+                  </tr>
+                </thead>
+                <tbody className="text-sm text-neutral-700">
+                  <tr className="border-t">
+                    <td className="p-3">Dr. K. Thirumamagal</td>
+                    <td className="p-3">Principal</td>
+                    <td className="p-3 font-semibold">Chairperson</td>
+                    <td className="p-3">9994745157</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="p-3">Ms. M. Mahalakshmi</td>
+                    <td className="p-3">Assistant Professor of Commerce</td>
+                    <td className="p-3 font-semibold">Coordinator</td>
+                    <td className="p-3">9566441320</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="p-3">Ms. M. Lavanya</td>
+                    <td className="p-3">Assistant Professor of Mathematics</td>
+                    <td className="p-3 font-semibold">Member</td>
+                    <td className="p-3">9994502098</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="p-3">Ms. S. Banupriya</td>
+                    <td className="p-3">Assistant Professor of English</td>
+                    <td className="p-3 font-semibold">Member</td>
+                    <td className="p-3">7548806673</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </AnimatedSection>
+
+          {/* REPORTS */}
+          <SectionHeading title="Reports" />
+
+          <AnimatedSection>
+            <div className="flex flex-col items-center gap-4">
+              <a href="/pdfs/sdge_cell/2022-2023 socio eco.pdf" target="_blank"
+                className="w-72 text-center px-4 py-2 rounded-lg bg-[#5a2a2a] text-white hover:bg-[#472020] transition">
+                <FaFileAlt className="inline mr-2" />
+                Report 2022-2023
+              </a>
+
+              <a href="/pdfs/sdge_cell/2023-2024 socio eco.pdf" target="_blank"
+                className="w-72 text-center px-4 py-2 rounded-lg bg-[#5a2a2a] text-white hover:bg-[#472020] transition">
+                <FaFileAlt className="inline mr-2" />
+                Report 2023-2024
+              </a>
+
+              <a href="/pdfs/sdge_cell/2024-2025 socio eco.pdf" target="_blank"
+                className="w-72 text-center px-4 py-2 rounded-lg bg-[#5a2a2a] text-white hover:bg-[#472020] transition">
+                <FaFileAlt className="inline mr-2" />
+                Report 2024-2025
+              </a>
+
+              <a href="/pdfs/sdge_cell/2025-2026 socio eco.pdf" target="_blank"
+                className="w-72 text-center px-4 py-2 rounded-lg bg-[#5a2a2a] text-white hover:bg-[#472020] transition">
+                <FaFileAlt className="inline mr-2" />
+                Report 2025-2026
+              </a>
+            </div>
+          </AnimatedSection>
+
+        </div>
+      </section>
+
+      {/* 5. OBJECTIVES */}
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto max-w-4xl">
           <SectionHeading title="Objectives" />
           <div className="space-y-3">
             {objectives.map((o, i) => (
-              <AnimatedSection key={i} delay={i * 0.06}>
-                <div className="flex items-start gap-3 bg-neutral-50 rounded-xl px-4 py-3 border border-neutral-100">
-                  <span className="w-6 h-6 rounded-full bg-primary-800 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
-                  <p className="text-sm text-neutral-700 leading-relaxed">{o}</p>
+              <AnimatedSection key={i}>
+                <div className="flex items-start gap-3 bg-neutral-50 rounded-xl px-4 py-3 border">
+                  <span className="w-6 h-6 rounded-full bg-primary-800 text-white text-xs flex items-center justify-center">{i + 1}</span>
+                  <p className="text-sm text-neutral-700">{o}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -74,7 +169,28 @@ export default function SEDGCellPage() {
         </div>
       </section>
 
-      <CTABanner title="No Student Left Behind" subtitle="SSKV College ensures every student has the support to achieve their academic potential." />
+      {/* 6. INITIATIVES */}
+      <section className="section-padding bg-neutral-50">
+        <div className="container-custom mx-auto">
+          <SectionHeading title="Our Initiatives" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {initiatives.map((item, i) => (
+              <AnimatedSection key={i}>
+                <div className="bg-white border rounded-xl p-6">
+                  <item.icon className="text-2xl mb-2" />
+                  <h3 className="font-bold">{item.title}</h3>
+                  <p className="text-sm">{item.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CTABanner 
+        title="No Student Left Behind" 
+        subtitle="SSKV College ensures every student has equal opportunity to succeed." 
+      />
     </>
   );
 }

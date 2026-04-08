@@ -39,9 +39,11 @@ export default function ReservationRosterPage() {
             </div>
           ) : (
             <AnimatedSection>
-              <div className="text-center py-16 bg-white rounded-2xl border border-neutral-100">
-                <FaListOl className="text-4xl text-neutral-200 mx-auto mb-3" />
-                <p className="text-neutral-400 text-sm">Reservation roster documents will be published here.</p>
+              <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-8 border border-primary-100 mb-8">
+
+                <p className="text-neutral-600 leading-relaxed mb-10 max-w-3xl">
+              The Reservation Roster of the University of Madras (UNOM) is strictly implemented in accordance with the Government of Tamil Nadu and University Grants Commission (UGC) norms. It ensures equitable representation of Scheduled Castes, Scheduled Tribes, Most Backward Classes, Backward Classes, and other eligible categories in appointments and admissions. The roster system promotes social justice, transparency, and inclusiveness in the university’s academic and administrative processes. Regular monitoring is carried out to ensure compliance with statutory reservation policies. 
+            </p>
               </div>
             </AnimatedSection>
           )}

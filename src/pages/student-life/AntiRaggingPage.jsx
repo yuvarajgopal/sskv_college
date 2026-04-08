@@ -41,7 +41,7 @@ export default function AntiRaggingPage() {
           </AnimatedSection>
 
           <SectionHeading title="Anti-Ragging Rules & Regulations" />
-          <div className="space-y-3 mb-8">
+          <div className="space-y-3 mb-6">
             {rules.map((r, i) => (
               <AnimatedSection key={i} delay={i * 0.06}>
                 <div className="flex items-start gap-3 bg-neutral-50 rounded-xl px-4 py-3 border border-neutral-100">
@@ -51,6 +51,49 @@ export default function AntiRaggingPage() {
               </AnimatedSection>
             ))}
           </div>
+
+          {/* Anti-Ragging Reports Buttons */}
+          <AnimatedSection>
+            <div className="mb-8">
+              <h4 className="text-sm font-semibold text-primary-700 mb-3">
+                Anti-Ragging Reports
+              </h4>
+
+              <div className="flex flex-wrap gap-3">
+                
+                <a
+                  href="/pdfs/anti_ragging/anti-ragging_23-24.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#8B5E3C] text-white text-sm font-medium hover:bg-[#6f472d] transition"
+                >
+                  <FaFileAlt />
+                  Anti-Ragging report 2023-2024
+                </a>
+
+                <a
+                  href="/pdfs/anti_ragging/anti-ragging_24-25.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#8B5E3C] text-white text-sm font-medium hover:bg-[#6f472d] transition"
+                >
+                  <FaFileAlt />
+                  Anti-Ragging report 2024-2025
+                </a>
+
+                <a
+                  href="/pdfs/anti_ragging/anti-ragging_25-26.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#8B5E3C] text-white text-sm font-medium hover:bg-[#6f472d] transition"
+                >
+                  <FaFileAlt />
+                  Anti-Ragging report 2025-2026
+                </a>
+
+              </div>
+            </div>
+          </AnimatedSection>
 
           <AnimatedSection>
             <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-6 text-white flex items-start gap-5">

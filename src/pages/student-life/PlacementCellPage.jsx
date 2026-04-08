@@ -1,4 +1,4 @@
-import { FaBriefcase, FaBuilding, FaHandshake, FaChartLine } from 'react-icons/fa';
+import { FaBriefcase, FaBuilding, FaHandshake, FaChartLine, FaUserGraduate } from 'react-icons/fa';
 import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
@@ -27,6 +27,19 @@ const services = [
   { icon: FaBuilding,   label: 'Industry Visits & Exposure' },
   { icon: FaHandshake,  label: 'MOU with Industries' },
   { icon: FaChartLine,  label: 'Career Guidance & Counselling' },
+];
+
+const placementStats = [
+  { year: '2022-2023', companies: 10, color: 'bg-blue-500' },
+  { year: '2023-2024', companies: 15, color: 'bg-green-500' },
+  { year: '2024-2025', companies: 18, color: 'bg-purple-500' },
+  { year: '2025-2026', companies: 30, color: 'bg-yellow-500' },
+];
+
+const recruiters = [
+  'echoVME', 'Verizon', 'Adenza', 'Airtel', 
+  'Sutherland', 'Avasoft', 'LTIMindtree', 'SurveySparrow', 
+  'PreludeSys', 'Adidas', 'Pickyourtrail', 'State Street', 'Goldman Sachs'
 ];
 
 export default function PlacementCellPage() {
@@ -64,11 +77,7 @@ export default function PlacementCellPage() {
             <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-8">
               <h3 className="font-bold text-primary-800 mb-3">Overview</h3>
               <p className="text-sm text-neutral-600 leading-relaxed mb-4">
-                The Placement Cell of the college was established on 11Aug, 2010 with Ms K. Krishnaveni as Alumnae & Placement Officer. 
-                With a view to strengthening the activities of the cell the placement officer underwent a training programme for career 
-                guidance counsellors organized by the University of Madras on sep 8, 2010. Since then ,the cell has been functioning with 
-                the sole aim of finding maximum number of placements for the students.In this connection, the Dean himself gives best care 
-                by conducting classes on leadership and employability skills for the students.
+                The placement cell of the college was established on 11 August 2010 with the sole aim of finding maximum number of placements for the students.  Ms.N.Ramya, Assistant Professor of Mathematics if the Placement Officer.  In 2025-26, 231 students received offer letters.  Every year, we organize Career Development Programmes, Skill Development Programmes  besides the usual training programmes.
               </p>
               <p className="text-sm text-neutral-600 leading-relaxed mb-4">
                 In the academic year 2011-2012 one more training programme was attended by the placement officer conducted by TCS, when 
@@ -134,31 +143,82 @@ export default function PlacementCellPage() {
               <h3 className="font-bold text-primary-800 mb-4">Placement Reports</h3>
               <div className="flex flex-wrap justify-center gap-3">
 
-                <a href="/placement/placement_detail_2024.xlsx.xlsx" target="_blank"
-                  className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">
+                <a href="/pdfs/placement/placement_detail_2024.xlsx" target="_blank"
+                  className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm transition hover:bg-primary-700">
                   Placement Report 2024
                 </a>
 
-                <a href="/placement/2020-23.xlsx" target="_blank"
-                  className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">
+                <a href="/pdfs/placement/placement_detail_2024.xlsx" target="_blank"
+                  className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm transition hover:bg-primary-700">
                   2023–2024 Selected Student List
                 </a>
 
-                <a href="/placement/2021-24.xlsx" target="_blank"
-                  className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">
+                <a href="/pdfs//placement/2020_23.xlsx" target="_blank"
+                  className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm transition hover:bg-primary-700">
                   2020–2023 Report
                 </a>
 
-                <a href="/placement/2021-24.xlsx" target="_blank"
-                  className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">
+                <a href="/pdfs//placement/2021-24.xlsx" target="_blank"
+                  className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm transition hover:bg-primary-700">
                   2021–2024 Report
                 </a>
 
-                <a href="/placement/2021-24.xlsx" target="_blank"
-                  className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">
+                <a href="/pdfs//placement/2021-24.xlsx" target="_blank"
+                  className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm transition hover:bg-primary-700">
                   2022–2025 Report
                 </a>
 
+              </div>
+            </div>
+          </AnimatedSection>
+
+          {/* PLACEMENT STATISTICS */}
+          <SectionHeading title="Placement Statistics" subtitle="No of companies visited and No of Students Placed" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            
+            <AnimatedSection delay={0.1}>
+              <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 h-full">
+                <h3 className="font-bold text-primary-800 mb-6 text-center">No of Companies Visited</h3>
+                <div className="space-y-4">
+                  {placementStats.map((stat, i) => (
+                    <div key={i} className="flex items-center gap-4">
+                      <span className="w-20 text-sm font-semibold text-neutral-700">{stat.year}</span>
+                      <div className="flex-1 bg-gray-200 rounded-full h-4 relative">
+                        <div 
+                          className={`${stat.color} h-4 rounded-full`} 
+                          style={{ width: `${(stat.companies / 30) * 100}%` }}
+                        ></div>
+                      </div>
+                      <span className="w-8 text-sm font-bold text-primary-800 text-right">{stat.companies}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 h-full flex flex-col justify-center items-center text-center">
+                <FaUserGraduate className="text-blue-500 text-5xl mb-4" />
+                <h3 className="font-bold text-primary-800 mb-2">Students Placed Highlights</h3>
+                <div className="mt-4">
+                  <span className="block text-4xl font-extrabold text-primary-800">141</span>
+                  <span className="block text-sm text-neutral-600 mt-1">Students placed in the 2021-2024 batch</span>
+                </div>
+              </div>
+            </AnimatedSection>
+
+          </div>
+
+          {/* OUR RECRUITERS */}
+          <SectionHeading title="Our Recruiters" subtitle="Leading companies hiring our talented students" />
+          <AnimatedSection>
+            <div className="bg-white rounded-2xl p-8 border border-neutral-100 shadow-sm mb-12">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {recruiters.map((recruiter, i) => (
+                  <div key={i} className="flex items-center justify-center p-4 bg-neutral-50 rounded-xl border border-neutral-100 hover:shadow-md transition-shadow">
+                    <span className="font-bold text-neutral-700 text-center">{recruiter}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </AnimatedSection>

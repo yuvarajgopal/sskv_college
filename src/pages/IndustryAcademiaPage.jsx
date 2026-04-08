@@ -23,11 +23,18 @@ export default function IndustryAcademiaPage() {
 
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto max-w-5xl">
-          <SectionHeading title="Industry-Academia Collaboration" subtitle="Strengthening the link between academic learning and industry practice" />
+          <SectionHeading title="Strengthening Industry-Academia Collaboration" />
 
           <AnimatedSection>
-            <p className="text-neutral-600 leading-relaxed mb-8 max-w-3xl">
-              SSKV College actively fosters industry-academia collaboration through MoUs, guest lectures, industrial visits, and joint training programmes. These initiatives ensure that students are industry-ready and equipped with the skills and knowledge demanded by today's job market.
+            <p className="max-w-4xl mx-auto">
+              At SSKV, we believe that fostering strong partnerships between academia and industry is essential for driving innovation, enhancing student employability, and contributing to societal growth. Our commitment to bridging the gap between theoretical knowledge and practical application is exemplified through our active collaborations with leading industry partners.
+            </p>
+             <p className="max-w-4xl mx-auto">
+              We are proud to announce the signing of a landmark Memorandum of Understanding (MoU) with Infosys, a global leader in technology and consulting services. This five-year partnership aims to create a vibrant ecosystem for skill development, research, and industry-oriented projects. Through this collaboration, students will gain access to real-world projects, internships, and training programs tailored to industry requirements. Faculty members will benefit from industry insights, joint research initiatives, and knowledge exchange sessions.
+            </p>
+             <p className="max-w-4xl mx-auto">
+              Our industry-academia partnership with Infosys underscores our dedication to preparing students for the evolving demands of the digital economy. Together, we strive to foster innovation, nurture talent, and contribute to building a skilled workforce ready to meet the challenges of the future.
+              Join us on this exciting journey as we bridge academia and industry for a brighter, more innovative tomorrow.
             </p>
           </AnimatedSection>
 

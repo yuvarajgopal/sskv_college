@@ -11,7 +11,7 @@ const members = [
   { sl: 5, name: 'Dr. Prasanth Krishna, M.A., Ph.D.',                                                               designation: 'Treasurer, Conjeevaram Hindu Educational Society',        role: 'Treasurer' },
   { sl: 6, name: 'Dr. Chinni Krishna, M.Sc., Ph.D.',                                                                designation: 'Member',                                                  role: 'Member' },
   { sl: 7, name: 'Dr. K. Thirumamagal, M.Com., M.Phil., NET., Ph.D.',                                               designation: 'Principal, SSKV College of Arts & Science for Women',    role: 'Principal' },
-  { sl: 8, name: 'Mr. P. Karthe, M.Phil., M.Tech., Ph.D.', designation: 'Professor & H.O.D, Dept. of Crystallography & Biophysics, University of Madras, Chennai – 600 116', role: 'University Nominee' },
+  { sl: 8, name: 'Dr.K.Sivakumari,, M.sc., M.Phil., Ph.D. Faz.', designation: ' Principal Dr.Ambedkar Governemnt  Arts College(Autonomous), Vyarsarpadi,  – 600 116', role: 'University Nominee' },
 ];
 
 export default function GoverningBodyPage() {

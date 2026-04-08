@@ -1,4 +1,4 @@
-import { FaFlag, FaHandsHelping, FaLeaf, FaHeart } from 'react-icons/fa';
+import { FaFlag, FaHandsHelping, FaLeaf, FaHeart, FaFilePdf } from 'react-icons/fa';
 import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
@@ -9,32 +9,37 @@ const nssInfo = {
   qualification: 'M.Sc., M.Phil., Ph.D., Assistant Professor',
   dept: 'Department of Mathematics',
 
-  about: `Our NSS is very active and organizes lectures and events that sensitize students to the values promoted globally by NSS. Every year, our students participate in the Geneva competition organized by the University of Madras. 
+  about: `Our NSS is very active and organizes lectures, events sensitizing our students to the values that the NSS perpetuates globally. Every year our students participate in the Geneva competition organized by the University of Madras. Tree planting, organizing rallies for spreading messages and field work are some of the programmes that cover our yearly itinerary. We have a very able NSS Coordinator is Ms. EZHILARASI, Assistant Professor of MATHEMATICS. 
 
-Tree planting, organizing awareness rallies, and fieldwork are some of the key programmes carried out regularly. The unit is guided by a dedicated team under the leadership of the NSS Coordinator.`,
+  THE NSS ACTIVITIES UNDERTAKEN FROM JUNE 2018 TO MARCH 2019.`,
 
   activities: [
     {
-      title: "NSS Activities (June 2018 – March 2019)",
-      content: `The NSS aims to develop the inner potential of students and transform them into socially responsible individuals. Regular activities and special camps are conducted focusing on educational, social, and community development.
-
-The unit actively engages in cleanliness drives, tree plantation, and social service activities in the adopted village Kooram, Kanchipuram.`,
+      title: "REPORT ON REGULAR ACTIVITIES",
+      content: `The NSS aims in developing the inner potentialities and transforming the students mentally to fit into the society to which he/she belongs.`,
       points: [
-        "100 students enrolled as NSS volunteers for the academic year 2018–2019",
-        "Cleanliness drives conducted in college premises, canteen, and garden",
-        "Plantation of around 60 saplings within the campus"
+        "Total 100 students enrolled as NSS volunteers.",
+        "Cleanliness drives in campus and surroundings.",
+        "About 60 plants planted in the college premises."
       ]
     },
     {
-      title: "Swachh Bharat Mission Program (1–15 September)",
-      content: `Swachh Bharat Abhiyan is a Government of India initiative aimed at ensuring cleanliness and sanitation across the nation. The programme promotes the vision of a clean and healthy India.
-
-Under this initiative, NSS volunteers organized “Swachhta Pakhwada” from 1st to 15th September to create awareness about hygiene and sanitation among students and the surrounding community.`,
+      title: "SWACHH BHARAT MISSION PROGRAM",
+      content: `Swachh Bharat Abhiyan aims to make India clean and promote sanitation awareness among citizens.`,
       points: [],
-      extra: `Every year, a series of activities highlight the active NSS calendar. These initiatives stand as a testament to the commitment and contribution of our volunteers towards society.`
+      extra: `NSS volunteers actively participated in spreading awareness on cleanliness.`
     }
   ],
 };
+
+// 🔥 PDF Buttons Data (Update links here)
+const reports = [
+  { title: 'NSS Annual Report 2020 - 2025', link: '/pdfs/nss/NSS Annual Report 2022-2025.pdf' },
+  { title: 'NSS Annual Report 2025 - 2026', link: '/pdfs/nss/NSS Annual Report 2023-2024.pdf' },
+  { title: 'NSS Special Camp Report 2024', link: '/pdfs/nss/nss_special_camp_2024.pdf' },
+  { title: 'NSS Special Camp Report 2025', link: '/pdfs/nss/nss_special_camp_2025.pdf' },
+  { title: 'NSS Special Camp Report 2026', link: '/pdfs/nss/nss_special_camp_2025_26.pdf' },
+];
 
 export default function NccNssPage() {
   return (
@@ -88,6 +93,28 @@ export default function NccNssPage() {
                           <p className="text-sm text-neutral-600 mt-4 whitespace-pre-line">
                             {a.extra}
                           </p>
+                        )}
+
+                        {/* 🔥 INSERT BUTTONS ONLY AFTER SWACHH BHARAT */}
+                        {a.title === "SWACHH BHARAT MISSION PROGRAM" && (
+                          <div className="mt-6">
+                            <h4 className="text-sm font-bold text-primary-800 mb-3">NSS Reports</h4>
+
+                            <div className="grid sm:grid-cols-2 gap-4">
+                              {reports.map((r, idx) => (
+                                <a
+                                  key={idx}
+                                  href={r.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex items-center gap-3 bg-white border border-neutral-200 rounded-xl px-4 py-3 shadow-sm hover:shadow-md transition"
+                                >
+                                  <FaFilePdf className="text-red-600 text-lg" />
+                                  <span className="text-sm font-medium text-neutral-700">{r.title}</span>
+                                </a>
+                              ))}
+                            </div>
+                          </div>
                         )}
 
                       </div>

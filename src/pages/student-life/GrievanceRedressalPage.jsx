@@ -4,12 +4,6 @@ import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
 import CTABanner from '../../components/sections/CTABanner';
 
-const coordinator = { 
-  name: 'Ms. H. Anusha', 
-  qualification: 'M.A., M.Phil., SET., Assistant Professor, Head', 
-  dept: 'Department of English' 
-};
-
 const process = [
   { step: '01', title: 'Submit Grievance', desc: 'Students may submit grievances in writing to the Grievance Redressal Committee or the designated coordinator.' },
   { step: '02', title: 'Acknowledgement', desc: 'The committee acknowledges receipt of the grievance and assigns it for review.' },
@@ -148,20 +142,6 @@ export default function GrievanceRedressalPage() {
                   </tr>
                 </tbody>
               </table>
-            </div>
-          </AnimatedSection>
-
-          {/* COORDINATOR */}
-          <AnimatedSection>
-            <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-6 text-white flex items-center gap-5">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
-                <FaUserShield className="text-2xl text-accent-400" />
-              </div>
-              <div>
-                <p className="text-accent-400 text-xs font-bold uppercase">Committee Coordinator</p>
-                <h3 className="text-base font-bold">{coordinator.name}</h3>
-                <p className="text-white/60 text-xs">{coordinator.qualification}</p>
-              </div>
             </div>
           </AnimatedSection>
 

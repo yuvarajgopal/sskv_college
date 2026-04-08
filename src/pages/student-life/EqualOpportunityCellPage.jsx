@@ -5,11 +5,17 @@ import AnimatedSection from '../../components/shared/AnimatedSection';
 import CTABanner from '../../components/sections/CTABanner';
 
 const objectives = [
-  'Ensure equal access to educational opportunities for all students irrespective of caste, religion, gender, or economic status.',
-  'Provide support and guidance to students from marginalized and disadvantaged communities.',
-  'Facilitate scholarships, remedial classes, and special assistance programmes.',
-  'Address discrimination, bias, and barriers to equal participation in campus life.',
-  'Promote awareness of constitutional rights, social justice, and inclusive education.',
+  'To ensure equity and equal opportunities for all members of the college community.',
+  'To enhance diversity among students, teaching, and non-teaching staff while eliminating all forms of discrimination.',
+'To create a socially congenial atmosphere that supports academic interaction and healthy interpersonal relationships.',
+'To address and resolve grievances of students belonging to disadvantaged sections through amicable and just solutions.',
+'To assist individuals or groups facing issues related to social exclusion or discrimination.',
+'To disseminate information on welfare schemes, scholarships, and government programmes for socially weaker sections.',
+'To simplify admission and registration procedures and ensure barrier-free access for disadvantaged groups.',
+'To coordinate with government bodies and other agencies to mobilize academic and financial resources.',
+'To organize periodic meetings to monitor the implementation and progress of various welfare schemes.',
+'To ensure due representation and utilization of opportunities by SC/ST communities in admissions and recruitment.',
+'To sensitize the college community on issues faced by SC/ST and other disadvantaged groups and promote social awareness.',
 ];
 
 export default function EqualOpportunityCellPage() {
@@ -30,6 +36,28 @@ export default function EqualOpportunityCellPage() {
             <p className="text-neutral-600 leading-relaxed mb-8">
               The Equal Opportunity Cell at SSKV College is established to uphold the principles of equality, inclusion, and non-discrimination. It ensures that students from all backgrounds — including SC/ST, minority communities, economically weaker sections, and differently abled students — have access to the full range of academic and co-curricular opportunities.
             </p>
+          </AnimatedSection>
+          <AnimatedSection>
+            <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-6">
+              <h3 className="font-bold text-primary-800 mb-2">Vision</h3>
+              <p className="text-sm text-neutral-600 leading-relaxed">
+                To create an inclusive, equitable, and socially just academic environment that nurtures diversity, eliminates discrimination, and empowers students and staff from disadvantaged and marginalized sections of society to achieve their full potential.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          {/* MISSION */}
+          <AnimatedSection>
+            <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-6">
+              <h3 className="font-bold text-primary-800 mb-2">Mission</h3>
+              <ul className="list-disc pl-5 text-sm text-neutral-600 space-y-2">
+               <li> To ensure the effective implementation of institutional and government policies and programmes meant for disadvantaged groups.</li>
+               <li> To provide academic, financial, social, and emotional guidance and counselling to students belonging to socially weaker sections.</li>
+              <li>To promote social inclusion, mutual respect, and harmonious relationships among students and staff from diverse social backgrounds.</li>
+               <li> To sensitize the academic community towards the challenges and aspirations of marginalized communities and foster a discrimination-free campus.</li>
+
+              </ul>
+            </div>
           </AnimatedSection>
 
           <SectionHeading title="Objectives" />

@@ -6,12 +6,13 @@ import CTABanner from '../components/sections/CTABanner';
 import { images } from '../data/media';
 
 const institutions = [
-  'SSKV College of Arts & Science for Women',
-  'SSKV Higher Secondary School',
-  'SSKV Matriculation School',
-  'SSKV Primary School',
-  'SSKV Nursery & Primary School',
+  'S.S.K.V Higher Secondary School,6-7-8, Collah Chatram Street,Kanchipuram',
+  'S.S.K.V Matriculation Girls Higher Secondary School, 124-125 West Raja Street,Kanchipuram.',
+  'S.S.K.V Matriculation boys Higher Secondary School, 124-125 Kailasanather Tample Street,Kanchipuram.',
+  'S.S.K.V Pre-Primary School, Mahanadu Dharmarayar Street,Kanchipuram.',
+  'S.S.K.V Elementary School,A.B.C Kamakshi Amman West Mada Street,Kanchipuram',
 ];
+
 
 export default function GroupInstitutionsPage() {
   return (
