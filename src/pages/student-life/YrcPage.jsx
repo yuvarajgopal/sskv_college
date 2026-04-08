@@ -27,12 +27,6 @@ export default function YrcPage() {
     'images/yrc3.jpg',
     'images/yrc4.jpg'
   ];
-  const reports = [
-  { label: 'YRC Annual Report 2022-23', href: '/pdfs/yrc/YRC ANNUAL REPORT (2022-2023).docx' },
-  { label: 'YRC Annual Report 2023-24', href: '/pdfs/yrc/YRCAnnual Report (2023-2024).docx' },
-  { label: 'YRC Annual Report 2024-25', href: '/pdfs/yrc/YRC Annual report.pdf' },
-
-];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -44,7 +38,7 @@ export default function YrcPage() {
   return (
     <>
       {/* HERO SLIDER */}
-      <div className="relative w-full h-[320px] overflow-hidden">
+      <div className="relative w-full h-[720px] overflow-hidden -mt-20">
         <div
           className="flex transition-transform duration-700 ease-in-out h-full"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -133,37 +127,33 @@ export default function YrcPage() {
                   <li>To promote health, hygiene, and sanitation awareness in the community.</li>
                   <li>To encourage voluntary blood donation and first-aid training.</li>
                   <li>To develop leadership qualities, discipline, and civic responsibility among youth.</li>
-                 <li> To prepare youth to respond effectively during emergencies and disasters.</li>
-                 <li> To promote national integration, peace, and international understanding.</li>
-                 <li> To support vulnerable and marginalized sections of society through social service activities..</li>
-                  <li> To spread awareness about Red Cross principles and values.</li>
+                  <li>To prepare youth to respond effectively during emergencies and disasters.</li>
+                  <li>To promote national integration, peace, and international understanding.</li>
+                  <li>To support vulnerable and marginalized sections of society.</li>
+                  <li>To spread awareness about Red Cross principles and values.</li>
                 </ul>
               </div>
             </AnimatedSection>
 
           </div>
 
-          {/* 🔥 DOCX REPORT BUTTONS */}
+          {/* Reports */}
           <AnimatedSection>
             <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-10 text-center">
               <h3 className="font-bold text-primary-800 mb-4">YRC Annual Reports</h3>
               <div className="flex flex-wrap justify-center gap-3">
-
                 <a href="/docs/yrc-2022-2023.docx" target="_blank"
                   className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">
                   YRC Annual Report 2022–23
                 </a>
-
                 <a href="/docs/yrc-2023-2024.docx" target="_blank"
                   className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">
                   YRC Annual Report 2023–24
                 </a>
-
                 <a href="/docs/yrc-2024-2025.docx" target="_blank"
                   className="px-4 py-2 bg-primary-800 text-white rounded-lg text-sm">
                   YRC Annual Report 2024–25
                 </a>
-
               </div>
             </div>
           </AnimatedSection>

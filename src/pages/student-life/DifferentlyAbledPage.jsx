@@ -27,10 +27,44 @@ export default function DifferentlyAbledPage() {
 
           <AnimatedSection>
             <p className="text-neutral-600 leading-relaxed mb-8 max-w-3xl">
-              SSKV College recognises and respects the diverse needs of differently abled students. The institution provides appropriate facilities, accommodations, and support systems to ensure that every student — regardless of physical ability — can access quality education and participate fully in campus life.
+              SSKV College of Arts and Sciences for Women provides an inclusive and supportive environment for differently-abled students. The campus is equipped with facilities such as ramps, accessible restrooms, and barrier-free entry to classrooms and offices to ensure easy mobility. Special support and assistance are extended during examinations and academic activities as per university norms. The institution is committed to promoting equal opportunities and empowering differently-abled students to achieve academic success. 
             </p>
           </AnimatedSection>
 
+          {/* IMAGE SECTION */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            
+            <AnimatedSection>
+              <div className="bg-neutral-50 rounded-2xl overflow-hidden border border-neutral-100 shadow-sm">
+                <img 
+                  src="/images/student_life/ramp.jpg" 
+                  alt="Ramp Access"
+                  className="w-full h-56 object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-semibold text-primary-800 text-sm">Ramp Access</h4>
+                  <p className="text-xs text-neutral-500">Wheelchair-friendly ramp for easy mobility</p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection>
+              <div className="bg-neutral-50 rounded-2xl overflow-hidden border border-neutral-100 shadow-sm">
+                <img 
+                  src="/images/student_life/lift.png" 
+                  alt="Lift Facility"
+                  className="w-full h-56 object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-semibold text-primary-800 text-sm">Lift Facility</h4>
+                  <p className="text-xs text-neutral-500">Dedicated lift for differently abled students</p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+          </div>
+
+          {/* FEATURES */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {provisions.map((p, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>

@@ -43,6 +43,44 @@ export default function AlumnaePage() {
             </p>
           </AnimatedSection>
 
+          {/* Committee Table */}
+          <AnimatedSection>
+            <div className="overflow-x-auto mb-12">
+              <table className="w-full border border-neutral-200 rounded-xl overflow-hidden">
+                <thead className="bg-primary-800 text-white">
+                  <tr>
+                    <th className="text-left px-4 py-3 text-sm font-semibold">Name</th>
+                    <th className="text-left px-4 py-3 text-sm font-semibold">Designation / Department</th>
+                    <th className="text-left px-4 py-3 text-sm font-semibold">Role</th>
+                    <th className="text-left px-4 py-3 text-sm font-semibold">Contact</th>
+                  </tr>
+                </thead>
+                <tbody className="text-sm text-neutral-700">
+                  {[
+                    ['Dr. C.K. Raman', 'Secretary', 'President (Ex-Officio)', '—'],
+                    ['Dr. K. Thirumamagal', 'Principal', 'Vice-President (Ex-Officio)', '—'],
+                    ['Ms. S. Komala', 'Assistant Professor, Mathematics', 'Vice-President (Ex-Officio)', '—'],
+                    ['Dr. P. Revathi', 'HOD, Business Administration', 'Treasurer', '—'],
+                    ['Dr. P. Revathy', 'Placement Officer, English', 'Executive Member (Ex-Officio)', '—'],
+                    ['Dr. K. P. Sowmiya', 'Alumnae Officer, Accounting & Finance', 'Executive Member (Ex-Officio)', '—'],
+                    ['Ms. K. Vijayalakshmi', 'Assistant Professor, Commerce (General)', 'Executive Member', '—'],
+                    ['Ms. Ponmani', 'Assistant Professor, Commerce (General)', 'Executive Member', '—'],
+                    ['Ms. P. Shenbagam', 'Assistant Professor, Tamil', 'Executive Member', '—'],
+                    ['Mr. T. V. Jagannathan', 'Office Superintendent', 'Executive Member', '—'],
+                  ].map((row, i) => (
+                    <tr key={i} className="border-t border-neutral-200 hover:bg-neutral-50">
+                      {row.map((cell, j) => (
+                        <td key={j} className="px-4 py-3">
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </AnimatedSection>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {links.map((l, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>

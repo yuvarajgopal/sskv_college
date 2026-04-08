@@ -21,15 +21,26 @@ export default function SilambamPage() {
         breadcrumb="Student Life › Value-Added Courses › Silambam"
       />
 
-      <section className="section-padding bg-white">
+           <section className="section-padding bg-white">
         <div className="container-custom mx-auto max-w-4xl">
           <SectionHeading title="Silambam Training Programme" />
           <AnimatedSection>
-            <p className="text-neutral-600 leading-relaxed mb-4">
-              Silambam is one of the oldest martial arts in the world, originating from Tamil Nadu. SSKV College offers Silambam as a value-added course to preserve and promote this ancient art form among young women. The programme provides structured training under qualified instructors.
-            </p>
+            <h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">Vision</h3>
             <p className="text-neutral-600 leading-relaxed mb-8">
-              Through regular practice sessions, students develop physical fitness, mental discipline, self-defence capabilities, and a deep appreciation for Tamil cultural heritage. Students are encouraged to participate in inter-college and state-level competitions.
+              To inspire and empower students to master Silambam, preserving Tamil heritage while fostering strength, discipline, and confidence. The vision is to see young learners grow into skilled, respectful, and resilient individuals who carry forward this ancient martial art with pride and honor.
+            </p>
+<h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">Mision</h3>
+            <p className="text-neutral-600 leading-relaxed mb-8">
+              To preserve and promote the ancient Tamil martial art of Silambam by training students in its techniques, discipline, and cultural values. The mission is to build physical fitness, mental focus, self-defense skills, and confidence while connecting youth to their heritage. It also aims to instill respect, perseverance, and teamwork through regular practice and competitions.
+            </p>
+            <h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">Objectives</h3>
+            <p className="text-neutral-600 leading-relaxed mb-8">
+              To teach self-defense skills and build confidence.<br></br>
+              To improve physical fitness, flexibility, and coordination.<br></br>
+To preserve and promote Tamil cultural heritage.<br></br>
+To instill discipline, focus, and mental strength.<br></br>
+To encourage teamwork, respect, and leadership qualities.<br></br>
+To prepare students for competitions and demonstrations at local, state, and national levels.<br></br>
             </p>
           </AnimatedSection>
         </div>

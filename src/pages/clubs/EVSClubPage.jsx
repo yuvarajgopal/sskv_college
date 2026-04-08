@@ -20,7 +20,7 @@ export default function EVSClubPage() {
           <SectionHeading title="About the EVS Club" />
           <AnimatedSection>
             <p className="text-neutral-600 leading-relaxed mb-8">
-              The Environmental Science (EVS) Club at SSKV College promotes environmental awareness and conservation among students. The club organises tree plantation drives, waste management campaigns, and awareness programmes to foster a green and sustainable campus culture.
+              The EVS (Environmental and Voluntary Service) Club in college focuses on raising awareness about environmental issues among students. It organizes activities like clean-up drives, tree plantation events, and recycling campaigns to promote eco-friendly habits. The club also conducts workshops and seminars to educate students about sustainability and conservation practices. Members actively participate in local environmental projects and volunteer for community service initiatives. The EVS Club encourages students to adopt sustainable lifestyles and reduce their carbon footprint. It provides a platform for students to collaborate on innovative ideas for environmental preservation. Through its efforts, the club aims to create a greener and healthier campus environment. It also promotes the importance of biodiversity and natural resource management. The club often partners with NGOs and government agencies for larger environmental campaigns. Overall, the EVS Club plays a crucial role in fostering environmental responsibility among the college community.
             </p>
           </AnimatedSection>
         </div>
