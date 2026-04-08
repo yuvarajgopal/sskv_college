@@ -242,6 +242,36 @@ export default function AcademicCalendarPage() {
         </div>
       </section>
 
+      {/* ── EMBEDDED PDF — CALENDAR & HANDBOOK ──────────────────────────── */}
+      <section className="section-padding bg-white">
+        <div className="container-custom mx-auto max-w-5xl">
+          <SectionHeading title="Calendar & Handbook" subtitle={`Academic Year ${academicYear} — View the full document below`} />
+          <AnimatedSection>
+            <div className="bg-white rounded-2xl border border-neutral-200 shadow-sm overflow-hidden">
+              <div className="flex items-center justify-between bg-primary-900 px-6 py-3">
+                <div className="flex items-center gap-3">
+                  <FaFilePdf className="text-accent-400 text-lg" />
+                  <span className="text-white font-heading font-bold text-sm">College Calendar & Handbook {academicYear}</span>
+                </div>
+                <a
+                  href="/pdfs/academic-calendar-2025-26.pdf"
+                  download
+                  className="flex items-center gap-2 px-4 py-2 bg-accent-400 text-primary-900 text-xs font-bold rounded-lg hover:bg-accent-300 transition-colors font-heading"
+                >
+                  <FaDownload /> Download
+                </a>
+              </div>
+              <iframe
+                src="/pdfs/academic-calendar-2025-26.pdf"
+                title="College Calendar & Handbook"
+                className="w-full border-0"
+                style={{ height: '700px' }}
+              />
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       <CTABanner
         title="Plan Your Academic Year"
         subtitle="Download the full Calendar & Handbook for detailed schedules, assessment dates, and college regulations."

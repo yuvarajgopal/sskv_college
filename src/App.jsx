@@ -45,10 +45,14 @@ const ExecutiveCommitteePage = lazy(() => import('./pages/administration/Executi
 const ICCPage = lazy(() => import('./pages/administration/ICCPage'));
 const OrganogramPage = lazy(() => import('./pages/administration/OrganogramPage'));
 const LibraryPage = lazy(() => import('./pages/LibraryPage'));
+const LibraryAboutPage = lazy(() => import('./pages/library/LibraryAboutPage'));
+const LibraryFacultyPage = lazy(() => import('./pages/library/LibraryFacultyPage'));
+const LibraryAnnualReportPage = lazy(() => import('./pages/library/LibraryAnnualReportPage'));
 const AcademicCollaborationsPage = lazy(() => import('./pages/AcademicCollaborationsPage'));
 const AcademicCalendarPage = lazy(() => import('./pages/AcademicCalendarPage'));
 const AISHEPage = lazy(() => import('./pages/AISHEPage'));
 const NIRFPage = lazy(() => import('./pages/NIRFPage'));
+const CBCSRegulationsPage = lazy(() => import('./pages/CBCSRegulationsPage'));
 const StatutesOrdinancesPage = lazy(() => import('./pages/StatutesOrdinancesPage'));
 const AnnualAccountsReportPage = lazy(() => import('./pages/AnnualAccountsReportPage'));
 const FeeRefundPolicyPage = lazy(() => import('./pages/FeeRefundPolicyPage'));
@@ -161,10 +165,14 @@ export default function App() {
             <Route path="/administration/icc" element={<ICCPage />} />
             <Route path="/administration/organogram" element={<OrganogramPage />} />
             <Route path="/library" element={<LibraryPage />} />
+            <Route path="/library/about" element={<LibraryAboutPage />} />
+            <Route path="/library/faculty" element={<LibraryFacultyPage />} />
+            <Route path="/library/annual-report" element={<LibraryAnnualReportPage />} />
             <Route path="/academic-collaborations" element={<AcademicCollaborationsPage />} />
             <Route path="/academic-calendar" element={<AcademicCalendarPage />} />
             <Route path="/aishe" element={<AISHEPage />} />
             <Route path="/nirf" element={<NIRFPage />} />
+            <Route path="/cbcs-regulations" element={<CBCSRegulationsPage />} />
             <Route path="/statutes-ordinances" element={<StatutesOrdinancesPage />} />
             <Route path="/annual-accounts" element={<AnnualAccountsReportPage />} />
             <Route path="/fee-refund-policy" element={<FeeRefundPolicyPage />} />
