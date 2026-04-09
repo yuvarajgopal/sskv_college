@@ -1,4 +1,5 @@
-import { FaMusic, FaMicrophone, FaTrophy, FaStar } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
+import { FaMusic, FaMicrophone, FaTrophy, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
@@ -11,7 +12,39 @@ const highlights = [
   { icon: FaStar,       title: 'Carnatic Music Assoc.', desc: 'Dedicated Carnatic Music Association since October 2012 with Carnatic Music as an add-on course.' },
 ];
 
+// 🔥 Image slider images
+const images = [
+  'images/culturals/cult_img_1.JPG',
+  'images/culturals/cult_img_2.JPG',
+  'images/culturals/cult_img_3.JPG',
+  'images/culturals/cult_img_4.JPG',
+   'images/culturals/cult_img_5.JPG',
+  'images/culturals/cult_img_6.JPG',
+  'images/culturals/cult_img_7.JPG',
+  'images/culturals/cult_img_4.JPG',
+
+];
+
 export default function CulturalsPage() {
+  const [current, setCurrent] = useState(0);
+
+  // 🔥 Auto slide
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 3000); // 3 sec
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   return (
     <>
       <Hero
@@ -23,6 +56,7 @@ export default function CulturalsPage() {
 
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto max-w-5xl">
+
           <SectionHeading title="Cultural Activities" subtitle="A vibrant platform for students to showcase their artistic talents" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -41,68 +75,13 @@ export default function CulturalsPage() {
             ))}
           </div>
 
-          {/* 🔥 NEW CONTENT ADDED BELOW IN SAME STYLE */}
-
           <div className="mt-10 space-y-6">
 
             <AnimatedSection>
               <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
                 <h3 className="font-bold text-primary-800 mb-2">Annual Cultural Celebration</h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
-                  The annual cultural celebration at SSKV College of Arts and Science for Women is one of the most anticipated events of the academic year. It reflects the college’s commitment to fostering artistic talent, teamwork, leadership, and cultural appreciation among students while enriching academic life with co-curricular experiences.
-                </p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection>
-              <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
-                <h3 className="font-bold text-primary-800 mb-2">When & Why It Happens</h3>
-                <ul className="list-disc pl-5 text-sm text-neutral-600 space-y-2">
-                  <li>Celebrates creativity in music, dance, theatre, and arts</li>
-                  <li>Encourages teamwork, leadership, and coordination</li>
-                  <li>Strengthens community bonding among students and faculty</li>
-                  <li>Provides a platform to showcase student talent</li>
-                </ul>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection>
-              <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
-                <h3 className="font-bold text-primary-800 mb-2">Preparation & Committees</h3>
                 <p className="text-sm text-neutral-600">
-                  Student committees work with faculty to organize themes, schedules, and logistics. Activities include theme selection, rehearsals, workshops, guest invitations, and promotions.
-                </p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection>
-              <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
-                <h3 className="font-bold text-primary-800 mb-2">Signature Events</h3>
-                <ul className="list-disc pl-5 text-sm text-neutral-600 space-y-2">
-                  <li><strong>Music & Singing:</strong> Solo, group, and light music performances</li>
-                  <li><strong>Dance:</strong> Classical, folk, and modern choreography</li>
-                  <li><strong>Drama:</strong> Skits and theatrical performances</li>
-                  <li><strong>Literary Events:</strong> Debate, poetry, and storytelling</li>
-                  <li><strong>Fine Arts:</strong> Painting, rangoli, and crafts</li>
-                  <li><strong>Fashion Shows:</strong> Cultural and themed showcases</li>
-                </ul>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection>
-              <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
-                <h3 className="font-bold text-primary-800 mb-2">Awards & Recognition</h3>
-                <p className="text-sm text-neutral-600">
-                  Winners receive certificates, trophies, and special awards like Best Performer and Audience Choice, boosting confidence and enhancing student portfolios.
-                </p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection>
-              <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
-                <h3 className="font-bold text-primary-800 mb-2">Campus Experience</h3>
-                <p className="text-sm text-neutral-600">
-                  The fest atmosphere includes food stalls, exhibitions, and interactive activities, creating a vibrant and memorable campus experience.
+                  The annual cultural celebration at SSKV College reflects the institution’s commitment to artistic excellence, teamwork, and cultural diversity.
                 </p>
               </div>
             </AnimatedSection>
@@ -114,8 +93,52 @@ export default function CulturalsPage() {
                   <li>Builds confidence and stage presence</li>
                   <li>Enhances teamwork and communication skills</li>
                   <li>Develops leadership and responsibility</li>
-                  <li>Encourages cultural awareness and creativity</li>
+                  <li>Encourages creativity and cultural awareness</li>
                 </ul>
+              </div>
+            </AnimatedSection>
+
+            {/* 🔥 IMAGE SLIDER SECTION */}
+            <AnimatedSection>
+              <div className="relative mt-6">
+
+                <div className="overflow-hidden rounded-2xl shadow-lg">
+                  <img
+                    src={images[current]}
+                    alt="Cultural Event"
+                    className="w-full h-[600px] object-cover transition-all duration-700"
+                  />
+                </div>
+
+                {/* Left Button */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute top-1/2 left-3 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60"
+                >
+                  <FaChevronLeft />
+                </button>
+
+                {/* Right Button */}
+                <button
+                  onClick={nextSlide}
+                  className="absolute top-1/2 right-3 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60"
+                >
+                  <FaChevronRight />
+                </button>
+
+                {/* Dots */}
+                <div className="flex justify-center mt-3 gap-2">
+                  {images.map((_, index) => (
+                    <div
+                      key={index}
+                      onClick={() => setCurrent(index)}
+                      className={`w-2.5 h-2.5 rounded-full cursor-pointer ${
+                        current === index ? 'bg-primary-700' : 'bg-gray-300'
+                      }`}
+                    />
+                  ))}
+                </div>
+
               </div>
             </AnimatedSection>
 
@@ -123,14 +146,19 @@ export default function CulturalsPage() {
 
           <AnimatedSection delay={0.3}>
             <div className="mt-8 bg-primary-50 rounded-2xl p-6 border border-primary-100 text-center">
-              <p className="text-neutral-500 text-sm">Detailed cultural event reports and gallery are being updated. Check back soon.</p>
+              <p className="text-neutral-500 text-sm">
+                Detailed cultural event reports and gallery are being updated. Check back soon.
+              </p>
             </div>
           </AnimatedSection>
 
         </div>
       </section>
 
-      <CTABanner title="Express. Perform. Shine." subtitle="SSKV College provides a vibrant stage for every student's artistic expression." />
+      <CTABanner
+        title="Express. Perform. Shine."
+        subtitle="SSKV College provides a vibrant stage for every student's artistic expression."
+      />
     </>
   );
 }
