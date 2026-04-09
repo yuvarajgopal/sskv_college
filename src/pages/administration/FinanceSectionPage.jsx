@@ -16,7 +16,7 @@ const management = [
     photo: '/images/management/joint-secretary.jpg'
   },
   { 
-    name: 'Dr. Prasanth',   
+    name: 'Dr. Prasanth Krishna',   
     designation: 'Treasurer', 
     photo: '/images/management/prasanth.jpg'
   },

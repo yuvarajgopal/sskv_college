@@ -44,16 +44,16 @@ const programmes = [
   },
   {
     sl: 6, shift: 'Shift I',
-    ug: 'B.Sc (Computer Science)', pg: '–', dept: 'Computer Science',
+    ug: 'B.Sc (Computer Science)', pg: 'M.Sc (Computer Science)', dept: 'Computer Science',
     ugElig: 'Mathematics at +2 required.',
-    pgElig: '–',
+    pgElig: 'B.Sc (Computer Science) or equivalent degree with minimum 50% marks (40% for SC/ST) as per UNOM norms.',
     ugSyllabus: '/pdfs/bsc_cs_syllabus.pdf', pgSyllabus: null,
   },
   {
     sl: 7, shift: 'Shift I',
-    ug: 'B.Sc (Mathematics)', pg: '–', dept: 'Mathematics',
+    ug: 'B.Sc (Mathematics)', pg: 'M.sc(Mathematics)', dept: 'Mathematics',
     ugElig: 'Mathematics at +2 level.',
-    pgElig: '–',
+    pgElig: 'B.Sc (Mathematics) or equivalent degree with minimum 50% marks (40% for SC/ST) as per UNOM norms.',
     ugSyllabus: '/pdfs/bsc_math_syllabus.pdf', pgSyllabus: null,
   },
   {
@@ -69,6 +69,14 @@ const programmes = [
     ugElig: 'Same as B.Sc CS.',
     pgElig: '–',
     ugSyllabus: '/pdfs/bsc_ai_syllabus.pdf', pgSyllabus: null,
+  },
+
+    {
+    sl: 10, shift: 'Shift I',
+    ug: 'BA(Economics)', pg: '–', dept: 'Economics',
+    ugElig: 'Pass any group in HSC.',
+    pgElig: '–',
+    ugSyllabus: '/pdfs/ba_english_syllabus.pdf', pgSyllabus: null,
   },
   {
     sl: 10, shift: 'Shift I',

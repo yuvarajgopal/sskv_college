@@ -8,12 +8,12 @@ import { COLLEGE_INFO } from '../utils/constants';
 
 const disclosures = [
   { category: 'Name of the Institution', value: 'SSKV College of Arts & Science for Women' },
-  { category: 'Address', value: 'Kilambi, Kanchipuram — 631 551, Tamil Nadu' },
+  { category: 'Address', value: 'Krishnapuram post, kizhambi, Kanchipuram-631551' },
   { category: 'Date of Establishment', value: '2007' },
-  { category: 'Type of Institution', value: "Women's College — Arts & Science" },
-  { category: 'Ownership', value: 'Private — SSKV Trust' },
+  { category: 'Type of Institution', value: "Self financing college" },
+  { category: 'Ownership', value: 'The Conjeevaram Hindu Educational Society' },
   { category: 'Affiliating University', value: 'University of Madras, Chennai' },
-  { category: 'UGC Recognition under Section 2(f)', value: 'Yes — Recognized' },
+  { category: 'UGC Recognition under Section 2(f)', value: 'Under Process' },
   { category: 'UGC Recognition under Section 12(B)', value: 'Applied / Under Process' },
   { category: 'Phone', value: '044-27277880 | 044-27277900' },
   { category: 'Email', value: 'sskvcollege@yahoo.com | sskvcollege2007@gmail.com' },

@@ -1,8 +1,11 @@
-import { useState } from 'react';
-import { FaBriefcase, FaUserTie, FaGraduationCap, FaUsers, FaAward, FaFilePdf } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { FaBriefcase, FaUserTie, FaGraduationCap, FaUsers, FaAward, FaFilePdf, FaCamera } from 'react-icons/fa';
 import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
+import DepartmentSectionNav from '../../components/shared/DepartmentSectionNav';
+import ActivityGallery from '../../components/shared/ActivityGallery';
 import CTABanner from '../../components/sections/CTABanner';
 
 const BASE_PHOTO  = '/images/faculty/bba/';
@@ -13,14 +16,14 @@ const faculty = [
   { name: 'D. Geethanjali',  qualification: 'M.B.A., NET',                               role: 'Assistant Professor',               photo: `${BASE_PHOTO}d-geethanjali.jpg`,  resume: `${BASE_RESUME}d-geethanjali.pdf` },
   { name: 'S. Janani',       qualification: 'M.B.A',                                     role: 'Assistant Professor',               photo: `${BASE_PHOTO}s-janani.jpg`,       resume: `${BASE_RESUME}s-janani.pdf` },
   { name: 'S. Kavitha',      qualification: 'M.Com',                                     role: 'Assistant Professor',               photo: `${BASE_PHOTO}s-kavitha.jpg`,      resume: `${BASE_RESUME}s-kavitha.pdf` },
-   { name: 'Ms.R,KAYALVIZHI', qualification: 'MBA.,',                                    role: 'Assistant Professor',               photo: `${BASE_PHOTO}kayalizhi.jpg`,      resume: `${BASE_RESUME}kayil_bba.pdf` },
+  { name: 'Ms.R,KAYALVIZHI', qualification: 'MBA.,',                                     role: 'Assistant Professor',               photo: `${BASE_PHOTO}kayalizhi.jpg`,      resume: `${BASE_RESUME}kayil_bba.pdf` },
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
   const [failed, setFailed] = useState(false);
   const sizeClass = size === 'lg'
-    ? 'w-24 h-24 text-4xl'
-    : 'w-24 h-24 text-2xl';
+    ? 'w-36 h-36 text-4xl'
+    : 'w-14 h-14 text-2xl';
 
   if (!failed) {
     return (
@@ -38,6 +41,7 @@ function FacultyPhoto({ src, name, size = 'md' }) {
     </div>
   );
 }
+
 
 const programDetails = [
   { label: 'Degree',        value: 'Bachelor of Business Administration (BBA)' },
@@ -68,8 +72,24 @@ const facultyCount = faculty.length;
 const phdCount = faculty.filter(f => f.qualification?.includes('Ph.D')).length;
 
 export default function BBADepartmentPage() {
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const section = searchParams.get('section');
+    if (section) {
+      const el = document.getElementById(section);
+      if (el) setTimeout(() => {
+        const top = el.getBoundingClientRect().top + window.pageYOffset - 130;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }, 150);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [searchParams]);
+
   return (
     <>
+      {/* Hero */}
       <Hero
         title="Department of BBA"
         subtitle="Bachelor of Business Administration — Developing tomorrow's leaders and entrepreneurs"
@@ -77,120 +97,75 @@ export default function BBADepartmentPage() {
         breadcrumb="Academics › BBA"
       />
 
-      {/* Program Overview */}
-      <section className="section-padding bg-white">
+      {/* Section Nav */}
+      <DepartmentSectionNav />
+
+      {/* About the Department */}
+      <section id="about" className="section-padding bg-white">
         <div className="container-custom mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="max-w-4xl">
             <AnimatedSection direction="left">
               <span className="inline-block px-4 py-1.5 bg-violet-50 text-violet-700 text-sm font-semibold rounded-full mb-4">
                 Professional — 3 Year Program
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+              <h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
                 About the Department
-              </h2>
+              </h3>
               <p className="text-neutral-600 leading-relaxed mb-4">
-              Management education is a transformative journey that builds responsible, globally minded leaders. We nurture personal growth through 
-              confidence and discipline, leading to career growth marked by adaptability and innovation. True leadership rests on values and balance—integrity, 
-              empathy, and resilience. With curriculum aligned to global industry needs and enriched by internships and real-world exposure. We are preparing 
-              students for tomorrow’s challenges. Through holistic development in academics, sports, and culture, We shape visionaries, entrepreneurs, and change-makers.
+                Management education is a transformative journey that builds responsible, globally minded leaders. We nurture personal growth through
+                confidence and discipline, leading to career growth marked by adaptability and innovation. True leadership rests on values and balance—integrity,
+                empathy, and resilience. With curriculum aligned to global industry needs and enriched by internships and real-world exposure. We are preparing
+                students for tomorrow's challenges. Through holistic development in academics, sports, and culture, We shape visionaries, entrepreneurs, and change-makers.
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+              <h3 className="text-xl font-bold text-primary-800 font-heading mb-3 mt-6">
                 Vision of the Department
-              </h2>
+              </h3>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                “Shaping Leaders, Inspiring Growth, Building Futures”
+                "Shaping Leaders, Inspiring Growth, Building Futures"
                 Education is the most powerful weapon which you can use to change the world – Nelson Mandela
               </p>
-               <br></br>
-               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+              <h3 className="text-xl font-bold text-primary-800 font-heading mb-3 mt-6">
                 Vision
-              </h2>
-              <p className="text-neutral-600 leading-relaxed">
+              </h3>
+              <p className="text-neutral-600 leading-relaxed mb-4">
                 Personal and Career Growth – Building confidence, adaptability and leadership.
-                irtues and Emotional Balance – Instilling integrity, empathy and resilience.
+                Virtues and Emotional Balance – Instilling integrity, empathy and resilience.
                 Global Industry Relevance – Aligning knowledge with modern industrial needs.
-                Holistic Development – Fostering talent through sports, culture, and co-curricular
-                Leadership for Tomorrow – Shaping thinkers, innovators, and global citizens .
+                Holistic Development – Fostering talent through sports, culture, and co-curricular.
+                Leadership for Tomorrow – Shaping thinkers, innovators, and global citizens.
               </p>
-                   <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+              <h3 className="text-xl font-bold text-primary-800 font-heading mb-3 mt-6">
                 Mission
-              </h2>
-               <br></br>
-              <p className="text-neutral-600 leading-relaxed">
-                Pdeveloped leaders who can shape the future with knowledge, values, and vision.
-                1. “Beyond Knowledge, Towards Leadership.”
-                2. “Educating Minds, Shaping Futures.”
-                3. “From Classrooms to Global Boardrooms.”
-                4. “Empowering Growth, Inspiring Change.”
-                5. “Where Learning Meets Leadership.”
-                6. “Knowledge, Virtue, and Vision for Tomorrow.”
+              </h3>
+              <p className="text-neutral-600 leading-relaxed mb-4">
+                Developing leaders who can shape the future with knowledge, values, and vision.
+                1. "Beyond Knowledge, Towards Leadership."
+                2. "Educating Minds, Shaping Futures."
+                3. "From Classrooms to Global Boardrooms."
+                4. "Empowering Growth, Inspiring Change."
+                5. "Where Learning Meets Leadership."
+                6. "Knowledge, Virtue, and Vision for Tomorrow."
               </p>
-              <br></br>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+              <h3 className="text-xl font-bold text-primary-800 font-heading mb-3 mt-6">
                 Objectives
-              </h2>
+              </h3>
               <p className="text-neutral-600 leading-relaxed">
-                The Department of English at SSKV College of Arts and Science for Women is committed to developing students’ language proficiency, 
-                communication skills, and literary understanding. The department organizes seminars, workshops, guest lectures, 
-                and literary activities such as debates, elocution, essay writing, and drama to enrich academic learning. 
-                Through English Club activities and interactive sessions, students are encouraged to improve their confidence and creativity.
-                 The department also motivates students to participate in intercollegiate competitions and skill-development programs for overall personality development.
+                The Department of BBA at SSKV College of Arts and Science for Women is committed to developing students' management skills,
+                communication abilities, and business understanding. The department organizes seminars, workshops, guest lectures,
+                and business activities such as case studies, business plan competitions, and management fests to enrich academic learning.
+                Through interactive sessions, students are encouraged to improve their confidence and creativity.
+                The department also motivates students to participate in intercollegiate competitions and skill-development programs for overall personality development.
               </p>
             </AnimatedSection>
-
-            {/* Program details card */}
-            <AnimatedSection direction="right">
-              <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-violet-500/20 flex items-center justify-center">
-                    <FaBriefcase className="text-2xl text-violet-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold font-heading">BBA</h3>
-                    <p className="text-white/60 text-sm">Program Details</p>
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  {programDetails.map((item) => (
-                    <div key={item.label} className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">{item.label}</span>
-                      <span className="text-white font-semibold text-sm text-right ml-4">{item.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Program Outcomes */}
-      <section className="section-padding bg-violet-50">
-        <div className="container-custom mx-auto">
-          <SectionHeading
-            title="Program Outcomes"
-            subtitle="What students gain from the BBA program"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            {outcomes.map((outcome, i) => (
-              <AnimatedSection key={i} delay={i * 0.07}>
-                <div className="flex items-start gap-3 bg-white rounded-xl p-5 border border-violet-100 shadow-sm h-full">
-                  <div className="w-7 h-7 rounded-full bg-violet-500 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-xs font-bold">{i + 1}</span>
-                  </div>
-                  <p className="text-neutral-700 text-sm leading-relaxed">{outcome}</p>
-                </div>
-              </AnimatedSection>
-            ))}
           </div>
         </div>
       </section>
 
       {/* Faculty */}
-      <section className="section-padding bg-white">
+      <section id="faculty" className="section-padding bg-violet-50">
         <div className="container-custom mx-auto">
           <SectionHeading
-            title="Our Faculty"
+            title="Faculty"
             subtitle="Business experts and management educators inspiring future leaders"
           />
 
@@ -223,7 +198,7 @@ export default function BBADepartmentPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
               {faculty.filter((f) => !f.isHod).map((f, i) => (
                 <AnimatedSection key={f.name} delay={i * 0.05}>
-                  <div className="bg-neutral-50 hover:bg-violet-50 transition-colors duration-300 rounded-xl p-5 border border-neutral-100 flex flex-col gap-4">
+                  <div className="bg-white hover:bg-violet-50 transition-colors duration-300 rounded-xl p-5 border border-neutral-100 flex flex-col gap-4">
                     <div className="flex items-center gap-3">
                       <FacultyPhoto src={f.photo} name={f.name} size="md" />
                       <div>
@@ -259,7 +234,7 @@ export default function BBADepartmentPage() {
                 { icon: FaGraduationCap, value: '3',                  label: 'Years Duration' },
                 { icon: FaBriefcase,     value: '6',                  label: 'Semesters' },
               ].map((stat) => (
-                <div key={stat.label} className="bg-primary-50 rounded-xl p-5 text-center">
+                <div key={stat.label} className="bg-white rounded-xl p-5 text-center">
                   <stat.icon className="text-2xl text-primary-700 mx-auto mb-2" />
                   <div className="text-2xl font-bold text-primary-800 font-heading">{stat.value}</div>
                   <div className="text-xs text-neutral-500 mt-1">{stat.label}</div>
@@ -270,6 +245,131 @@ export default function BBADepartmentPage() {
         </div>
       </section>
 
+      {/* Programmes Offered */}
+      <section id="programmes" className="section-padding bg-white">
+        <div className="container-custom mx-auto">
+          <SectionHeading title="Programmes Offered" subtitle="Academic programmes and learning outcomes" />
+          <div className="max-w-5xl mx-auto">
+            {/* Programmes List */}
+            <div className="flex flex-wrap gap-4 mb-8 max-w-5xl mx-auto">
+              <div className="flex-1 min-w-[200px] bg-violet-50 border border-violet-200 rounded-xl p-5 text-center">
+                <div className="w-10 h-10 rounded-full bg-violet-500 flex items-center justify-center mx-auto mb-3">
+                  <FaGraduationCap className="text-white text-lg" />
+                </div>
+                <p className="text-sm font-bold text-primary-800">Bachelor of Business Administration (BBA)</p>
+                <p className="text-xs text-neutral-500 mt-1">Undergraduate Programme</p>
+              </div>
+              <div className="flex-1 min-w-[200px] bg-violet-50 border border-violet-200 rounded-xl p-5 text-center">
+                <div className="w-10 h-10 rounded-full bg-violet-500 flex items-center justify-center mx-auto mb-3">
+                  <FaGraduationCap className="text-white text-lg" />
+                </div>
+                <p className="text-sm font-bold text-primary-800">Master of Business Administration (MBA)</p>
+                <p className="text-xs text-neutral-500 mt-1">Postgraduate Programme</p>
+              </div>
+            </div>
+            {/* Programme Details Card */}
+            <AnimatedSection>
+              <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white mb-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-violet-500/20 flex items-center justify-center">
+                    <FaBriefcase className="text-2xl text-violet-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold font-heading">BBA</h3>
+                    <p className="text-white/60 text-sm">Program Details</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+                  {programDetails.map((item) => (
+                    <div key={item.label} className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                      <span className="text-white/60 text-sm">{item.label}</span>
+                      <span className="text-white font-semibold text-sm text-right ml-4">{item.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={0.1}>
+              <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white mb-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-violet-500/20 flex items-center justify-center">
+                    <FaBriefcase className="text-2xl text-violet-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold font-heading">MBA</h3>
+                    <p className="text-white/60 text-sm">Postgraduate Programme Details</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                      <span className="text-white/60 text-sm">Degree</span>
+                      <span className="text-white font-semibold text-sm text-right ml-4">Master of Business Administration (MBA)</span>
+                    </div>
+                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                      <span className="text-white/60 text-sm">Specialisation</span>
+                      <span className="text-white font-semibold text-sm text-right ml-4">Business Administration</span>
+                    </div>
+                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                      <span className="text-white/60 text-sm">Duration</span>
+                      <span className="text-white font-semibold text-sm text-right ml-4">2 Years (4 Semesters)</span>
+                    </div>
+                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                      <span className="text-white/60 text-sm">Eligibility</span>
+                      <span className="text-white font-semibold text-sm text-right ml-4">BBA / Any UG degree from a recognized university</span>
+                    </div>
+                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                      <span className="text-white/60 text-sm">Affiliation</span>
+                      <span className="text-white font-semibold text-sm text-right ml-4">University of Madras</span>
+                    </div>
+                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                      <span className="text-white/60 text-sm">Curriculum</span>
+                      <span className="text-white font-semibold text-sm text-right ml-4">CBCS — Choice Based Credit System</span>
+                    </div>
+                </div>
+              </div>
+            </AnimatedSection>
+            {/* Program Outcomes */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {outcomes.map((outcome, i) => (
+                <AnimatedSection key={i} delay={i * 0.07}>
+                  <div className="flex items-start gap-3 bg-violet-50 rounded-xl p-5 border border-violet-100 shadow-sm h-full">
+                    <div className="w-7 h-7 rounded-full bg-violet-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-white text-xs font-bold">{i + 1}</span>
+                    </div>
+                    <p className="text-neutral-700 text-sm leading-relaxed">{outcome}</p>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Department Activities */}
+      <section id="activities" className="section-padding bg-violet-50">
+        <div className="container-custom mx-auto">
+          <SectionHeading title="Department Activities" subtitle="Developing management skills and business acumen" />
+          <AnimatedSection>
+            <p className="text-neutral-600 leading-relaxed mb-6 max-w-4xl mx-auto">
+              The Department of BBA at SSKV College of Arts and Science for Women focuses on developing management skills, entrepreneurial thinking, and business acumen. The department organizes business plan competitions, industrial visits, guest lectures by corporate leaders, workshops on marketing and finance, and management fests. Students participate in case study competitions, role-play exercises, and intercollegiate management events to enhance their leadership and decision-making abilities.
+            </p>
+          </AnimatedSection>
+          <div className="max-w-4xl mx-auto">
+            <ActivityGallery images={[
+              { src: '/images/activities/bba/1.jpg', caption: 'Business Plan Competition' },
+              { src: '/images/activities/bba/2.jpg', caption: 'Industrial Visit' },
+              { src: '/images/activities/bba/3.jpg', caption: 'Guest Lecture' },
+              { src: '/images/activities/bba/4.jpg', caption: 'Marketing Workshop' },
+              { src: '/images/activities/bba/5.jpg', caption: 'Management Fest' },
+              { src: '/images/activities/bba/6.jpg', caption: 'Case Study Competition' },
+              { src: '/images/activities/bba/7.jpg', caption: 'Leadership Workshop' },
+              { src: '/images/activities/bba/8.jpg', caption: 'Entrepreneurship Seminar' },
+            ]} color="violet" />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
       <CTABanner
         title="Interested in BBA?"
         subtitle="Apply now and start your journey towards becoming a confident business leader."

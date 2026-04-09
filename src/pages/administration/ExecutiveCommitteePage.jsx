@@ -85,7 +85,7 @@ export default function ExecutiveCommitteePage() {
         <div className="container-custom mx-auto">
           <SectionHeading
             title="Committee Members"
-            subtitle="Conjeevaram Hindu Educational Society"
+            subtitle=""
           />
 
           {members.length > 0 ? (

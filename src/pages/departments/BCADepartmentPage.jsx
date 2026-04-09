@@ -1,8 +1,11 @@
-import { useState } from 'react';
-import { FaDesktop, FaUserTie, FaGraduationCap, FaUsers, FaAward, FaFilePdf } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { FaDesktop, FaUserTie, FaGraduationCap, FaUsers, FaAward, FaFilePdf, FaCamera } from 'react-icons/fa';
 import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
+import DepartmentSectionNav from '../../components/shared/DepartmentSectionNav';
+import ActivityGallery from '../../components/shared/ActivityGallery';
 import CTABanner from '../../components/sections/CTABanner';
 
 const BASE_PHOTO  = '/images/faculty/bca/';
@@ -16,29 +19,6 @@ const faculty = [
   { name: 'Dr. P. Priyadharshini', qualification: 'M.C.A., M.Phil., Ph.D.',  role: 'Assistant Professor & HOD (Shift II)',   isHod: true,   photo: `${BASE_PHOTO}priyadharshini.jpg`,   resume: `${BASE_RESUME}priyadharshini.pdf` },
   { name: 'Ms. A. Yazhini',       qualification: 'MCA., NET',                role: 'Assistant Professor (Shift II)',                              photo: `${BASE_PHOTO}yazhini.jpg`,             resume: `${BASE_RESUME}Yazhini.pdf` },
 ];
-
-function FacultyPhoto({ src, name, size = 'md' }) {
-  const [failed, setFailed] = useState(false);
-  const sizeClass = size === 'lg'
-    ? 'w-24 h-24 text-4xl'
-    : 'w-24 h-24 text-2xl';
-
-  if (!failed) {
-    return (
-      <img
-        src={src}
-        alt={name}
-        onError={() => setFailed(true)}
-        className={`${sizeClass} rounded-full object-cover flex-shrink-0`}
-      />
-    );
-  }
-  return (
-    <div className={`${sizeClass} rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0`}>
-      <FaUserTie className="text-teal-400" />
-    </div>
-  );
-}
 
 const programDetails = [
   { label: 'Degree',        value: 'Bachelor of Computer Applications (BCA)' },
@@ -64,12 +44,60 @@ const outcomes = [
   'Industry readiness for roles in software development, IT services, and digital business',
 ];
 
+const activityPhotos = [
+  { src: '/images/activities/bca/1.jpg', caption: 'Technical Workshop' },
+  { src: '/images/activities/bca/2.jpg', caption: 'Coding Competition' },
+  { src: '/images/activities/bca/3.jpg', caption: 'Guest Lecture on IT Trends' },
+  { src: '/images/activities/bca/4.jpg', caption: 'Project Exhibition' },
+  { src: '/images/activities/bca/5.jpg', caption: 'Hands-on Training Session' },
+  { src: '/images/activities/bca/6.jpg', caption: 'Industry Visit' },
+  { src: '/images/activities/bca/7.jpg', caption: 'Seminar on Web Development' },
+  { src: '/images/activities/bca/8.jpg', caption: 'Intercollegiate Tech Event' },
+];
+
 const facultyCount = faculty.length;
 const phdCount = faculty.filter(f => f.qualification?.includes('Ph.D')).length;
 
+function FacultyPhoto({ src, name, size = 'md' }) {
+  const [failed, setFailed] = useState(false);
+  const sizeClass = size === 'lg'
+    ? 'w-24 h-24 text-4xl'
+    : 'w-24 h-24 text-2xl';
+
+  if (!failed) {
+    return (
+      <img
+        src={src}
+        alt={name}
+        onError={() => setFailed(true)}
+        className={`${sizeClass} rounded-full object-cover flex-shrink-0`}
+      />
+    );
+  }
+  return (
+    <div className={`${sizeClass} rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0`}>
+      <FaUserTie className="text-teal-400" />
+    </div>
+  );
+}
+
+
 export default function BCADepartmentPage() {
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const section = searchParams.get('section');
+    if (section) {
+      const el = document.getElementById(section);
+      if (el) setTimeout(() => { const top = el.getBoundingClientRect().top + window.pageYOffset - 130; window.scrollTo({ top, behavior: 'smooth' }); }, 150);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [searchParams]);
+
   return (
     <>
+      {/* Hero */}
       <Hero
         title="Department of BCA"
         subtitle="Bachelor of Computer Applications — Bridging technology and business for the digital age"
@@ -77,10 +105,13 @@ export default function BCADepartmentPage() {
         breadcrumb="Academics › BCA"
       />
 
-      {/* Program Overview */}
-      <section className="section-padding bg-white">
+      {/* Section Nav */}
+      <DepartmentSectionNav />
+
+      {/* About the Department */}
+      <section id="about" className="section-padding bg-white">
         <div className="container-custom mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="max-w-4xl">
             <AnimatedSection direction="left">
               <span className="inline-block px-4 py-1.5 bg-teal-50 text-teal-700 text-sm font-semibold rounded-full mb-4">
                 Professional — 3 Year Program
@@ -89,133 +120,79 @@ export default function BCADepartmentPage() {
                 About the Department
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                Next to the Industrial Revolution the revolution that has changed our whole perception of the world, knowledge 
-                and consciousness and which has changed the global economic scene is computer revolution. Here in our college we 
-                understand the value of this new dimension and bring that understanding to our thinking and living. The departments 
-                of Computer Application and Computer Science were established when the college was founded in 2007. The two departments, 
-                though different in the sense pure science and applied science are different, work cohesively as one unit not withstanding 
-                the fact that the ontological status of each department is maintained. “Where success is concerned, people are not 
-                measured in inches, or pounds, or college degrees, or family background, they are measured by the size of their 
-                thinking,” said J.M. Cupello, the quality management expert and six zigma masterBlack Belt. The development 
-                in computer science is so fast that we have to be on our toes not to lose ourselves in obsolescence. Taking this 
-                into consideration the faculty of the two departments strive to be at the cutting edge of knowledge and sensitize 
-                our students to the impartance of analytical and application of acquired knowledge. 
+                Next to the Industrial Revolution the revolution that has changed our whole perception of the world, knowledge
+                and consciousness and which has changed the global economic scene is computer revolution. Here in our college we
+                understand the value of this new dimension and bring that understanding to our thinking and living. The departments
+                of Computer Application and Computer Science were established when the college was founded in 2007. The two departments,
+                though different in the sense pure science and applied science are different, work cohesively as one unit not withstanding
+                the fact that the ontological status of each department is maintained. "Where success is concerned, people are not
+                measured in inches, or pounds, or college degrees, or family background, they are measured by the size of their
+                thinking," said J.M. Cupello, the quality management expert and six zigma masterBlack Belt. The development
+                in computer science is so fast that we have to be on our toes not to lose ourselves in obsolescence. Taking this
+                into consideration the faculty of the two departments strive to be at the cutting edge of knowledge and sensitize
+                our students to the impartance of analytical and application of acquired knowledge.
               </p>
-              <br></br>
               <p className="text-neutral-600 leading-relaxed mb-4">
-               The course typically spans three years, divided into six semesters, covering topics like programming languages, 
-               database management, web development, and computer networks. BCA prepares students for careers in software development, 
-               system analysis, and IT consulting. It also offers a solid foundation for pursuing higher studies like 
-               MCA or MBA in IT-related fields. The program emphasizes both theoretical knowledge and practical skills 
-               through projects and internships. Graduates of BCA can find employment in IT companies, tech startups, banks, 
-               and government agencies. The curriculum is regularly updated to include the latest industry trends and technologies. 
-               BCA is ideal for students who want to build a strong career in the rapidly evolving tech industry. Overall, 
-               it is a valuable degree for those aspiring to become IT professionals, software engineers, or entrepreneurs 
-               in the digital space.or 
+               The course typically spans three years, divided into six semesters, covering topics like programming languages,
+               database management, web development, and computer networks. BCA prepares students for careers in software development,
+               system analysis, and IT consulting. It also offers a solid foundation for pursuing higher studies like
+               MCA or MBA in IT-related fields. The program emphasizes both theoretical knowledge and practical skills
+               through projects and internships. Graduates of BCA can find employment in IT companies, tech startups, banks,
+               and government agencies. The curriculum is regularly updated to include the latest industry trends and technologies.
+               BCA is ideal for students who want to build a strong career in the rapidly evolving tech industry. Overall,
+               it is a valuable degree for those aspiring to become IT professionals, software engineers, or entrepreneurs
+               in the digital space.
               </p>
-              <br></br>
 
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-4">
                 Vision
               </h2>
-              <p className="text-neutral-600 leading-relaxed">
-               The Department aims to foster a dynamic teaching and learning environment that empowers students to become 
-               competent professionals, ready to serve the computing industry and contribute meaningfully to the socio-economic 
+              <p className="text-neutral-600 leading-relaxed mb-4">
+               The Department aims to foster a dynamic teaching and learning environment that empowers students to become
+               competent professionals, ready to serve the computing industry and contribute meaningfully to the socio-economic
                development of the nation.
               </p>
-              <br></br>
 
-               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-4">
                 Mission
               </h2>
-              <p className="text-neutral-600 leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed mb-4">
                We provide high-quality education in computer applications through a curriculum aligned with industry needs.
                Preparing students for successful careers in IT and allied sectors.
-               Encouraging students in academic excellence and innovation. 	
-               <br></br>
+               Encouraging students in academic excellence and innovation.
               </p>
-               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
+
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-4">
                 Objectives
               </h2>
+              <p className="text-neutral-600 leading-relaxed mb-4">
+               To ensure students graduate with strong technical and analytical skills, ready to face real-world challenges.
+              </p>
+              <p className="text-neutral-600 leading-relaxed mb-4">
+               To achieve consistent academic excellence through mentoring and performance tracking.
+              </p>
+              <p className="text-neutral-600 leading-relaxed mb-4">
+               To support students in securing placements in reputed IT companies and organizations.
+              </p>
+              <p className="text-neutral-600 leading-relaxed mb-4">
+               To motivate students to achieve top university ranks and gold medals.
+              </p>
+              <p className="text-neutral-600 leading-relaxed mb-4">
+               To foster soft skills, leadership abilities, and a lifelong learning mindset.
+              </p>
               <p className="text-neutral-600 leading-relaxed">
-               To ensure students graduate with strong technical and analytical skills, ready to face real-world challenges.<br></br>
-               To achieve consistent academic excellence through mentoring and performance tracking.<br></br>
-               To support students in securing placements in reputed IT companies and 	organizations.<br></br>
-               To motivate students to achieve top university ranks and gold medals.<br></br>
-               To foster soft skills, leadership abilities, and a lifelong learning mindset.<br></br>
-               To create an environment that encourages creativity, collaboration, and a sense of social responsibility.<br></br>
-              </p>
-
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">
-                Department Activities
-              </h2>
-               <p className="text-neutral-600 leading-relaxed">
-               The Department of BCA at SSKV College of Arts and Science for Women focuses on developing students computing skills, 
-               programming knowledge, and application-oriented learning. The department organizes seminars, workshops, guest lectures, 
-               and hands-on training programs in areas such as programming, web development, and emerging technologies. Various activities 
-               like coding contests, project exhibitions, and technical quizzes help enhance students practical skills and innovation.
-              The department also encourages participation in intercollegiate technical events, internships, and career guidance programs 
-              to prepare students for the IT industry. 
-               <br></br>
+               To create an environment that encourages creativity, collaboration, and a sense of social responsibility.
               </p>
             </AnimatedSection>
-
-            {/* Program details card */}
-            <AnimatedSection direction="right">
-              <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-teal-500/20 flex items-center justify-center">
-                    <FaDesktop className="text-2xl text-teal-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold font-heading">BCA</h3>
-                    <p className="text-white/60 text-sm">Program Details</p>
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  {programDetails.map((item) => (
-                    <div key={item.label} className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">{item.label}</span>
-                      <span className="text-white font-semibold text-sm text-right ml-4">{item.value}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-4 pt-4 border-t border-white/10">
-                  <p className="text-white/50 text-xs">Available in Shift I &amp; Shift II</p>
-                </div>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Program Outcomes */}
-      <section className="section-padding bg-teal-50">
-        <div className="container-custom mx-auto">
-          <SectionHeading
-            title="Program Outcomes"
-            subtitle="What students gain from the BCA program"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            {outcomes.map((outcome, i) => (
-              <AnimatedSection key={i} delay={i * 0.07}>
-                <div className="flex items-start gap-3 bg-white rounded-xl p-5 border border-teal-100 shadow-sm h-full">
-                  <div className="w-7 h-7 rounded-full bg-teal-500 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-xs font-bold">{i + 1}</span>
-                  </div>
-                  <p className="text-neutral-700 text-sm leading-relaxed">{outcome}</p>
-                </div>
-              </AnimatedSection>
-            ))}
           </div>
         </div>
       </section>
 
       {/* Faculty */}
-      <section className="section-padding bg-white">
+      <section id="faculty" className="section-padding bg-teal-50">
         <div className="container-custom mx-auto">
           <SectionHeading
-            title="Our Faculty"
+            title="Faculty"
             subtitle="Industry-experienced educators shaping skilled technology professionals"
           />
 
@@ -295,6 +272,137 @@ export default function BCADepartmentPage() {
         </div>
       </section>
 
+      {/* Programmes Offered */}
+      <section id="programmes" className="section-padding bg-white">
+        <div className="container-custom mx-auto">
+          <SectionHeading
+            title="Programmes Offered"
+            subtitle="What students gain from the BCA program"
+          />
+
+          {/* Programmes List */}
+          <div className="flex flex-wrap gap-4 mb-8 max-w-4xl mx-auto">
+            <div className="flex-1 min-w-[200px] bg-teal-50 border border-teal-200 rounded-xl p-5 text-center">
+              <div className="w-10 h-10 rounded-full bg-teal-500 flex items-center justify-center mx-auto mb-3">
+                <FaGraduationCap className="text-white text-lg" />
+              </div>
+              <p className="text-sm font-bold text-primary-800">Bachelor of Computer Applications (BCA)</p>
+              <p className="text-xs text-neutral-500 mt-1">Undergraduate Programme</p>
+            </div>
+            <div className="flex-1 min-w-[200px] bg-teal-50 border border-teal-200 rounded-xl p-5 text-center">
+              <div className="w-10 h-10 rounded-full bg-teal-500 flex items-center justify-center mx-auto mb-3">
+                <FaGraduationCap className="text-white text-lg" />
+              </div>
+              <p className="text-sm font-bold text-primary-800">Master of Computer Applications (MCA)</p>
+              <p className="text-xs text-neutral-500 mt-1">Postgraduate Programme</p>
+            </div>
+          </div>
+
+          {/* Wide dark program card */}
+          <AnimatedSection>
+            <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white max-w-4xl mx-auto mb-10">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-teal-500/20 flex items-center justify-center">
+                  <FaDesktop className="text-2xl text-teal-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold font-heading">BCA</h3>
+                  <p className="text-white/60 text-sm">Program Details</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+                {programDetails.map((item) => (
+                  <div key={item.label} className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                    <span className="text-white/60 text-sm">{item.label}</span>
+                    <span className="text-white font-semibold text-sm text-right ml-4">{item.value}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 pt-4 border-t border-white/10">
+                <p className="text-white/50 text-xs">Available in Shift I &amp; Shift II</p>
+              </div>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white mb-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-teal-500/20 flex items-center justify-center">
+                  <FaDesktop className="text-2xl text-teal-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold font-heading">MCA</h3>
+                  <p className="text-white/60 text-sm">Postgraduate Programme Details</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                    <span className="text-white/60 text-sm">Degree</span>
+                    <span className="text-white font-semibold text-sm text-right ml-4">Master of Computer Applications (MCA)</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                    <span className="text-white/60 text-sm">Specialisation</span>
+                    <span className="text-white font-semibold text-sm text-right ml-4">Computer Applications</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                    <span className="text-white/60 text-sm">Duration</span>
+                    <span className="text-white font-semibold text-sm text-right ml-4">2 Years (4 Semesters)</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                    <span className="text-white/60 text-sm">Eligibility</span>
+                    <span className="text-white font-semibold text-sm text-right ml-4">BCA / B.Sc. CS from a recognized university</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                    <span className="text-white/60 text-sm">Affiliation</span>
+                    <span className="text-white font-semibold text-sm text-right ml-4">University of Madras</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                    <span className="text-white/60 text-sm">Curriculum</span>
+                    <span className="text-white font-semibold text-sm text-right ml-4">CBCS — Choice Based Credit System</span>
+                  </div>
+              </div>
+            </div>
+          </AnimatedSection>
+
+          {/* Outcomes grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {outcomes.map((outcome, i) => (
+              <AnimatedSection key={i} delay={i * 0.07}>
+                <div className="flex items-start gap-3 bg-white rounded-xl p-5 border border-teal-100 shadow-sm h-full">
+                  <div className="w-7 h-7 rounded-full bg-teal-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white text-xs font-bold">{i + 1}</span>
+                  </div>
+                  <p className="text-neutral-700 text-sm leading-relaxed">{outcome}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Department Activities */}
+      <section id="activities" className="section-padding bg-teal-50">
+        <div className="container-custom mx-auto">
+          <SectionHeading
+            title="Department Activities"
+            subtitle="Workshops, events, and hands-on learning experiences"
+          />
+
+          <AnimatedSection>
+            <p className="text-neutral-600 leading-relaxed max-w-3xl mx-auto text-center mb-10">
+              The Department of BCA at SSKV College of Arts and Science for Women focuses on developing students computing skills,
+              programming knowledge, and application-oriented learning. The department organizes seminars, workshops, guest lectures,
+              and hands-on training programs in areas such as programming, web development, and emerging technologies. Various activities
+              like coding contests, project exhibitions, and technical quizzes help enhance students practical skills and innovation.
+              The department also encourages participation in intercollegiate technical events, internships, and career guidance programs
+              to prepare students for the IT industry.
+            </p>
+          </AnimatedSection>
+
+          <ActivityGallery images={activityPhotos} color="teal" />
+        </div>
+      </section>
+
+      {/* CTA */}
       <CTABanner
         title="Interested in BCA?"
         subtitle="Apply now and begin your journey into the world of computer applications and IT."

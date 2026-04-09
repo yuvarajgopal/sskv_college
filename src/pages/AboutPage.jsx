@@ -65,7 +65,7 @@ export default function AboutPage() {
       />
 
       {/* Our Story */}
-      <section className="section-padding bg-white">
+      <section id="genesis" className="section-padding bg-white">
         <div className="container-custom mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection direction="left">
@@ -101,9 +101,9 @@ export default function AboutPage() {
                     <div className="text-center text-white p-8 w-full">
                       <FaUniversity className="text-7xl text-accent-400 mx-auto mb-6" />
                       <p className="text-xl font-heading font-bold">University of Madras</p>
-                      <p className="text-white/60 mt-2">Affiliated Institution</p>
+                      <p className="text-white/60 mt-2">Affiliated to the university of Madras</p>
                       <div className="mt-6 pt-6 border-t border-white/10">
-                        <p className="text-3xl font-bold text-accent-400">11</p>
+                        <p className="text-3xl font-bold text-accent-400">17</p>
                         <p className="text-white/60 text-sm">Academic Programs</p>
                       </div>
                     </div>
@@ -451,7 +451,7 @@ export default function AboutPage() {
               </AnimatedSection>
             ))}
             {/* Annual Reports */}
-<section className="section-padding bg-white">
+<section id="annual-reports" className="section-padding bg-white">
   <div className="container-custom mx-auto">
     
     <SectionHeading

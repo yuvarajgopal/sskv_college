@@ -12,11 +12,13 @@ const primaryLinks = [
     label: 'About Us',
     path: '/about',
     children: [
-      { label: 'About SSKV', path: '/about' },
-      { label: 'Goals & Vision', path: '/about/goals' },
-      { label: 'Group of Institutions', path: '/about/institutions' },
-      { label: 'College Timeline', path: '/about/timeline' },
-      { label: 'Policy Documents', path: '/policy-documents' },
+      { label: 'Genesis and Growth', path: '/about?section=genesis' },
+      { label: 'Institutional Development Plan', path: '/about?section=devplan' },
+      { label: 'Affiliated University', url: 'https://unom.ac.in' },
+      { label: 'Annual Reports', path: '/about?section=annual-reports' },
+      { label: 'Annual Accounts Reports', path: '/annual-accounts' },
+      { label: 'Best Practices', path: '/about?section=best-practices' },
+      { label: 'Institutional Distinctiveness', path: '/about?section=distinctiveness' },
     ],
   },
   {
@@ -49,20 +51,90 @@ const primaryLinks = [
         label: 'Departments',
         path: '/academics',
         children: [
-          { label: 'Tamil',                                    path: '/departments/tamil' },
-          { label: 'English',                                  path: '/departments/english' },
-          { label: 'Computer Science',                         path: '/departments/computer-science' },
-          { label: 'Mathematics',                              path: '/departments/mathematics' },
-          { label: 'BCA',                                      path: '/departments/bca' },
-          { label: 'B.Com (General)',                           path: '/departments/bcom-general' },
-          { label: 'B.Com (CS)',                                path: '/departments/bcom-cs' },
-          { label: 'B.Com (A&F)',                               path: '/departments/bcom-af' },
-          { label: 'B.B.A',                                    path: '/departments/bba' },
-          { label: 'Computer Science with AI',                 path: '/departments/cs-ai' },
-          { label: 'Criminology and Criminal Justice Science', path: '/departments/criminology' },
-          { label: 'BCA (Shift II)',                            path: '/departments/bca-shift-ii' },
-          { label: 'Computer Science (Shift II)',              path: '/departments/computer-science-shift-ii' },
-          { label: 'B.Com General (Shift II)',                  path: '/departments/bcom-general-shift-ii' },
+          { label: 'Tamil', path: '/departments/tamil', children: [
+            { label: 'About the Department', path: '/departments/tamil?section=about' },
+            { label: 'Faculty', path: '/departments/tamil?section=faculty' },
+            { label: 'Programmes Offered', path: '/departments/tamil?section=programmes' },
+            { label: 'Department Activities', path: '/departments/tamil?section=activities' },
+          ]},
+          { label: 'English', path: '/departments/english', children: [
+            { label: 'About the Department', path: '/departments/english?section=about' },
+            { label: 'Faculty', path: '/departments/english?section=faculty' },
+            { label: 'Programmes Offered', path: '/departments/english?section=programmes' },
+            { label: 'Department Activities', path: '/departments/english?section=activities' },
+          ]},
+          { label: 'Computer Science', path: '/departments/computer-science', children: [
+            { label: 'About the Department', path: '/departments/computer-science?section=about' },
+            { label: 'Faculty', path: '/departments/computer-science?section=faculty' },
+            { label: 'Programmes Offered', path: '/departments/computer-science?section=programmes' },
+            { label: 'Department Activities', path: '/departments/computer-science?section=activities' },
+          ]},
+          { label: 'Mathematics', path: '/departments/mathematics', children: [
+            { label: 'About the Department', path: '/departments/mathematics?section=about' },
+            { label: 'Faculty', path: '/departments/mathematics?section=faculty' },
+            { label: 'Programmes Offered', path: '/departments/mathematics?section=programmes' },
+            { label: 'Department Activities', path: '/departments/mathematics?section=activities' },
+          ]},
+          { label: 'BCA', path: '/departments/bca', children: [
+            { label: 'About the Department', path: '/departments/bca?section=about' },
+            { label: 'Faculty', path: '/departments/bca?section=faculty' },
+            { label: 'Programmes Offered', path: '/departments/bca?section=programmes' },
+            { label: 'Department Activities', path: '/departments/bca?section=activities' },
+          ]},
+          { label: 'B.Com (General)', path: '/departments/bcom-general', children: [
+            { label: 'About the Department', path: '/departments/bcom-general?section=about' },
+            { label: 'Faculty', path: '/departments/bcom-general?section=faculty' },
+            { label: 'Programmes Offered', path: '/departments/bcom-general?section=programmes' },
+            { label: 'Department Activities', path: '/departments/bcom-general?section=activities' },
+          ]},
+          { label: 'B.Com (CS)', path: '/departments/bcom-cs', children: [
+            { label: 'About the Department', path: '/departments/bcom-cs?section=about' },
+            { label: 'Faculty', path: '/departments/bcom-cs?section=faculty' },
+            { label: 'Programmes Offered', path: '/departments/bcom-cs?section=programmes' },
+            { label: 'Department Activities', path: '/departments/bcom-cs?section=activities' },
+          ]},
+          { label: 'B.Com (A&F)', path: '/departments/bcom-af', children: [
+            { label: 'About the Department', path: '/departments/bcom-af?section=about' },
+            { label: 'Faculty', path: '/departments/bcom-af?section=faculty' },
+            { label: 'Programmes Offered', path: '/departments/bcom-af?section=programmes' },
+            { label: 'Department Activities', path: '/departments/bcom-af?section=activities' },
+          ]},
+          { label: 'B.B.A', path: '/departments/bba', children: [
+            { label: 'About the Department', path: '/departments/bba?section=about' },
+            { label: 'Faculty', path: '/departments/bba?section=faculty' },
+            { label: 'Programmes Offered', path: '/departments/bba?section=programmes' },
+            { label: 'Department Activities', path: '/departments/bba?section=activities' },
+          ]},
+          { label: 'Computer Science with AI', path: '/departments/cs-ai', children: [
+            { label: 'About the Department', path: '/departments/cs-ai?section=about' },
+            { label: 'Faculty', path: '/departments/cs-ai?section=faculty' },
+            { label: 'Programmes Offered', path: '/departments/cs-ai?section=programmes' },
+            { label: 'Department Activities', path: '/departments/cs-ai?section=activities' },
+          ]},
+          { label: 'Criminology and Criminal Justice Science', path: '/departments/criminology', children: [
+            { label: 'About the Department', path: '/departments/criminology?section=about' },
+            { label: 'Faculty', path: '/departments/criminology?section=faculty' },
+            { label: 'Programmes Offered', path: '/departments/criminology?section=programmes' },
+            { label: 'Department Activities', path: '/departments/criminology?section=activities' },
+          ]},
+          { label: 'BCA (Shift II)', path: '/departments/bca-shift-ii', children: [
+            { label: 'About the Department', path: '/departments/bca-shift-ii?section=about' },
+            { label: 'Faculty', path: '/departments/bca-shift-ii?section=faculty' },
+            { label: 'Programmes Offered', path: '/departments/bca-shift-ii?section=programmes' },
+            { label: 'Department Activities', path: '/departments/bca-shift-ii?section=activities' },
+          ]},
+          { label: 'Computer Science (Shift II)', path: '/departments/computer-science-shift-ii', children: [
+            { label: 'About the Department', path: '/departments/computer-science-shift-ii?section=about' },
+            { label: 'Faculty', path: '/departments/computer-science-shift-ii?section=faculty' },
+            { label: 'Programmes Offered', path: '/departments/computer-science-shift-ii?section=programmes' },
+            { label: 'Department Activities', path: '/departments/computer-science-shift-ii?section=activities' },
+          ]},
+          { label: 'B.Com General (Shift II)', path: '/departments/bcom-general-shift-ii', children: [
+            { label: 'About the Department', path: '/departments/bcom-general-shift-ii?section=about' },
+            { label: 'Faculty', path: '/departments/bcom-general-shift-ii?section=faculty' },
+            { label: 'Programmes Offered', path: '/departments/bcom-general-shift-ii?section=programmes' },
+            { label: 'Department Activities', path: '/departments/bcom-general-shift-ii?section=activities' },
+          ]},
         ],
       },
       {
@@ -137,13 +209,24 @@ function DropdownChildItem({ child, onClose }) {
       onMouseEnter={() => { clearTimeout(subTimeout.current); setSubOpen(true); }}
       onMouseLeave={() => { subTimeout.current = setTimeout(() => setSubOpen(false), 150); }}
     >
-      <button
-        className="w-full flex items-center justify-between px-4 py-2 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
-        onClick={() => setSubOpen((s) => !s)}
-      >
-        {child.label}
-        <FaChevronRight className="text-[10px] ml-2" />
-      </button>
+      {child.path ? (
+        <Link
+          to={child.path}
+          onClick={onClose}
+          className="w-full flex items-center justify-between px-4 py-2 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
+        >
+          {child.label}
+          <FaChevronRight className="text-[10px] ml-2" />
+        </Link>
+      ) : (
+        <button
+          className="w-full flex items-center justify-between px-4 py-2 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
+          onClick={() => setSubOpen((s) => !s)}
+        >
+          {child.label}
+          <FaChevronRight className="text-[10px] ml-2" />
+        </button>
+      )}
       <AnimatePresence>
         {subOpen && (
           <motion.div
@@ -153,29 +236,9 @@ function DropdownChildItem({ child, onClose }) {
             transition={{ duration: 0.15 }}
             className="absolute left-full top-0 ml-1 bg-primary-900 border border-white/10 rounded-lg shadow-2xl min-w-[260px] py-1.5 z-50 max-h-[70vh] overflow-y-auto"
           >
-            {child.children.map((sub) =>
-              sub.url ? (
-                <a
-                  key={sub.label}
-                  href={sub.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={onClose}
-                  className="block px-4 py-2 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
-                >
-                  {sub.label} ↗
-                </a>
-              ) : (
-                <Link
-                  key={sub.label}
-                  to={sub.path}
-                  onClick={onClose}
-                  className="block px-4 py-2 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
-                >
-                  {sub.label}
-                </Link>
-              )
-            )}
+            {child.children.map((sub) => (
+              <DropdownChildItem key={sub.label} child={sub} onClose={onClose} />
+            ))}
           </motion.div>
         )}
       </AnimatePresence>
@@ -360,13 +423,21 @@ function MobileChildItem({ child, onNavigate }) {
 
   return (
     <div>
-      <button
-        onClick={() => setSubOpen((o) => !o)}
-        className="flex items-center gap-1 px-4 py-1.5 text-sm text-white/60 hover:text-accent-400 transition-colors"
-      >
-        {child.label}
-        <FaChevronDown className={`text-[9px] transition-transform duration-200 ${subOpen ? 'rotate-180' : ''}`} />
-      </button>
+      <div className="flex items-center gap-1 px-4 py-1.5">
+        <Link
+          to={child.path}
+          onClick={onNavigate}
+          className="text-sm text-white/60 hover:text-accent-400 transition-colors"
+        >
+          {child.label}
+        </Link>
+        <button
+          onClick={() => setSubOpen((o) => !o)}
+          className="text-white/60 hover:text-accent-400 transition-colors p-1"
+        >
+          <FaChevronDown className={`text-[9px] transition-transform duration-200 ${subOpen ? 'rotate-180' : ''}`} />
+        </button>
+      </div>
       <AnimatePresence>
         {subOpen && (
           <motion.div
@@ -377,29 +448,9 @@ function MobileChildItem({ child, onNavigate }) {
             className="overflow-hidden"
           >
             <div className="pb-1 flex flex-col items-center pl-4">
-              {child.children.map((sub) =>
-                sub.url ? (
-                  <a
-                    key={sub.label}
-                    href={sub.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={onNavigate}
-                    className="block px-4 py-1 text-xs text-white/50 hover:text-accent-400 transition-colors"
-                  >
-                    {sub.label} ↗
-                  </a>
-                ) : (
-                  <Link
-                    key={sub.label}
-                    to={sub.path}
-                    onClick={onNavigate}
-                    className="block px-4 py-1 text-xs text-white/50 hover:text-accent-400 transition-colors"
-                  >
-                    {sub.label}
-                  </Link>
-                )
-              )}
+              {child.children.map((sub) => (
+                <MobileChildItem key={sub.label} child={sub} onNavigate={onNavigate} />
+              ))}
             </div>
           </motion.div>
         )}

@@ -58,7 +58,7 @@ export const leaders = [
     id: 'principal',
     name: 'Dr. K. Thirumamagal',
     designation: 'Principal',
-    org: 'SSKV College of Arts and Science for Women',
+    org: '',
     photo: '/images/leadership/principal.jpg',
     bio: [
       'I transitioned to college in 2010 and eventually rose to the position of Principal in 2021.  SSKV, a pioneer and forerunner in the field of womens education since 1904, started a college in the year 2007. A teacher is always a learner.',
