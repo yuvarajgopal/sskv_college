@@ -156,10 +156,17 @@ export default function BCADepartmentPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-4">
                 Mission
               </h2>
-              <p className="text-neutral-600 leading-relaxed mb-4">
+              <p className="text-neutral-600 leading-relaxed mb-2">
                We provide high-quality education in computer applications through a curriculum aligned with industry needs.
+              </p>
+              <p className="text-neutral-600 leading-relaxed mb-2">
                Preparing students for successful careers in IT and allied sectors.
+              </p>
+              <p className="text-neutral-600 leading-relaxed mb-2">
                Encouraging students in academic excellence and innovation.
+              </p>
+              <p className="text-neutral-600 leading-relaxed mb-4">
+               We bridge the gap between academics and industry through collaborations, internships, and certifications.
               </p>
 
               <h2 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-4">
