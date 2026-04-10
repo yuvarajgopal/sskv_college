@@ -65,8 +65,8 @@ export default function SportsPage() {
   const images = [
     '/images/sports/sports1.JPG',
     '/images/sports/sports2.JPG',
-    '/images/sports/sports3.JPG',
-    '/images/sports/sports4.JPG',
+    '/images/sports/sports3.jpg',
+    '/images/sports/sports4.jpg',
     '/images/sports/sports5.JPG',
     '/images/sports/sports6.JPG',
     '/images/sports/sports7.JPG',
@@ -74,7 +74,7 @@ export default function SportsPage() {
     '/images/sports/sports9.JPG',
     '/images/sports/sports10.JPG',
     '/images/sports/sports11.JPG',
-    '/images/sports/sports12.JPG',
+    '/images/sports/sports12.jpg',
   ];
 
   useEffect(() => {

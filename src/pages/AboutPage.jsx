@@ -11,7 +11,7 @@ const leadership = [
   { name: 'President', designation: 'President', photo: '/images/leadership/president.jpg', message: 'Leading the institution towards excellence in education and holistic development.' },
   { name: 'Vice-President', designation: 'Vice-President', photo: '/images/leadership/vice-president.jpg', message: 'Committed to creating opportunities for women through quality education.' },
   { name: 'Secretary', designation: 'Secretary', photo: '/images/leadership/secretary.jpg', message: 'Ensuring administrative excellence and institutional growth.' },
-    { name: 'Joint Secretary', designation: 'Joint Secretary', photo: '/images/leadership/joint-secretary.jpg', message: 'Ensuring administrative excellence and institutional growth.' },
+    { name: 'Joint Secretary', designation: 'Joint Secretary', photo: '/images/leadership/joint-secretary.jpg', message: 'Leading with purpose, strengthening systems, and shaping the future. growth.' },
   { name: 'Principal', designation: 'Principal', photo: '/images/leadership/principal.jpg', message: 'Fostering academic rigor and nurturing talent in every student.' },
 ];
 

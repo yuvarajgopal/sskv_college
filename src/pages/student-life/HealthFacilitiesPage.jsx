@@ -23,72 +23,89 @@ export default function HealthFacilitiesPage() {
 
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto max-w-5xl">
-          <SectionHeading title="Health & Wellness" subtitle="Supporting physical and mental well-being of our students" />
+          
+          <SectionHeading 
+            title="Health & Wellness" 
+            subtitle="Supporting physical and mental well-being of our students" 
+          />
 
           <AnimatedSection>
-            <h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">Vision</h3>
-            <p className="text-neutral-600 leading-relaxed mb-8 max-w-3xl">
-              To foster a healthy academic environment by ensuring accessible, responsive and preventive healthcare support for all students and staff.
+            <h3 className="text-3xl md:text-4xl font-bold text-primary-800 mb-5">Vision</h3>
+            <p className="text-neutral-600 mb-8 max-w-3xl">
+              To foster a healthy academic environment by ensuring accessible, responsive and preventive healthcare support.
             </p>
 
-            <h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">Mission</h3>
-            <p className="text-neutral-600 leading-relaxed mb-8 max-w-3xl">
-              To provide immediate primary healthcare and first-aid assistance within the campus.<br />
-              To promote awareness on hygiene, nutrition, mental wellness and disease prevention.<br />
-              To organize regular health check-ups and medical camps.<br />
-              To ensure a safe and healthy campus environment.
+            <h3 className="text-3xl md:text-4xl font-bold text-primary-800 mb-5">Mission</h3>
+            <p className="text-neutral-600 mb-8 max-w-3xl">
+              To provide immediate healthcare support, promote awareness, conduct medical camps, and ensure a safe campus.
             </p>
 
-            <h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">Objectives</h3>
-            <p className="text-neutral-600 leading-relaxed mb-8 max-w-3xl">
-              To maintain a well-equipped health centre.<br />
-              To provide timely medical attention during emergencies.<br />
-              To promote hygiene and sanitation across campus.<br />
-              To educate students on first aid and personal health care.
+            <h3 className="text-3xl md:text-4xl font-bold text-primary-800 mb-5">Objectives</h3>
+            <p className="text-neutral-600 mb-8 max-w-3xl">
+              To maintain health facilities, respond to emergencies, promote hygiene, and educate students on health care.
             </p>
           </AnimatedSection>
 
-          {/* 🔥 NEW IMAGE SECTION */}
+          {/* 🔥 IMAGE SECTION (ROUNDED RECTANGLE STYLE) */}
           <AnimatedSection>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-              
-              <img 
-                src="/images/health/varalakshmi.jpg" 
-                alt="Health Facility 1" 
-                className="w-full h-70 object-cover rounded-2xl shadow-md"
-              />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12 items-center">
 
-              <img 
-                src="/images/health/ehho_certi.jpg" 
-                alt="Health Facility 2" 
-                className="w-full h-70 object-cover rounded-2xl shadow-md"
-              />
+              {/* DOCTOR PROFILE */}
+              <div className="text-center">
+                <div className="w-60 mx-auto overflow-hidden rounded-2xl shadow-lg">
+                  <img 
+                    src="/images/health/varalakshmi.jpg"
+                    alt="Dr Varalakshmi"
+                    className="w-full aspect-[4/5] object-cover"
+                  />
+                </div>
+
+                <h4 className="mt-4 text-lg font-semibold text-primary-800">
+                  Dr. H. Varalakshmi
+                </h4>
+
+                <p className="text-sm text-neutral-600">
+                  B.Com, MBA, PhD
+                </p>
+              </div>
+
+              {/* CERTIFICATE */}
+              <div className="text-center">
+                <div className="max-w-md mx-auto overflow-hidden rounded-2xl shadow-md border">
+                  <img 
+                    src="/images/health/ehho_certi.jpg"
+                    alt="Health Certificate"
+                    className="w-full object-cover"
+                  />
+                </div>
+              </div>
 
             </div>
           </AnimatedSection>
 
-          {/* Facilities */}
+          {/* FACILITIES */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {facilities.map((f, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 h-full flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-green-50 flex items-center justify-center flex-shrink-0">
+                <div className="bg-neutral-50 rounded-2xl p-6 border flex items-start gap-4">
+                  <div className="w-11 h-11 rounded-xl bg-green-50 flex items-center justify-center">
                     <f.icon className="text-green-600 text-lg" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-primary-800 font-heading text-base mb-1">{f.title}</h3>
-                    <p className="text-sm text-neutral-600 leading-relaxed">{f.desc}</p>
+                    <h3 className="font-bold text-primary-800 mb-1">{f.title}</h3>
+                    <p className="text-sm text-neutral-600">{f.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
             ))}
           </div>
 
+          {/* EXTRA */}
           <AnimatedSection delay={0.3}>
-            <div className="mt-6 bg-primary-50 rounded-2xl p-6 border border-primary-100">
-              <h3 className="font-bold text-primary-800 font-heading text-base mb-2">Free Dental Camp</h3>
+            <div className="mt-6 bg-primary-50 rounded-2xl p-6 border">
+              <h3 className="font-bold text-primary-800 mb-2">Free Dental Camp</h3>
               <p className="text-sm text-neutral-600">
-                The college has conducted free dental health camps in association with the NSS unit.
+                The college conducts free dental health camps in association with NSS.
               </p>
             </div>
           </AnimatedSection>
@@ -98,7 +115,7 @@ export default function HealthFacilitiesPage() {
 
       <CTABanner 
         title="Healthy Students. Bright Futures." 
-        subtitle="SSKV College prioritises the health and well-being of every student on campus." 
+        subtitle="SSKV College prioritises the health and well-being of every student." 
       />
     </>
   );

@@ -21,11 +21,14 @@ import EventsTimeline from '../components/sections/EventsTimeline';
 import { events } from '../data/events';
 import { videos, images } from '../data/media';
 
-/* HERO IMAGES */
+/* HERO IMAGES — NOW 5 */
 const heroImages = [
   '/images/home/home_1.jpg',
   '/images/home/home_2.jpg',
   '/images/home/home_3.jpg',
+  '/images/home/home_4.png',
+  '/images/home/home_5.jpg',
+   '/images/home/home_6.png',
 ];
 
 const features = [
@@ -57,23 +60,16 @@ const features = [
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [scrolled, setScrolled] = useState(false);
 
-  /* HERO AUTO SLIDE */
+  /* AUTO SLIDE — FIXED */
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+      setCurrentSlide((prev) =>
+        prev === heroImages.length - 1 ? 0 : prev + 1
+      );
     }, 4000);
-    return () => clearInterval(interval);
-  }, []);
 
-  /* FIX NAVBAR COLOR ISSUE */
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -176,38 +172,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ================= ACHIEVERS ================= */}
-      <section className="section-padding bg-neutral-50">
-        <div className="container-custom mx-auto">
-          <SectionHeading title="Our Achievers" />
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-xl text-center shadow">
-              <img src="/images/achiever/achiever_1.png" className="mx-auto mb-4 rounded-xl" />
-              <h3 className="font-bold text-primary-800">University Rank Holder</h3>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl text-center shadow">
-              <img src="/images/achiever/divine_award_1.jpg" className="mx-auto mb-4 rounded-xl" />
-              <h3 className="font-bold text-primary-800">Placement Drive Record</h3>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= UNNAT BHARAT ================= */}
-      <section className="section-padding bg-white">
-        <div className="container-custom mx-auto">
-          <SectionHeading title="Unnat Bharat Abhiyan" />
-
-          <div className="grid md:grid-cols-3 gap-6">
-            
-            <img src="" className="rounded-xl shadow" />
-            <img src="/images/achiever/Unnat Bharat Abhiyan_1.png" className="rounded-xl shadow" />
-            <img src="" className="rounded-xl shadow" />
-          </div>
-        </div>
-      </section>
+    
 
       {/* ================= STATS ================= */}
       <StatsBar />
