@@ -127,14 +127,19 @@ function PaymentForm() {
 export default function FeesPage() {
   return (
     <>
-      <Hero title="Fees Structure" />
+      <Hero
+        title="Fees Structure"
+        subtitle="Transparent fee structure for the academic year 2025–2026"
+        height="medium"
+        breadcrumb="Home › Fees"
+      />
 
-      <section className="p-6">
+      <section className="section-padding bg-neutral-50">
         <SectionHeading title="Semester Fee Structure 2025–2026" />
         <FeeTable />
       </section>
 
-      <section className="p-6 bg-gray-50">
+      <section className="section-padding bg-white">
         <SectionHeading title="Online Fee Payment" />
         <PaymentForm />
       </section>

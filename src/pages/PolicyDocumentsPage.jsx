@@ -19,18 +19,6 @@ const categories = [
     ],
   },
   {
-     name: 'Academic Policies',
-    icon: FaBook,
-    color: '#3498db',
-    policies: [
-      { title: 'Admission Policy', file: 'admission-policy.pdf', available: true },
-      { title: 'Examination Policy', file: 'examination-policy.pdf', available: true },
-      { title: 'Fee Refund Policy', file: 'fee-refund-policy.pdf', available: true },
-      { title: 'Library Policy', file: 'library-policy.pdf', available: true },
-      { title: 'IQAC Policy', file: 'iqac-policy.pdf', available: true },
-    ],
-  },
-    {
     name: 'Academic Policies',
     icon: FaBook,
     color: '#3498db',
@@ -42,7 +30,7 @@ const categories = [
       { title: 'IQAC Policy', file: 'iqac-policy.pdf', available: true },
     ],
   },
-    {
+  {
     name: 'Sustainability & Infrastructure',
     icon: FaLeaf,
     color: '#27ae60',

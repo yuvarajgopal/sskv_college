@@ -63,24 +63,31 @@ export const navLinks = [
           { label: 'B.Com General (Shift II)', path: '/departments/bcom-general-shift-ii' },
         ],
       },
-      {
-        label: 'IQAC',
-        path: '/iqac',
-        children: [
-          { label: 'AISHE',                    path: '/aishe' },
-        ],
-      },
-      { label: 'NIRF',                          path: '/nirf' },
-      {
-        label: 'Library',
-        path: '/library',
-        children: [
-          { label: 'About',                 path: '/library/about' },
-          { label: 'Faculty',               path: '/library/faculty' },
-          { label: 'Annual Report - Library', path: '/library/annual-report' },
-        ],
-      },
       { label: 'Academic Collaborations',       path: '/academic-collaborations' },
+    ],
+  },
+
+  {
+    label: 'IQAC',
+    path: '/iqac',
+    children: [
+      { label: 'AISHE', path: '/aishe' },
+    ],
+  },
+
+  { label: 'NIRF', path: '/nirf' },
+
+  { label: 'NAAC', path: '/naac' },
+
+  { label: 'Placement', path: '/student-life/placement-cell' },
+
+  {
+    label: 'Library',
+    path: '/library',
+    children: [
+      { label: 'About',                   path: '/library/about' },
+      { label: 'Faculty',                 path: '/library/faculty' },
+      { label: 'Annual Report - Library', path: '/library/annual-report' },
     ],
   },
 
@@ -110,6 +117,8 @@ export const navLinks = [
     label: 'Students Life',
     path: '/student-life/culturals',
     children: [
+      { label: 'ERP',                              path: '/student-life/erp' },
+      { label: "Student's Code of Conduct",        path: '/student-life/code-of-conduct' },
       { label: 'Culturals',                        path: '/student-life/culturals' },
       { label: 'Add On Courses',                   path: '/student-life/add-on-courses' },
       { label: 'Value-Added: Music and Arts',      path: '/student-life/music-arts' },
@@ -117,7 +126,6 @@ export const navLinks = [
       { label: 'Skill Training by Bhumi',          path: '/student-life/skill-training-bhumi' },
       { label: 'Training by Hand in Hand Academy', path: '/student-life/skill-training-hand-in-hand' },
       { label: 'Sports',                           path: '/student-life/sports' },
-      { label: 'Placement Cell',                   path: '/student-life/placement-cell' },
       { label: 'Grievance Redressal',              path: '/student-life/grievance-redressal' },
       { label: 'Indian Knowledge System',          path: '/student-life/indian-knowledge-system' },
       { label: 'Health Facilities',                path: '/student-life/health-facilities' },

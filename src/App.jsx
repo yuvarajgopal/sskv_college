@@ -79,6 +79,12 @@ const MusicArtsPage = lazy(() => import('./pages/student-life/MusicArtsPage'));
 const SilambamPage = lazy(() => import('./pages/student-life/SilambamPage'));
 const SkillTrainingBhumiPage = lazy(() => import('./pages/student-life/SkillTrainingBhumiPage'));
 const HandInHandPage = lazy(() => import('./pages/student-life/HandInHandPage'));
+const ERPPage = lazy(() => import('./pages/student-life/ERPPage'));
+const StudentCodeOfConductPage = lazy(() => import('./pages/student-life/StudentCodeOfConductPage'));
+// Feedback
+const StudentFeedbackPage = lazy(() => import('./pages/feedback/StudentFeedbackPage'));
+const ParentFeedbackPage = lazy(() => import('./pages/feedback/ParentFeedbackPage'));
+const EmployeesFeedbackPage = lazy(() => import('./pages/feedback/EmployeesFeedbackPage'));
 // Alumnae
 const AlumnaePage = lazy(() => import('./pages/AlumnaePage'));
 // Notices
@@ -199,6 +205,12 @@ export default function App() {
             <Route path="/student-life/silambam" element={<SilambamPage />} />
             <Route path="/student-life/skill-training-bhumi" element={<SkillTrainingBhumiPage />} />
             <Route path="/student-life/skill-training-hand-in-hand" element={<HandInHandPage />} />
+            <Route path="/student-life/erp" element={<ERPPage />} />
+            <Route path="/student-life/code-of-conduct" element={<StudentCodeOfConductPage />} />
+            {/* Feedback */}
+            <Route path="/feedback/student"   element={<StudentFeedbackPage />} />
+            <Route path="/feedback/parent"    element={<ParentFeedbackPage />} />
+            <Route path="/feedback/employees" element={<EmployeesFeedbackPage />} />
             {/* Alumnae */}
             <Route path="/alumnae" element={<AlumnaePage />} />
             {/* Notices */}

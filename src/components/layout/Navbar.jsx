@@ -68,23 +68,6 @@ const primaryLinks = [
           { label: 'B.Com General (Shift II)', path: '/departments/bcom-general-shift-ii' },
         ],
       },
-      {
-        label: 'IQAC',
-        path: '/iqac',
-        children: [
-          { label: 'AISHE', path: '/aishe' },
-        ],
-      },
-      { label: 'NIRF', path: '/nirf' },
-      {
-        label: 'Library',
-        path: '/library',
-        children: [
-          { label: 'About',                 path: '/library/about' },
-          { label: 'Faculty',               path: '/library/faculty' },
-          { label: 'Annual Report - Library', path: '/library/annual-report' },
-        ],
-      },
       { label: 'Academic Collaborations', path: '/academic-collaborations' },
     ],
   },
@@ -97,6 +80,34 @@ const primaryLinks = [
       { label: 'Fee Refund Policy', path: '/fees' },
       { label: 'Online Application Form', path: '/apply' },
       { label: 'Download Application', path: '/apply' },
+    ],
+  },
+  {
+    label: 'IQAC',
+    path: '/iqac',
+    children: [
+      { label: 'AISHE', path: '/aishe' },
+    ],
+  },
+  { label: 'NIRF', path: '/nirf' },
+  { label: 'NAAC', path: '/naac' },
+  { label: 'Placement', path: '/student-life/placement-cell' },
+  {
+    label: 'Library',
+    path: '/library',
+    children: [
+      { label: 'About',                   path: '/library/about' },
+      { label: 'Faculty',                 path: '/library/faculty' },
+      { label: 'Annual Report - Library', path: '/library/annual-report' },
+    ],
+  },
+  {
+    label: 'Alumnae',
+    path: '/alumnae',
+    children: [
+      { label: 'Alumnae Association & Report', path: '/alumnae' },
+      { label: 'Alumnae Registration Form',    url: 'https://forms.gle/7jSgQBW52F3vgGv19' },
+      { label: 'Suggestion & Feedback Form',   url: 'https://forms.gle/yQz7exXMn7yWf6928' },
     ],
   },
 ];
@@ -205,7 +216,7 @@ function DropdownNavItem({ link, isActive }) {
     <div ref={ref} className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Link
         to={link.path}
-        className={`flex items-center gap-1 px-4 py-2 text-sm font-medium font-body transition-colors duration-200 rounded-lg whitespace-nowrap ${
+        className={`flex items-center gap-1 px-2.5 2xl:px-4 py-2 text-[13px] 2xl:text-sm font-medium font-body transition-colors duration-200 rounded-lg whitespace-nowrap ${
           isActive ? 'text-accent-400' : 'text-white/80 hover:text-white hover:bg-white/10'
         }`}
       >
@@ -223,6 +234,65 @@ function DropdownNavItem({ link, isActive }) {
           >
             {link.children.map((child) => (
               <DropdownChildItem key={child.label} child={child} onClose={closeAll} />
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+function FeedbackDropdown() {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+  const timeoutRef = useRef(null);
+
+  useEffect(() => {
+    function handleClick(e) {
+      if (ref.current && !ref.current.contains(e.target)) setOpen(false);
+    }
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
+
+  const items = [
+    { label: 'Student Feedback',   path: '/feedback/student' },
+    { label: 'Parent Feedback',    path: '/feedback/parent' },
+    { label: 'Employees Feedback', path: '/feedback/employees' },
+  ];
+
+  return (
+    <div
+      ref={ref}
+      className="relative"
+      onMouseEnter={() => { clearTimeout(timeoutRef.current); setOpen(true); }}
+      onMouseLeave={() => { timeoutRef.current = setTimeout(() => setOpen(false), 150); }}
+    >
+      <button
+        onClick={() => setOpen((o) => !o)}
+        className="flex items-center gap-1 text-white/75 hover:text-accent-400 transition-colors"
+      >
+        Feedback
+        <FaChevronDown className={`text-[8px] transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -4 }}
+            transition={{ duration: 0.15 }}
+            className="absolute top-full right-0 mt-1 bg-primary-900 border border-white/10 rounded-lg shadow-2xl min-w-[180px] py-1.5 z-50"
+          >
+            {items.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setOpen(false)}
+                className="block px-4 py-2 text-[12px] text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
+              >
+                {item.label}
+              </Link>
             ))}
           </motion.div>
         )}
@@ -251,7 +321,7 @@ function MoreDropdown({ links }) {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen((o) => !o)}
-        className="flex items-center gap-1 px-4 py-2 text-sm font-medium font-body transition-colors duration-200 rounded-lg whitespace-nowrap text-white/80 hover:text-white hover:bg-white/10"
+        className="flex items-center gap-1 px-2.5 2xl:px-4 py-2 text-[13px] 2xl:text-sm font-medium font-body transition-colors duration-200 rounded-lg whitespace-nowrap text-white/80 hover:text-white hover:bg-white/10"
       >
         More
         <FaChevronDown className={`text-[10px] transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
@@ -266,21 +336,37 @@ function MoreDropdown({ links }) {
             className="absolute top-full right-0 mt-1 bg-primary-900 border border-white/10 rounded-lg shadow-2xl py-1.5 z-50 flex"
           >
             <div className="min-w-[210px] border-r border-white/10">
-              {links.map((link) => (
-                <button
-                  key={link.label}
-                  onMouseEnter={() => setActiveSubmenu(link.label)}
-                  onClick={() => setActiveSubmenu((s) => (s === link.label ? null : link.label))}
-                  className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors whitespace-nowrap ${
-                    activeSubmenu === link.label
-                      ? 'text-accent-400 bg-white/5'
-                      : 'text-white/75 hover:text-accent-400 hover:bg-white/5'
-                  }`}
-                >
-                  {link.label}
-                  {link.children && <FaChevronRight className="text-[10px] ml-2" />}
-                </button>
-              ))}
+              {links.map((link) => {
+                const closeAll = () => { setOpen(false); setActiveSubmenu(null); };
+                if (!link.children) {
+                  return (
+                    <Link
+                      key={link.label}
+                      to={link.path}
+                      onMouseEnter={() => setActiveSubmenu(null)}
+                      onClick={closeAll}
+                      className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                }
+                return (
+                  <button
+                    key={link.label}
+                    onMouseEnter={() => setActiveSubmenu(link.label)}
+                    onClick={() => setActiveSubmenu((s) => (s === link.label ? null : link.label))}
+                    className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors whitespace-nowrap ${
+                      activeSubmenu === link.label
+                        ? 'text-accent-400 bg-white/5'
+                        : 'text-white/75 hover:text-accent-400 hover:bg-white/5'
+                    }`}
+                  >
+                    {link.label}
+                    <FaChevronRight className="text-[10px] ml-2" />
+                  </button>
+                );
+              })}
             </div>
             {activeSubmenu && (
               <div className="min-w-[210px] py-1 max-h-[70vh] overflow-y-auto">
@@ -437,9 +523,9 @@ function MobileAccordionItem({ link, onNavigate, isActive }) {
   );
 }
 
-// Links with dropdowns for "More" menu (everything beyond the 6 primary flat links)
+// Links for "More" menu (everything beyond the primary flat links)
 const moreMenuLinks = navLinks.filter(
-  (link) => !primaryLinks.some((p) => p.path === link.path) && link.children
+  (link) => !primaryLinks.some((p) => p.path === link.path)
 );
 
 export default function Navbar() {
@@ -455,29 +541,40 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-primary-900/95 backdrop-blur-md shadow-lg py-3'
-            : 'bg-transparent py-5'
+        initial={false}
+        className={`fixed top-0 left-0 right-0 z-50 bg-primary-900 pt-3 transition-all duration-300 ${
+          isScrolled ? 'shadow-lg' : ''
         }`}
       >
-        <div className="container-custom mx-auto px-4 md:px-8 flex items-center justify-between">
+        {/* Top utility strip: e-Governance / Feedback / Help Desk */}
+        <div className="hidden md:block">
+          <div className="w-full px-4 md:px-6 xl:px-8 2xl:px-12 flex justify-end items-center gap-5 py-1.5 text-[11px] font-body">
+            <Link to="/e-governance" className="text-white/75 hover:text-accent-400 transition-colors">
+              e-Governance
+            </Link>
+            <span className="text-white/20">|</span>
+            <FeedbackDropdown />
+            <span className="text-white/20">|</span>
+            <Link to="/help-desk" className="text-white/75 hover:text-accent-400 transition-colors">
+              Help Desk
+            </Link>
+          </div>
+        </div>
+
+        <div className="w-full px-4 md:px-6 xl:px-8 2xl:px-12 flex items-center justify-between gap-4 py-5">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-accent-400 flex items-center justify-center">
-              <span className="text-primary-900 font-heading font-bold text-lg md:text-xl">S</span>
+          <Link to="/" className="flex items-center gap-3 flex-shrink-0">
+            <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent-400 flex items-center justify-center flex-shrink-0">
+              <span className="text-primary-900 font-heading font-bold text-xl md:text-2xl">S</span>
             </div>
-            <div className="hidden sm:block">
-              <div className="text-white font-heading font-bold text-lg leading-tight">SSKV College</div>
-              <div className="text-white/60 text-xs">Arts & Science for Women</div>
+            <div className="hidden sm:block whitespace-nowrap">
+              <div className="text-white font-heading font-bold text-xl 2xl:text-2xl leading-tight">SSKV College</div>
+              <div className="text-white/60 text-xs 2xl:text-sm">Arts & Science for Women</div>
             </div>
           </Link>
 
           {/* Desktop nav links */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden xl:flex items-center gap-0.5 flex-1 justify-center">
             {primaryLinks.map((link) =>
               link.children ? (
                 <DropdownNavItem
@@ -489,7 +586,7 @@ export default function Navbar() {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`relative px-4 py-2 text-sm font-medium font-body transition-colors duration-200 rounded-lg ${
+                  className={`relative px-2.5 2xl:px-4 py-2 text-[13px] 2xl:text-sm font-medium font-body transition-colors duration-200 rounded-lg whitespace-nowrap ${
                     location.pathname === link.path
                       ? 'text-accent-400'
                       : 'text-white/80 hover:text-white hover:bg-white/10'
@@ -499,7 +596,7 @@ export default function Navbar() {
                   {location.pathname === link.path && (
                     <motion.div
                       layoutId="navbar-indicator"
-                      className="absolute bottom-0 left-4 right-4 h-0.5 bg-accent-400 rounded-full"
+                      className="absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-accent-400 rounded-full"
                     />
                   )}
                 </Link>
@@ -512,19 +609,22 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               to="/admissions"
-              className="hidden md:inline-flex px-5 py-2.5 bg-accent-400 text-primary-900 text-sm font-semibold rounded-lg hover:bg-accent-300 transition-colors duration-200 font-body"
+              className="hidden md:inline-flex xl:hidden 2xl:inline-flex px-5 py-2.5 bg-accent-400 text-primary-900 text-sm font-semibold rounded-lg hover:bg-accent-300 transition-colors duration-200 font-body"
             >
               Apply Now
             </Link>
             <button
               onClick={() => setMobileOpen(true)}
-              className="lg:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+              className="xl:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
               aria-label="Open menu"
             >
               <FaBars className="text-xl" />
             </button>
           </div>
         </div>
+
+        {/* Golden divider strip between navbar and hero */}
+        <div className="h-2.5 bg-accent-400" />
       </motion.nav>
 
       {/* Mobile Drawer */}
