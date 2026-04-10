@@ -1,29 +1,76 @@
 import { useState } from 'react';
 import Hero from '../../components/shared/Hero';
 
-const yesNo = ['YES', 'NO'];
+const fields = [
+  // ── Student Details ──
+  { label: 'Student Details', type: 'sectionTitle' },
+  { name: 'email',          label: 'Email',                          type: 'email', required: true },
+  { name: 'daughterName',   label: 'Name of your Daughter',          type: 'text',  required: true },
+  { name: 'registerNumber', label: 'Register Number',                type: 'text',  required: true },
+  { name: 'dob',            label: 'Date of Birth',                  type: 'date',  required: true },
+  { name: 'department',     label: 'Department',                     type: 'select', required: true,
+    options: [
+      'B.A.(TAMIL)', 'B.A.(ENGLISH)', 'B.Sc(Maths)', 'B.C.A',
+      'B.SC (Computer Science)', 'B.COM(G)', 'B.COM(A&F)',
+      'B.COM(Corporate Secretaryship)', 'B.B.A',
+      'B.Sc.(Artificial Intelligence)', 'B.Sc.(CCJS)',
+      'M.A.(Tamil)', 'M.Com', 'M.A.(English)',
+    ] },
+  { name: 'year',           label: 'Year',                           type: 'select', required: true,
+    options: ['I', 'II', 'III'] },
+  { name: 'shift',          label: 'Shift',                          type: 'select',
+    options: ['I', 'II'] },
+  { name: 'studentMobile',  label: 'Mobile Number of the Student',   type: 'tel',   required: true },
+  { name: 'batch',          label: 'Batch',                          type: 'radio', required: true,
+    options: ['2020-23', '2021-24', '2022-25'] },
 
-const questions = [
-  "Are you satisfied with the overall infrastructure of the college?",
-  "Is the classroom environment clean and well maintained?",
-  "Are the laboratory facilities adequate and functioning properly?",
-  "Is the college library providing sufficient learning resources?",
-  "Are you satisfied with the transport facilities provided by the college?",
-  "Is the transport facility safe and punctual for your ward?",
-  "Are the canteen facilities hygienic and well maintained?",
-  "Is the food quality in the canteen satisfactory?",
-  "Are you satisfied with the overall teaching quality in the college?",
-  "Do teachers communicate clearly and effectively with students?",
-  "Are teachers approachable for academic support?",
-  "Does the college provide enough extracurricular activities?",
-  "Are you satisfied with sports and cultural activities?",
-  "Does the college encourage participation in competitions?",
-  "Is the parent-teacher relationship positive?",
-  "Are parent-teacher interactions sufficient?",
-  "Does the college ensure safety and security?",
-  "Are you satisfied with administrative support?",
-  "Does the college address grievances promptly?",
-  "Do you think improvements are needed?"
+  // ── Parent Details ──
+  { label: 'Parent Details', type: 'sectionTitle' },
+  { name: 'parentName',     label: 'Name of the Parent who is filling the form', type: 'text', required: true },
+  { name: 'parentMobile',   label: 'Mobile Number of the Parent',    type: 'tel',   required: true },
+
+  // ── Infrastructure ──
+  { label: 'Infrastructure', type: 'sectionTitle' },
+  { name: 'q_infrastructure',  label: 'Are you satisfied with the overall infrastructure of the college?', type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_classroom',       label: 'Is the classroom environment clean and well maintained?',           type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_laboratory',      label: 'Are the laboratory facilities adequate and functioning properly?',  type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_library',         label: 'Is the college library providing sufficient learning resources to students?', type: 'radio', required: true, options: ['YES', 'NO'] },
+
+  // ── Transport & Canteen ──
+  { label: 'Transport & Canteen', type: 'sectionTitle' },
+  { name: 'q_transport',       label: 'Are you satisfied with the transport facilities provided by the college?', type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_transportSafe',   label: 'Is the transport facility safe and punctual for your ward?',               type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_canteen',         label: 'Are the canteen facilities hygienic and well maintained?',                  type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_foodQuality',     label: 'Is the food quality in the canteen satisfactory?',                         type: 'radio', required: true, options: ['YES', 'NO'] },
+
+  // ── Teaching & Academic ──
+  { label: 'Teaching & Academic', type: 'sectionTitle' },
+  { name: 'q_teachingQuality', label: 'Are you satisfied with the overall teaching quality in the college?',   type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_communication',   label: 'Do teachers communicate clearly and effectively with students?',        type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_approachable',    label: 'Are teachers approachable for academic support?',                       type: 'radio', required: true, options: ['YES', 'NO'] },
+
+  // ── Extracurricular Activities ──
+  { label: 'Extracurricular Activities', type: 'sectionTitle' },
+  { name: 'q_extracurricular', label: 'Does the college provide enough extracurricular activities for students?',             type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_sportsCultural',  label: 'Are you satisfied with the opportunities provided for sports and cultural activities?', type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_competitions',    label: 'Does the college encourage student participation in competitions and events?',          type: 'radio', required: true, options: ['YES', 'NO'] },
+
+  // ── Parent-Teacher Relations & Administration ──
+  { label: 'Parent-Teacher Relations & Administration', type: 'sectionTitle' },
+  { name: 'q_parentTeacher',   label: 'Is the relationship between parents and teachers cooperative and positive?',  type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_ptInteractions',  label: 'Are you satisfied with the frequency of parent-teacher interactions?',        type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_safety',          label: 'Do you feel the college ensures the safety and security of students?',        type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_adminSupport',    label: 'Are you satisfied with the administrative support provided by the college?',  type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_grievances',      label: 'Does the college address student concerns and grievances promptly?',          type: 'radio', required: true, options: ['YES', 'NO'] },
+  { name: 'q_improvements',    label: 'Do you think any improvements are needed in the college\'s overall functioning?', type: 'radio', required: true, options: ['YES', 'NO'] },
+
+  // ── Suggestions ──
+  { label: 'Suggestions', type: 'sectionTitle' },
+  { name: 'suggestions',  label: 'Your suggestions on the improvements in the College overall functioning', type: 'textarea', required: true, rows: 5,
+    placeholder: 'Please share your suggestions for improving the college…' },
+
+  // ── Assurance ──
+  { name: 'assurance', label: 'I assure that the questions are personally gone through by me and answered the questions in the form', type: 'checkbox', required: true, checkLabel: 'YES' },
 ];
 
 export default function ParentsFeedbackPage() {
@@ -48,117 +95,20 @@ export default function ParentsFeedbackPage() {
   return (
     <>
       <Hero
-        title="Parent’s Feedback"
-        subtitle="SSKV College of Arts & Science for Women"
+        title="Parent's Feedback"
+        subtitle="Your observations help us serve our students better — we welcome your perspective"
         height="medium"
-        breadcrumb="Feedback › Parent’s Feedback"
+        breadcrumb="Feedback › Parent's Feedback"
       />
 
       <section className="section-padding bg-neutral-50">
-        <div className="container-custom mx-auto max-w-4xl bg-white p-8 rounded-xl shadow">
-
-          <h2 className="text-2xl font-bold mb-6 text-yellow-900">
-            Parent’s Feedback Form
-          </h2>
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-
-            {/* BASIC DETAILS */}
-            <input name="email" placeholder="Email" required className="input" onChange={handleChange} />
-            <input name="studentName" placeholder="Name of your Daughter" required className="input" onChange={handleChange} />
-            <input name="registerNumber" placeholder="Register Number" required className="input" onChange={handleChange} />
-            <input type="date" name="dob" required className="input" onChange={handleChange} />
-            <input type="date" name="date" className="input" onChange={handleChange} />
-            <input name="department" placeholder="Department" required className="input" onChange={handleChange} />
-
-            <select name="year" className="input" onChange={handleChange}>
-              <option value="">Select Year</option>
-              <option>I Year</option>
-              <option>II Year</option>
-              <option>III Year</option>
-            </select>
-
-            <select name="shift" className="input" onChange={handleChange}>
-              <option value="">Select Shift</option>
-              <option>Shift I</option>
-              <option>Shift II</option>
-            </select>
-
-            <input name="studentMobile" placeholder="Student Mobile Number" required className="input" onChange={handleChange} />
-
-            <select name="batch" className="input" onChange={handleChange}>
-              <option value="">Select Batch</option>
-              <option>2020-23</option>
-              <option>2021-24</option>
-              <option>2022-25</option>
-            </select>
-
-            <input name="parentName" placeholder="Parent Name" required className="input" onChange={handleChange} />
-            <input name="parentMobile" placeholder="Parent Mobile Number" required className="input" onChange={handleChange} />
-
-            {/* QUESTIONS */}
-            {questions.map((q, index) => (
-              <div key={index} className="border p-4 rounded-lg">
-                <p className="font-medium mb-2">
-                  {index + 1}. {q}
-                </p>
-
-                <div className="flex gap-6">
-                  {yesNo.map((opt) => (
-                    <label key={opt} className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name={`q${index + 1}`}
-                        value={opt}
-                        onChange={handleChange}
-                        required
-                      />
-                      {opt}
-                    </label>
-                  ))}
-                </div>
-              </div>
-            ))}
-
-            {/* SUGGESTIONS */}
-            <textarea
-              name="suggestions"
-              placeholder="Your suggestions for improvement"
-              className="input h-28"
-              required
-              onChange={handleChange}
-            />
-
-            {/* DECLARATION */}
-            <div className="border p-4 rounded-lg">
-              <p className="font-medium mb-2">
-                22. I confirm that I have personally answered all questions
-              </p>
-
-              <label className="flex items-center gap-2">
-                <input
-                  type="radio"
-                  name="declaration"
-                  value="YES"
-                  required
-                  onChange={handleChange}
-                />
-                YES
-              </label>
-            </div>
-
-            {/* BUTTONS */}
-            <div className="flex gap-4">
-              <button type="submit" className="bg-yellow-500 text-white px-6 py-2 rounded-lg">
-                Submit
-              </button>
-
-              <button type="button" onClick={handleClear} className="bg-gray-300 px-6 py-2 rounded-lg">
-                Clear
-              </button>
-            </div>
-
-          </form>
+        <div className="container-custom mx-auto max-w-4xl">
+          <FeedbackForm
+            heading="Parent's Feedback Form"
+            intro="As partners in your daughter's education, your views matter deeply to us. Please take a moment to share your feedback on the college's infrastructure, teaching, and overall functioning."
+            fields={fields}
+            subject="Parent's Feedback — SSKV College Website"
+          />
         </div>
       </section>
 

@@ -14,11 +14,18 @@ import { COLLEGE_INFO } from '../../utils/constants';
  * Field definition shape:
  *  { name, label, type, required?, options?, placeholder?, rows? }
  *
- *  type ∈ 'text' | 'email' | 'tel' | 'number' | 'select' | 'textarea'
- *  options is required when type === 'select' (array of strings)
+ *  type ∈ 'text' | 'email' | 'tel' | 'number' | 'date' | 'select' | 'radio' | 'checkbox' | 'checkboxGroup' | 'scale' | 'textarea' | 'sectionTitle'
+ *  options is required when type === 'select', 'radio', or 'checkboxGroup' (array of strings)
+ *  scale requires { min, max } (integers) and optional { minLabel, maxLabel }
+ *  sectionTitle renders a heading divider (no form input)
  */
 export default function FeedbackForm({ heading, intro, fields, subject }) {
-  const initialState = fields.reduce((acc, f) => ({ ...acc, [f.name]: '' }), {});
+  const initialState = fields.reduce((acc, f) => {
+    if (f.type === 'sectionTitle') return acc;
+    if (f.type === 'checkbox') return { ...acc, [f.name]: false };
+    if (f.type === 'checkboxGroup') return { ...acc, [f.name]: [] };
+    return { ...acc, [f.name]: '' };
+  }, {});
   const [formData, setFormData] = useState(initialState);
   const [submitted, setSubmitted] = useState(false);
 
@@ -37,7 +44,13 @@ export default function FeedbackForm({ heading, intro, fields, subject }) {
       '',
       '---------------------------------------',
       '',
-      ...fields.map((f) => `${f.label}: ${formData[f.name] || '—'}`),
+      ...fields.map((f) => {
+        if (f.type === 'sectionTitle') return `\n--- ${f.label} ---`;
+        if (f.type === 'checkbox') return `${f.label}: ${formData[f.name] ? 'YES' : 'NO'}`;
+        if (f.type === 'checkboxGroup') return `${f.label}: ${formData[f.name]?.length ? formData[f.name].join(', ') : '—'}`;
+        if (f.type === 'scale') return `${f.label}: ${formData[f.name] || '—'} / ${f.max}`;
+        return `${f.label}: ${formData[f.name] || '—'}`;
+      }),
       '',
       '---------------------------------------',
     ];
@@ -92,6 +105,17 @@ export default function FeedbackForm({ heading, intro, fields, subject }) {
       <form onSubmit={handleSubmit} className="space-y-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {fields.map((field) => {
+            // Section title — decorative divider, no input
+            if (field.type === 'sectionTitle') {
+              return (
+                <div key={field.label} className="md:col-span-2 pt-4 pb-1 border-b border-neutral-200">
+                  <h3 className="font-heading font-bold text-primary-800 text-lg">
+                    {field.label}
+                  </h3>
+                </div>
+              );
+            }
+
             const commonProps = {
               id: field.name,
               name: field.name,
@@ -103,7 +127,9 @@ export default function FeedbackForm({ heading, intro, fields, subject }) {
             };
 
             const wrapperClass =
-              field.type === 'textarea' ? 'md:col-span-2' : '';
+              field.type === 'textarea' || field.type === 'radio' || field.type === 'checkbox' || field.type === 'checkboxGroup' || field.type === 'scale'
+                ? 'md:col-span-2'
+                : '';
 
             return (
               <div key={field.name} className={wrapperClass}>
@@ -127,6 +153,76 @@ export default function FeedbackForm({ heading, intro, fields, subject }) {
                       </option>
                     ))}
                   </select>
+                ) : field.type === 'radio' ? (
+                  <div className="flex flex-wrap gap-4 mt-1">
+                    {field.options.map((opt) => (
+                      <label key={opt} className="inline-flex items-center gap-2 cursor-pointer text-sm text-neutral-700">
+                        <input
+                          type="radio"
+                          name={field.name}
+                          value={opt}
+                          checked={formData[field.name] === opt}
+                          required={field.required}
+                          onChange={(e) => handleChange(field.name, e.target.value)}
+                          className="accent-accent-400"
+                        />
+                        {opt}
+                      </label>
+                    ))}
+                  </div>
+                ) : field.type === 'checkbox' ? (
+                  <label className="inline-flex items-center gap-2 cursor-pointer text-sm text-neutral-700 mt-1">
+                    <input
+                      type="checkbox"
+                      name={field.name}
+                      checked={formData[field.name] || false}
+                      required={field.required}
+                      onChange={(e) => handleChange(field.name, e.target.checked)}
+                      className="accent-accent-400 w-4 h-4"
+                    />
+                    {field.checkLabel || 'YES'}
+                  </label>
+                ) : field.type === 'checkboxGroup' ? (
+                  <div className="flex flex-wrap gap-4 mt-1">
+                    {field.options.map((opt) => (
+                      <label key={opt} className="inline-flex items-center gap-2 cursor-pointer text-sm text-neutral-700">
+                        <input
+                          type="checkbox"
+                          name={field.name}
+                          value={opt}
+                          checked={(formData[field.name] || []).includes(opt)}
+                          onChange={(e) => {
+                            const current = formData[field.name] || [];
+                            const updated = e.target.checked
+                              ? [...current, opt]
+                              : current.filter((v) => v !== opt);
+                            handleChange(field.name, updated);
+                          }}
+                          className="accent-accent-400 w-4 h-4"
+                        />
+                        {opt}
+                      </label>
+                    ))}
+                  </div>
+                ) : field.type === 'scale' ? (
+                  <div className="flex items-center gap-6 mt-1">
+                    {field.minLabel && <span className="text-xs text-neutral-500 mr-1">{field.minLabel}</span>}
+                    {Array.from({ length: (field.max || 5) - (field.min || 1) + 1 }, (_, i) => (field.min || 1) + i).map((n) => (
+                      <label key={n} className="flex flex-col items-center cursor-pointer min-w-[2rem]">
+                        <input
+                          type="radio"
+                          name={field.name}
+                          value={n}
+                          checked={formData[field.name] === String(n)}
+                          required={field.required}
+                          onChange={(e) => handleChange(field.name, e.target.value)}
+                          className="accent-accent-400"
+                        />
+                        <span className="text-xs text-neutral-600 mt-0.5">{n}</span>
+                      </label>
+                    ))}
+                    {field.maxLabel && <span className="text-xs text-neutral-500 ml-2">{field.maxLabel}</span>}
+                  </div>
                 ) : field.type === 'textarea' ? (
                   <textarea
                     {...commonProps}

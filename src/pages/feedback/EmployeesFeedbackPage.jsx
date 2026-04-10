@@ -5,76 +5,82 @@ import FeedbackForm from '../../components/feedback/FeedbackForm';
 const yesNo = ['YES', 'NO'];
 
 const fields = [
-  /* BASIC DETAILS */
-  { name: 'email', label: 'Email', type: 'email', required: true },
+  // ── Faculty Details ──
+  { label: 'Faculty Details', type: 'sectionTitle' },
+  { name: 'email',       label: 'Email',               type: 'email', required: true },
+  { name: 'facultyName', label: 'Name of the Faculty',  type: 'text',  required: true },
+  { name: 'department',  label: 'Department',            type: 'text',  required: true },
 
-  { name: 'studentName', label: "Name of your Daughter", type: 'text', required: true },
-  { name: 'registerNumber', label: 'Register Number', type: 'text', required: true },
-  { name: 'dob', label: 'Date of Birth', type: 'date', required: true },
-  { name: 'date', label: 'Date', type: 'date' },
+  // ── Teaching & Professional Development ──
+  { label: 'Teaching & Professional Development', type: 'sectionTitle' },
+  { name: 'q_updateSkills',  label: 'Do you regularly update yourself to improve your teaching skills?',                       type: 'radio', required: true, options: ['Yes', 'No'] },
+  { name: 'q_useLibrary',    label: 'Do you make use of the college library for academic or research purpose?',                type: 'radio', required: true, options: ['Yes', 'No'] },
+  { name: 'q_followPlan',    label: 'Do you follow the prescribed teaching plan and syllabus schedule?',                      type: 'radio', required: true, options: ['Yes', 'No'] },
+  { name: 'q_useICT',        label: 'Do you effectively use teaching tools such as ICT, PPT, smart boards, etc.?',            type: 'radio', required: true, options: ['Yes', 'No'] },
+  { name: 'q_fdp',           label: 'Have you attended any Faculty Development Programs (FDP) during this academic year?',     type: 'radio', required: true, options: ['Yes', 'No'] },
+  { name: 'q_seminars',      label: 'Have you participated in any seminars or conferences this year?',                        type: 'radio', required: true, options: ['Yes', 'No'] },
+  { name: 'q_research',      label: 'Have you published any research papers during this academic year?',                      type: 'radio', required: true, options: ['Yes', 'No'] },
+  { name: 'q_resourceTalks', label: 'Have you delivered any resource talks/expert talks in other institutions?',              type: 'radio', required: true, options: ['Yes', 'No'] },
 
-  { name: 'department', label: 'Department', type: 'text', required: true },
-  { name: 'year', label: 'Year', type: 'select', required: true,
-    options: ['I Year', 'II Year', 'III Year'] },
+  // ── Student Support ──
+  { label: 'Student Support', type: 'sectionTitle' },
+  { name: 'q_slowLearners',     label: 'Do you conduct special classes for slow learners?',              type: 'radio', required: true, options: ['Yes', 'No'] },
+  { name: 'q_remedialClasses',  label: 'Do you take remedial classes for academically weak students?',   type: 'radio', required: true, options: ['Yes', 'No'] },
+  { name: 'q_completeSyllabus', label: 'Do you complete the syllabus within the allotted time?',         type: 'radio', required: true, options: ['Yes', 'No'] },
 
-  { name: 'shift', label: 'Shift', type: 'select', required: true,
-    options: ['Shift I', 'Shift II'] },
+  // ── Department & College Responsibilities ──
+  { label: 'Department & College Responsibilities', type: 'sectionTitle' },
+  { name: 'q_deptResponsibility',     label: 'Are you involved in any department level responsibilities?',                          type: 'radio',    required: true, options: ['Yes', 'No'] },
+  { name: 'deptResponsibilityDesc',   label: 'Briefly describe the responsibility you are taking charge of in the department',       type: 'textarea', required: true, rows: 3 },
+  { name: 'q_collegeResponsibility',  label: 'Are you involved in any college level responsibilities?',                             type: 'radio',    options: ['Yes', 'No'] },
+  { name: 'collegeResponsibilityDesc',label: 'Briefly describe the responsibility you are taking charge of in the college',          type: 'textarea', rows: 3 },
 
-  { name: 'studentMobile', label: 'Mobile Number of the Student', type: 'tel', required: true },
+  // ── Discipline & Records ──
+  { label: 'Discipline & Records', type: 'sectionTitle' },
+  { name: 'q_discipline',      label: 'Do you maintain discipline and punctuality in the classroom?',     type: 'radio', required: true, options: ['Yes', 'No'] },
+  { name: 'q_academicRecords', label: 'Do you regularly maintain academic records and documents?',         type: 'radio', required: true, options: ['Yes', 'No'] },
 
-  { name: 'batch', label: 'Batch', type: 'select', required: true,
-    options: ['2020-23', '2021-24', '2022-25'] },
+  // ── Teaching Methodologies & Support ──
+  { label: 'Teaching Methodologies & Support', type: 'sectionTitle' },
+  { name: 'teachingMethodologies', label: 'Mention the teaching methodologies you commonly use',                                type: 'textarea', required: true, rows: 3 },
+  { name: 'supportLearners',      label: 'Briefly describe how you support slow learners and advanced learners',                type: 'textarea', required: true, rows: 3 },
+  { name: 'specialClasses',       label: 'How many special classes have you handled this semester?',                            type: 'textarea', required: true, rows: 2 },
+  { name: 'remedialClasses',      label: 'How many remedial classes have you conducted for slow learners?',                     type: 'textarea', required: true, rows: 2 },
+  { name: 'subjectsAllotted',     label: 'Mention the subjects allotted to you along with the total hours allotted for a week', type: 'textarea', required: true, rows: 3 },
 
-  { name: 'parentName', label: 'Name of the Parent', type: 'text', required: true },
-  { name: 'parentMobile', label: 'Mobile Number of the Parent', type: 'tel', required: true },
+  // ── Attendance & Leave ──
+  { label: 'Attendance & Leave', type: 'sectionTitle' },
+  { name: 'casualLeaves',    label: 'How many casual leaves have you taken this academic year?',  type: 'textarea', required: true, rows: 2 },
+  { name: 'q_permission',    label: 'Have you availed the permitted permission in a month?',      type: 'radio',    required: true, options: ['Yes', 'No'] },
+  { name: 'odDays',          label: 'How many days of On Duty (OD) have you availed?',            type: 'textarea', required: true, rows: 2 },
+  { name: 'lateAttendance',  label: 'How many late attendance have been recorded?',                type: 'textarea', required: true, rows: 2 },
 
-  /* QUESTIONS */
-  { name: 'q1', label: '1. Are you satisfied with the overall infrastructure of the college?', type: 'radio', required: true, options: yesNo },
-  { name: 'q2', label: '2. Is the classroom environment clean and well maintained?', type: 'radio', required: true, options: yesNo },
-  { name: 'q3', label: '3. Are the laboratory facilities adequate and functioning properly?', type: 'radio', required: true, options: yesNo },
-  { name: 'q4', label: '4. Is the college library providing sufficient learning resources?', type: 'radio', required: true, options: yesNo },
-  { name: 'q5', label: '5. Are you satisfied with the transport facilities?', type: 'radio', required: true, options: yesNo },
-  { name: 'q6', label: '6. Is the transport facility safe and punctual?', type: 'radio', required: true, options: yesNo },
-  { name: 'q7', label: '7. Are the canteen facilities hygienic?', type: 'radio', required: true, options: yesNo },
-  { name: 'q8', label: '8. Is the food quality satisfactory?', type: 'radio', required: true, options: yesNo },
-  { name: 'q9', label: '9. Are you satisfied with teaching quality?', type: 'radio', required: true, options: yesNo },
-  { name: 'q10', label: '10. Do teachers communicate clearly?', type: 'radio', required: true, options: yesNo },
-  { name: 'q11', label: '11. Are teachers approachable?', type: 'radio', required: true, options: yesNo },
-  { name: 'q12', label: '12. Are extracurricular activities sufficient?', type: 'radio', required: true, options: yesNo },
-  { name: 'q13', label: '13. Are sports and cultural opportunities good?', type: 'radio', required: true, options: yesNo },
-  { name: 'q14', label: '14. Does the college encourage competitions?', type: 'radio', required: true, options: yesNo },
-  { name: 'q15', label: '15. Is parent-teacher relationship positive?', type: 'radio', required: true, options: yesNo },
-  { name: 'q16', label: '16. Are parent-teacher meetings sufficient?', type: 'radio', required: true, options: yesNo },
-  { name: 'q17', label: '17. Is student safety ensured?', type: 'radio', required: true, options: yesNo },
-  { name: 'q18', label: '18. Is administrative support satisfactory?', type: 'radio', required: true, options: yesNo },
-  { name: 'q19', label: '19. Are grievances handled promptly?', type: 'radio', required: true, options: yesNo },
-  { name: 'q20', label: '20. Are improvements needed?', type: 'radio', required: true, options: yesNo },
+  // ── Department Strength ──
+  { label: 'Department Strength', type: 'sectionTitle' },
+  { name: 'q_fullComplement',    label: 'Did you get full complement of students in your department this year?',             type: 'radio',    required: true, options: ['Yes', 'No'] },
+  { name: 'measuresToIncrease',  label: 'What kind of measures have you taken to increase the strength of your department',  type: 'textarea', required: true, rows: 3 },
 
-  /* TEXT AREA */
-  {
-    name: 'suggestions',
-    label: '21. Your suggestions for improvement',
-    type: 'textarea',
-    required: true,
-    rows: 4
-  },
+  // ── Self-Rating ──
+  { label: 'Self-Rating', type: 'sectionTitle' },
+  { name: 'rateTeaching',          label: 'Rate your overall teaching methodology',                          type: 'scale', required: true, min: 1, max: 5, minLabel: 'Poor', maxLabel: 'Excellent' },
+  { name: 'rateICT',               label: 'Rate your effectiveness in using teaching tools/ICT resources',   type: 'scale', required: true, min: 1, max: 5, minLabel: 'Poor', maxLabel: 'Excellent' },
+  { name: 'rateDeptCommitment',    label: 'Rate your Commitment to your department',                         type: 'scale', required: true, min: 1, max: 5, minLabel: 'Poor', maxLabel: 'Excellent' },
+  { name: 'rateCollegeCommitment', label: 'Rate your Commitment to the college as a whole',                  type: 'scale', required: true, min: 1, max: 5, minLabel: 'Poor', maxLabel: 'Excellent' },
 
-  /* DECLARATION */
-  {
-    name: 'declaration',
-    label: '22. I confirm that I have personally answered all questions',
-    type: 'radio',
-    required: true,
-    options: ['YES']
-  }
+  // ── Management Support ──
+  { label: 'Management Support', type: 'sectionTitle' },
+  { name: 'q_grievancesAddressed', label: 'Are your grievances on the academic part addressed by the Management?',          type: 'radio',    required: true, options: ['Yes', 'No'] },
+  { name: 'q_infrastructure',     label: 'Are you comfortable with the infrastructure provided to you by the Management?',  type: 'radio',    required: true, options: ['Yes', 'No'] },
+  { name: 'academicSupport',      label: 'What kind of academic support do you expect from the Management?',                type: 'textarea', required: true, rows: 3 },
+  { name: 'otherSupport',         label: 'What kind of support do you need (other than the academic support) from the Management?', type: 'textarea', required: true, rows: 3 },
 ];
 
 export default function ParentsFeedbackPage() {
   return (
     <>
       <Hero
-        title="Parent’s Feedback"
-        subtitle="SSKV College of Arts & Science for Women"
+        title="Faculty Self Appraisal & Feedback"
+        subtitle="Help us build a better workplace — your input drives positive change"
         height="medium"
         breadcrumb="Feedback › Parent’s Feedback"
       />
@@ -83,13 +89,10 @@ export default function ParentsFeedbackPage() {
         <div className="container-custom mx-auto max-w-4xl">
           
           <FeedbackForm
-            heading="Parent’s Feedback Form"
-            intro="We value your feedback. Please provide your honest opinion about infrastructure, teaching quality, facilities, and overall development."
+            heading="Faculty Self Appraisal and Feedback Form"
+            intro="SSKV College values the voice of every faculty member. Please share your honest self-appraisal and feedback on teaching, responsibilities, and institutional support."
             fields={fields}
-            subject="Parent Feedback — SSKV College"
-            submitText="Submit Feedback"
-            clearText="Clear Form"
-            toEmail="senyuv@gmail.com"
+            subject="Faculty Self Appraisal & Feedback — SSKV College Website"
           />
 
         </div>
