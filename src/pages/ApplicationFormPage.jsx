@@ -711,30 +711,30 @@ export default function ApplicationFormPage() {
             <a
               href="/pdfs/application-form-2026-27.pdf"
               download
-              className="flex items-center gap-3 flex-1 bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3.5 hover:bg-primary-50 hover:border-primary-300 transition-all group"
+              className="flex items-center gap-3 flex-1 bg-gradient-to-br from-primary-50 to-primary-100/50 border border-primary-200 rounded-xl px-4 py-3.5 hover:from-primary-100 hover:to-primary-50 hover:border-accent-400 hover:shadow-md transition-all group"
             >
-              <div className="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
-                <FaFilePdf className="text-primary-700 text-lg" />
+              <div className="w-10 h-10 rounded-lg bg-primary-800 flex items-center justify-center flex-shrink-0">
+                <FaFilePdf className="text-accent-400 text-lg" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-bold text-neutral-800 font-heading leading-tight">Application Form 2026–27</p>
-                <p className="text-xs text-neutral-500 mt-0.5">Printable admission form (PDF)</p>
+                <p className="text-sm font-bold text-primary-900 font-heading leading-tight">Application Form 2026–27</p>
+                <p className="text-xs text-primary-600 mt-0.5">Printable admission form (PDF)</p>
               </div>
-              <FaDownload className="text-neutral-400 group-hover:text-primary-600 transition-colors flex-shrink-0" />
+              <FaDownload className="text-accent-500/60 group-hover:text-accent-500 transition-colors flex-shrink-0" />
             </a>
             <a
               href="/pdfs/prospectus-2025-26.pdf"
               download
-              className="flex items-center gap-3 flex-1 bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3.5 hover:bg-primary-50 hover:border-primary-300 transition-all group"
+              className="flex items-center gap-3 flex-1 bg-gradient-to-br from-primary-50 to-primary-100/50 border border-primary-200 rounded-xl px-4 py-3.5 hover:from-primary-100 hover:to-primary-50 hover:border-accent-400 hover:shadow-md transition-all group"
             >
-              <div className="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
-                <FaFilePdf className="text-primary-700 text-lg" />
+              <div className="w-10 h-10 rounded-lg bg-primary-800 flex items-center justify-center flex-shrink-0">
+                <FaFilePdf className="text-accent-400 text-lg" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-bold text-neutral-800 font-heading leading-tight">Prospectus 2025–26</p>
-                <p className="text-xs text-neutral-500 mt-0.5">Courses, fees & college handbook (PDF)</p>
+                <p className="text-sm font-bold text-primary-900 font-heading leading-tight">Prospectus 2025–26</p>
+                <p className="text-xs text-primary-600 mt-0.5">Courses, fees & college handbook (PDF)</p>
               </div>
-              <FaDownload className="text-neutral-400 group-hover:text-primary-600 transition-colors flex-shrink-0" />
+              <FaDownload className="text-accent-500/60 group-hover:text-accent-500 transition-colors flex-shrink-0" />
             </a>
           </div>
         </div>
@@ -745,7 +745,22 @@ export default function ApplicationFormPage() {
         <StepIndicator currentStep={step} />
 
         <div className="container-custom mx-auto py-8 px-4 max-w-2xl">
-          <div className="bg-white rounded-2xl shadow-md border border-neutral-200 p-6 md:p-8 ring-1 ring-primary-100">
+          <div className="bg-white rounded-2xl shadow-lg border-2 border-primary-700 p-6 md:p-8 ring-1 ring-accent-300/50">
+            <div className="bg-gradient-to-r from-primary-800 to-primary-900 rounded-xl px-5 py-3 mb-6 flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-accent-400 flex items-center justify-center flex-shrink-0">
+                <span className="text-primary-900 font-bold text-sm">{step}</span>
+              </div>
+              <h2 className="text-white font-heading font-bold text-lg">
+                {step === 1 && 'Personal Information'}
+                {step === 2 && 'Educational Details'}
+                {step === 3 && 'Course Selection'}
+                {step === 4 && 'Document Upload'}
+                {step === 5 && 'Review & Submit'}
+              </h2>
+              <div className="ml-auto h-1 flex-1 max-w-[120px] bg-primary-700 rounded-full overflow-hidden">
+                <div className="h-full bg-accent-400 rounded-full transition-all duration-500" style={{ width: `${(step / 5) * 100}%` }} />
+              </div>
+            </div>
           <AnimatePresence mode="wait">
             <motion.div
               key={step}
@@ -764,28 +779,28 @@ export default function ApplicationFormPage() {
 
           {/* Navigation */}
           {step < 5 && (
-            <div className="flex justify-between items-center mt-8 pt-6 border-t border-neutral-100">
+            <div className="flex justify-between items-center mt-8 pt-6 border-t border-accent-200/50">
               <button
                 onClick={handleBack}
                 disabled={step === 1}
-                className="px-6 py-2.5 rounded-lg border-2 border-neutral-300 text-neutral-600 font-semibold text-sm hover:border-primary-400 hover:text-primary-700 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                className="px-6 py-2.5 rounded-lg border-2 border-primary-200 text-primary-700 font-semibold text-sm hover:bg-primary-50 hover:border-primary-400 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
               >
                 ← Back
               </button>
               <button
                 onClick={handleNext}
-                className="px-8 py-2.5 rounded-lg bg-primary-800 text-white font-bold text-sm hover:bg-primary-700 transition-colors shadow-sm hover:shadow-md"
+                className="px-8 py-2.5 rounded-lg bg-gradient-to-r from-accent-500 to-accent-400 text-primary-900 font-bold text-sm hover:from-accent-400 hover:to-accent-300 transition-all shadow-md hover:shadow-lg"
               >
                 Next →
               </button>
             </div>
           )}
           {step === 5 && step > 1 && (
-            <div className="flex justify-start mt-6 pt-4 border-t border-neutral-100">
+            <div className="flex justify-start mt-6 pt-4 border-t border-accent-200/50">
               <button
                 onClick={handleBack}
                 disabled={loading}
-                className="px-6 py-2.5 rounded-lg border-2 border-neutral-300 text-neutral-600 font-semibold text-sm hover:border-primary-400 hover:text-primary-700 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                className="px-6 py-2.5 rounded-lg border-2 border-primary-200 text-primary-700 font-semibold text-sm hover:bg-primary-50 hover:border-primary-400 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
               >
                 ← Back
               </button>
