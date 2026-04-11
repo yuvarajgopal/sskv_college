@@ -32,8 +32,8 @@ const about = {
 
 // ── FACULTY ───────────────────────────────────────────────────────────────────
 const faculty = [
-  { name: 'Ms.J.Suganthi,  Head, Department of Mathematics ', Mobile: '9444759527  ', , photo: '/images/faculty/library/dr-e-kalaiselvi.jpg' },
-  { name: 'Mr.T.V.Jaganathan, Office Superintendent', Mobile: ' 9381080510 ',, photo: '/images/faculty/library/ms-a-liviya-kumari.jpg' },
+  { name: 'Ms. J. Suganthi', designation: 'Head, Department of Mathematics', mobile: '9444759527', photo: '/images/faculty/library/dr-e-kalaiselvi.jpg' },
+  { name: 'Mr. T.V. Jaganathan', designation: 'Office Superintendent', mobile: '9381080510', photo: '/images/faculty/library/ms-a-liviya-kumari.jpg' },
 ];
 
 // ── ANNUAL REPORTS ────────────────────────────────────────────────────────────
@@ -109,10 +109,13 @@ export default function HelpdeskPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {faculty.map((member, i) => (
               <AnimatedSection key={i}>
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <StaffPhoto src={member.photo} name={member.name} />
-                  <h3>{member.name}</h3>
-                  <p>{member.designation}</p>
+                <div className="bg-white p-4 rounded-lg shadow text-center">
+                  <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-3">
+                    <StaffPhoto src={member.photo} name={member.name} />
+                  </div>
+                  <h3 className="font-heading font-bold text-primary-800">{member.name}</h3>
+                  <p className="text-neutral-600 text-sm">{member.designation}</p>
+                  {member.mobile && <p className="text-neutral-500 text-sm mt-1">Mobile: {member.mobile}</p>}
                 </div>
               </AnimatedSection>
             ))}

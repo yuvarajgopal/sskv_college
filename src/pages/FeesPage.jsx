@@ -3,7 +3,6 @@ import { FaSpinner } from 'react-icons/fa';
 import Hero from '../components/shared/Hero';
 import AnimatedSection from '../components/shared/AnimatedSection';
 import SectionHeading from '../components/shared/SectionHeading';
-import { loadRazorpayScript, openCheckout } from '../utils/razorpay';
 
 // ✅ UPDATED DATA FROM IMAGE
 const FEE_DATA = [
@@ -65,40 +64,11 @@ function FeeTable() {
 
 // PAYMENT FORM
 function PaymentForm() {
-  const [data, setData] = useState({
-    feeType: '',
-    program: '',
-    name: '',
-    mobile: '',
-  });
-
-  const [loading, setLoading] = useState(false);
-
+  const [data, setData] = useState({ feeType: '', program: '' });
   const amount = getAmount(data.feeType, data.program);
 
-  const handlePay = async () => {
-    if (!amount) return alert('Select program & fee type');
-
-    setLoading(true);
-    const loaded = await loadRazorpayScript();
-    if (!loaded) return alert('Payment failed');
-
-    openCheckout({
-      amount,
-      name: data.feeType,
-      description: data.program,
-      prefill: { name: data.name, contact: data.mobile },
-      onSuccess: () => {
-        alert('Payment Successful');
-        setLoading(false);
-      },
-      onFailure: () => setLoading(false),
-    });
-  };
-
   return (
-    <div className="max-w-xl mx-auto bg-white p-6 rounded-xl shadow space-y-3">
-      
+    <div className="max-w-xl mx-auto bg-white p-6 rounded-xl shadow space-y-4">
       <select onChange={(e) => setData({ ...data, feeType: e.target.value })} className="w-full border p-2 rounded">
         <option value="">Select Fee Type</option>
         <option>Admission Fee</option>
@@ -111,14 +81,21 @@ function PaymentForm() {
       </select>
 
       {amount > 0 && (
-        <div className="text-center font-bold text-lg">
+        <div className="text-center font-bold text-lg text-primary-800">
           Amount: ₹{amount}
         </div>
       )}
 
-      <button onClick={handlePay} className="w-full bg-accent-400 text-white py-2 rounded">
-        {loading ? <FaSpinner className="animate-spin mx-auto" /> : 'Pay Now'}
-      </button>
+      <div className="flex justify-center pt-2">
+        <img
+          src="/images/sskv_payment_QR.jpeg"
+          alt="Payment QR Code"
+          className="w-64 h-64 object-contain rounded-lg border border-neutral-200"
+        />
+      </div>
+      <p className="text-sm text-neutral-600 text-center">
+        Scan the QR code above to pay the fee amount.
+      </p>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { FaLanguage, FaUserTie, FaGraduationCap, FaUsers, FaAward, FaFilePdf } f
 import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
+import ActivityGallery from '../../components/shared/ActivityGallery';
 import CTABanner from '../../components/sections/CTABanner';
 import { images } from '../../data/media';
 
@@ -295,6 +296,29 @@ export default function EnglishDepartmentPage() {
               ))}
             </div>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Department Activities */}
+      <section id="activities" className="section-padding bg-primary-50">
+        <div className="container-custom mx-auto">
+          <SectionHeading title="Department Activities" subtitle="Events, seminars, and literary engagements" />
+          <AnimatedSection>
+            <p className="text-neutral-600 leading-relaxed mb-6 max-w-4xl mx-auto">
+              The Department of English at SSKV College organizes literary events, guest lectures, seminars, workshops, and intercollegiate competitions to enhance students' language proficiency, communication skills, and literary appreciation.
+            </p>
+          </AnimatedSection>
+          <div className="max-w-4xl mx-auto">
+            <ActivityGallery images={[
+              { src: '/images/ba_english/eng_img1.jpeg', caption: 'English Department Activity' },
+              { src: '/images/ba_english/eng_img2.jpeg', caption: 'English Department Activity' },
+              { src: '/images/ba_english/eng_img3.jpeg', caption: 'English Department Activity' },
+              { src: '/images/ba_english/eng_img4.jpeg', caption: 'English Department Activity' },
+              { src: '/images/ba_english/eng_img5.jpeg', caption: 'English Department Activity' },
+              { src: '/images/ba_english/eng_img6.jpeg', caption: 'English Department Activity' },
+              { src: '/images/ba_english/eng_img7.jpeg', caption: 'English Department Activity' },
+            ]} color="indigo" />
+          </div>
         </div>
       </section>
 

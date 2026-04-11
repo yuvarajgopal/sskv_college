@@ -361,14 +361,16 @@ export default function BComGeneralDepartmentPage() {
           </AnimatedSection>
           <div className="max-w-4xl mx-auto">
             <ActivityGallery images={[
-              { src: '/images/activities/bcom-general/1.jpg', caption: 'Commerce Day Celebration' },
-              { src: '/images/activities/bcom-general/2.jpg', caption: 'Guest Lecture on Accounting' },
-              { src: '/images/activities/bcom-general/3.jpg', caption: 'Industrial Visit' },
-              { src: '/images/activities/bcom-general/4.jpg', caption: 'Business Quiz Competition' },
-              { src: '/images/activities/bcom-general/5.jpg', caption: 'Workshop on Tally' },
-              { src: '/images/activities/bcom-general/6.jpg', caption: 'Seminar on Banking' },
-              { src: '/images/activities/bcom-general/7.jpg', caption: 'Commerce Association Inauguration' },
-              { src: '/images/activities/bcom-general/8.jpg', caption: 'Intercollegiate Commerce Fest' },
+              { src: '/images/bcom_g/bcom_g_img_1.jpeg', caption: 'B.Com (General) Department Activity' },
+              { src: '/images/bcom_g/bcom_g_img_2.jpeg', caption: 'B.Com (General) Department Activity' },
+              { src: '/images/bcom_g/bcom_g_img_3.jpeg', caption: 'B.Com (General) Department Activity' },
+              { src: '/images/bcom_g/bcom_g_img_4.jpeg', caption: 'B.Com (General) Department Activity' },
+              { src: '/images/bcom_g/bcom_g_img_5.jpeg', caption: 'B.Com (General) Department Activity' },
+              { src: '/images/bcom_g/bcom_g_img_6.jpeg', caption: 'B.Com (General) Department Activity' },
+              { src: '/images/bcom_g/bcom_g_img_7.jpeg', caption: 'B.Com (General) Department Activity' },
+              { src: '/images/bcom_g/bcom_g_img_8.jpeg', caption: 'B.Com (General) Department Activity' },
+              { src: '/images/bcom_g/bcom_g_img_9.jpeg', caption: 'B.Com (General) Department Activity' },
+              { src: '/images/bcom_g/bcom_g_img_10.jpeg', caption: 'B.Com (General) Department Activity' },
             ]} color="orange" />
           </div>
         </div>

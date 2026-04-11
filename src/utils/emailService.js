@@ -55,3 +55,4 @@ export async function sendApplicationEmail(formData, pdfBase64, applicationNo) {
     EMAILJS_PUBLIC_KEY
   );
 }
+

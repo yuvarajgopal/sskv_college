@@ -353,14 +353,10 @@ export default function BComAFDepartmentPage() {
           </AnimatedSection>
           <div className="max-w-4xl mx-auto">
             <ActivityGallery images={[
-              { src: '/images/activities/bcom-af/1.jpg', caption: 'Accounting Workshop' },
-              { src: '/images/activities/bcom-af/2.jpg', caption: 'Guest Lecture on Finance' },
-              { src: '/images/activities/bcom-af/3.jpg', caption: 'Bank Visit' },
-              { src: '/images/activities/bcom-af/4.jpg', caption: 'Budget Competition' },
-              { src: '/images/activities/bcom-af/5.jpg', caption: 'Tax Seminar' },
-              { src: '/images/activities/bcom-af/6.jpg', caption: 'Stock Market Simulation' },
-              { src: '/images/activities/bcom-af/7.jpg', caption: 'Department Day' },
-              { src: '/images/activities/bcom-af/8.jpg', caption: 'Intercollegiate Event' },
+              { src: '/images/bcom_af/bcom_af_1.jpeg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/bcom_af/bcom_af_2.jpeg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/bcom_af/bcom_af_3.jpeg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/bcom_af/bcom_af_4.jpeg', caption: 'B.Com (A&F) Department Activity' },
             ]} color="emerald" />
           </div>
         </div>

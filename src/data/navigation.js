@@ -109,7 +109,7 @@ export const navLinks = [
     children: [
       { label: 'Research & Development', path: '/research-development' },
       { label: 'Projects',               path: '/projects' },
-      { label: 'Entrepreneurship Cell',  path: '/entrepreneurship-cell' },
+      { label: 'Entrepreneurship Development Cell (ED Cell)',  path: '/entrepreneurship-cell' },
     ],
   },
 

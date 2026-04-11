@@ -110,6 +110,7 @@ const ConsumerClubPage = lazy(() => import('./pages/clubs/ConsumerClubPage'));
 const ValueEducationClubPage = lazy(() => import('./pages/clubs/ValueEducationClubPage'));
 const InfrastructurePage = lazy(() => import('./pages/InfrastructurePage'));
 const TransportPage = lazy(() => import('./pages/TransportPage'));
+const HelpdeskPage = lazy(() => import('./pages/helpdesk'));
 
 function PageLoader() {
   return (
@@ -236,6 +237,7 @@ export default function App() {
             <Route path="/clubs/value-education" element={<ValueEducationClubPage />} />
             <Route path="/infrastructure" element={<InfrastructurePage />} />
             <Route path="/transport" element={<TransportPage />} />
+            <Route path="/help-desk" element={<HelpdeskPage />} />
           </Route>
         </Routes>
       </Suspense>

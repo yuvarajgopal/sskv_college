@@ -549,9 +549,13 @@ export default function Navbar() {
         {/* Top utility strip: e-Governance / Feedback / Help Desk */}
         <div className="hidden md:block">
           <div className="w-full px-4 md:px-6 xl:px-8 2xl:px-12 flex justify-end items-center gap-5 py-1.5 text-[11px] font-body">
-            <Link to="/e-governance" className="text-white/75 hover:text-accent-400 transition-colors">
+            <a href="https://play.google.com/store/apps/details?id=parentsalarm.sskv.womens.arts.college.kanchipuram" target="_blank" rel="noopener noreferrer" className="text-white/75 hover:text-accent-400 transition-colors">
+              Download App
+            </a>
+            <span className="text-white/20">|</span>
+            <a href="https://app.schoolcanvas.com/" target="_blank" rel="noopener noreferrer" className="text-white/75 hover:text-accent-400 transition-colors">
               e-Governance
-            </Link>
+            </a>
             <span className="text-white/20">|</span>
             <FeedbackDropdown />
             <span className="text-white/20">|</span>

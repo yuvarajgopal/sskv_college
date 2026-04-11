@@ -7,7 +7,6 @@ import Hero from '../components/shared/Hero';
 import { images } from '../data/media';
 import { generateApplicationPDF } from '../utils/pdfGenerator';
 import { sendApplicationEmail } from '../utils/emailService';
-import { loadRazorpayScript, openCheckout } from '../utils/razorpay';
 
 // ─── Step configuration ───────────────────────────────────────────────────────
 const STEPS = [
@@ -485,30 +484,42 @@ function Step5({ formData, loading, onPay }) {
         ]}
       />
 
-      {/* Payment Box */}
-      <div className="rounded-2xl border-2 border-accent-400 bg-accent-50 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div>
+      {/* Payment QR Code */}
+      <div className="rounded-2xl border-2 border-accent-400 bg-accent-50 p-6">
+        <div className="text-center mb-4">
           <p className="text-sm font-semibold text-primary-800">Application Fee (one-time, non-refundable)</p>
           <p className="text-3xl font-bold text-primary-900 mt-1">₹500</p>
         </div>
-        <button
-          onClick={onPay}
-          disabled={loading}
-          className="flex items-center gap-2 bg-accent-400 hover:bg-accent-500 text-primary-900 font-bold px-8 py-3 rounded-xl transition-colors disabled:opacity-60 disabled:cursor-not-allowed text-base shadow-md hover:shadow-lg"
-        >
-          {loading ? (
-            <>
-              <FaSpinner className="animate-spin" />
-              Processing...
-            </>
-          ) : (
-            'Pay ₹500 & Submit Application'
-          )}
-        </button>
+        <div className="flex justify-center mb-4">
+          <img
+            src="/images/sskv_payment_QR.jpeg"
+            alt="Payment QR Code"
+            className="w-64 h-64 object-contain rounded-lg border border-neutral-200"
+          />
+        </div>
+        <p className="text-sm text-neutral-600 text-center mb-4">
+          Scan the QR code above to pay the application fee. After payment, click the button below to submit your application.
+        </p>
+        <div className="flex justify-center">
+          <button
+            onClick={onPay}
+            disabled={loading}
+            className="flex items-center gap-2 bg-accent-400 hover:bg-accent-500 text-primary-900 font-bold px-8 py-3 rounded-xl transition-colors disabled:opacity-60 disabled:cursor-not-allowed text-base shadow-md hover:shadow-lg"
+          >
+            {loading ? (
+              <>
+                <FaSpinner className="animate-spin" />
+                Processing...
+              </>
+            ) : (
+              'I have paid — Submit Application'
+            )}
+          </button>
+        </div>
       </div>
 
       <p className="text-xs text-neutral-400 text-center">
-        Secure payment powered by Razorpay. Your application PDF will be generated and emailed after payment.
+        Your application PDF will be generated and emailed after submission.
       </p>
     </div>
   );
@@ -664,42 +675,18 @@ export default function ApplicationFormPage() {
   const handlePay = async () => {
     setLoading(true);
     try {
-      const loaded = await loadRazorpayScript();
-      if (!loaded) {
-        alert('Failed to load payment gateway. Please check your internet connection and try again.');
-        setLoading(false);
-        return;
+      const { base64, applicationNo } = generateApplicationPDF(formData);
+      try {
+        await sendApplicationEmail(formData, base64, applicationNo);
+      } catch (emailErr) {
+        console.error('Email sending failed:', emailErr);
       }
-      openCheckout({
-        amount: 500,
-        name: 'Application Fee',
-        description: `Application for ${formData.program}`,
-        prefill: {
-          name: formData.fullName,
-          email: formData.email,
-          contact: formData.mobile,
-        },
-        onSuccess: async (response) => {
-          const { base64, applicationNo } = generateApplicationPDF(formData);
-          try {
-            await sendApplicationEmail(formData, base64, applicationNo);
-          } catch (emailErr) {
-            console.error('Email sending failed:', emailErr);
-          }
-          setSuccess({ applicationNo, pdfBase64: base64 });
-          setLoading(false);
-        },
-        onFailure: (error) => {
-          if (error?.message !== 'Payment cancelled by user') {
-            alert('Payment failed. Please try again.');
-          }
-          setLoading(false);
-        },
-      });
+      setSuccess({ applicationNo, pdfBase64: base64 });
     } catch (err) {
-      console.error('Payment error:', err);
-      setLoading(false);
+      console.error('Submission error:', err);
+      alert('Submission failed. Please try again.');
     }
+    setLoading(false);
   };
 
   if (success) {

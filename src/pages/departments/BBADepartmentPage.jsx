@@ -356,14 +356,15 @@ export default function BBADepartmentPage() {
           </AnimatedSection>
           <div className="max-w-4xl mx-auto">
             <ActivityGallery images={[
-              { src: '/images/activities/bba/1.jpg', caption: 'Business Plan Competition' },
-              { src: '/images/activities/bba/2.jpg', caption: 'Industrial Visit' },
-              { src: '/images/activities/bba/3.jpg', caption: 'Guest Lecture' },
-              { src: '/images/activities/bba/4.jpg', caption: 'Marketing Workshop' },
-              { src: '/images/activities/bba/5.jpg', caption: 'Management Fest' },
-              { src: '/images/activities/bba/6.jpg', caption: 'Case Study Competition' },
-              { src: '/images/activities/bba/7.jpg', caption: 'Leadership Workshop' },
-              { src: '/images/activities/bba/8.jpg', caption: 'Entrepreneurship Seminar' },
+              { src: '/images/bba_1/bba_1.jpeg', caption: 'BBA Department Activity' },
+              { src: '/images/bba_1/bba_2.jpeg', caption: 'BBA Department Activity' },
+              { src: '/images/bba_ass/WhatsApp Image 2025-09-18 at 10.49.22.jpeg', caption: 'BBA Association Activity' },
+              { src: '/images/bba_ass/WhatsApp Image 2025-09-18 at 10.49.23.jpeg', caption: 'BBA Association Activity' },
+              { src: '/images/bba_ass/WhatsApp Image 2025-09-18 at 10.49.23 (1).jpeg', caption: 'BBA Association Activity' },
+              { src: '/images/bba_ass/WhatsApp Image 2025-09-18 at 10.49.24.jpeg', caption: 'BBA Association Activity' },
+              { src: '/images/bba_ass/WhatsApp Image 2025-09-18 at 10.49.25.jpeg', caption: 'BBA Association Activity' },
+              { src: '/images/bba_ass/WhatsApp Image 2025-09-18 at 10.49.25 (1).jpeg', caption: 'BBA Association Activity' },
+              { src: '/images/bba_ass/Copy of WhatsApp Image 2025-09-18 at 10.49.25 (1).jpeg', caption: 'BBA Association Activity' },
             ]} color="violet" />
           </div>
         </div>

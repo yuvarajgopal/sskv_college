@@ -6,19 +6,19 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 
 // ── Drive file IDs ─────────────────────────────────────
 const documents = [
-  { id: '116DGd9srNsKOicepw4kn3nqeokGdEalS', label: 'Entrepreneurship Cell — Document 1' },
-  { id: '1No5Rz1L8g70A3K9B4L90h1AnCz_p5BpO', label: 'Entrepreneurship Cell — Document 2' },
-  { id: '1k-0E9FRhbwy-7lH9mQDffmljB69EDEHu', label: 'Entrepreneurship Cell — Document 3' },
+  { id: '116DGd9srNsKOicepw4kn3nqeokGdEalS', label: 'Entrepreneurship Development Cell (ED Cell) — Document 1' },
+  { id: '1No5Rz1L8g70A3K9B4L90h1AnCz_p5BpO', label: 'Entrepreneurship Development Cell (ED Cell) — Document 2' },
+  { id: '1k-0E9FRhbwy-7lH9mQDffmljB69EDEHu', label: 'Entrepreneurship Development Cell (ED Cell) — Document 3' },
 ];
 
 export default function EntrepreneurshipCellPage() {
   return (
     <>
       <Hero
-        title="Entrepreneurship Cell"
+        title="Entrepreneurship Development Cell (ED Cell)"
         subtitle="Nurturing entrepreneurial spirit and innovation among students at SSKV College"
         height="medium"
-        breadcrumb="Research & Development › Entrepreneurship Cell"
+        breadcrumb="Research & Development › Entrepreneurship Development Cell (ED Cell)"
       />
 
       <section className="section-padding bg-neutral-50">

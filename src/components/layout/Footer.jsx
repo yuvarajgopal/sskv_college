@@ -1,10 +1,19 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaYoutube, FaInstagram, FaMapMarkerAlt, FaPhone, FaEnvelope, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaYoutube, FaInstagram, FaMapMarkerAlt, FaPhone, FaEnvelope, FaExternalLinkAlt, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { navLinks, quickLinks, externalLinks } from '../../data/navigation';
 import { departments } from '../../data/departments';
 import { COLLEGE_INFO } from '../../utils/constants';
 
+// Show up to Placement by default
+const CUTOFF_LABEL = 'Placement';
+const cutoffIndex = navLinks.findIndex((l) => l.label === CUTOFF_LABEL);
+const primaryLinks = navLinks.slice(0, cutoffIndex + 1);
+const moreLinks = navLinks.slice(cutoffIndex + 1);
+
 export default function Footer() {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <footer className="bg-primary-900 text-white">
       {/* Gold accent line */}
@@ -55,7 +64,7 @@ export default function Footer() {
             <div>
               <h3 className="font-heading font-bold text-base mb-4 text-accent-400">Quick Links</h3>
               <ul className="space-y-1.5">
-                {navLinks.map((link) => (
+                {primaryLinks.map((link) => (
                   <li key={link.path}>
                     <Link
                       to={link.path}
@@ -65,16 +74,44 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
-                <li className="pt-1 border-t border-white/10 mt-2">
-                  {quickLinks.map((link) => (
-                    <Link
-                      key={link.path}
-                      to={link.path}
-                      className="block text-white/60 hover:text-accent-400 transition-colors text-sm mt-1.5"
-                    >
-                      › {link.label}
-                    </Link>
-                  ))}
+
+                {showMore && (
+                  <>
+                    {moreLinks.map((link) => (
+                      <li key={link.path}>
+                        <Link
+                          to={link.path}
+                          className="text-white/60 hover:text-accent-400 transition-colors text-sm"
+                        >
+                          › {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                    <li className="pt-1 border-t border-white/10 mt-2">
+                      {quickLinks.map((link) => (
+                        <Link
+                          key={link.path}
+                          to={link.path}
+                          className="block text-white/60 hover:text-accent-400 transition-colors text-sm mt-1.5"
+                        >
+                          › {link.label}
+                        </Link>
+                      ))}
+                    </li>
+                  </>
+                )}
+
+                <li className="pt-1">
+                  <button
+                    onClick={() => setShowMore(!showMore)}
+                    className="flex items-center gap-1.5 text-accent-400 text-sm font-semibold hover:text-accent-300 transition-colors"
+                  >
+                    {showMore ? (
+                      <>Show Less <FaChevronUp className="text-[10px]" /></>
+                    ) : (
+                      <>View More <FaChevronDown className="text-[10px]" /></>
+                    )}
+                  </button>
                 </li>
               </ul>
             </div>

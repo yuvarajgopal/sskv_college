@@ -1,6 +1,11 @@
 import { useState } from 'react';
-import { FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
-import { COLLEGE_INFO } from '../../utils/constants';
+import { FaPaperPlane, FaCheckCircle, FaSpinner } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
+
+const FEEDBACK_EMAIL = import.meta.env.VITE_FEEDBACK_EMAIL || 'sskvcollege2007@gmail.com';
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 /**
  * Reusable feedback form.
@@ -28,18 +33,21 @@ export default function FeedbackForm({ heading, intro, fields, subject }) {
   }, {});
   const [formData, setFormData] = useState(initialState);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (name, value) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError('');
 
     // Build an email body from all field values
     const bodyLines = [
       `${heading}`,
-      `Submitted from: ${COLLEGE_INFO.website}`,
       `Date: ${new Date().toLocaleString()}`,
       '',
       '---------------------------------------',
@@ -56,15 +64,20 @@ export default function FeedbackForm({ heading, intro, fields, subject }) {
     ];
 
     const body = bodyLines.join('\n');
-    const recipients = COLLEGE_INFO.email.join(',');
-    const mailto =
-      `mailto:${recipients}` +
-      `?subject=${encodeURIComponent(subject)}` +
-      `&body=${encodeURIComponent(body)}`;
 
-    // Opens the user's default email client with everything pre-filled
-    window.location.href = mailto;
-    setSubmitted(true);
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+        to_email: FEEDBACK_EMAIL,
+        from_email: formData.email || '',
+        subject,
+        message: body,
+      }, PUBLIC_KEY);
+      setSubmitted(true);
+    } catch (err) {
+      console.error('Feedback email error:', err);
+      setError('Failed to send feedback. Please try again.');
+    }
+    setLoading(false);
   };
 
   const handleReset = () => {
@@ -80,9 +93,7 @@ export default function FeedbackForm({ heading, intro, fields, subject }) {
           Thank you for your feedback!
         </h3>
         <p className="text-neutral-600 mb-6 max-w-md mx-auto">
-          Your email client has been opened with the feedback details. Please press
-          <span className="font-semibold"> Send </span>
-          to deliver it to the college. We appreciate you taking the time to share your thoughts.
+          Your feedback has been submitted successfully. We appreciate you taking the time to share your thoughts.
         </p>
         <button
           type="button"
@@ -241,18 +252,32 @@ export default function FeedbackForm({ heading, intro, fields, subject }) {
           })}
         </div>
 
+        {error && (
+          <p className="text-red-600 text-sm text-center">{error}</p>
+        )}
+
         <div className="pt-2 flex flex-col sm:flex-row gap-3 items-center justify-between">
           <p className="text-xs text-neutral-500">
             Fields marked <span className="text-accent-500">*</span> are required.
-            On submit, your email client opens with the details pre-filled to
-            <span className="font-semibold"> {COLLEGE_INFO.email[0]}</span>.
+            Your feedback will be sent to
+            <span className="font-semibold"> {FEEDBACK_EMAIL}</span>.
           </p>
           <button
             type="submit"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-accent-400 text-primary-900 text-sm font-bold rounded-lg hover:bg-accent-300 transition-colors font-body whitespace-nowrap"
+            disabled={loading}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-accent-400 text-primary-900 text-sm font-bold rounded-lg hover:bg-accent-300 transition-colors font-body whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            <FaPaperPlane className="text-xs" />
-            Submit Feedback
+            {loading ? (
+              <>
+                <FaSpinner className="text-xs animate-spin" />
+                Sending...
+              </>
+            ) : (
+              <>
+                <FaPaperPlane className="text-xs" />
+                Submit Feedback
+              </>
+            )}
           </button>
         </div>
       </form>

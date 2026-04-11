@@ -207,7 +207,17 @@ export default function HomePage() {
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto">
           <SectionHeading title="Campus Life" />
-          <VideoEmbed videoId={videos.campusLife.id} />
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-lg">
+            <video
+              src="/videos/college_life.mp4"
+              controls
+              className="w-full"
+              poster=""
+              preload="metadata"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </section>
 
