@@ -81,24 +81,6 @@ export default function HomePage() {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-primary-900/70 flex flex-col items-center justify-center text-center text-white px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            SSKV College of Arts & Science for Women
-          </h1>
-
-          <p className="mb-6 text-lg">
-            Empowering Women Through Quality Education — Affiliated to University of Madras, Kanchipuram
-          </p>
-
-          <div className="flex gap-4">
-            <Button variant="gold" size="lg" href="/academics">
-              Explore Programs
-            </Button>
-            <Button variant="outline" size="lg" href="/admissions">
-              Apply Now
-            </Button>
-          </div>
-        </div>
 
         {/* DOTS */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
@@ -111,6 +93,28 @@ export default function HomePage() {
               }`}
             />
           ))}
+        </div>
+      </section>
+
+      {/* ================= COLLEGE INFO BAR ================= */}
+      <section className="bg-primary-900 text-white">
+        <div className="container-custom mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>
+            <h1 className="text-xl md:text-2xl font-bold font-heading">
+              SSKV College of Arts &amp; Science for Women
+            </h1>
+            <p className="text-white/70 text-sm md:text-base mt-1">
+              Empowering Women Through Quality Education — Affiliated to University of Madras, Kanchipuram
+            </p>
+          </div>
+          <div className="flex gap-3 shrink-0">
+            <Button variant="gold" href="/academics">
+              Explore Programs
+            </Button>
+            <Button variant="outline" href="/admissions">
+              Apply Now
+            </Button>
+          </div>
         </div>
       </section>
 
