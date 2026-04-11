@@ -14,9 +14,9 @@ const qualityParams = [
 ];
 
 const aqarReports = [
-  { year: '2024–25', status: 'Submitted', date: 'Oct 2025' },
-  { year: '2023–24', status: 'Submitted', date: 'Oct 2024' },
-  { year: '2022–23', status: 'Submitted', date: 'Oct 2023' },
+  { year: '2024–25', status: '-', date: 'Oct 2025' },
+  { year: '2023–24', status: '-', date: 'Oct 2024' },
+  { year: '2022–23', status: '-', date: 'Oct 2023' },
 ];
 
 export default function NAACPage() {
@@ -46,8 +46,6 @@ export default function NAACPage() {
                 </div>
                 <p className="text-amber-700 leading-relaxed">
                   SSKV College of Arts & Science for Women has initiated the NAAC accreditation process.
-                  The Self Study Report (SSR) has been submitted to NAAC for assessment.
-                  Grade and cycle details will be updated upon completion of the peer team visit.
                 </p>
               </div>
             </AnimatedSection>
@@ -168,7 +166,7 @@ export default function NAACPage() {
               <div>
                 <h3 className="font-heading font-bold text-lg text-white">Self Study Report (SSR)</h3>
                 <p className="text-white/60 text-sm mt-1">
-                  Comprehensive self-study report submitted to NAAC for accreditation assessment
+                  
                 </p>
               </div>
               <button className="flex-shrink-0 flex items-center gap-2 px-5 py-2.5 bg-accent-400 text-primary-900 font-semibold rounded-lg hover:bg-accent-300 transition-colors text-sm">

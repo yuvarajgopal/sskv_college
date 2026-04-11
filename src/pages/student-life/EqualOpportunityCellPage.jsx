@@ -59,6 +59,7 @@ export default function EqualOpportunityCellPage() {
               </ul>
             </div>
           </AnimatedSection>
+          
 
           <SectionHeading title="Objectives" />
           <div className="space-y-3">
@@ -70,9 +71,52 @@ export default function EqualOpportunityCellPage() {
                 </div>
               </AnimatedSection>
             ))}
+             {/* TABLE */}
+                      <AnimatedSection>
+                        <div className="overflow-x-auto mb-8">
+                          <table className="w-full border border-neutral-300 rounded-xl overflow-hidden">
+                            <thead className="bg-primary-900 text-white text-sm">
+                              <tr>
+                                <th className="p-3 text-left">Name</th>
+                                <th className="p-3 text-left">Designation</th>
+                                <th className="p-3 text-left">Role</th>
+                                <th className="p-3 text-left">Contact</th>
+                              </tr>
+                            </thead>
+                            <tbody className="text-sm text-neutral-700">
+                              <tr className="border-t">
+                                <td className="p-3">Dr. K. Thirumamagal</td>
+                                <td className="p-3">Principal</td>
+                                <td className="p-3 font-semibold">Chairperson</td>
+                                <td className="p-3">9994745157</td>
+                              </tr>
+                              <tr className="border-t">
+                                <td className="p-3">Ms. M. Mahalakshmi</td>
+                                <td className="p-3">SC/ST Scholarship Coordinator</td>
+                                <td className="p-3 font-semibold">Member</td>
+                                <td className="p-3">9566441320</td>
+                              </tr>
+                              <tr className="border-t">
+                                <td className="p-3">Ms. M. Lavanya</td>
+                                <td className="p-3">Faculty</td>
+                                <td className="p-3 font-semibold">Member</td>
+                                <td className="p-3">9994502098</td>
+                              </tr>
+                              <tr className="border-t">
+                                <td className="p-3">Mr. Paneerselvam</td>
+                                <td className="p-3">Founder, Sarvam Trust (NGO)</td>
+                                <td className="p-3 font-semibold">External Member</td>
+                                <td className="p-3">9500218240</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </AnimatedSection>
           </div>
         </div>
+        
       </section>
+      
 
       <CTABanner title="Equal Opportunities. Unlimited Potential." subtitle="SSKV College believes every student deserves an equal chance to realise their full potential." />
     </>

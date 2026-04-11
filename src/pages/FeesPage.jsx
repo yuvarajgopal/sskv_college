@@ -106,7 +106,7 @@ export default function FeesPage() {
     <>
       <Hero
         title="Fees Structure"
-        subtitle="Transparent fee structure for the academic year 2025–2026"
+        subtitle="Transparent fee structure for the academic year 2026–2027"
         height="medium"
         breadcrumb="Home › Fees"
       />

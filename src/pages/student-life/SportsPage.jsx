@@ -10,11 +10,7 @@ const achievements = [
     title: 'AZONE Women\'s Tournament',
     desc: 'College enrolled in the AZONE Women\'s Tournament of the University of Madras. Winners went on to represent at the state level in sports.',
   },
-  {
-    year: 'June 2024',
-    title: 'Nodal College for Placement Drives',
-    desc: 'Selected as a Nodal College by the Government of Tamil Nadu — reflecting the overall strength and reputation of the institution including sports activities.',
-  },
+  
 ];
 
 const facilities = [
@@ -64,8 +60,8 @@ export default function SportsPage() {
 
   const images = [
     '/images/sports/sports1.JPG',
-    '/images/sports/sports2.JPG',
-    '/images/sports/sports3.jpg',
+    '/images/sports/sports2.jpg',
+    '/images/sports/sports3.JPG',
     '/images/sports/sports4.jpg',
     '/images/sports/sports5.JPG',
     '/images/sports/sports6.JPG',
@@ -114,7 +110,7 @@ export default function SportsPage() {
           <SectionHeading title="Sports at SSKV College" subtitle="A tradition of athletic excellence and competitive spirit" />
 
           <p className="text-neutral-600 leading-relaxed mb-8">
-            Juvenal, the Roman poet, famously wrote, "Mens sana in corpore sano"...
+              Juvenal, the Roman poet, famously wrote, "Mens sana in corpore sano" (A sound mind in a sound body), a popular aphorism that has become the motto of many educational and military institutions around the world. The importance of physical fitness is recognized by all educational institutions, and sports are an integral part of higher education. We too place a high value on sports, and although we are a small college, we take great pride in our enthusiasm for athletic pursuits. Our Physical Director, Ms. Lavanya, was selected by the Sports Authority of Tamil Nadu to serve as the coach for the state/’s hockey team in the 2024 National Level Hockey Championship. These are remarkable achievements for our college.
           </p>
 
           <p className="text-neutral-600 leading-relaxed mb-8">
@@ -133,10 +129,14 @@ export default function SportsPage() {
             </div>
           </AnimatedSection>
 
-          <h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5">Objectives</h3>
+          <h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5"></h3>
 
           <p className="text-neutral-600 leading-relaxed mb-8">
-            Ms. Priya, B.Com in 2010 achieved the following...
+            Ms. Priya, B.Com in 2010 achieved the following...<br></br>
+            Participated in Thanjavur State level Sports meet.<br></br>
+            Participated in Chennai A.L meet . 10,000 meters run and secured the 5th place.<br></br>
+            Won the Gold Medal and the 1st prize in 800 & 400 meters running and Replay at the state level Athletics held at SCSVMV University, Kancheepuram.<br></br>
+            Ms. Devi B.Com (2009-2012) participated in the senior Dodge Ball championship organized by the Maharashtra Dodge Ball Association in Nasik, Maharashtra.<br></br>
           </p>
 
           {/* 🔥 ACHIEVERS SECTION (UPDATED LAYOUT) */}

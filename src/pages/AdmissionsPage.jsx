@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: 'What placement support does the college offer?',
-    a: 'Our Placement Cell actively conducts on-campus recruitment drives with a 60% placement rate. Students receive training in aptitude, communication, and technical skills.',
+    a: 'Our Placement Cell actively conducts on-campus recruitment drives with a 75% placement rate. Students receive training in aptitude, communication, and technical skills.',
   },
 ];
 
