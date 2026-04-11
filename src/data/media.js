@@ -109,7 +109,7 @@ export const images = {
   general: {
     placeholder: '/images/home/hero.jpg', // College entrance as default
     noImage: '/images/home/campus.jpg', // Campus building as fallback
-    logo: '/images/logo/logo.jpeg', // SSKV College logo
+    logo: '/images/logo/SSKV.png', // SSKV College logo
   }
 };
 

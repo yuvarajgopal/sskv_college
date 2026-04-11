@@ -542,13 +542,13 @@ export default function Navbar() {
     <>
       <motion.nav
         initial={false}
-        className={`fixed top-0 left-0 right-0 z-50 bg-primary-900 pt-3 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 bg-primary-900 transition-all duration-300 ${
           isScrolled ? 'shadow-lg' : ''
         }`}
       >
         {/* Top utility strip: e-Governance / Feedback / Help Desk */}
         <div className="hidden md:block">
-          <div className="w-full px-4 md:px-6 xl:px-8 2xl:px-12 flex justify-end items-center gap-5 py-1.5 text-[11px] font-body">
+          <div className="w-full px-4 md:px-6 xl:px-8 2xl:px-12 flex justify-end items-center gap-5 pt-2 pb-1 text-[11px] font-body">
             <a href="https://play.google.com/store/apps/details?id=parentsalarm.sskv.womens.arts.college.kanchipuram" target="_blank" rel="noopener noreferrer" className="text-white/75 hover:text-accent-400 transition-colors">
               Download App
             </a>
@@ -565,12 +565,14 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="w-full px-4 md:px-6 xl:px-8 2xl:px-12 flex items-center justify-between gap-4 py-5">
+        <div className="w-full px-4 md:px-6 xl:px-8 2xl:px-12 flex items-center justify-between gap-4 pt-4 pb-3">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent-400 flex items-center justify-center flex-shrink-0">
-              <span className="text-primary-900 font-heading font-bold text-xl md:text-2xl">S</span>
-            </div>
+            <img
+              src="/images/logo/SSKV.png"
+              alt="SSKV College Logo"
+              className="h-14 md:h-16 w-auto object-contain flex-shrink-0"
+            />
             <div className="hidden sm:block whitespace-nowrap">
               <div className="text-white font-heading font-bold text-xl 2xl:text-2xl leading-tight">SSKV College</div>
               <div className="text-white/60 text-xs 2xl:text-sm">Arts & Science for Women</div>

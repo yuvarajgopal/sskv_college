@@ -26,9 +26,11 @@ export default function Footer() {
             {/* Column 1: About */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-accent-400 flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary-900 font-heading font-bold text-lg">S</span>
-                </div>
+                <img
+                  src="/images/logo/SSKV.png"
+                  alt="SSKV College Logo"
+                  className="h-12 w-auto object-contain flex-shrink-0"
+                />
                 <div>
                   <div className="font-heading font-bold text-base leading-tight">SSKV College</div>
                   <div className="text-white/60 text-xs">Arts & Science for Women</div>

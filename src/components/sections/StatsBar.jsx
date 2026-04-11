@@ -3,9 +3,9 @@ import { stats } from '../../data/stats';
 
 export default function StatsBar() {
   return (
-    <section className="bg-primary-800 py-12 md:py-16">
-      <div className="container-custom mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+    <section className="bg-primary-800 py-8 md:py-12">
+      <div className="w-full px-2 md:px-6">
+        <div className="flex flex-wrap justify-center md:flex-nowrap md:justify-between">
           {stats.map((stat) => (
             <StatCounter
               key={stat.label}

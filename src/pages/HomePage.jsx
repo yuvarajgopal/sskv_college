@@ -75,7 +75,7 @@ export default function HomePage() {
   return (
     <>
       {/* ================= HERO ================= */}
-      <section className="relative h-[60vh] md:h-[68vh] overflow-hidden">
+      <section className="relative h-[75vh] md:h-[85vh] overflow-hidden">
         <img
           src={heroImages[currentSlide]}
           className="w-full h-full object-cover"
