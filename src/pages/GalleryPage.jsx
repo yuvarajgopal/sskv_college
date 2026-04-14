@@ -3,9 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaChevronLeft, FaChevronRight, FaImage, FaCamera, FaUserGraduate, FaTrophy, FaCalendarAlt } from 'react-icons/fa';
 import Hero from '../components/shared/Hero';
 import SectionHeading from '../components/shared/SectionHeading';
-import VideoEmbed from '../components/sections/VideoEmbed';
 import { galleryImages } from '../data/gallery';
-import { videos, images } from '../data/media';
+import { images } from '../data/media';
 
 const galleryCategories = [
   { id: 'all', label: 'All', icon: FaImage },
@@ -173,17 +172,23 @@ export default function GalleryPage() {
         )}
       </AnimatePresence>
 
-      {/* Campus Video Tour */}
+      {/* Campus Life */}
       <section className="section-padding bg-neutral-50">
         <div className="container-custom mx-auto">
           <SectionHeading
-            title="Campus Video Tour"
-            subtitle="Take a virtual tour of our beautiful campus"
+            title="Campus Life"
+            subtitle="A glimpse into everyday life at SSKV College"
           />
-          <VideoEmbed
-            videoId={videos.campusTour.id}
-            title={videos.campusTour.title}
-          />
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-lg">
+            <video
+              src="/videos/college_life.mp4"
+              controls
+              className="w-full"
+              preload="metadata"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </section>
     </>
