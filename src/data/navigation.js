@@ -58,6 +58,7 @@ export const navLinks = [
           { label: 'B.B.A', path: '/departments/bba' },
           { label: 'Computer Science with AI', path: '/departments/cs-ai' },
           { label: 'Criminology and Criminal Justice Science', path: '/departments/criminology' },
+          { label: 'B.A. Economics', path: '/departments/ba-economics' },
           { label: 'BCA (Shift II)', path: '/departments/bca-shift-ii' },
           { label: 'Computer Science (Shift II)', path: '/departments/computer-science-shift-ii' },
           { label: 'B.Com General (Shift II)', path: '/departments/bcom-general-shift-ii' },

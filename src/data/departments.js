@@ -1,4 +1,4 @@
-import { FaBook, FaLanguage, FaLaptopCode, FaRobot, FaCalculator, FaDesktop, FaChartLine, FaMoneyBillWave, FaLaptop, FaBriefcase, FaGavel } from 'react-icons/fa';
+import { FaBook, FaLanguage, FaLaptopCode, FaRobot, FaCalculator, FaDesktop, FaChartLine, FaMoneyBillWave, FaLaptop, FaBriefcase, FaGavel, FaCoins } from 'react-icons/fa';
 
 export const departments = [
   {
@@ -149,11 +149,24 @@ export const departments = [
     link: '/departments/criminology',
     syllabus: '/pdfs/criminology-syllabus.pdf',
   },
+  {
+    id: 'ba-economics',
+    name: 'Department of Economics',
+    degree: 'B.A. Economics',
+    category: 'arts',
+    description: 'Study economic theory, quantitative methods, and public policy to understand markets, institutions, and society.',
+    icon: FaCoins,
+    color: '#d97706',
+    duration: '3 Years',
+    eligibility: '+2 in any stream',
+    link: '/departments/ba-economics',
+    syllabus: '/pdfs/ba_economics_syllabus.pdf',
+  },
 ];
 
 export const categories = [
-  { id: 'all', label: 'All Programs', count: 11 },
-  { id: 'arts', label: 'Arts', count: 3 },
+  { id: 'all', label: 'All Programs', count: 12 },
+  { id: 'arts', label: 'Arts', count: 4 },
   { id: 'science', label: 'Science', count: 3 },
   { id: 'commerce', label: 'Commerce', count: 3 },
   { id: 'professional', label: 'Professional', count: 2 },

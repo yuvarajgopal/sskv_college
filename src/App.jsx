@@ -25,6 +25,7 @@ const BComAFDepartmentPage = lazy(() => import('./pages/departments/BComAFDepart
 const BComCSDepartmentPage = lazy(() => import('./pages/departments/BComCSDepartmentPage'));
 const BBADepartmentPage = lazy(() => import('./pages/departments/BBADepartmentPage'));
 const CriminologyDepartmentPage = lazy(() => import('./pages/departments/CriminologyDepartmentPage'));
+const BAEconomicsDepartmentPage = lazy(() => import('./pages/departments/BAEconomicsDepartmentPage'));
 const BCAShiftIIDepartmentPage = lazy(() => import('./pages/departments/BCAShiftIIDepartmentPage'));
 const CSShiftIIDepartmentPage = lazy(() => import('./pages/departments/CSShiftIIDepartmentPage'));
 const BComGeneralShiftIIDepartmentPage = lazy(() => import('./pages/departments/BComGeneralShiftIIDepartmentPage'));
@@ -152,6 +153,7 @@ export default function App() {
             <Route path="/departments/bcom-cs" element={<BComCSDepartmentPage />} />
             <Route path="/departments/bba" element={<BBADepartmentPage />} />
             <Route path="/departments/criminology" element={<CriminologyDepartmentPage />} />
+            <Route path="/departments/ba-economics" element={<BAEconomicsDepartmentPage />} />
             <Route path="/departments/bca-shift-ii" element={<BCAShiftIIDepartmentPage />} />
             <Route path="/departments/computer-science-shift-ii" element={<CSShiftIIDepartmentPage />} />
             <Route path="/departments/bcom-general-shift-ii" element={<BComGeneralShiftIIDepartmentPage />} />
