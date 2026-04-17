@@ -1,6 +1,8 @@
 node_modules
 dist
 public
+pdfs
+videos
 .env
 .env.local
 .env.*.local
