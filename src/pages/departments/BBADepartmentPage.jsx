@@ -7,16 +7,16 @@ import AnimatedSection from '../../components/shared/AnimatedSection';
 import DepartmentSectionNav from '../../components/shared/DepartmentSectionNav';
 import ActivityGallery from '../../components/shared/ActivityGallery';
 import CTABanner from '../../components/sections/CTABanner';
+import DepartmentNewsletter from '../../components/shared/DepartmentNewsletter';
 
 const BASE_PHOTO  = '/images/faculty/bba/';
 const BASE_RESUME = '/pdfs/faculty/bba/';
 
 const faculty = [
-  { name: 'P. Revathi',      qualification: 'M.Com., M.Phil., B.Ed., M.B.A., SET., NET', role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}p-revathi.jpg`,      resume: `${BASE_RESUME}p-revathi.pdf` },
-  { name: 'D. Geethanjali',  qualification: 'M.B.A., NET',                               role: 'Assistant Professor',               photo: `${BASE_PHOTO}d-geethanjali.jpg`,  resume: `${BASE_RESUME}d-geethanjali.pdf` },
+  { name: 'P. Revathi',      qualification: 'M.Com., M.Phil., M.B.A., Ph.D., B.Ed.,  SET., NET', role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}p-revathi.jpg`,      resume: `${BASE_RESUME}p-revathi.pdf` },
   { name: 'S. Janani',       qualification: 'M.B.A',                                     role: 'Assistant Professor',               photo: `${BASE_PHOTO}s-janani.jpg`,       resume: `${BASE_RESUME}s-janani.pdf` },
   { name: 'S. Kavitha',      qualification: 'M.Com',                                     role: 'Assistant Professor',               photo: `${BASE_PHOTO}s-kavitha.jpg`,      resume: `${BASE_RESUME}s-kavitha.pdf` },
-  { name: 'Ms.R,KAYALVIZHI', qualification: 'MBA.,',                                     role: 'Assistant Professor',               photo: `${BASE_PHOTO}kayalizhi.jpg`,      resume: `${BASE_RESUME}kayil_bba.pdf` },
+  { name: 'Ms.R.KAYALVIZHI', qualification: 'MBA.,',                                     role: 'Assistant Professor',               photo: `${BASE_PHOTO}kayalizhi.jpg`,      resume: `${BASE_RESUME}kayil_bba.pdf` },
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
@@ -185,7 +185,7 @@ export default function BBADepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 bg-violet-500/20 hover:bg-violet-500/30 text-violet-300 text-xs font-semibold rounded-lg transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </div>
@@ -213,7 +213,7 @@ export default function BBADepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 w-full py-1.5 bg-violet-50 hover:bg-violet-100 text-violet-700 text-xs font-semibold rounded-lg border border-violet-100 transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </AnimatedSection>
@@ -259,13 +259,7 @@ export default function BBADepartmentPage() {
                 <p className="text-sm font-bold text-primary-800">Bachelor of Business Administration (BBA)</p>
                 <p className="text-xs text-neutral-500 mt-1">Undergraduate Programme</p>
               </div>
-              <div className="flex-1 min-w-[200px] bg-violet-50 border border-violet-200 rounded-xl p-5 text-center">
-                <div className="w-10 h-10 rounded-full bg-violet-500 flex items-center justify-center mx-auto mb-3">
-                  <FaGraduationCap className="text-white text-lg" />
-                </div>
-                <p className="text-sm font-bold text-primary-800">Master of Business Administration (MBA)</p>
-                <p className="text-xs text-neutral-500 mt-1">Postgraduate Programme</p>
-              </div>
+   
             </div>
             {/* Programme Details Card */}
             <AnimatedSection>
@@ -289,45 +283,7 @@ export default function BBADepartmentPage() {
                 </div>
               </div>
             </AnimatedSection>
-            <AnimatedSection delay={0.1}>
-              <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white mb-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-violet-500/20 flex items-center justify-center">
-                    <FaBriefcase className="text-2xl text-violet-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold font-heading">MBA</h3>
-                    <p className="text-white/60 text-sm">Postgraduate Programme Details</p>
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">Degree</span>
-                      <span className="text-white font-semibold text-sm text-right ml-4">Master of Business Administration (MBA)</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">Specialisation</span>
-                      <span className="text-white font-semibold text-sm text-right ml-4">Business Administration</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">Duration</span>
-                      <span className="text-white font-semibold text-sm text-right ml-4">2 Years (4 Semesters)</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">Eligibility</span>
-                      <span className="text-white font-semibold text-sm text-right ml-4">BBA / Any UG degree from a recognized university</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">Affiliation</span>
-                      <span className="text-white font-semibold text-sm text-right ml-4">University of Madras</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">Curriculum</span>
-                      <span className="text-white font-semibold text-sm text-right ml-4">CBCS — Choice Based Credit System</span>
-                    </div>
-                </div>
-              </div>
-            </AnimatedSection>
+       
             {/* Program Outcomes */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {outcomes.map((outcome, i) => (
@@ -371,6 +327,11 @@ export default function BBADepartmentPage() {
       </section>
 
       {/* CTA Banner */}
+      <DepartmentNewsletter
+        departmentName="B.B.A"
+        pdfHref="/pdfs/newsletter/bba.pdf"
+      />
+
       <CTABanner
         title="Interested in BBA?"
         subtitle="Apply now and start your journey towards becoming a confident business leader."

@@ -209,8 +209,8 @@ export default function IQACPage() {
             light
           />
           <AnimatedSection>
-            <div className="bg-white/10 rounded-2xl overflow-hidden border border-white/20">
-              <table className="w-full text-sm">
+            <div className="bg-white/10 rounded-2xl overflow-hidden border border-white/20 overflow-x-auto">
+              <table className="w-full text-sm min-w-[600px]">
                 <thead>
                   <tr className="bg-white/10 text-accent-300">
                     <th className="text-left px-6 py-3">Meeting Date</th>

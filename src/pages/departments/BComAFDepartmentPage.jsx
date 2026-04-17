@@ -7,15 +7,18 @@ import AnimatedSection from '../../components/shared/AnimatedSection';
 import DepartmentSectionNav from '../../components/shared/DepartmentSectionNav';
 import ActivityGallery from '../../components/shared/ActivityGallery';
 import CTABanner from '../../components/sections/CTABanner';
+import DepartmentNewsletter from '../../components/shared/DepartmentNewsletter';
 
 const BASE_PHOTO  = '/images/faculty/bcom-af/';
 const BASE_RESUME = '/pdfs/faculty/bcom-af/';
 
 const faculty = [
-  { name: 'J. Ramani',           qualification: 'M.Com., M.Phil., B.Ed., SET., M.B.A', role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}j-ramani.jpg`,            resume: `${BASE_RESUME}j-ramani.pdf` },
+  { name: 'J. Ramani',           qualification: 'M.Com., M.Phil., M.B.A., Ph.D., B.Ed., SET.,  ', role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}j-ramani.jpg`,            resume: `${BASE_RESUME}j-ramani.pdf` },
   { name: 'Ms. K. Krishnaveni',  qualification: 'M.Com',                               role: 'Assistant Professor',               photo: `${BASE_PHOTO}k-krishnaveni.jpg`,      resume: `${BASE_RESUME}k-krishnaveni.pdf` },
   { name: 'B. Dhivyadharshini',  qualification: 'M.Com',                               role: 'Assistant Professor',               photo: `${BASE_PHOTO}b-dhivyadharshini.jpg`,  resume: `${BASE_RESUME}b-dhivyadharshini.pdf` },
   { name: 'Dr. K.P. Sowmya',     qualification: 'M.Com., Ph.D.',                       role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-kp-sowmya.jpg`,       resume: `${BASE_RESUME}dr-kp-sowmya.pdf` },
+   { name: 'Ms. R. Ramya',     qualification: 'MM.Com.,',                       role: 'Assistant Professor',                      photo: `${BASE_PHOTO}ramaya_1.jpg`,       resume: `${BASE_RESUME}ramaya.pdf` }, 
+  
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
@@ -182,7 +185,7 @@ export default function BComAFDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-semibold rounded-lg transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </div>
@@ -210,7 +213,7 @@ export default function BComAFDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 w-full py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-lg border border-emerald-100 transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </AnimatedSection>
@@ -256,13 +259,7 @@ export default function BComAFDepartmentPage() {
                 <p className="text-sm font-bold text-primary-800">Bachelor of Commerce — Accounting & Finance (B.Com A&F)</p>
                 <p className="text-xs text-neutral-500 mt-1">Undergraduate Programme</p>
               </div>
-              <div className="flex-1 min-w-[200px] bg-emerald-50 border border-emerald-200 rounded-xl p-5 text-center">
-                <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center mx-auto mb-3">
-                  <FaGraduationCap className="text-white text-lg" />
-                </div>
-                <p className="text-sm font-bold text-primary-800">Master of Commerce (M.Com)</p>
-                <p className="text-xs text-neutral-500 mt-1">Postgraduate Programme</p>
-              </div>
+              
             </div>
             {/* Programme Details Card */}
             <AnimatedSection>
@@ -286,45 +283,7 @@ export default function BComAFDepartmentPage() {
                 </div>
               </div>
             </AnimatedSection>
-            <AnimatedSection delay={0.1}>
-              <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white mb-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center">
-                    <FaMoneyBillWave className="text-2xl text-emerald-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold font-heading">M.Com (A&amp;F)</h3>
-                    <p className="text-white/60 text-sm">Postgraduate Programme Details</p>
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">Degree</span>
-                      <span className="text-white font-semibold text-sm text-right ml-4">Master of Commerce (M.Com)</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">Specialisation</span>
-                      <span className="text-white font-semibold text-sm text-right ml-4">Accounting & Finance</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">Duration</span>
-                      <span className="text-white font-semibold text-sm text-right ml-4">2 Years (4 Semesters)</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">Eligibility</span>
-                      <span className="text-white font-semibold text-sm text-right ml-4">B.Com from a recognized university</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">Affiliation</span>
-                      <span className="text-white font-semibold text-sm text-right ml-4">University of Madras</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">Curriculum</span>
-                      <span className="text-white font-semibold text-sm text-right ml-4">CBCS — Choice Based Credit System</span>
-                    </div>
-                </div>
-              </div>
-            </AnimatedSection>
+
             {/* Program Outcomes */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {outcomes.map((outcome, i) => (
@@ -363,6 +322,11 @@ export default function BComAFDepartmentPage() {
       </section>
 
       {/* CTA Banner */}
+      <DepartmentNewsletter
+        departmentName="B.Com (A&F)"
+        pdfHref="/pdfs/newsletter/bcom_af.pdf"
+      />
+
       <CTABanner
         title="Interested in B.Com (A&F)?"
         subtitle="Apply now and build the financial expertise that drives today's economy."

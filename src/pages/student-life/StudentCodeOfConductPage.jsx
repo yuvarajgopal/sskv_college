@@ -44,13 +44,13 @@ const pillars = [
     icon: FaHandshake,
     title: 'Dress & Identity',
     description:
-      'Wear the prescribed uniform and carry the college ID card at all times while on the premises.',
+      'The institution does not enforce a dress code. Students may dress as per their comfort and preference, while maintaining decency. Possession of the college ID card on campus is mandatory.',
   },
   {
     icon: FaExclamationTriangle,
     title: 'Prohibited Conduct',
     description:
-      'Mobile phones, smoking, alcohol, weapons, and politically-motivated activities are strictly forbidden on campus.',
+      'Smoking, alcohol, weapons, and politically-motivated activities are strictly forbidden on campus.',
   },
 ];
 

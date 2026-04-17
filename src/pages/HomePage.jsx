@@ -54,7 +54,7 @@ const features = [
     icon: FaStar,
     title: 'Holistic Development',
     description:
-      'NCC, NSS, sports, cultural clubs, and value-added courses for all-round personality growth.',
+      'NSS, sports, cultural clubs, and value-added courses for all-round personality growth.',
   },
 ];
 

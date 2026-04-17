@@ -7,6 +7,7 @@ import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
 import ActivityGallery from '../../components/shared/ActivityGallery';
 import CTABanner from '../../components/sections/CTABanner';
+import DepartmentNewsletter from '../../components/shared/DepartmentNewsletter';
 import { images } from '../../data/media';
 
 
@@ -20,25 +21,22 @@ const faculty = [
   { name: 'H. Anusha', qualification: 'MA., M.Phil., SET', role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}h-anusha.jpg`, resume: `${BASE_RESUME}h-anusha.pdf` },
   { name: 'M. Arulmozhi', qualification: 'MA., M.Ed', role: 'Assistant Professor', photo: `${BASE_PHOTO}m-arulmozhi.jpg`, resume: `${BASE_RESUME}m-arulmozhi.pdf` },
   { name: 'S. Anitha', qualification: 'MA', role: 'Assistant Professor', photo: `${BASE_PHOTO}s-anitha.jpg`, resume: `${BASE_RESUME}s-anitha.pdf` },
-  { name: 'R. Revathi', qualification: 'MA., M.Phil.,', role: 'Assistant Professor', photo: `${BASE_PHOTO}r_reavathi.jpg`, resume: `${BASE_RESUME}r_reavathi.pdf` },
-  { name: 'S. Banupriya', qualification: 'MA., M.Phil', role: 'Assistant Professor', photo: `${BASE_PHOTO}s-banupriya.jpg`, resume: `${BASE_RESUME}s-banupriya.pdf` },
   { name: 'S. Girivardhini', qualification: 'MA., B.Ed', role: 'Assistant Professor', photo: `${BASE_PHOTO}s-girivardhini.jpg`, resume: `${BASE_RESUME}s-girivardhini.pdf` },
-  { name: 'B. Sowmiya Durga', qualification: 'MA., NET', role: 'Assistant Professor', photo: `${BASE_PHOTO}b-sowmiya-durga.jpg`, resume: `${BASE_RESUME}b-sowmiyadurga.pdf` },
-  { name: 'B. Kokila', qualification: 'MA', role: 'Assistant Professor', photo: `${BASE_PHOTO}b-kokila.jpg`, resume: `${BASE_RESUME}b-Kokila.pdf` },
   { name: 'V. Aswini', qualification: 'MA', role: 'Assistant Professor', photo: `${BASE_PHOTO}v-aswini.jpg`, resume: `${BASE_RESUME}v-aswini.pdf` },
-  { name: 'B. Mohanapriya', qualification: 'MA', role: 'Assistant Professor', photo: `${BASE_PHOTO}b-mohanapriya.jpg`, resume: `${BASE_RESUME}b-mohanapriya.pdf` },
+  { name: 'B. Mohanapriya', qualification: 'MA', role: 'Assistant Professor', photo: `${BASE_PHOTO}b-mohanapriya.jpg`, resume: `${BASE_RESUME}mohanapriya.pdf` },
   { name: 'K. Pooja', qualification: 'MA', role: 'Assistant Professor', photo: `${BASE_PHOTO}k-pooja.jpg`, resume: `${BASE_RESUME}k-pooja.pdf` },
   { name: 'M.Badhma', qualification: 'MA', role: 'Assistant Professor', photo: `${BASE_PHOTO}m_badhma.JPG`, resume: `${BASE_RESUME}m_badhma.pdf` },
   { name: 'Dr.M.Maragadhashrruthi', qualification: 'M.A., Ph.D.', role: 'Assistant Professor', photo: `${BASE_PHOTO}dr_martha.JPG`, resume: `${BASE_RESUME}dr_maragatha.pdf` },
-  { name: 'R. Mirnalini', qualification: 'MA', role: 'Assistant Professor', photo: `${BASE_PHOTO}r_mMirnalini.JPG`, resume: `${BASE_RESUME}r. mirnalini.pdf` },
-  { name: 'K.Pavithra', qualification: 'MA', role: 'Assistant Professor', photo: `${BASE_PHOTO}k_pavithra.JPG`, resume: `${BASE_RESUME}k_pavithra.pdf` },
+  { name: 'R. Mirnalini', qualification: 'MA., M.Phil., B.ed., SET., NET', role: 'Assistant Professor', photo: `${BASE_PHOTO}r_mMirnalini.JPG`, resume: `${BASE_RESUME}r. mirnalini.pdf` },
+  { name: 'Ms.Jayapriya ', qualification: 'MA.,Mphil.,NET', role: 'Assistant Professor', photo: `${BASE_PHOTO}p_jJayapriya.JPG`, resume: `${BASE_RESUME}Jayapriya.pdf` },
+ {  name: 'K.Bavani', qualification: 'M.A., B.Ed., M.Phil.', role: 'Assistant Professor', photo: `${BASE_PHOTO}k_Bavani.JPG`, resume: `${BASE_RESUME}bhavani_k.pdf`},
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
   const [failed, setFailed] = useState(false);
   const sizeClass = size === 'lg'
     ? 'w-36 h-36 text-4xl'
-    : 'w-14 h-14 text-2xl';
+    : 'w-24 h-24 text-2xl';
 
   if (!failed) {
     return (
@@ -239,7 +237,7 @@ export default function EnglishDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 text-xs font-semibold rounded-lg transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </div>
@@ -267,7 +265,7 @@ export default function EnglishDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 w-full py-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-semibold rounded-lg border border-blue-100 transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </AnimatedSection>
@@ -321,6 +319,11 @@ export default function EnglishDepartmentPage() {
           </div>
         </div>
       </section>
+      <DepartmentNewsletter
+        departmentName="English"
+        pdfHref="/pdfs/newsletter/english_newletter.pdf"
+      />
+
 
       <CTABanner
         title="Interested in B.A. English?"

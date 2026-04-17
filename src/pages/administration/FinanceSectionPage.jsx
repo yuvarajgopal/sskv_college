@@ -30,7 +30,7 @@ const management = [
 const staff = [
   { 
     name: 'Mr. T.V.Jaganath',  
-    designation: 'Office Superindent', 
+    designation: 'office superintendent', 
     photo: '/images/staff/jaganath.jpg'
   },
   { 

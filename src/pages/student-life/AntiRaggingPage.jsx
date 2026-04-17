@@ -27,6 +27,16 @@ export default function AntiRaggingPage() {
 
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto max-w-4xl">
+          <AnimatedSection delay={0.1}>
+            <div className="mt-5 bg-amber-50 border border-amber-200 rounded-2xl p-5 flex items-center gap-4">
+              <FaPhone className="text-amber-600 text-xl flex-shrink-0" />
+              <div>
+                <p className="font-bold text-amber-800 text-sm">UGC Anti-Ragging Helpline</p>
+                <p className="text-amber-700 text-sm font-semibold mt-0.5">1800-180-5522 (Toll-Free)</p>
+                <p className="text-amber-700 text-sm font-semibold mt-0.5">contact no- 9524598802</p>
+              </div>
+            </div>
+          </AnimatedSection>
 
           <AnimatedSection>
             <div className="flex items-start gap-4 bg-red-50 border border-red-200 rounded-2xl p-6 mb-8">
@@ -109,16 +119,7 @@ export default function AntiRaggingPage() {
             </div>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.1}>
-            <div className="mt-5 bg-amber-50 border border-amber-200 rounded-2xl p-5 flex items-center gap-4">
-              <FaPhone className="text-amber-600 text-xl flex-shrink-0" />
-              <div>
-                <p className="font-bold text-amber-800 text-sm">UGC Anti-Ragging Helpline</p>
-                <p className="text-amber-700 text-sm font-semibold mt-0.5">1800-180-5522 (Toll-Free)</p>
-                <p className="text-amber-700 text-sm font-semibold mt-0.5">contact no- 9524598802</p>
-              </div>
-            </div>
-          </AnimatedSection>
+          
         </div>
       </section>
 

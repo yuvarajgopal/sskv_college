@@ -7,17 +7,18 @@ import AnimatedSection from '../../components/shared/AnimatedSection';
 import DepartmentSectionNav from '../../components/shared/DepartmentSectionNav';
 import ActivityGallery from '../../components/shared/ActivityGallery';
 import CTABanner from '../../components/sections/CTABanner';
+import DepartmentNewsletter from '../../components/shared/DepartmentNewsletter';
 
 const BASE_PHOTO  = '/images/faculty/bca/';
 const BASE_RESUME = '/pdfs/faculty/bca/';
 
 const faculty = [
   // Shift I
-  { name: 'R.K. Ramya',           qualification: 'M.Sc., M.Phil.',           role: 'Assistant Professor & HOD',           isHod: true, photo: `${BASE_PHOTO}rk-ramya.jpg`,              resume: `${BASE_RESUME}rk-ramya.pdf` },
+  { name: 'Ms. R.K. Ramya',           qualification: 'M.Sc., M.Phil., SET',           role: 'Assistant Professor & HOD',           isHod: true, photo: `${BASE_PHOTO}rk-ramya.jpg`,              resume: `${BASE_RESUME}rk-ramya.pdf` },
   { name: 'Dr. V. Priya',         qualification: 'M.C.A., M.Phil., Ph.D.',   role: 'Assistant Professor',                              photo: `${BASE_PHOTO}dr-v-priya.jpg`,            resume: `${BASE_RESUME}dr-v-priya.pdf` },
   // Shift II
-  { name: 'Dr. P. Priyadharshini', qualification: 'M.C.A., M.Phil., Ph.D.',  role: 'Assistant Professor & HOD (Shift II)',   isHod: true,   photo: `${BASE_PHOTO}priyadharshini.jpg`,   resume: `${BASE_RESUME}priyadharshini.pdf` },
-  { name: 'Ms. A. Yazhini',       qualification: 'MCA., NET',                role: 'Assistant Professor (Shift II)',                              photo: `${BASE_PHOTO}yazhini.jpg`,             resume: `${BASE_RESUME}Yazhini.pdf` },
+ 
+  
 ];
 
 const programDetails = [
@@ -217,7 +218,7 @@ export default function BCADepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 bg-teal-500/20 hover:bg-teal-500/30 text-teal-300 text-xs font-semibold rounded-lg transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </div>
@@ -245,7 +246,7 @@ export default function BCADepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 w-full py-1.5 bg-teal-50 hover:bg-teal-100 text-teal-700 text-xs font-semibold rounded-lg border border-teal-100 transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </AnimatedSection>
@@ -328,46 +329,7 @@ export default function BCADepartmentPage() {
               </div>
             </div>
           </AnimatedSection>
-          <AnimatedSection delay={0.1}>
-            <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white mb-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-teal-500/20 flex items-center justify-center">
-                  <FaDesktop className="text-2xl text-teal-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold font-heading">MCA</h3>
-                  <p className="text-white/60 text-sm">Postgraduate Programme Details</p>
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Degree</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">Master of Computer Applications (MCA)</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Specialisation</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">Computer Applications</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Duration</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">2 Years (4 Semesters)</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Eligibility</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">BCA / B.Sc. CS from a recognized university</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Affiliation</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">University of Madras</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Curriculum</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">CBCS — Choice Based Credit System</span>
-                  </div>
-              </div>
-            </div>
-          </AnimatedSection>
-
+         
           {/* Outcomes grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {outcomes.map((outcome, i) => (
@@ -408,6 +370,11 @@ export default function BCADepartmentPage() {
       </section>
 
       {/* CTA */}
+      <DepartmentNewsletter
+        departmentName="BCA"
+        pdfHref="/pdfs/newsletter/bca_shift_1.pdf"
+      />
+
       <CTABanner
         title="Interested in BCA?"
         subtitle="Apply now and begin your journey into the world of computer applications and IT."

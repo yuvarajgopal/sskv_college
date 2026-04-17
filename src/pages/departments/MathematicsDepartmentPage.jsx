@@ -7,6 +7,7 @@ import AnimatedSection from '../../components/shared/AnimatedSection';
 import DepartmentSectionNav from '../../components/shared/DepartmentSectionNav';
 import ActivityGallery from '../../components/shared/ActivityGallery';
 import CTABanner from '../../components/sections/CTABanner';
+import DepartmentNewsletter from '../../components/shared/DepartmentNewsletter';
 
 const BASE_PHOTO  = '/images/faculty/mathematics/';
 const BASE_RESUME = '/pdfs/faculty/mathematics/';
@@ -17,8 +18,7 @@ const faculty = [
   { name: 'A. Ezhilarasi',    qualification: 'M.Sc., M.Phil., B.Ed.',        role: 'Assistant Professor',               photo: `${BASE_PHOTO}a-ezhilarasi.jpg`,    resume: `${BASE_RESUME}a-ezhilarasi.pdf` },
   { name: 'S. Komala',        qualification: 'M.Sc., M.Phil.',               role: 'Assistant Professor',               photo: `${BASE_PHOTO}s-komala.jpg`,        resume: `${BASE_RESUME}s-komala.pdf` },
   { name: 'B. Premalatha',    qualification: 'M.Sc., M.Phil., B.Ed.',        role: 'Assistant Professor',               photo: `${BASE_PHOTO}b-premalatha.jpg`,    resume: `${BASE_RESUME}b-premalatha.pdf` },
-  { name: 'Dr. B. Amudha',    qualification: 'M.Sc., M.Phil., B.Ed., Ph.D', role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-b-amudha.jpg`,     resume: `${BASE_RESUME}dr-b-amudha.pdf` },
-  { name: 'Ms. M. Lavanya',   qualification: 'M.Sc., M.Phil., SET',          role: 'Assistant Professor',               photo: `${BASE_PHOTO}ms-m-lavanya.jpg`,       resume: `${BASE_RESUME}m-lavanya.pdf` },
+   { name: 'Ms. M. Lavanya',   qualification: 'M.Sc., M.Phil., SET',          role: 'Assistant Professor',               photo: `${BASE_PHOTO}ms-m-lavanya.jpg`,       resume: `${BASE_RESUME}m-lavanya.pdf` },
   { name: 'D.Saraswathi',     qualification: 'M.Sc., M.Phil., SET',          role: 'Assistant Professor',               photo: `${BASE_PHOTO}d_saraswathi.jpg`,     resume: `${BASE_RESUME}d_saraswathi.pdf` },
   { name: 'S.Gayathri',       qualification: 'MSc.,',                        role: 'Assistant Professor',               photo: `${BASE_PHOTO}s_gayathri.jpg`,     resume: `${BASE_RESUME}gayathri.pdf` },
 ];
@@ -83,7 +83,8 @@ export default function MathematicsDepartmentPage() {
     if (section) {
       const el = document.getElementById(section);
       if (el) setTimeout(() => {
-        const top = el.getBoundingClientRect().top + window.pageYOffset - 130;
+        const offset = section === 'programmes-msc' ? 220 : 130;
+        const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
         window.scrollTo({ top, behavior: 'smooth' });
       }, 150);
     } else {
@@ -169,7 +170,7 @@ export default function MathematicsDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 text-xs font-semibold rounded-lg transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </div>
@@ -196,7 +197,7 @@ export default function MathematicsDepartmentPage() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-1.5 w-full py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-700 text-xs font-semibold rounded-lg border border-amber-100 transition-colors"
                   >
-                    <FaFilePdf className="text-xs" /> View Resume
+                    <FaFilePdf className="text-xs" /> View Profile
                   </a>
                 </div>
               </AnimatedSection>
@@ -267,7 +268,7 @@ export default function MathematicsDepartmentPage() {
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
-              <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white mb-8">
+              <div id="programmes-msc" className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white mb-8 scroll-mt-32">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-amber-500/20 flex items-center justify-center">
                     <FaCalculator className="text-2xl text-amber-400" />
@@ -344,6 +345,11 @@ export default function MathematicsDepartmentPage() {
       </section>
 
       {/* CTA */}
+      <DepartmentNewsletter
+        departmentName="Mathematics"
+        pdfHref="/pdfs/newsletter/maths.pdf"
+      />
+
       <CTABanner
         title="Interested in B.Sc. Mathematics?"
         subtitle="Apply now and develop the analytical skills that drive science, technology, and beyond."

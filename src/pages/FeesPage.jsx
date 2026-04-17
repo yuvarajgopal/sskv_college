@@ -112,7 +112,7 @@ export default function FeesPage() {
       />
 
       <section className="section-padding bg-neutral-50">
-        <SectionHeading title="Semester Fee Structure 2025–2026" />
+        <SectionHeading title="Semester Fee Structure 2026–2027" />
         <FeeTable />
       </section>
 

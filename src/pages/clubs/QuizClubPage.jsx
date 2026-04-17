@@ -86,8 +86,8 @@ export default function QuizClubPage() {
                 </thead>
                 <tbody className="text-neutral-700">
                   <tr className="border-t">
-                    <td className="px-4 py-2">Ms. D. Geethanjali</td>
-                    <td className="px-4 py-2">Asst. Prof, Department of Business Administration</td>
+                    <td className="px-4 py-2">Dr.G.Rajathi</td>
+                    <td className="px-4 py-2">Asst. Prof, Department of Commerce</td>
                     <td className="px-4 py-2">Coordinator</td>
                     <td className="px-4 py-2">—</td>
                   </tr>

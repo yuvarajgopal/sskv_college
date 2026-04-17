@@ -33,6 +33,7 @@ export default function FeeRefundPolicyPage() {
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto max-w-4xl">
           <SectionHeading title="Fee Refund Policy" />
+
           <AnimatedSection>
             <p className="text-neutral-600 leading-relaxed mb-8">
               SSKV College follows a transparent and fair fee refund policy in accordance with UGC guidelines. Students who wish to withdraw their admission may apply for a refund as per the schedule below.
@@ -40,6 +41,7 @@ export default function FeeRefundPolicyPage() {
           </AnimatedSection>
 
           <SectionHeading title="Refund Schedule" />
+
           <AnimatedSection>
             <div className="bg-neutral-50 rounded-2xl overflow-hidden border border-neutral-200 mb-10">
               <table className="w-full text-sm">
@@ -62,11 +64,14 @@ export default function FeeRefundPolicyPage() {
           </AnimatedSection>
 
           <SectionHeading title="Terms & Conditions" />
+
           <div className="space-y-3 mb-10">
             {conditions.map((c, i) => (
               <AnimatedSection key={i} delay={i * 0.06}>
                 <div className="flex items-start gap-3 bg-neutral-50 rounded-xl px-4 py-3 border border-neutral-100">
-                  <span className="w-6 h-6 rounded-full bg-primary-800 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
+                  <span className="w-6 h-6 rounded-full bg-primary-800 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                    {i + 1}
+                  </span>
                   <p className="text-sm text-neutral-700 leading-relaxed">{c}</p>
                 </div>
               </AnimatedSection>
@@ -74,17 +79,35 @@ export default function FeeRefundPolicyPage() {
           </div>
 
           <AnimatedSection>
-            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 flex items-start gap-3">
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 flex items-start gap-3 mb-6">
               <FaExclamationTriangle className="text-amber-500 mt-0.5 flex-shrink-0" />
               <p className="text-sm text-amber-800 leading-relaxed">
                 <strong>Note:</strong> The college reserves the right to modify the refund policy as per UGC/University of Madras guidelines. For the latest policy, please contact the college office.
               </p>
             </div>
           </AnimatedSection>
+
+          {/* PDF BUTTON (Smart CTA Placement) */}
+          <AnimatedSection>
+            <div className="text-center">
+              <a
+                href="/pdfs/fee_refund_polcy.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-amber-700 hover:bg-amber-800 text-white font-semibold text-sm px-6 py-3 rounded-lg shadow transition duration-300"
+              >
+                View / Download Fee Refund Policy
+              </a>
+            </div>
+          </AnimatedSection>
+
         </div>
       </section>
 
-      <CTABanner title="Questions About Fees?" subtitle="Contact the college office for clarification on fee refund or payment options." />
+      <CTABanner
+        title="Questions About Fees?"
+        subtitle="Contact the college office for clarification on fee refund or payment options."
+      />
     </>
   );
 }

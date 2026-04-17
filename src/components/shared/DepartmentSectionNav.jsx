@@ -5,6 +5,7 @@ const sections = [
   { id: 'faculty', label: 'Faculty' },
   { id: 'programmes', label: 'Programmes Offered' },
   { id: 'activities', label: 'Department Activities' },
+  { id: 'newsletter', label: 'Newsletter' },
 ];
 
 export default function DepartmentSectionNav() {

@@ -31,34 +31,30 @@ export default function SEDGCellPage() {
         breadcrumb="Student Life › SEDG Cell"
       />
 
-      {/* 1. ABOUT */}
+      {/* ABOUT + VISION + OBJECTIVES */}
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto max-w-4xl">
+
+          {/* ABOUT */}
           <SectionHeading title="About the SEDG Cell" />
           <AnimatedSection>
-            <p className="text-neutral-600 leading-relaxed mb-8">
+            <p className="text-neutral-600 leading-relaxed mb-10">
               The Socio Economically Disadvantaged Group (SEDG) Cell at SSKV College supports students from economically weaker and disadvantaged backgrounds with academic, financial, and personal assistance.
             </p>
           </AnimatedSection>
-        </div>
-      </section>
 
-      {/* 2. VISION & MISSION */}
-      <section className="section-padding bg-white">
-        <div className="container-custom mx-auto max-w-4xl">
+          {/* VISION & MISSION */}
           <SectionHeading title="Vision & Mission" />
 
-          <div className="space-y-5">
+          <div className="space-y-5 mb-10">
             <AnimatedSection>
-              <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
+              <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-4">
                 <h3 className="font-bold text-primary-800 mb-2">Vision</h3>
                 <p className="text-sm text-neutral-600 leading-relaxed">
                   To empower socio-economically disadvantaged students through equal access to education and opportunities.
                 </p>
               </div>
-            </AnimatedSection>
 
-            <AnimatedSection>
               <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
                 <h3 className="font-bold text-primary-800 mb-2">Mission</h3>
                 <p className="text-sm text-neutral-600 leading-relaxed">
@@ -67,18 +63,31 @@ export default function SEDGCellPage() {
               </div>
             </AnimatedSection>
           </div>
+
+          {/* OBJECTIVES */}
+          <SectionHeading title="Objectives" />
+          <div className="space-y-3">
+            {objectives.map((o, i) => (
+              <AnimatedSection key={i}>
+                <div className="flex items-start gap-3 bg-neutral-50 rounded-xl px-4 py-3 border">
+                  <span className="w-6 h-6 rounded-full bg-primary-800 text-white text-xs flex items-center justify-center">{i + 1}</span>
+                  <p className="text-sm text-neutral-700">{o}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
         </div>
       </section>
 
-      {/* 3 & 4. COMMITTEE + REPORTS */}
+      {/* COMMITTEE + REPORTS */}
       <section className="section-padding bg-neutral-50">
         <div className="container-custom mx-auto max-w-4xl">
 
           <SectionHeading title="SEDG Cell Committee" />
 
-          {/* TABLE */}
           <AnimatedSection>
-            <div className="overflow-x-auto mb-8">
+            <div className="overflow-x-auto mb-10">
               <table className="w-full border border-neutral-300 rounded-xl overflow-hidden">
                 <thead className="bg-primary-900 text-white text-sm">
                   <tr>
@@ -122,54 +131,39 @@ export default function SEDGCellPage() {
           <SectionHeading title="Reports" />
 
           <AnimatedSection>
-            <div className="flex flex-col items-center gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
               <a href="/pdfs/sdge_cell/2022-2023 socio eco.pdf" target="_blank"
-                className="w-72 text-center px-4 py-2 rounded-lg bg-[#5a2a2a] text-white hover:bg-[#472020] transition">
+                className="w-72 text-center px-4 py-2 rounded-lg bg-blue-900 text-white hover:bg-blue-800 transition">
                 <FaFileAlt className="inline mr-2" />
                 Report 2022-2023
               </a>
 
               <a href="/pdfs/sdge_cell/2023-2024 socio eco.pdf" target="_blank"
-                className="w-72 text-center px-4 py-2 rounded-lg bg-[#5a2a2a] text-white hover:bg-[#472020] transition">
+                className="w-72 text-center px-4 py-2 rounded-lg bg-blue-900 text-white hover:bg-blue-800 transition">
                 <FaFileAlt className="inline mr-2" />
                 Report 2023-2024
               </a>
 
               <a href="/pdfs/sdge_cell/2024-2025 socio eco.pdf" target="_blank"
-                className="w-72 text-center px-4 py-2 rounded-lg bg-[#5a2a2a] text-white hover:bg-[#472020] transition">
+                className="w-72 text-center px-4 py-2 rounded-lg bg-blue-900 text-white hover:bg-blue-800 transition">
                 <FaFileAlt className="inline mr-2" />
                 Report 2024-2025
               </a>
 
               <a href="/pdfs/sdge_cell/2025-2026 socio eco.pdf" target="_blank"
-                className="w-72 text-center px-4 py-2 rounded-lg bg-[#5a2a2a] text-white hover:bg-[#472020] transition">
+                className="w-72 text-center px-4 py-2 rounded-lg bg-blue-900 text-white hover:bg-blue-800 transition">
                 <FaFileAlt className="inline mr-2" />
                 Report 2025-2026
               </a>
+
             </div>
           </AnimatedSection>
 
         </div>
       </section>
 
-      {/* 5. OBJECTIVES */}
-      <section className="section-padding bg-white">
-        <div className="container-custom mx-auto max-w-4xl">
-          <SectionHeading title="Objectives" />
-          <div className="space-y-3">
-            {objectives.map((o, i) => (
-              <AnimatedSection key={i}>
-                <div className="flex items-start gap-3 bg-neutral-50 rounded-xl px-4 py-3 border">
-                  <span className="w-6 h-6 rounded-full bg-primary-800 text-white text-xs flex items-center justify-center">{i + 1}</span>
-                  <p className="text-sm text-neutral-700">{o}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. INITIATIVES */}
+      {/* INITIATIVES */}
       <section className="section-padding bg-neutral-50">
         <div className="container-custom mx-auto">
           <SectionHeading title="Our Initiatives" />
@@ -177,9 +171,9 @@ export default function SEDGCellPage() {
             {initiatives.map((item, i) => (
               <AnimatedSection key={i}>
                 <div className="bg-white border rounded-xl p-6">
-                  <item.icon className="text-2xl mb-2" />
-                  <h3 className="font-bold">{item.title}</h3>
-                  <p className="text-sm">{item.desc}</p>
+                  <item.icon className="text-2xl mb-2 text-primary-800" />
+                  <h3 className="font-bold text-primary-800">{item.title}</h3>
+                  <p className="text-sm text-neutral-600">{item.desc}</p>
                 </div>
               </AnimatedSection>
             ))}

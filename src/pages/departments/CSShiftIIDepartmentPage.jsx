@@ -5,14 +5,17 @@ import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
 import CTABanner from '../../components/sections/CTABanner';
+import DepartmentNewsletter from '../../components/shared/DepartmentNewsletter';
 import DepartmentSectionNav from '../../components/shared/DepartmentSectionNav';
 import ActivityGallery from '../../components/shared/ActivityGallery';
 
-const BASE_PHOTO  = '/images/faculty/cs/';
-const BASE_RESUME = '/pdfs/faculty/cs/';
+const BASE_PHOTO  = '/images/faculty/computer_shift_2/';
+const BASE_RESUME = '/pdfs/faculty/computer-science/';
 
 const faculty = [
-  { name: 'Faculty details will be updated soon', qualification: '', role: 'Shift II Faculty', isHod: false, photo: '', resume: '' },
+  { name: 'R,Anitha',           qualification: 'M.Sc., M.Phil.',    role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}aniatha.jpg`,      resume: `${BASE_RESUME}anitha_s2.pdf` },
+  { name: 'Dr.C.Sudha',    qualification: 'MCA.,M.Phil.,Ph.D.',   role: 'Assistant Professor',                    photo: `${BASE_PHOTO}sudha.jpg`,   resume: `${BASE_RESUME}sudha.pdf` },
+    { name: 'R.Aishwarya',    qualification: 'M.Sc.,BEd.,',   role: 'Assistant Professor',                    photo: `${BASE_PHOTO}Aishwarya.jpg`,   resume: `${BASE_RESUME}r_aishwarya.pdf` }
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
@@ -143,7 +146,7 @@ export default function CSShiftIIDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 text-xs font-semibold rounded-lg transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </div>
@@ -153,10 +156,10 @@ export default function CSShiftIIDepartmentPage() {
 
           {/* Faculty grid */}
           {faculty.filter((f) => !f.isHod).length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            <div className="flex flex-wrap justify-center gap-5">
               {faculty.filter((f) => !f.isHod).map((f, i) => (
-                <AnimatedSection key={f.name} delay={i * 0.05}>
-                  <div className="bg-white hover:bg-blue-50 transition-colors duration-300 rounded-xl p-5 border border-neutral-100 flex flex-col gap-4">
+                <AnimatedSection key={f.name} delay={i * 0.05} className="w-full sm:w-72">
+                  <div className="bg-white hover:bg-blue-50 transition-colors duration-300 rounded-xl p-5 border border-neutral-100 flex flex-col gap-4 h-full">
                     <div className="flex items-center gap-3">
                       <FacultyPhoto src={f.photo} name={f.name} size="md" />
                       <div>
@@ -171,7 +174,7 @@ export default function CSShiftIIDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 w-full py-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-semibold rounded-lg border border-blue-100 transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </AnimatedSection>
@@ -327,6 +330,11 @@ export default function CSShiftIIDepartmentPage() {
           <ActivityGallery images={activityPhotos} color="blue" />
         </div>
       </section>
+      <DepartmentNewsletter
+        departmentName="Computer Science (Shift II)"
+        pdfHref="/pdfs/newsletter/computer_science_shift_2.pdf"
+      />
+
 
       <CTABanner
         title="Interested in B.Sc. CS (Shift II)?"

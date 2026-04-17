@@ -9,16 +9,16 @@ const about = [
 ];
 
 const members = [
-  { name: 'Dr. K. Thirumamagal', designation: 'Principal',                                          role: 'Presiding Officer', contact: '9994745157' },
-  { name: 'R.K. Ramya',          designation: 'HOD, Department of BCA',                            role: 'Faculty Member',    contact: '9940749481' },
-  { name: 'N. Ramya',            designation: 'Assistant Professor, Department of Mathematics',    role: 'Faculty Member',    contact: '9944561867' },
-  { name: 'Mr. T.V. Jaganathan', designation: 'Office Superintendent',                             role: 'Non-Teaching Member', contact: '9381080510' },
-  { name: 'Dr. H. Varalakshmi',  designation: 'Health & Safety Officer',                          role: 'Non-Teaching Member', contact: '8680023003' },
-  { name: 'R. Aarthi',           designation: 'II Year AI',                                        role: 'Student Member',    contact: '—' },
-  { name: 'M. Thaibunnisa',      designation: 'I MA English',                                      role: 'Student Member',    contact: '—' },
-  { name: 'J. Ragini',           designation: 'II M.Com',                                          role: 'Student Member',    contact: '—' },
-  { name: 'Mr. Pannerselvam',    designation: 'Founder – Sarvam Trust',                           role: 'NGO Member',        contact: '9500218240' },
-  { name: 'Mr. G. Sridhar',      designation: 'Lawyer',                                            role: 'Legal Advisor',     contact: '9444087709' },
+  { name: 'Dr. K. Thirumamagal', designation: 'Principal', role: 'Presiding Officer', contact: '9994745157' },
+  { name: 'R.K. Ramya', designation: 'HOD, Department of BCA', role: 'Faculty Member', contact: '9940749481' },
+  { name: 'N. Ramya', designation: 'Assistant Professor, Department of Mathematics', role: 'Faculty Member', contact: '9944561867' },
+  { name: 'Mr. T.V. Jaganathan', designation: 'Office Superintendent', role: 'Non-Teaching Member', contact: '9381080510' },
+  { name: 'Dr. H. Varalakshmi', designation: 'Health & Safety Officer', role: 'Non-Teaching Member', contact: '8680023003' },
+  { name: 'R. Aarthi', designation: 'II Year AI', role: 'Student Member', contact: '—' },
+  { name: 'M. Thaibunnisa', designation: 'I MA English', role: 'Student Member', contact: '—' },
+  { name: 'J. Ragini', designation: 'II M.Com', role: 'Student Member', contact: '—' },
+  { name: 'Mr. Pannerselvam', designation: 'Founder – Sarvam Trust', role: 'NGO Member', contact: '9500218240' },
+  { name: 'Mr. G. Sridhar', designation: 'Lawyer', role: 'Legal Advisor', contact: '9444087709' },
 ];
 
 export default function ICCPage() {
@@ -34,7 +34,7 @@ export default function ICCPage() {
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto max-w-4xl">
 
-              {about.length > 0 && (
+          {about.length > 0 && (
             <AnimatedSection>
               <div className="bg-primary-50 border-l-4 border-accent-400 rounded-r-xl p-6 mb-10 space-y-3">
                 {about.map((para, i) => (
@@ -48,7 +48,7 @@ export default function ICCPage() {
 
           {members.length > 0 ? (
             <AnimatedSection>
-              <div className="overflow-x-auto rounded-xl shadow border border-neutral-100">
+              <div className="overflow-x-auto rounded-xl shadow border border-neutral-100 mb-12">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="bg-primary-900 text-white">
@@ -82,6 +82,62 @@ export default function ICCPage() {
               <div className="text-center py-16 text-neutral-400">Content coming soon.</div>
             </AnimatedSection>
           )}
+
+          <AnimatedSection>
+            <div className="space-y-10">
+
+              <div>
+                <SectionHeading title="Responsibilities of Internal Complaints Committee" />
+                <ul className="list-disc pl-6 space-y-2 text-neutral-700 text-sm leading-relaxed">
+                  <li>Receiving and addressing complaints related to sexual harassment.</li>
+                  <li>Ensuring a fair, impartial, and time-bound inquiry process.</li>
+                  <li>Providing support and assistance to the aggrieved individual.</li>
+                  <li>Maintaining confidentiality throughout the proceedings.</li>
+                  <li>Recommending appropriate action based on the findings.</li>
+                  <li>Creating awareness through programmes and workshops.</li>
+                </ul>
+              </div>
+
+              <div>
+                <SectionHeading title="Process of Making Complaints" />
+                <ul className="list-disc pl-6 space-y-2 text-neutral-700 text-sm leading-relaxed">
+                  <li>Submit a written complaint within the prescribed time limit.</li>
+                  <li>Complaints can be submitted in person, via email, or complaint boxes.</li>
+                  <li>The ICC acknowledges and reviews the complaint.</li>
+                  <li>A formal inquiry is conducted with fair hearing for both parties.</li>
+                  <li>The inquiry is completed as per UGC norms.</li>
+                  <li>Findings are submitted to the appropriate authority for action.</li>
+                </ul>
+              </div>
+
+              <div>
+                <SectionHeading title="Punishment and Compensation" />
+                <ul className="list-disc pl-6 space-y-2 text-neutral-700 text-sm leading-relaxed">
+                  <li>Written apology, warning, or reprimand.</li>
+                  <li>Suspension or expulsion (for students).</li>
+                  <li>Withholding promotion, increment, or termination (for staff).</li>
+                  <li>Mandatory counselling or community service.</li>
+                  <li>Monetary compensation to the aggrieved party.</li>
+                  <li>Other actions as per UGC regulations and institutional policies.</li>
+                </ul>
+
+                {/* PDF BUTTON */}
+                <div className="mt-6">
+                  <a
+                    href="/pdfs/policies/ugc_internal_complaints.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-amber-700 hover:bg-amber-800 text-white font-semibold text-sm px-6 py-3 rounded-lg shadow transition duration-300"
+                  >
+                    View UGC Internal Complaints Policy
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+          </AnimatedSection>
+
         </div>
       </section>
 

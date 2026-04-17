@@ -41,7 +41,7 @@ export default function ClubsPage() {
 
       <section className="section-padding bg-neutral-50">
         <div className="container-custom mx-auto max-w-5xl">
-          <SectionHeading title="Student Clubs" subtitle="Join a club that matches your passion and develop skills beyond academics" />
+          <SectionHeading title="Student Clubs" subtitle="The college's vibrant club scene offers something for everyone, with a diverse range of groups catering to various interests. The Environmental Science (EVS) Club and Consumer Club focus on sustainability and consumer awareness, while the Rotaract Club and Student Outreach Club emphasize community service and social responsibility. The Electoral Literacy Club empowers students to engage with the democratic process, and the Cultural Club showcases the richness of diverse traditions through music, dance, and art. For those with a competitive streak, the Quiz Club is a hub for trivia enthusiasts, while the Fitness Club promotes physical well-being and healthy lifestyles. With such a wide range of options, students can easily find their niche and connect with like-minded peers who share their passions. " />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {clubs.map((c, i) => (
               <AnimatedSection key={i} delay={i * 0.04}>

@@ -13,6 +13,7 @@ const primaryLinks = [
     path: '/about',
     children: [
       { label: 'Genesis and Growth', path: '/about?section=genesis' },
+      { label: 'College Timeline', path: '/about/timeline' },
       { label: 'Institutional Development Plan', path: '/about?section=devplan' },
       { label: 'Affiliated University', url: 'https://unom.ac.in' },
       { label: 'Annual Reports', path: '/about?section=annual-reports' },
@@ -52,21 +53,33 @@ const primaryLinks = [
         label: 'Departments',
         path: '/academics',
         children: [
-          { label: 'Tamil', path: '/departments/tamil' },
-          { label: 'English', path: '/departments/english' },
-          { label: 'Computer Science', path: '/departments/computer-science' },
-          { label: 'Mathematics', path: '/departments/mathematics' },
-          { label: 'BCA', path: '/departments/bca' },
-          { label: 'B.Com (General)', path: '/departments/bcom-general' },
-          { label: 'B.Com (CS)', path: '/departments/bcom-cs' },
-          { label: 'B.Com (A&F)', path: '/departments/bcom-af' },
-          { label: 'B.B.A', path: '/departments/bba' },
-          { label: 'Computer Science with AI', path: '/departments/cs-ai' },
-          { label: 'Criminology and Criminal Justice Science', path: '/departments/criminology' },
-          { label: 'B.A. Economics', path: '/departments/ba-economics' },
-          { label: 'BCA (Shift II)', path: '/departments/bca-shift-ii' },
-          { label: 'Computer Science (Shift II)', path: '/departments/computer-science-shift-ii' },
-          { label: 'B.Com General (Shift II)', path: '/departments/bcom-general-shift-ii' },
+          {
+            label: 'Shift I',
+            children: [
+              { label: 'Tamil', path: '/departments/tamil' },
+              { label: 'English', path: '/departments/english' },
+              { label: 'Computer Science', path: '/departments/computer-science' },
+              { label: 'Mathematics', path: '/departments/mathematics' },
+              { label: 'BCA', path: '/departments/bca' },
+              { label: 'B.Com (General)', path: '/departments/bcom-general' },
+              { label: 'B.Com (CS)', path: '/departments/bcom-cs' },
+              { label: 'B.Com (A&F)', path: '/departments/bcom-af' },
+              { label: 'B.B.A', path: '/departments/bba' },
+              { label: 'Computer Science with AI', path: '/departments/cs-ai' },
+              { label: 'Criminology and Criminal Justice Science', path: '/departments/criminology' },
+              { label: 'B.A. Economics', path: '/departments/ba-economics' },
+              { label: 'M.Sc. Computer Science', path: '/departments/computer-science?section=programmes-msc' },
+              { label: 'M.Sc. Mathematics', path: '/departments/mathematics?section=programmes-msc' },
+            ],
+          },
+          {
+            label: 'Shift II',
+            children: [
+              { label: 'BCA', path: '/departments/bca-shift-ii' },
+              { label: 'B.Sc. Computer Science', path: '/departments/computer-science-shift-ii' },
+              { label: 'B.Com General', path: '/departments/bcom-general-shift-ii' },
+            ],
+          },
         ],
       },
       { label: 'Academic Collaborations', path: '/academic-collaborations' },
@@ -78,7 +91,7 @@ const primaryLinks = [
     children: [
       { label: 'Prospectus with Fees', path: '/fees' },
       { label: 'Admission Process & Guidelines', path: '/admissions' },
-      { label: 'Fee Refund Policy', path: '/fees' },
+      { label: 'Fee Refund Policy', path: '/fee-refund-policy' },
       { label: 'Online Application Form', path: '/apply' },
       { label: 'Download Application', path: '/apply' },
     ],
@@ -117,6 +130,7 @@ function DropdownChildItem({ child, onClose }) {
   const [subOpen, setSubOpen] = useState(false);
   const subRef = useRef(null);
   const subTimeout = useRef(null);
+  const hasNestedSubmenus = child.children?.some((c) => c.children);
 
   if (!child.children) {
     if (child.url) {
@@ -177,7 +191,9 @@ function DropdownChildItem({ child, onClose }) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -6 }}
             transition={{ duration: 0.15 }}
-            className="absolute left-full top-0 ml-1 bg-primary-900 border border-white/10 rounded-lg shadow-2xl min-w-[260px] py-1.5 z-50 max-h-[70vh] overflow-y-auto"
+            className={`absolute left-full top-0 ml-1 bg-primary-900 border border-white/10 rounded-lg shadow-2xl min-w-[260px] py-1.5 z-50 ${
+              hasNestedSubmenus ? '' : 'max-h-[70vh] overflow-y-auto'
+            }`}
           >
             {child.children.map((sub) => (
               <DropdownChildItem key={sub.label} child={sub} onClose={onClose} />
@@ -188,6 +204,10 @@ function DropdownChildItem({ child, onClose }) {
     </div>
   );
 }
+
+// Tracks which top-level dropdown is currently open, so opening a new one
+// closes the previous immediately (no overlapping menus when sweeping the navbar).
+let activeDropdownCloser = null;
 
 function DropdownNavItem({ link, isActive }) {
   const [open, setOpen] = useState(false);
@@ -204,14 +224,24 @@ function DropdownNavItem({ link, isActive }) {
 
   const handleMouseEnter = () => {
     clearTimeout(timeoutRef.current);
+    if (activeDropdownCloser && activeDropdownCloser !== setOpen) {
+      activeDropdownCloser(false);
+    }
+    activeDropdownCloser = setOpen;
     setOpen(true);
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => setOpen(false), 150);
+    timeoutRef.current = setTimeout(() => {
+      setOpen(false);
+      if (activeDropdownCloser === setOpen) activeDropdownCloser = null;
+    }, 150);
   };
 
-  const closeAll = () => setOpen(false);
+  const closeAll = () => {
+    setOpen(false);
+    if (activeDropdownCloser === setOpen) activeDropdownCloser = null;
+  };
 
   return (
     <div ref={ref} className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
@@ -369,41 +399,39 @@ function MoreDropdown({ links }) {
                 );
               })}
             </div>
-            {activeSubmenu && (
-              <div className="min-w-[210px] py-1 max-h-[70vh] overflow-y-auto">
-                {links
-                  .find((l) => l.label === activeSubmenu)
-                  ?.children?.map((child) => {
-                    const closeAll = () => { setOpen(false); setActiveSubmenu(null); };
-                    if (child.children) {
-                      return (
-                        <DropdownChildItem key={child.label} child={child} onClose={closeAll} />
-                      );
-                    }
-                    return child.url ? (
-                      <a
-                        key={child.label}
-                        href={child.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={closeAll}
-                        className="block px-4 py-2.5 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
-                      >
-                        {child.label} ↗
-                      </a>
-                    ) : (
-                      <Link
-                        key={child.label}
-                        to={child.path}
-                        onClick={closeAll}
-                        className="block px-4 py-2.5 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors whitespace-nowrap"
-                      >
-                        {child.label}
-                      </Link>
+            <div className="w-[280px] py-1 max-h-[70vh] overflow-y-auto">
+              {activeSubmenu && links
+                .find((l) => l.label === activeSubmenu)
+                ?.children?.map((child) => {
+                  const closeAll = () => { setOpen(false); setActiveSubmenu(null); };
+                  if (child.children) {
+                    return (
+                      <DropdownChildItem key={child.label} child={child} onClose={closeAll} />
                     );
-                  })}
-              </div>
-            )}
+                  }
+                  return child.url ? (
+                    <a
+                      key={child.label}
+                      href={child.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={closeAll}
+                      className="block px-4 py-2.5 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors leading-snug"
+                    >
+                      {child.label} ↗
+                    </a>
+                  ) : (
+                    <Link
+                      key={child.label}
+                      to={child.path}
+                      onClick={closeAll}
+                      className="block px-4 py-2.5 text-sm text-white/75 hover:text-accent-400 hover:bg-white/5 transition-colors leading-snug"
+                    >
+                      {child.label}
+                    </Link>
+                  );
+                })}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -422,7 +450,7 @@ function MobileChildItem({ child, onNavigate }) {
           target="_blank"
           rel="noopener noreferrer"
           onClick={onNavigate}
-          className="block px-4 py-1.5 text-sm text-white/60 hover:text-accent-400 transition-colors"
+          className="block px-4 py-2 text-base text-white/90 hover:text-accent-400 active:text-accent-400 transition-colors"
         >
           {child.label} ↗
         </a>
@@ -432,7 +460,7 @@ function MobileChildItem({ child, onNavigate }) {
       <Link
         to={child.path}
         onClick={onNavigate}
-        className="block px-4 py-1.5 text-sm text-white/60 hover:text-accent-400 transition-colors"
+        className="block px-4 py-2 text-base text-white/90 hover:text-accent-400 active:text-accent-400 transition-colors"
       >
         {child.label}
       </Link>
@@ -441,19 +469,29 @@ function MobileChildItem({ child, onNavigate }) {
 
   return (
     <div>
-      <div className="flex items-center gap-1 px-4 py-1.5">
-        <Link
-          to={child.path}
-          onClick={onNavigate}
-          className="text-sm text-white/60 hover:text-accent-400 transition-colors"
-        >
-          {child.label}
-        </Link>
+      <div className="flex items-center justify-center gap-2 px-4 py-2">
+        {child.path ? (
+          <Link
+            to={child.path}
+            onClick={onNavigate}
+            className="text-base text-white/90 hover:text-accent-400 active:text-accent-400 transition-colors"
+          >
+            {child.label}
+          </Link>
+        ) : (
+          <button
+            onClick={() => setSubOpen((o) => !o)}
+            className="text-base text-white/90 hover:text-accent-400 active:text-accent-400 transition-colors"
+          >
+            {child.label}
+          </button>
+        )}
         <button
           onClick={() => setSubOpen((o) => !o)}
-          className="text-white/60 hover:text-accent-400 transition-colors p-1"
+          className="text-white/90 hover:text-accent-400 transition-colors p-1"
+          aria-label={subOpen ? 'Collapse' : 'Expand'}
         >
-          <FaChevronDown className={`text-[9px] transition-transform duration-200 ${subOpen ? 'rotate-180' : ''}`} />
+          <FaChevronDown className={`text-[11px] transition-transform duration-200 ${subOpen ? 'rotate-180' : ''}`} />
         </button>
       </div>
       <AnimatePresence>
@@ -485,8 +523,8 @@ function MobileAccordionItem({ link, onNavigate, isActive }) {
       <Link
         to={link.path}
         onClick={onNavigate}
-        className={`block px-6 py-3 text-2xl font-heading font-semibold transition-colors ${
-          isActive ? 'text-accent-400' : 'text-white/80 hover:text-white'
+        className={`block w-full text-center px-6 py-3 text-xl font-heading font-semibold transition-colors ${
+          isActive ? 'text-accent-400' : 'text-white hover:text-accent-400 active:text-accent-400'
         }`}
       >
         {link.label}
@@ -495,10 +533,10 @@ function MobileAccordionItem({ link, onNavigate, isActive }) {
   }
 
   return (
-    <div>
+    <div className="w-full">
       <button
         onClick={() => setOpen((o) => !o)}
-        className="w-full flex items-center justify-center gap-2 px-6 py-3 text-2xl font-heading font-semibold text-white/80 hover:text-white transition-colors"
+        className="w-full flex items-center justify-center gap-2 px-6 py-3 text-xl font-heading font-semibold text-white hover:text-accent-400 active:text-accent-400 transition-colors"
       >
         {link.label}
         <FaChevronDown className={`text-sm transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
@@ -547,9 +585,14 @@ export default function Navbar() {
           isScrolled ? 'shadow-lg' : ''
         }`}
       >
-        {/* Top utility strip: e-Governance / Feedback / Help Desk */}
-        <div className="hidden md:block">
-          <div className="w-full px-4 md:px-6 xl:px-8 2xl:px-12 flex justify-end items-center gap-5 pt-2 pb-1 text-[11px] font-body">
+        {/* Top utility strip: Anti-Ragging / Download App / e-Governance / Feedback / Help Desk */}
+        <div>
+          <div className="w-full px-3 md:px-6 xl:px-8 2xl:px-12 flex flex-wrap justify-center md:justify-end items-center gap-x-3 md:gap-x-5 gap-y-1 pt-2 pb-1 text-[10px] md:text-[11px] font-body">
+            <span className="text-white/75">
+              Anti-Ragging Helpline:{' '}
+              <a href="tel:18001805522" className="text-accent-400 font-semibold hover:text-accent-300 transition-colors">1800-180-5522</a>
+            </span>
+            <span className="text-white/20">|</span>
             <a href="https://play.google.com/store/apps/details?id=parentsalarm.sskv.womens.arts.college.kanchipuram" target="_blank" rel="noopener noreferrer" className="text-white/75 hover:text-accent-400 transition-colors">
               Download App
             </a>
@@ -642,7 +685,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-0 z-[60] bg-primary-900/98 backdrop-blur-md"
+            className="fixed inset-0 z-[60] bg-primary-900"
           >
             <div className="flex flex-col h-full p-6">
               {/* Close button */}
@@ -656,28 +699,18 @@ export default function Navbar() {
                 </button>
               </div>
 
-              {/* Centered nav links */}
-              <nav className="flex flex-col items-center justify-center flex-1 gap-2">
-                {navLinks.map((link, index) => (
-                  <motion.div
-                    key={link.path}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                  >
+              {/* Scrollable nav links */}
+              <nav className="flex flex-col items-center flex-1 gap-2 overflow-y-auto py-4">
+                {navLinks.map((link) => (
+                  <div key={link.path} className="w-full">
                     <MobileAccordionItem
                       link={link}
                       onNavigate={() => setMobileOpen(false)}
                       isActive={location.pathname === link.path}
                     />
-                  </motion.div>
+                  </div>
                 ))}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: navLinks.length * 0.05 }}
-                  className="mt-6"
-                >
+                <div className="mt-6">
                   <Link
                     to="/admissions"
                     onClick={() => setMobileOpen(false)}
@@ -685,7 +718,7 @@ export default function Navbar() {
                   >
                     Apply Now
                   </Link>
-                </motion.div>
+                </div>
               </nav>
             </div>
           </motion.div>

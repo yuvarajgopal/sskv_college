@@ -5,6 +5,7 @@ import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
 import CTABanner from '../../components/sections/CTABanner';
+import DepartmentNewsletter from '../../components/shared/DepartmentNewsletter';
 import DepartmentSectionNav from '../../components/shared/DepartmentSectionNav';
 import ActivityGallery from '../../components/shared/ActivityGallery';
 
@@ -12,7 +13,7 @@ const BASE_PHOTO  = '/images/faculty/cs-ai/';
 const BASE_RESUME = '/pdfs/faculty/cs-ai/';
 
 const faculty = [
-  { name: 'Dr. J. Seethalakshmi', qualification: 'M.C.A., M.Phil., Ph.D.',      role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}dr-j-seethalakshmi.PNG`, resume: `${BASE_RESUME}dr-j-seethalakshmi.pdf` },
+  { name: 'Dr. J. Seethalakshmi', qualification: 'M.C.A., M.Phil., Ph.D.',      role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}seetha_lakshmi.jpeg`, resume: `${BASE_RESUME}dr-j-seethalakshmi.pdf` },
   { name: 'Dr. V. Vanitha',       qualification: 'M.C.A., M.Phil., Ph.D., NET', role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-v-vanitha.jpg`,        resume: `${BASE_RESUME}dr-v-vanitha.pdf` },
 ];
 
@@ -190,7 +191,7 @@ export default function CSAIDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 text-xs font-semibold rounded-lg transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </div>
@@ -218,7 +219,7 @@ export default function CSAIDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 w-full py-1.5 bg-purple-50 hover:bg-purple-100 text-purple-700 text-xs font-semibold rounded-lg border border-purple-100 transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </AnimatedSection>
@@ -267,13 +268,6 @@ export default function CSAIDepartmentPage() {
               <p className="text-sm font-bold text-primary-800">Bachelor of Science — CS with AI (B.Sc.)</p>
               <p className="text-xs text-neutral-500 mt-1">Undergraduate Programme</p>
             </div>
-            <div className="flex-1 min-w-[200px] bg-purple-50 border border-purple-200 rounded-xl p-5 text-center">
-              <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center mx-auto mb-3">
-                <FaGraduationCap className="text-white text-lg" />
-              </div>
-              <p className="text-sm font-bold text-primary-800">Master of Science (M.Sc.)</p>
-              <p className="text-xs text-neutral-500 mt-1">Postgraduate Programme</p>
-            </div>
           </div>
 
           {/* Wide dark program card */}
@@ -300,45 +294,7 @@ export default function CSAIDepartmentPage() {
               </div>
             </div>
           </AnimatedSection>
-          <AnimatedSection delay={0.1}>
-            <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white mb-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center">
-                  <FaRobot className="text-2xl text-purple-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold font-heading">M.Sc. CS with AI</h3>
-                  <p className="text-white/60 text-sm">Postgraduate Programme Details</p>
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Degree</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">Master of Science (M.Sc.)</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Specialisation</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">Computer Science with Artificial Intelligence</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Duration</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">2 Years (4 Semesters)</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Eligibility</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">B.Sc. CS / CS with AI from a recognized university</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Affiliation</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">University of Madras</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Curriculum</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">CBCS — Choice Based Credit System</span>
-                  </div>
-              </div>
-            </div>
-          </AnimatedSection>
+
 
           {/* Outcomes grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
@@ -374,6 +330,11 @@ export default function CSAIDepartmentPage() {
           <ActivityGallery images={activityPhotos} color="purple" />
         </div>
       </section>
+      <DepartmentNewsletter
+        departmentName="Computer Science with AI"
+        pdfHref="/pdfs/newsletter/SSKV_Newsletter_2026.pdf"
+      />
+
 
       <CTABanner
         title="Interested in B.Sc. CS with AI?"

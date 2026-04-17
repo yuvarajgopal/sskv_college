@@ -5,6 +5,7 @@ import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
 import CTABanner from '../../components/sections/CTABanner';
+import DepartmentNewsletter from '../../components/shared/DepartmentNewsletter';
 import DepartmentSectionNav from '../../components/shared/DepartmentSectionNav';
 import ActivityGallery from '../../components/shared/ActivityGallery';
 
@@ -174,7 +175,7 @@ export default function CriminologyDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 text-xs font-semibold rounded-lg transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </div>
@@ -202,7 +203,7 @@ export default function CriminologyDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 w-full py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-semibold rounded-lg border border-rose-100 transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </AnimatedSection>
@@ -251,13 +252,7 @@ export default function CriminologyDepartmentPage() {
               <p className="text-sm font-bold text-primary-800">Bachelor of Arts — Criminology (B.A.)</p>
               <p className="text-xs text-neutral-500 mt-1">Undergraduate Programme</p>
             </div>
-            <div className="flex-1 min-w-[200px] bg-rose-50 border border-rose-200 rounded-xl p-5 text-center">
-              <div className="w-10 h-10 rounded-full bg-rose-500 flex items-center justify-center mx-auto mb-3">
-                <FaGraduationCap className="text-white text-lg" />
-              </div>
-              <p className="text-sm font-bold text-primary-800">Master of Arts (M.A.)</p>
-              <p className="text-xs text-neutral-500 mt-1">Postgraduate Programme</p>
-            </div>
+           
           </div>
 
           {/* Wide dark program card */}
@@ -284,45 +279,7 @@ export default function CriminologyDepartmentPage() {
               </div>
             </div>
           </AnimatedSection>
-          <AnimatedSection delay={0.1}>
-            <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white mb-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-rose-500/20 flex items-center justify-center">
-                  <FaGavel className="text-2xl text-rose-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold font-heading">M.A. Criminology</h3>
-                  <p className="text-white/60 text-sm">Postgraduate Programme Details</p>
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Degree</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">Master of Arts (M.A.)</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Specialisation</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">Criminology & Criminal Justice</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Duration</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">2 Years (4 Semesters)</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Eligibility</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">B.A. Criminology from a recognized university</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Affiliation</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">University of Madras</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Curriculum</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">CBCS — Choice Based Credit System</span>
-                  </div>
-              </div>
-            </div>
-          </AnimatedSection>
+
 
           {/* Outcomes grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
@@ -358,6 +315,11 @@ export default function CriminologyDepartmentPage() {
           <ActivityGallery images={activityPhotos} color="rose" />
         </div>
       </section>
+      <DepartmentNewsletter
+        departmentName="Criminology and Criminal Justice Science"
+        pdfHref="/pdfs/newsletter/crimnology.pdf"
+      />
+
 
       <CTABanner
         title="Interested in B.A. Criminology?"

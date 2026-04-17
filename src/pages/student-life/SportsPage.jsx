@@ -119,6 +119,35 @@ export default function SportsPage() {
 
           {/* REPORT BUTTONS */}
           <AnimatedSection>
+
+           <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-10">
+
+              <h3 className="text-xl font-bold text-primary-800 mb-3">Vision</h3>
+              <p className="text-neutral-600 leading-relaxed mb-5">
+                To foster a culture of physical fitness, sportsmanship, and holistic development by encouraging active participation in sports and games, thereby nurturing disciplined, confident, and socially responsible individuals.
+              </p>
+
+              <h3 className="text-xl font-bold text-primary-800 mb-3">Mission</h3>
+              <ul className="list-disc pl-5 text-neutral-600 space-y-2 mb-5">
+                <li>To provide quality sports infrastructure and professional coaching to promote physical well-being among students.</li>
+                <li>To encourage participation in intramural, intercollegiate, state, and national level sports competitions.</li>
+                <li>To instill values of teamwork, leadership, discipline, and fair play through sports activities.</li>
+                <li>To identify and nurture sporting talent and support students in achieving excellence in sports alongside academics.</li>
+              </ul>
+
+              <h3 className="text-xl font-bold text-primary-800 mb-3">Objectives</h3>
+              <ul className="list-disc pl-5 text-neutral-600 space-y-2">
+                <li>To promote physical fitness and mental well-being among students through regular sports and games.</li>
+                <li>To encourage mass participation in sports and create awareness about the importance of an active lifestyle.</li>
+                <li>To identify talented sportspersons and provide opportunities for advanced training and competition.</li>
+                <li>To organize intra-college, inter-college, and university-level sports events and tournaments.</li>
+                <li>To inculcate values such as discipline, leadership, teamwork, and sportsmanship among students.</li>
+                <li>To provide equal opportunities for participation in sports for all students, including differently-abled students.</li>
+                <li>To motivate students to represent the institution at district, state, national, and international levels.</li>
+                <li>To integrate sports activities as an essential component of holistic education.</li>
+              </ul>
+
+            </div>
             <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-10 text-center">
               <h3 className="font-bold text-primary-800 mb-4">Sports Annual Reports</h3>
               <div className="flex flex-wrap justify-center gap-3">
@@ -127,7 +156,9 @@ export default function SportsPage() {
                 <a href="/pdfs/sports-2024-25.pdf" target="_blank" className="flex items-center gap-2 px-4 py-2 bg-primary-800 text-white rounded-lg text-sm"><FaFilePdf /> 2024–25</a>
               </div>
             </div>
+            
           </AnimatedSection>
+          
 
           <h3 className="text-3xl md:text-4xl font-bold text-primary-800 font-heading mb-5"></h3>
 

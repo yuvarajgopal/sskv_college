@@ -12,41 +12,13 @@ const categories = [
     icon: FaShieldAlt,
     color: '#e74c3c',
       policies: [
-      { title: 'Anti-Ragging Policy', file: 'anti-ragging-policy.pdf', available: true },
-      { title: 'Sexual Harassment Policy (ICC)', file: 'sexual-harassment-policy.pdf', available: true },
+      { title: 'Anti-Ragging Policy', file: 'anti_ragging_policy.pdf', available: true },
+      { title: 'Anti sexual Harassment policy (ICC)', file: 'sexual-harassment-policy.pdf', available: true },
       { title: 'Grievance Redressal Policy', file: 'grievance-redressal-policy.pdf', available: true },
-      { title: 'Student Code of Conduct', file: 'student-code-of-conduct.pdf', available: true },
+    
     ],
   },
-  {
-    name: 'Academic Policies',
-    icon: FaBook,
-    color: '#3498db',
-    policies: [
-      { title: 'Admission Policy', file: 'admission-policy.pdf', available: true },
-      { title: 'Examination Policy', file: 'examination-policy.pdf', available: true },
-      { title: 'Fee Refund Policy', file: 'fee-refund-policy.pdf', available: true },
-      { title: 'Library Policy', file: 'library-policy.pdf', available: true },
-      { title: 'IQAC Policy', file: 'iqac-policy.pdf', available: true },
-    ],
-  },
-  {
-    name: 'Sustainability & Infrastructure',
-    icon: FaLeaf,
-    color: '#27ae60',
-    policies: [
-      { title: 'Environmental Policy', file: 'environmental-policy.pdf', available: true },
-      { title: 'IT Usage Policy', file: 'it-usage-policy.pdf', available: true },
-    ],
-  },
-   {
-    name: 'Placement & Industry',
-    icon: FaBriefcase,
-    color: '#e67e22',
-    policies: [
-      { title: 'Placement Policy', file: 'placement-policy.pdf', available: true },
-    ],
-  },
+  
 ];
 // ─────────────────────────────────────────────────────────────────────────────
 

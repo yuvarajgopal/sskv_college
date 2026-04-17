@@ -5,8 +5,8 @@ import AnimatedSection from '../../components/shared/AnimatedSection';
 import CTABanner from '../../components/sections/CTABanner';
 
 const coordinator = { 
-  name: 'Ms. A. Ezhilarasi', 
-  qualification: 'M.Sc., M.Phil., B.Ed., Assistant Professor', 
+  name: 'Ms.M.Premalatha', 
+  qualification: 'Assistant Professor of Mathematics', 
   dept: 'Department of Mathematics' 
 };
 

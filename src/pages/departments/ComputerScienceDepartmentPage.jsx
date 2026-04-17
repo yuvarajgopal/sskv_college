@@ -5,6 +5,7 @@ import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
 import CTABanner from '../../components/sections/CTABanner';
+import DepartmentNewsletter from '../../components/shared/DepartmentNewsletter';
 import DepartmentSectionNav from '../../components/shared/DepartmentSectionNav';
 import ActivityGallery from '../../components/shared/ActivityGallery';
 
@@ -16,7 +17,7 @@ const faculty = [
   { name: 'R. Ramya',           qualification: 'M.Sc., M.Phil.',    role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}r-ramya.jpg`,      resume: `${BASE_RESUME}r-ramya.pdf` },
   { name: 'Ms. V. Suganthi',    qualification: 'M.C.A., M.Phil.',   role: 'Assistant Professor',                    photo: `${BASE_PHOTO}v-suganthi.jpg`,   resume: `${BASE_RESUME}v-suganthi.pdf` },
   // Shift II
-  { name: 'U.Aishwarya',        qualification: 'MCA.,',             role: 'Assistant Professor',                    photo: `${BASE_PHOTO}u_ashiwarya.jpg`,  resume: `${BASE_RESUME}u_ashiwarya.pdf` },
+  { name: 'U.Aishwarya',        qualification: 'M.C.A., NET',             role: 'Assistant Professor',                    photo: `${BASE_PHOTO}u_ashiwarya.jpg`,  resume: `${BASE_RESUME}u_ashiwarya.pdf` },
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
@@ -62,6 +63,25 @@ const programDetails = [
   )},
 ];
 
+const mscProgramDetails = [
+  { label: 'Degree',        value: 'Master of Science (M.Sc.)' },
+  { label: 'Specialisation', value: 'Computer Science' },
+  { label: 'Duration',      value: '2 Years (4 Semesters)' },
+  { label: 'Eligibility',   value: 'B.Sc. Computer Science / B.C.A. or equivalent.' },
+  { label: 'Affiliation',   value: 'University of Madras' },
+  { label: 'Curriculum',    value: 'CBCS — Choice Based Credit System' },
+  { label: 'Syllabus',      value: (
+    <a
+      href="/pdfs/msc_cs_syllabus.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white-600 underline hover:text-orange-800"
+    >
+      PG Syllabus
+    </a>
+  )},
+];
+
 const outcomes = [
   'Strong foundation in programming using C, C++, Java, and Python',
   'Understanding of data structures, algorithms, and software engineering principles',
@@ -93,7 +113,8 @@ export default function ComputerScienceDepartmentPage() {
     if (section) {
       const el = document.getElementById(section);
       if (el) setTimeout(() => {
-        const top = el.getBoundingClientRect().top + window.pageYOffset - 130;
+        const offset = section === 'programmes-msc' ? 220 : 130;
+        const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
         window.scrollTo({ top, behavior: 'smooth' });
       }, 150);
     } else {
@@ -178,7 +199,7 @@ export default function ComputerScienceDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 bg-green-500/20 hover:bg-green-500/30 text-green-300 text-xs font-semibold rounded-lg transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </div>
@@ -206,7 +227,7 @@ export default function ComputerScienceDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 w-full py-1.5 bg-green-50 hover:bg-green-100 text-green-700 text-xs font-semibold rounded-lg border border-green-100 transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </AnimatedSection>
@@ -264,7 +285,7 @@ export default function ComputerScienceDepartmentPage() {
             </div>
           </div>
 
-          {/* Wide dark program card */}
+          {/* Wide dark program card — B.Sc. */}
           <AnimatedSection>
             <div className="max-w-4xl mx-auto mb-10">
               <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white">
@@ -291,45 +312,35 @@ export default function ComputerScienceDepartmentPage() {
               </div>
             </div>
           </AnimatedSection>
-          <AnimatedSection delay={0.1}>
-            <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white mb-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center">
-                  <FaLaptopCode className="text-2xl text-green-400" />
+
+          {/* Wide dark program card — M.Sc. */}
+          <AnimatedSection>
+            <div id="programmes-msc" className="max-w-4xl mx-auto mb-10 scroll-mt-32">
+              <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-8 text-white">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center">
+                    <FaLaptopCode className="text-2xl text-green-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold font-heading">M.Sc. Computer Science</h3>
+                    <p className="text-white/60 text-sm">Program Details</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold font-heading">M.Sc. Computer Science</h3>
-                  <p className="text-white/60 text-sm">Postgraduate Programme Details</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+                  {mscProgramDetails.map((item) => (
+                    <div key={item.label} className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
+                      <span className="text-white/60 text-sm">{item.label}</span>
+                      <span className="text-white font-semibold text-sm text-right ml-4">{item.value}</span>
+                    </div>
+                  ))}
                 </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Degree</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">Master of Science (M.Sc.)</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Specialisation</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">Computer Science</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Duration</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">2 Years (4 Semesters)</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Eligibility</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">B.Sc. Computer Science from a recognized university</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Affiliation</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">University of Madras</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
-                    <span className="text-white/60 text-sm">Curriculum</span>
-                    <span className="text-white font-semibold text-sm text-right ml-4">CBCS — Choice Based Credit System</span>
-                  </div>
+                <div className="mt-4 pt-4 border-t border-white/10">
+                  <p className="text-white/50 text-xs">Postgraduate Programme</p>
+                </div>
               </div>
             </div>
           </AnimatedSection>
+          
 
           {/* Outcomes grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
@@ -365,6 +376,11 @@ export default function ComputerScienceDepartmentPage() {
           <ActivityGallery images={activityPhotos} color="green" />
         </div>
       </section>
+      <DepartmentNewsletter
+        departmentName="Computer Science"
+        pdfHref="/pdfs/newsletter/SSKV_Newsletter_2026.pdf"
+      />
+
 
       <CTABanner
         title="Interested in B.Sc. Computer Science?"

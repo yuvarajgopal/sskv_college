@@ -7,6 +7,7 @@ import AnimatedSection from '../../components/shared/AnimatedSection';
 import DepartmentSectionNav from '../../components/shared/DepartmentSectionNav';
 import ActivityGallery from '../../components/shared/ActivityGallery';
 import CTABanner from '../../components/sections/CTABanner';
+import DepartmentNewsletter from '../../components/shared/DepartmentNewsletter';
 
 const faculty = [];
 
@@ -140,7 +141,7 @@ export default function BComGeneralShiftIIDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 text-xs font-semibold rounded-lg transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </div>
@@ -168,7 +169,7 @@ export default function BComGeneralShiftIIDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 w-full py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-700 text-xs font-semibold rounded-lg border border-amber-100 transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </AnimatedSection>
@@ -325,6 +326,11 @@ export default function BComGeneralShiftIIDepartmentPage() {
       </section>
 
       {/* CTA Banner */}
+      <DepartmentNewsletter
+        departmentName="B.Com General (Shift II)"
+        pdfHref="/pdfs/newsletter/bcom-shift-II.pdf"
+      />
+
       <CTABanner
         title="Interested in B.Com General (Shift II)?"
         subtitle="Apply now for the evening programme in Commerce."

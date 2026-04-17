@@ -58,12 +58,7 @@ const annualReports = [
   },
 ];
 
-// ── MOU FILES ────────────────────────────────────────────────────────────────
-const mouFiles = [
-  { title: 'MOU 2023 - 2024', file: 'MOU 2023-24.pdf' },
-  { title: 'MOU 2024 - 2025', file: 'MOU 2024-25.pdf' },
-  { title: 'MOU 2025 - 2026', file: 'MOU 2025-26.pdf' },
-];
+
 
 // ── STAFF PHOTO ──────────────────────────────────────────────────────────────
 function StaffPhoto({ src, name }) {
@@ -124,27 +119,7 @@ export default function HelpdeskPage() {
       </section>
 
 
-      {/* ── MOU SECTION ───────────────────────────────────────── */}
-      <section className="section-padding bg-neutral-50">
-        <div className="container-custom mx-auto">
-          <SectionHeading title="MOU Documents" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {mouFiles.map((mou, i) => (
-              <AnimatedSection key={i}>
-                <a
-                  href={`/pdfs/library/${mou.file}`}
-                  download
-                  className="flex items-center justify-center gap-2 px-5 py-4 bg-primary-800 text-white rounded-lg hover:bg-primary-700"
-                >
-                  <FaFilePdf />
-                  {mou.title}
-                </a>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <CTABanner
         title="Explore. Learn. Grow."

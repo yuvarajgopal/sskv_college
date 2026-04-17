@@ -16,6 +16,7 @@ const disclosures = [
   { category: 'UGC Recognition under Section 2(f)', value: 'Under Process' },
   { category: 'UGC Recognition under Section 12(B)', value: 'Applied / Under Process' },
   { category: 'Phone', value: '044-27277880 | 044-27277900' },
+  { category: 'mobile', value: '8680023003 | 7904428316' },
   { category: 'Email', value: 'sskvcollege@yahoo.com | sskvcollege2007@gmail.com' },
   { category: 'Website', value: 'www.sskvcollege.com' },
   { category: 'NAAC Accreditation', value: 'Accreditation process initiated' },
@@ -86,8 +87,8 @@ export default function MandatoryDisclosuresPage() {
             subtitle="Basic institutional details as mandated by regulatory authorities"
           />
           <AnimatedSection>
-            <div className="bg-white rounded-2xl border border-neutral-200 overflow-hidden shadow-sm">
-              <table className="w-full text-sm">
+            <div className="bg-white rounded-2xl border border-neutral-200 overflow-hidden shadow-sm overflow-x-auto">
+              <table className="w-full text-sm min-w-[600px]">
                 <thead>
                   <tr className="bg-primary-800 text-white">
                     <th className="text-left px-6 py-3 w-2/5">Category</th>
@@ -116,8 +117,8 @@ export default function MandatoryDisclosuresPage() {
             subtitle="List of undergraduate programs approved by the University of Madras"
           />
           <AnimatedSection>
-            <div className="bg-white rounded-2xl border border-neutral-200 overflow-hidden shadow-sm">
-              <table className="w-full text-sm">
+            <div className="bg-white rounded-2xl border border-neutral-200 overflow-hidden shadow-sm overflow-x-auto">
+              <table className="w-full text-sm min-w-[600px]">
                 <thead>
                   <tr className="bg-primary-800 text-white">
                     <th className="text-left px-4 py-3">S.No</th>
@@ -220,8 +221,8 @@ export default function MandatoryDisclosuresPage() {
             subtitle="Year-wise student enrollment details"
           />
           <AnimatedSection>
-            <div className="max-w-2xl mx-auto bg-white rounded-2xl border border-neutral-200 overflow-hidden shadow-sm">
-              <table className="w-full text-sm">
+            <div className="max-w-2xl mx-auto bg-white rounded-2xl border border-neutral-200 overflow-hidden shadow-sm overflow-x-auto">
+              <table className="w-full text-sm min-w-[500px]">
                 <thead>
                   <tr className="bg-primary-800 text-white">
                     <th className="text-left px-6 py-3">Academic Year</th>

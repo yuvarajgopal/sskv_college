@@ -7,25 +7,28 @@ import AnimatedSection from '../../components/shared/AnimatedSection';
 import DepartmentSectionNav from '../../components/shared/DepartmentSectionNav';
 import ActivityGallery from '../../components/shared/ActivityGallery';
 import CTABanner from '../../components/sections/CTABanner';
+import DepartmentNewsletter from '../../components/shared/DepartmentNewsletter';
 
 const BASE_PHOTO  = '/images/faculty/tamil/';
 const BASE_RESUME = '/pdfs/faculty/tamil/';
+  
 
 const faculty = [
   { name: 'Dr. B. Valli',    qualification: 'MA., M.Phil., BEd., Ph.D', role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}dr-b-valli.jpg`,    resume: `${BASE_RESUME}dr-b-valli.pdf` },
-  { name: 'M. Arulambigai',  qualification: 'MA., M.Phil., NET',         role: 'Assistant Professor',               photo: `${BASE_PHOTO}m-arulambigai.jpg`,  resume: `${BASE_RESUME}m-arulambigai.pdf` },
-  { name: 'K. Priya',        qualification: 'MA., M.Phil., SET., NET',   role: 'Assistant Professor',               photo: `${BASE_PHOTO}k-priya.jpg`,        resume: `${BASE_RESUME}k-priya.pdf` },
-  { name: 'Dr. D. Ammu',     qualification: 'MA., M.Phil., NET., Ph.D',  role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-d-ammu.jpg`,      resume: `${BASE_RESUME}dr-d-ammu.pdf` },
-  { name: 'Dr. R. Kannagi',  qualification: 'MA., M.Phil., NET., Ph.D',  role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-r-kannagi.jpg`,   resume: `${BASE_RESUME}dr-r-kannagi.pdf` },
-  { name: 'Dr. P. Latha',    qualification: 'MA., M.Phil., SET., NET',   role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-p-latha.jpg`,     resume: `${BASE_RESUME}dr-p-latha.pdf` },
-  { name: 'T. Indrani',      qualification: 'MA., NET, MEd',             role: 'Assistant Professor',               photo: `${BASE_PHOTO}t-indrani.jpg`,      resume: `${BASE_RESUME}t-indrani.pdf` },
-  { name: 'U. Revathi',      qualification: 'MA., M.Phil., NET, BEd',    role: 'Assistant Professor',               photo: `${BASE_PHOTO}u-revathi.jpg`,      resume: `${BASE_RESUME}u-revathi.pdf` },
-  { name: 'D. Chithra',      qualification: 'MA., M.Phil., NET, B.Ed.',  role: 'Assistant Professor',               photo: `${BASE_PHOTO}d-chithra.jpg`,      resume: `${BASE_RESUME}d-chithra.pdf` },
-  { name: 'G. Pavithra',     qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}g-pavithra.jpg`,     resume: `${BASE_RESUME}g-pavithra.pdf` },
-  { name: 'B. Bharathi',     qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}b-bharathi.jpg`,     resume: `${BASE_RESUME}b-bharathi.pdf` },
-  { name: 'V. Yuvalakshmi',  qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}v-yuvalakshmi.jpg`,  resume: `${BASE_RESUME}v-yuvalakshmi.pdf` },
-  { name: 'R. Shenbagam',    qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}r-shenbagam.jpg`,    resume: `${BASE_RESUME}r-shenbagam.pdf` },
-  { name: 'K. Sangeetha',    qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}k-sangeetha.jpg`,    resume: `${BASE_RESUME}k-sangeetha.pdf` },
+  { name: 'Ms. M. Arulambigai',  qualification: 'MA., M.Phil., NET',         role: 'Assistant Professor',               photo: `${BASE_PHOTO}m-arulambigai.jpg`,  resume: `${BASE_RESUME}m-arulambigai.pdf` },
+  { name: 'Dr.K. Priya',        qualification: 'MA., M.Phil., SET., NET',   role: 'Assistant Professor',               photo: `${BASE_PHOTO}k-priya.jpg`,        resume: `${BASE_RESUME}k-priya.pdf` },
+  { name: 'Dr. D. Ammu',     qualification: 'M.A., M.Phil., Ph.D., NET.',  role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-d-ammu.jpg`,      resume: `${BASE_RESUME}dr-d-ammu.pdf` },
+  { name: 'Dr. R. Kannagi',  qualification: 'M.A., M.Phil., Ph.D., NET.',  role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-r-kannagi.jpg`,   resume: `${BASE_RESUME}dr-r-kannagi.pdf` },
+  { name: 'Dr. P. Latha',    qualification: 'M.A., M.Phil., Ph.D., NET, SET',   role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-p-latha.jpg`,     resume: `${BASE_RESUME}dr-p-latha.pdf` },
+  { name: 'Ms. T. Indrani',      qualification: 'MA,M.ed, NET ',             role: 'Assistant Professor',               photo: `${BASE_PHOTO}t-indrani.jpg`,      resume: `${BASE_RESUME}t-indrani.pdf` },
+  { name: 'ms. U. Revathi',      qualification: 'MA., M.Phil.,  BEd,  NET.',    role: 'Assistant Professor',               photo: `${BASE_PHOTO}u-revathi.jpg`,      resume: `${BASE_RESUME}u-revathi.pdf` },
+  { name: 'Ms. D. Chithra',      qualification: 'MA., M.Phil.,  B.Ed. NET.',  role: 'Assistant Professor',               photo: `${BASE_PHOTO}d-chithra.jpg`,      resume: `${BASE_RESUME}d-chithra.pdf` },
+  { name: 'Ms.G. Pavithra',     qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}g-pavithra.jpg`,     resume: `${BASE_RESUME}g-pavithra.pdf` },
+  { name: 'Ms. B. Bharathi',     qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}b-bharathi.jpg`,     resume: `${BASE_RESUME}b-bharathi.pdf` },
+  { name: 'Ms. V. Yuvalakshmi',  qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}v-yuvalakshmi.jpg`,  resume: `${BASE_RESUME}v-yuvalakshmi.pdf` },
+  { name: 'Ms. R. Shenbagam',    qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}r-shenbagam.jpg`,    resume: `${BASE_RESUME}r-shenbagam.pdf` },
+  { name: 'Ms. K. Sangeetha',    qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}k-sangeetha.jpg`,    resume: `${BASE_RESUME}k-sangeetha.pdf` },
+   { name: 'D.Tamizharuvi',    qualification: 'M.A.,B.ED.,NET',          role: 'Assistant Professor',               photo: `${BASE_PHOTO}aruvi.jpg`,    resume: `${BASE_RESUME}d._tamizharuvi.pdf` },
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
@@ -150,7 +153,7 @@ export default function TamilDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 bg-red-500/20 hover:bg-red-500/30 text-red-300 text-xs font-semibold rounded-lg transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </div>
@@ -177,7 +180,7 @@ export default function TamilDepartmentPage() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-1.5 w-full py-1.5 bg-red-50 hover:bg-red-100 text-red-700 text-xs font-semibold rounded-lg border border-red-100 transition-colors"
                   >
-                    <FaFilePdf className="text-xs" /> View Resume
+                    <FaFilePdf className="text-xs" /> View Profile
                   </a>
                 </div>
               </AnimatedSection>
@@ -325,6 +328,11 @@ export default function TamilDepartmentPage() {
       </section>
 
       {/* CTA */}
+      <DepartmentNewsletter
+        departmentName="Tamil"
+        pdfHref="/pdfs/newsletter/tamil_1.pdf"
+      />
+
       <CTABanner
         title="Interested in B.A. Tamil?"
         subtitle="Apply now and begin your journey into the world's oldest classical language."

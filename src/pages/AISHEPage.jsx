@@ -9,6 +9,9 @@ const reports = [
   { label: 'AISHE Report 2022-23', pdf: '/pdfs/aishe-report-2022-23.pdf' },
   { label: 'AISHE Report 2023-24', pdf: '/pdfs/aishe-report-2023-24.pdf' },
   { label: 'AISHE Report 2024-25', pdf: '/pdfs/aishe-report-2024-25.pdf' },
+
+  // ✅ Added new button (clean integration)
+  { label: 'IQAC Meeting and Action Taken Reports', pdf: '/pdfs/icc_policy_doc.pdf' },
 ];
 
 export default function AISHEPage() {
@@ -39,10 +42,11 @@ export default function AISHEPage() {
                   href={r.pdf}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 px-6 py-5 bg-primary-900 text-white rounded-xl hover:bg-primary-800 transition-colors group"
-                >
+                  className="flex items-center gap-4 px-6 py-5 bg-primary-900 text-white rounded-xl hover:bg-primary-800 transition-colors group" >
                   <FaFilePdf className="text-2xl text-accent-400 flex-shrink-0" />
-                  <span className="font-heading font-bold text-sm flex-grow">{r.label}</span>
+                  <span className="font-heading font-bold text-sm flex-grow">
+                    {r.label}
+                  </span>
                   <FaExternalLinkAlt className="text-white/40 group-hover:text-accent-400 text-xs flex-shrink-0 transition-colors" />
                 </a>
               </AnimatedSection>
@@ -51,7 +55,10 @@ export default function AISHEPage() {
         </div>
       </section>
 
-      <CTABanner title="Committed to Transparency" subtitle="SSKV College ensures timely and accurate submission of AISHE data every academic year." />
+      <CTABanner
+        title="Committed to Transparency"
+        subtitle="SSKV College ensures timely and accurate submission of AISHE data every academic year."
+      />
     </>
   );
 }

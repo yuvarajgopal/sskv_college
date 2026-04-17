@@ -4,11 +4,11 @@ import AnimatedSection from '../components/shared/AnimatedSection';
 import CTABanner from '../components/sections/CTABanner';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-// ── Drive file IDs ─────────────────────────────────────
+// ✅ Updated Documents (PDF Links)
 const documents = [
-  { id: '116DGd9srNsKOicepw4kn3nqeokGdEalS', label: 'Entrepreneurship Development Cell (ED Cell) — Document 1' },
-  { id: '1No5Rz1L8g70A3K9B4L90h1AnCz_p5BpO', label: 'Entrepreneurship Development Cell (ED Cell) — Document 2' },
-  { id: '1k-0E9FRhbwy-7lH9mQDffmljB69EDEHu', label: 'Entrepreneurship Development Cell (ED Cell) — Document 3' },
+  { file: '/pdfs/ed-cell/2022-23 ED CELL.pdf', label: '2022-23 ED CELL' },
+  { file: '/pdfs/ed-cell/2023-24 ED CELL.pdf', label: '2023-24 ED CELL' },
+  { file: '/pdfs/ed-cell/2025-26 ED CELL.pdf', label: '2025-26 ED CELL' },
 ];
 
 export default function EntrepreneurshipCellPage() {
@@ -29,7 +29,7 @@ export default function EntrepreneurshipCellPage() {
             subtitle="Activities, programmes, and initiatives fostering entrepreneurship"
           />
 
-          {/* 🔥 ADDED CONTENT STARTS HERE */}
+          {/* CONTENT */}
           <div className="bg-white rounded-2xl shadow-sm border border-neutral-100 p-6 space-y-6 text-neutral-700 leading-relaxed">
             
             <p>
@@ -56,21 +56,11 @@ export default function EntrepreneurshipCellPage() {
               <h3 className="text-lg font-semibold text-primary-800 mb-2">Activities and Programmes</h3>
 
               <ul className="list-disc pl-5 space-y-3">
-                <li>
-                  <strong>Workshops & Seminars:</strong> Sessions on startup fundamentals, marketing, finance, and digital tools.
-                </li>
-                <li>
-                  <strong>Business Idea Competitions:</strong> Platforms for students to pitch ideas and gain feedback/support.
-                </li>
-                <li>
-                  <strong>Mentorship & Networking:</strong> Interaction with industry experts, alumni, and entrepreneurs.
-                </li>
-                <li>
-                  <strong>Training Programmes:</strong> Skill-building in leadership, communication, and business management.
-                </li>
-                <li>
-                  <strong>Industrial Visits:</strong> Exposure to startups, incubators, and real-world business environments.
-                </li>
+                <li><strong>Workshops & Seminars:</strong> Sessions on startup fundamentals, marketing, finance, and digital tools.</li>
+                <li><strong>Business Idea Competitions:</strong> Platforms for students to pitch ideas and gain feedback/support.</li>
+                <li><strong>Mentorship & Networking:</strong> Interaction with industry experts, alumni, and entrepreneurs.</li>
+                <li><strong>Training Programmes:</strong> Skill-building in leadership, communication, and business management.</li>
+                <li><strong>Industrial Visits:</strong> Exposure to startups, incubators, and real-world business environments.</li>
               </ul>
 
               <p className="mt-3">
@@ -79,35 +69,27 @@ export default function EntrepreneurshipCellPage() {
             </div>
 
           </div>
-          {/* 🔥 CONTENT ENDS HERE */}
 
-          <div className="space-y-8 mt-10">
-            {documents.map((doc, i) => (
-              <AnimatedSection key={doc.id} delay={i * 0.08}>
-                <div className="bg-white rounded-2xl border border-neutral-100 shadow-sm overflow-hidden">
-                  <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
-                    <p className="font-semibold text-primary-800 font-heading text-sm">{doc.label}</p>
-                    <a
-                      href={`https://drive.google.com/file/d/${doc.id}/view`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs font-semibold text-primary-600 hover:text-accent-600 transition-colors"
-                    >
-                      Open in Drive <FaExternalLinkAlt className="text-[10px]" />
-                    </a>
-                  </div>
-                  <div className="w-full" style={{ height: '520px' }}>
-                    <iframe
-                      src={`https://drive.google.com/file/d/${doc.id}/preview`}
-                      title={doc.label}
-                      className="w-full h-full border-0"
-                      allow="autoplay"
-                    />
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
+          {/* ✅ BUTTON SECTION */}
+          <div className="mt-10 text-center">
+            <SectionHeading title="ED Cell Reports" />
+
+            <div className="flex flex-col items-center gap-4 mt-6">
+              {documents.map((doc, i) => (
+                <AnimatedSection key={i}>
+                  <a
+                    href={doc.file}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-72 flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-blue-900 text-white hover:bg-blue-800 transition font-semibold text-sm"
+                  >
+                    {doc.label} <FaExternalLinkAlt className="text-xs" />
+                  </a>
+                </AnimatedSection>
+              ))}
+            </div>
           </div>
+
         </div>
       </section>
 

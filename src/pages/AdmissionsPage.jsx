@@ -1,6 +1,16 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaClipboardCheck, FaDownload, FaFileAlt, FaCheckCircle, FaPhone, FaEnvelope, FaChevronDown } from 'react-icons/fa';
+import {
+  FaClipboardCheck,
+  FaDownload,
+  FaFileAlt,
+  FaCheckCircle,
+  FaPhone,
+  FaEnvelope,
+  FaChevronDown,
+  FaMobileAlt
+} from 'react-icons/fa';
+
 import Hero from '../components/shared/Hero';
 import Button from '../components/shared/Button';
 import SectionHeading from '../components/shared/SectionHeading';
@@ -44,7 +54,7 @@ const faqs = [
   },
   {
     q: 'What placement support does the college offer?',
-    a: 'Our Placement Cell actively conducts on-campus recruitment drives with a 75% placement rate. Students receive training in aptitude, communication, and technical skills.',
+    a: 'Our Placement Cell actively conducts on-campus recruitment drives with a 75% placement rate.',
   },
 ];
 
@@ -56,21 +66,25 @@ function FAQItem({ faq, index }) {
       <div className="bg-white rounded-xl shadow-sm border border-neutral-100 overflow-hidden">
         <button
           onClick={() => setOpen(!open)}
-          className="w-full flex items-center justify-between p-5 text-left hover:bg-neutral-50 transition-colors"
+          className="w-full flex items-center justify-between p-5 text-left hover:bg-neutral-50"
         >
           <span className="font-semibold text-primary-800 text-sm pr-4">{faq.q}</span>
-          <FaChevronDown className={`text-accent-400 flex-shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : ''}`} />
+
+          <FaChevronDown
+            className={`text-accent-400 transition-transform duration-300 ${
+              open ? 'rotate-180' : ''
+            }`}
+          />
         </button>
+
         <AnimatePresence>
           {open && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="overflow-hidden"
             >
-              <div className="px-5 pb-5 text-neutral-600 text-sm leading-relaxed border-t border-neutral-100 pt-4">
+              <div className="px-5 pb-5 text-neutral-600 text-sm border-t pt-4">
                 {faq.a}
               </div>
             </motion.div>
@@ -91,40 +105,37 @@ export default function AdmissionsPage() {
         breadcrumb="Admissions"
         bannerImage={images.admissions.banner}
       >
-        <div className="flex flex-wrap gap-3 justify-center">
-          <Button variant="gold" size="lg" href="/apply">
-            Apply Online
-          </Button>
-          <Button variant="outline" size="lg" href="/fees">
-            Pay Fees
-          </Button>
+        <div className="flex gap-3 justify-center">
+          <Button variant="gold" size="lg" href="/apply">Apply Online</Button>
+          <Button variant="outline" size="lg" href="/fees">Pay Fees</Button>
         </div>
       </Hero>
 
-      {/* Admission Process Steps */}
+      {/* Admission Process */}
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto">
-          <SectionHeading
-            title="Admission Process"
-            subtitle="Follow these simple steps to begin your journey at SSKV College"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <SectionHeading title="Admission Process" />
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {steps.map((step, index) => (
-              <AnimatedSection key={step.title} delay={index * 0.15}>
+              <AnimatedSection key={index}>
                 <div className="relative text-center p-6">
-                  {/* Step number */}
-                  <div className="w-16 h-16 rounded-full bg-accent-400 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <step.icon className="text-2xl text-primary-900" />
+
+                  <div className="w-16 h-16 bg-accent-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <step.icon className="text-primary-900 text-xl" />
                   </div>
-                  <span className="absolute top-4 right-1/2 translate-x-[52px] text-xs font-bold text-accent-600 bg-accent-50 px-2 py-0.5 rounded-full">
+
+                  {/* STEP NUMBER */}
+                  <span className="absolute top-2 right-1/2 translate-x-[55px] text-xs bg-accent-50 text-accent-600 px-2 py-0.5 rounded-full font-bold">
                     Step {index + 1}
                   </span>
-                  <h3 className="text-lg font-bold text-primary-800 font-heading mb-2">{step.title}</h3>
-                  <p className="text-neutral-600 text-sm leading-relaxed">{step.description}</p>
 
-                  {/* Connector line (hidden on last item and mobile) */}
-                  {index < steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] h-0.5 bg-accent-200" />
+                  <h3 className="font-bold text-primary-800">{step.title}</h3>
+                  <p className="text-sm text-neutral-600">{step.description}</p>
+
+                  {/* CONNECTOR LINE */}
+                  {index !== steps.length - 1 && (
+                    <div className="hidden lg:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] h-[2px] bg-accent-200" />
                   )}
                 </div>
               </AnimatedSection>
@@ -133,111 +144,86 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      {/* Programs & Eligibility */}
+      {/* Programs */}
       <section className="section-padding bg-neutral-50">
         <div className="container-custom mx-auto">
-          <SectionHeading
-            title="Programs & Eligibility"
-            subtitle="Find the right program that matches your interests and career goals"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
-            {departments.map((dept, index) => (
-              <AnimatedSection key={dept.id} delay={index * 0.05}>
-                <div className="bg-white rounded-xl p-5 shadow-sm border border-neutral-100 hover:shadow-md transition-all duration-300 flex items-start gap-4">
-                  <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: `${dept.color}15` }}
-                  >
-                    <dept.icon className="text-lg" style={{ color: dept.color }} />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-bold text-primary-800 text-sm">{dept.degree}</h3>
-                    <div className="flex flex-wrap gap-3 mt-1.5 text-xs text-neutral-500">
-                      <span>{dept.duration}</span>
-                      <span>•</span>
-                      <span>{dept.eligibility}</span>
-                      {dept.shifts && (
-                        <>
-                          <span>•</span>
-                          <span className="text-accent-600 font-medium">{dept.shifts.join(' & ')}</span>
-                        </>
-                      )}
-                    </div>
-                  </div>
+          <SectionHeading title="Programs & Eligibility" />
+
+          <div className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+            {departments.map((dept) => (
+              <div key={dept.id} className="bg-white p-5 rounded-xl flex gap-4 border">
+
+                <div
+                  className="w-10 h-10 rounded-lg flex items-center justify-center"
+                  style={{ backgroundColor: `${dept.color}15` }}
+                >
+                  <dept.icon style={{ color: dept.color }} />
                 </div>
-              </AnimatedSection>
+
+                <div>
+                  <h3 className="font-bold text-primary-800">{dept.degree}</h3>
+                  <p className="text-xs text-neutral-500">
+                    {dept.duration} • {dept.eligibility}
+                  </p>
+                </div>
+
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Documents Required */}
+      {/* Documents + Contact */}
       <section className="section-padding bg-white">
-        <div className="container-custom mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <AnimatedSection direction="left">
-              <h2 className="text-3xl font-bold text-primary-800 font-heading mb-6">Documents Required</h2>
-              <div className="space-y-3">
-                {documents.map((doc, index) => (
-                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-neutral-50">
-                    <FaCheckCircle className="text-accent-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-neutral-700 text-sm">{doc}</span>
-                  </div>
-                ))}
-              </div>
-            </AnimatedSection>
+        <div className="container-custom mx-auto grid lg:grid-cols-2 gap-10 max-w-5xl">
 
-            <AnimatedSection direction="right">
-              <div className="bg-gradient-to-br from-accent-50 to-accent-100 rounded-2xl p-8 border border-accent-200">
-                <h3 className="text-2xl font-bold text-primary-800 font-heading mb-4">
-                  Contact Admissions
-                </h3>
-                <p className="text-neutral-600 mb-6">
-                  Have questions about admissions? Our team is here to help you through every step of the process.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-accent-400 flex items-center justify-center">
-                      <FaPhone className="text-primary-900" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-neutral-500">Phone</div>
-                      <div className="font-semibold text-primary-800 text-sm">{COLLEGE_INFO.phone.join(' / ')}</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-accent-400 flex items-center justify-center">
-                      <FaEnvelope className="text-primary-900" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-neutral-500">Email</div>
-                      <div className="font-semibold text-primary-800 text-sm">{COLLEGE_INFO.email[1]}</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-6">
-                  <Button variant="primary" size="md" href="/contact">
-                    Send an Inquiry
-                  </Button>
-                </div>
+          {/* Documents */}
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Documents Required</h2>
+            {documents.map((doc, i) => (
+              <div key={i} className="flex gap-2 mb-2">
+                <FaCheckCircle className="text-accent-400 mt-1" />
+                <span className="text-sm">{doc}</span>
               </div>
-            </AnimatedSection>
+            ))}
           </div>
+
+          {/* Contact */}
+          <div className="bg-accent-50 p-6 rounded-xl">
+            <h3 className="text-xl font-bold mb-4">Contact Admissions</h3>
+
+            {/* Landline */}
+            <div className="flex gap-3 mb-3">
+              <FaPhone />
+              <span>{COLLEGE_INFO.phone.join(' / ')}</span>
+            </div>
+
+            {/* Mobile FIXED */}
+            <div className="flex gap-3 mb-3">
+              <FaMobileAlt />
+              <span>8680023003 / 7904428316</span>
+            </div>
+
+            {/* Email */}
+            <div className="flex gap-3">
+              <FaEnvelope />
+              <span>{COLLEGE_INFO.email[1]}</span>
+            </div>
+
+            <Button className="mt-4" href="/contact">Send Inquiry</Button>
+          </div>
+
         </div>
       </section>
 
       {/* FAQ */}
       <section className="section-padding bg-neutral-50">
-        <div className="container-custom mx-auto">
-          <SectionHeading
-            title="Frequently Asked Questions"
-            subtitle="Find answers to common questions about admissions at SSKV College"
-          />
-          <div className="space-y-3 max-w-3xl mx-auto">
-            {faqs.map((faq, index) => (
-              <FAQItem key={index} faq={faq} index={index} />
-            ))}
-          </div>
+        <div className="container-custom mx-auto max-w-3xl">
+          <SectionHeading title="FAQ" />
+
+          {faqs.map((faq, i) => (
+            <FAQItem key={i} faq={faq} index={i} />
+          ))}
         </div>
       </section>
     </>

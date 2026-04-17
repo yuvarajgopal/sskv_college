@@ -12,7 +12,7 @@ const members = [
   { sl: 6, designation: 'HOD – Mathematics',             name: 'Ms. J. Suganthi',           role: 'Co-opted Member',  contact: '9444759527' },
   { sl: 7, designation: 'HOD – English',                 name: 'Ms. H. Anusha',             role: 'Co-opted Member',  contact: '9894285506' },
   { sl: 8, designation: 'HOD – Computer Science',        name: 'Ms. R. Ramya',              role: 'Co-opted Member',  contact: '9790566753' },
-  { sl: 9, designation: 'HOD – Commerce',                name: 'Ms. P. Anandhalakshmi',     role: 'Co-opted Member',  contact: '' },
+  { sl: 9, designation: 'HOD – Commerce',                name: 'Ms. P. Anandhalakshmi',     role: 'Co-opted Member',  contact: '9585673438' },
 ];
 
 const purpose = {

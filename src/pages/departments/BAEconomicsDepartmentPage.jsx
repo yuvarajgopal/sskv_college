@@ -5,6 +5,7 @@ import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
 import CTABanner from '../../components/sections/CTABanner';
+import DepartmentNewsletter from '../../components/shared/DepartmentNewsletter';
 import DepartmentSectionNav from '../../components/shared/DepartmentSectionNav';
 import ActivityGallery from '../../components/shared/ActivityGallery';
 
@@ -118,44 +119,66 @@ export default function BAEconomicsDepartmentPage() {
                 About the Department
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                The Department of Economics at SSKV College of Arts and Science for Women is dedicated
-                to providing students with a strong foundation in economic theory, quantitative techniques,
-                and the analytical skills needed to understand the complex forces that shape markets,
-                institutions, and public policy. The B.A. Economics programme blends classical and
-                contemporary economic thought with applied perspectives drawn from the Indian and global
-                economy.
+               The college proudly introduces the Bachelor of Arts (B.A.) in Economics programme from the academic year 2026–27, 
+               marking a significant step towards strengthening the institution’s commitment to social sciences and contemporary 
+               academic disciplines.
+
+
               </p>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                Through a CBCS-aligned curriculum, students explore microeconomics, macroeconomics,
-                development economics, public finance, international trade, and econometrics. The
-                department emphasises critical thinking, data-driven reasoning, and the ability to
-                translate economic ideas into practical insight, preparing graduates for careers in
-                banking, finance, research, civil services, and policy analysis.
+                Economics is a dynamic and ever-evolving field that studies how individuals, households, businesses, 
+                and governments make decisions in the context of limited resources. The B.A. Economics programme is 
+                designed to equip students with strong analytical thinking, problem-solving abilities, and a deep understanding of
+                 economic systems at both national and global levels.
               </p>
 
               <h3 className="text-2xl md:text-3xl font-bold text-primary-800 font-heading mb-3">
-                Vision
+                Programme Highlights
               </h3>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                To nurture economically literate, analytically strong, and socially conscious women
-                graduates who can contribute meaningfully to the economic development and policy-making
-                landscape of the nation.
-              </p>
+                The curriculum offers a balanced blend of theoretical knowledge and quantitative skills, enabling 
+                students to understand real-world economic issues with clarity and confidence. Key areas of study include:
+                <ul> <li>•	  Microeconomics and Macroeconomics  </li>
+                <li>•	  Indian Economy and Development Studies </li>
+                <li>•	  Statistics for Economics  </li>
+                <li>•	  Econometrics and Data Analysis   </li>
+                <li>•	  Public Finance and Policy Studies    </li>
+                 <li>•	  International Economics and Trade     </li>
+                </ul>	<br></br> 
+                The programme also encourages students to engage with contemporary issues such as inflation, unemployment, poverty, sustainable development, and digital economy trends.</p>
 
               <h3 className="text-2xl md:text-3xl font-bold text-primary-800 font-heading mb-3">
-                Mission
+                Learning Outcomes
               </h3>
               <p className="text-neutral-600 leading-relaxed mb-2">
-                To impart rigorous training in economic theory, quantitative methods, and applied
-                economic analysis.
+             Students enrolling in B.A. Economics will develop:
+ •	Strong analytical and critical thinking skills <br></br> 
+•	 Ability to interpret economic data and trends <br></br> 
+•	 Understanding of policy-making and governance <br></br> 
+•	 Quantitative and statistical reasoning abilities <br></br> 
+•	 Awareness of national and global economic challenges  <br></br> 
+
               </p>
+              <h3 className="text-2xl md:text-3xl font-bold text-primary-800 font-heading mb-3">
+                Career Opportunities
+              </h3>
               <p className="text-neutral-600 leading-relaxed mb-2">
-                To foster awareness of contemporary economic issues, public policy, and sustainable
-                development.
+                Graduates of B.A. Economics can pursue a wide range of career paths in both public and private sectors, including:
+                •	Banking and Financial Services <br></br> 
+•	Civil Services and Competitive Examinations <br></br> 
+•	Economic Research and Data Analysis <br></br> 
+•	Teaching and Academic Careers <br></br> 
+•	Policy Research and Development Organisations <br></br> 
+•	Higher Studies such as M.A. Economics, MBA, and professional certifications <br></br> 
+
               </p>
+               <h3 className="text-2xl md:text-3xl font-bold text-primary-800 font-heading mb-3">
+                Vision of the Programme
+              </h3>
               <p className="text-neutral-600 leading-relaxed">
-                To equip students with the skills and confidence to pursue careers in research,
-                industry, government, and higher education.
+                The introduction of B.A. Economics aims to empower students—especially young women—with the knowledge and skills 
+                required to actively participate in economic decision-making and nation-building. The programme nurtures intellectual 
+                growth, social responsibility, and career readiness in a rapidly changing global economy.
               </p>
             </AnimatedSection>
           </div>
@@ -327,6 +350,11 @@ export default function BAEconomicsDepartmentPage() {
           <ActivityGallery images={activityPhotos} color="amber" />
         </div>
       </section>
+      <DepartmentNewsletter
+        departmentName="B.A. Economics"
+        pdfHref="/pdfs/newsletter/SSKV_Newsletter_2026.pdf"
+      />
+
 
       <CTABanner
         title="Interested in B.A. Economics?"

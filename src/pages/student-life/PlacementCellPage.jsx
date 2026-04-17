@@ -30,26 +30,42 @@ const services = [
 ];
 
 const placementStats = [
-  { year: '2022-2023', companies: 10, color: 'bg-blue-500' },
-  { year: '2023-2024', companies: 15, color: 'bg-green-500' },
-  { year: '2024-2025', companies: 18, color: 'bg-purple-500' },
-  { year: '2025-2026', companies: 30, color: 'bg-yellow-500' },
+  { year: '2022-2023', companies: 79, color: 'bg-blue-500' },
+  { year: '2023-2024', companies: 141, color: 'bg-green-500' },
+  { year: '2024-2025', companies: 221, color: 'bg-purple-500' },
+  { year: '2025-2026', companies: 231, color: 'bg-yellow-500' },
 ];
 
-// ✅ UPDATED STRUCTURE (READY FOR LOGOS)
+const maxCompanies = Math.max(...placementStats.map(stat => stat.companies));
+
 const recruiters = [
-  { name: 'Adidas', logo: '/images/placement_cel/addias.jpg' },
-  { name: 'Adenza', logo: '/images/placement_cel/advenza.jpg' },
-  { name: 'Airtel', logo: '/images/placement_cel/airtel.jpg' },
-  { name: 'Avasoft', logo: '/images/placement_cel/avsoft.jpg' },
-  { name: 'echoVME', logo: '/images/placement_cel/echo.jpg' },
-  { name: 'Goldman Sachs', logo: '/images/placement_cel/gold_sachs.jpg' },
-  { name: 'LTIMindtree', logo: '/images/placement_cel/LT_tree.jpg' },
-  { name: 'PreludeSys', logo: '/images/placement_cel/prelude.jpg' },
-  { name: 'State Street', logo: '/images/placement_cel/state.jpg' },
-  { name: 'SurveySparrow', logo: '/images/placement_cel/survey.jpg' },
-  { name: 'Sutherland', logo: '/images/placement_cel/sutherland.jpg' },
-  { name: 'Verizon', logo: '/images/placement_cel/verizon.jpg' },
+  { name: 'HDB', logo: '/images/placement_cel/HDB.jpg' },
+  { name: 'Allins', logo: '/images/placement_cel/allins.jpg' },
+  { name: 'quess', logo: '/images/placement_cel/quess.jpg' },
+  { name: 'cafs', logo: '/images/placement_cel/cafs.jpg' },
+  { name: 'flezo', logo: '/images/placement_cel/flezo.jpg' },
+  { name: 'izeon', logo: '/images/placement_cel/izeon.jpg' },
+  { name: 'ienergnier', logo: '/images/placement_cel/ienergnier.jpg' },
+  { name: 'Systopic', logo: '/images/placement_cel/s.jpg' },
+  { name: 'source_corp', logo: '/images/placement_cel/source_corp.jpg' },
+  { name: 'Cavinkare', logo: '/images/placement_cel/cavincare.jpg' },
+  { name: 'forte', logo: '/images/placement_cel/forte.jpg' },
+  { name: '247', logo: '/images/placement_cel/247.jpg' },
+  { name: 'talent trenz', logo: '/images/placement_cel/talent.jpg' },
+  { name: 'mmc', logo: '/images/placement_cel/mmc.jpg' },
+  { name: 'india_cement', logo: '/images/placement_cel/india_cement.jpg' },
+  { name: 'AlfaPTE', logo: '/images/placement_cel/a.jpg' },
+  { name: 'tatamotors', logo: '/images/placement_cel/tatamotors.jpg' },
+  { name: 'medlplus', logo: '/images/placement_cel/medlplus.jpg' },
+  { name: 'Mastermind', logo: '/images/placement_cel/mm.jpg' },
+  { name: 'delivede', logo: '/images/placement_cel/delivede.jpg' },
+  { name: 'sbi_life', logo: '/images/placement_cel/sbi_life.jpg' },
+  { name: 'v4u', logo: '/images/placement_cel/v4u.jpg' },
+  { name: 'ison', logo: '/images/placement_cel/ison.jpg' },
+  { name: 'cameo', logo: '/images/placement_cel/cameo.jpg' },
+  { name: 'equitas', logo: '/images/placement_cel/equitas.jpg' },
+  { name: 'indus', logo: '/images/placement_cel/indus.jpg' },
+  { name: 'muhoot', logo: '/images/placement_cel/muhoot.jpg' }
 ];
 
 export default function PlacementCellPage() {
@@ -65,9 +81,9 @@ export default function PlacementCellPage() {
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto max-w-5xl">
 
-          <SectionHeading 
-            title="Placement Cell" 
-            subtitle="Bridging academic excellence and professional success" 
+          <SectionHeading
+            title="Placement Cell"
+            subtitle="Bridging academic excellence and professional success"
           />
 
           {/* SERVICES */}
@@ -76,7 +92,9 @@ export default function PlacementCellPage() {
               <AnimatedSection key={i} delay={i * 0.06}>
                 <div className="bg-primary-50 rounded-2xl p-5 text-center border border-primary-100 h-full">
                   <s.icon className="text-primary-700 text-2xl mx-auto mb-2" />
-                  <p className="text-xs font-semibold text-primary-800 font-heading">{s.label}</p>
+                  <p className="text-xs font-semibold text-primary-800 font-heading">
+                    {s.label}
+                  </p>
                 </div>
               </AnimatedSection>
             ))}
@@ -86,23 +104,31 @@ export default function PlacementCellPage() {
           <AnimatedSection>
             <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-8">
               <h3 className="font-bold text-primary-800 mb-3">Overview</h3>
-              <p className="text-sm text-neutral-600 leading-relaxed mb-4">
-                The placement cell of the college was established on 11 August 2010 with the sole aim of finding maximum number of placements for the students. Ms.N.Ramya, Assistant Professor of Mathematics is the Placement Officer. In 2025-26, 231 students received offer letters.
+              <p className="text-sm text-neutral-600 leading-relaxed">
+                The placement cell of the college was established on 11 August 2010 with the aim of ensuring maximum placements. In 2025-26, 231 students received offer letters.
               </p>
             </div>
           </AnimatedSection>
 
-          {/* PLACEMENT STATISTICS */}
-          <SectionHeading title="Placement Statistics" subtitle="No of companies visited and No of Students Placed" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          {/* STATS */}
+          <SectionHeading
+            title="Placement Statistics"
+            subtitle="No of companies visited and No of Students Placed"
+          />
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            
+            {/* BAR CHART */}
             <AnimatedSection>
               <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
                 {placementStats.map((stat, i) => (
                   <div key={i} className="flex items-center gap-4 mb-3">
                     <span className="w-24 text-sm">{stat.year}</span>
                     <div className="flex-1 bg-gray-200 h-3 rounded">
-                      <div className={`${stat.color} h-3 rounded`} style={{ width: `${(stat.companies / 30) * 100}%` }} />
+                      <div
+                        className={`${stat.color} h-3 rounded`}
+                        style={{ width: `${(stat.companies / maxCompanies) * 100}%` }}
+                      />
                     </div>
                     <span>{stat.companies}</span>
                   </div>
@@ -110,57 +136,39 @@ export default function PlacementCellPage() {
               </div>
             </AnimatedSection>
 
+            {/* COMPANY COUNT */}
             <AnimatedSection>
               <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 text-center">
-                <FaUserGraduate className="text-5xl text-blue-500 mx-auto mb-3" />
-                <h3 className="font-bold text-primary-800">Students Placed</h3>
-                <p className="text-3xl font-bold text-primary-800">141</p>
+                <FaBuilding className="text-5xl text-blue-500 mx-auto mb-3" />
+                <h3 className="font-bold text-primary-800">Number of Companies</h3>
+                <p className="text-3xl font-bold text-primary-800">27</p>
               </div>
             </AnimatedSection>
 
           </div>
 
-          {/* 🔥 UPDATED RECRUITERS SECTION */}
-          <SectionHeading title="Our Recruiters" subtitle="Leading companies hiring our talented students" />
+          {/* RECRUITERS */}
+          <SectionHeading
+            title="Our Recruiters"
+            subtitle="Leading companies hiring our talented students"
+          />
 
           <AnimatedSection>
             <div className="bg-white rounded-2xl p-8 border border-neutral-100 shadow-sm mb-12">
-
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center">
-
                 {recruiters.map((r, i) => (
-                  <div
-                    key={i}
-                    className="flex flex-col items-center justify-center p-4 bg-neutral-50 rounded-xl border border-neutral-100 hover:shadow-md transition w-[140px]"
-                  >
-
-                    {/* LOGO BOX */}
-                    <div className="w-[120px] h-[60px] flex items-center justify-center bg-white rounded-md overflow-hidden">
-                      {r.logo ? (
-                        <img
-                          src={r.logo}
-                          alt={r.name}
-                          className="max-w-full max-h-full object-contain"
-                        />
-                      ) : (
-                        <span className="text-xs text-neutral-400">Add Logo</span>
-                      )}
-                    </div>
-
-                    {/* NAME */}
-                    <p className="text-xs font-semibold text-neutral-700 text-center mt-2">
-                      {r.name}
-                    </p>
-
+                  <div key={i} className="flex flex-col items-center p-4 bg-neutral-50 rounded-xl border border-neutral-100 w-[140px]">
+                    <img src={r.logo} alt={r.name} className="h-12 object-contain mb-2" />
+                    <p className="text-xs font-semibold text-neutral-700 text-center">{r.name}</p>
                   </div>
                 ))}
-
               </div>
             </div>
           </AnimatedSection>
 
           {/* MILESTONES */}
           <SectionHeading title="Key Milestones" />
+
           <div className="space-y-4">
             {milestones.map((m, i) => (
               <AnimatedSection key={i}>

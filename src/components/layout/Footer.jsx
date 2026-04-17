@@ -172,12 +172,19 @@ export default function Footer() {
                 </li>
                 <li className="flex gap-2 text-sm">
                   <FaPhone className="text-accent-400 mt-0.5 flex-shrink-0 text-xs" />
-                  <div className="text-white/60 text-xs">
-                    {COLLEGE_INFO.phone.map((p) => (
-                      <div key={p}>{p}</div>
+                  <div className="text-white/60 text-xs space-y-0.5">
+                    {COLLEGE_INFO.phoneList.map((p) => (
+                      <a
+                        key={p.tel}
+                        href={`tel:${p.tel}`}
+                        className="block hover:text-accent-400 transition-colors"
+                      >
+                        <span className="text-white/40">{p.label}:</span> {p.display}
+                      </a>
                     ))}
                   </div>
                 </li>
+                
                 <li className="flex gap-2 text-sm">
                   <FaEnvelope className="text-accent-400 mt-0.5 flex-shrink-0 text-xs" />
                   <div className="text-white/60 text-xs">

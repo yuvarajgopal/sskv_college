@@ -7,6 +7,7 @@ import AnimatedSection from '../../components/shared/AnimatedSection';
 import DepartmentSectionNav from '../../components/shared/DepartmentSectionNav';
 import ActivityGallery from '../../components/shared/ActivityGallery';
 import CTABanner from '../../components/sections/CTABanner';
+import DepartmentNewsletter from '../../components/shared/DepartmentNewsletter';
 
 const BASE_PHOTO  = '/images/faculty/bcom-general/';
 const BASE_RESUME = '/pdfs/faculty/bcom-general/';
@@ -16,17 +17,17 @@ const faculty = [
   { name: 'P. Anandhalakshmi', qualification: 'M.Com., M.Phil.',                                          role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}p-anandhalakshmi.jpg`, resume: `${BASE_RESUME}p-anandhalakshmi.pdf` },
   { name: 'K. Thenmozhi',      qualification: 'M.Com., MBA., M.Phil., MA (PM&IR), PG AGM (IIM), NET',     role: 'Assistant Professor',               photo: `${BASE_PHOTO}k-thenmozhi.jpg`,       resume: `${BASE_RESUME}k-thenmozhi.pdf` },
   { name: 'Dr. G. Rajathi',    qualification: 'M.Com., MBA., Ph.D.',                                      role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-g-rajathi.jpg`,      resume: `${BASE_RESUME}dr-g-rajathi.pdf` },
-  { name: 'K. Vijayalakshmi',  qualification: 'M.Com',                                                    role: 'Assistant Professor',               photo: `${BASE_PHOTO}k-vijayalakshmi.jpg`,   resume: `${BASE_RESUME}k-vijayalakshmi.pdf` },
   { name: 'R. Ponmani',        qualification: 'M.Com',                                                    role: 'Assistant Professor',               photo: `${BASE_PHOTO}r-ponmani.jpg`,         resume: `${BASE_RESUME}r-ponmani.pdf` },
+  { name: 'V.Yamini ',        qualification: 'M.Com',                                                    role: 'Assistant Professor',                   photo: `${BASE_PHOTO}yamini.jpg`,   resume: `${BASE_RESUME}yamini.pdf` },
   // Shift II
-  { name: 'K. Sridevi',        qualification: 'M.Com., M.Phil., SET., B.Ed., (Ph.D)',                     role: 'Assistant Professor',               photo: `${BASE_PHOTO}k-sridevi.jpg`,         resume: `${BASE_RESUME}k-sridevi.pdf` },
+  
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
   const [failed, setFailed] = useState(false);
   const sizeClass = size === 'lg'
     ? 'w-24 h-24 text-4xl'
-    : 'w-14 h-14 text-2xl';
+    : 'w-24 h-24 text-2xl';
 
   if (!failed) {
     return (
@@ -187,7 +188,7 @@ export default function BComGeneralDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 bg-orange-500/20 hover:bg-orange-500/30 text-orange-300 text-xs font-semibold rounded-lg transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </div>
@@ -215,7 +216,7 @@ export default function BComGeneralDepartmentPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 w-full py-1.5 bg-orange-50 hover:bg-orange-100 text-orange-700 text-xs font-semibold rounded-lg border border-orange-100 transition-colors"
                     >
-                      <FaFilePdf className="text-xs" /> View Resume
+                      <FaFilePdf className="text-xs" /> View Profile
                     </a>
                   </div>
                 </AnimatedSection>
@@ -377,6 +378,11 @@ export default function BComGeneralDepartmentPage() {
       </section>
 
       {/* CTA Banner */}
+      <DepartmentNewsletter
+        departmentName="B.Com (General)"
+        pdfHref="/pdfs/newsletter/SSKV_Newsletter_2026.pdf"
+      />
+
       <CTABanner
         title="Interested in B.Com (General)?"
         subtitle="Apply now and build the commercial knowledge and financial skills for a successful career."
