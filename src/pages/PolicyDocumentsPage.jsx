@@ -1,4 +1,4 @@
-import { FaFilePdf, FaDownload, FaShieldAlt, FaUsers, FaBook, FaLeaf, FaGavel, FaLaptop, FaBriefcase } from 'react-icons/fa';
+import { FaFilePdf, FaDownload, FaShieldAlt, FaUsers, FaBook, FaLeaf, FaGavel, FaLaptop, FaBriefcase, FaClipboardList, FaTools, FaHandsHelping, FaWheelchair } from 'react-icons/fa';
 import Hero from '../components/shared/Hero';
 import AnimatedSection from '../components/shared/AnimatedSection';
 import CTABanner from '../components/sections/CTABanner';
@@ -11,14 +11,60 @@ const categories = [
     name: 'Student Welfare & Safety',
     icon: FaShieldAlt,
     color: '#e74c3c',
-      policies: [
+    policies: [
       { title: 'Anti-Ragging Policy', file: 'anti_ragging_policy.pdf', available: true },
-      { title: 'Anti sexual Harassment policy (ICC)', file: 'sexual-harassment-policy.pdf', available: true },
+      { title: 'Anti Sexual Harassment Policy (ICC)', file: 'sexual-harassment-policy.pdf', available: true },
       { title: 'Grievance Redressal Policy', file: 'grievance-redressal-policy.pdf', available: true },
-    
     ],
   },
-  
+  {
+    name: 'Admission Policy',
+    icon: FaClipboardList,
+    color: '#3498db',
+    policies: [
+      { title: 'Admission Policy — Rules and Regulations', file: 'admission-policy.pdf.pdf', available: true },
+    ],
+  },
+  {
+    name: 'Recruitment Policy',
+    icon: FaBriefcase,
+    color: '#8e44ad',
+    policies: [
+      { title: 'Policies on Recruitment and Promotion', file: 'recruitment.pdf', available: true },
+    ],
+  },
+  {
+    name: 'Maintenance Policy',
+    icon: FaTools,
+    color: '#e67e22',
+    policies: [
+      { title: 'Policy for Maintenance of Physical, Academic & Support Facilities', file: 'policy for maintance.pdf', available: true },
+    ],
+  },
+  {
+    name: 'Extension Activity Policy',
+    icon: FaHandsHelping,
+    color: '#16a085',
+    policies: [
+      { title: 'Extension Activities — Policy and Guidelines', file: 'extension activity.pdf', available: true },
+    ],
+  },
+  {
+    name: 'Green Campus Policy',
+    icon: FaLeaf,
+    color: '#27ae60',
+    policies: [
+      { title: 'Green Campus Policy — Sustainable & Eco-Friendly Practices', file: 'green campus.pdf', available: true },
+    ],
+  },
+  {
+    name: 'Divyangjan Policy',
+    icon: FaWheelchair,
+    color: '#2980b9',
+    policies: [
+      { title: 'Divyangjan Policy — Inclusion of Students with Disabilities', file: 'divyngan policy.pdf', available: true },
+    ],
+  },
 ];
 // ─────────────────────────────────────────────────────────────────────────────
 

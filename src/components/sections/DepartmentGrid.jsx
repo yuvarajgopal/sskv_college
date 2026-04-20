@@ -10,6 +10,10 @@ export default function DepartmentGrid({ limit, showFilter = true }) {
 
   const filtered = activeCategory === 'all'
     ? departments
+    : activeCategory === 'shift-i'
+    ? departments.filter((d) => d.shift !== 'Shift II')
+    : activeCategory === 'shift-ii'
+    ? departments.filter((d) => d.shift === 'Shift II')
     : departments.filter((d) => d.category === activeCategory);
 
   const displayed = limit ? filtered.slice(0, limit) : filtered;
@@ -62,7 +66,7 @@ export default function DepartmentGrid({ limit, showFilter = true }) {
                     description={dept.description}
                     icon={dept.icon}
                     color={dept.color}
-                    badge={dept.shifts ? `${dept.shifts.length} Shifts` : null}
+                    badge={dept.shift ?? (dept.shifts ? `${dept.shifts.length} Shifts` : null)}
                   />
                 </Link>
               ) : (
@@ -72,7 +76,7 @@ export default function DepartmentGrid({ limit, showFilter = true }) {
                   description={dept.description}
                   icon={dept.icon}
                   color={dept.color}
-                  badge={dept.shifts ? `${dept.shifts.length} Shifts` : null}
+                  badge={dept.shift ?? (dept.shifts ? `${dept.shifts.length} Shifts` : null)}
                 />
               )}
             </motion.div>
