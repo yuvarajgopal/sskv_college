@@ -187,7 +187,7 @@ export default function HomePage() {
       <section className="section-padding bg-neutral-50">
         <div className="container-custom mx-auto">
           <SectionHeading title="Academic Programs" />
-          <DepartmentGrid limit={8} />
+          <DepartmentGrid />
         </div>
       </section>
 
