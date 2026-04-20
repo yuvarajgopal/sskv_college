@@ -1,4 +1,5 @@
 import { FaBriefcase, FaBuilding, FaHandshake, FaChartLine, FaUserGraduate } from 'react-icons/fa';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import Hero from '../../components/shared/Hero';
 import SectionHeading from '../../components/shared/SectionHeading';
 import AnimatedSection from '../../components/shared/AnimatedSection';
@@ -30,13 +31,11 @@ const services = [
 ];
 
 const placementStats = [
-  { year: '2022-2023', companies: 79, color: 'bg-blue-500' },
-  { year: '2023-2024', companies: 141, color: 'bg-green-500' },
-  { year: '2024-2025', companies: 221, color: 'bg-purple-500' },
-  { year: '2025-2026', companies: 231, color: 'bg-yellow-500' },
+  { year: '2022-23', students: 79,  companies: 6  },
+  { year: '2023-24', students: 141, companies: 12 },
+  { year: '2024-25', students: 221, companies: 15 },
+  { year: '2025-26', students: 231, companies: 30 },
 ];
-
-const maxCompanies = Math.max(...placementStats.map(stat => stat.companies));
 
 const recruiters = [
   { name: 'HDB', logo: '/images/placement_cel/HDB.jpg' },
@@ -113,39 +112,27 @@ export default function PlacementCellPage() {
           {/* STATS */}
           <SectionHeading
             title="Placement Statistics"
-            subtitle="No of companies visited and No of Students Placed"
+            subtitle="Students placed and companies visited per academic year"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            
-            {/* BAR CHART */}
-            <AnimatedSection>
-              <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
-                {placementStats.map((stat, i) => (
-                  <div key={i} className="flex items-center gap-4 mb-3">
-                    <span className="w-24 text-sm">{stat.year}</span>
-                    <div className="flex-1 bg-gray-200 h-3 rounded">
-                      <div
-                        className={`${stat.color} h-3 rounded`}
-                        style={{ width: `${(stat.companies / maxCompanies) * 100}%` }}
-                      />
-                    </div>
-                    <span>{stat.companies}</span>
-                  </div>
-                ))}
-              </div>
-            </AnimatedSection>
-
-            {/* COMPANY COUNT */}
-            <AnimatedSection>
-              <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 text-center">
-                <FaBuilding className="text-5xl text-blue-500 mx-auto mb-3" />
-                <h3 className="font-bold text-primary-800">Number of Companies</h3>
-                <p className="text-3xl font-bold text-primary-800">27</p>
-              </div>
-            </AnimatedSection>
-
-          </div>
+          <AnimatedSection>
+            <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 mb-12">
+              <ResponsiveContainer width="100%" height={320}>
+                <BarChart data={placementStats} margin={{ top: 10, right: 20, left: 0, bottom: 5 }} barCategoryGap="30%">
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                  <XAxis dataKey="year" tick={{ fontSize: 13, fill: '#374151' }} />
+                  <YAxis tick={{ fontSize: 12, fill: '#6b7280' }} />
+                  <Tooltip
+                    contentStyle={{ borderRadius: '10px', border: '1px solid #e5e7eb', fontSize: 13 }}
+                    formatter={(value, name) => [value, name === 'students' ? 'Students Placed' : 'Companies Visited']}
+                  />
+                  <Legend formatter={(value) => value === 'students' ? 'Students Placed' : 'Companies Visited'} />
+                  <Bar dataKey="students" fill="#1e3a5f" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="companies" fill="#f59e0b" radius={[4, 4, 0, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          </AnimatedSection>
 
           {/* RECRUITERS */}
           <SectionHeading

@@ -10,8 +10,9 @@ const reports = [
   { label: 'AISHE Report 2023-24', pdf: '/pdfs/aishe-report-2023-24.pdf' },
   { label: 'AISHE Report 2024-25', pdf: '/pdfs/aishe-report-2024-25.pdf' },
 
-  // ✅ Added new button (clean integration)
-  { label: 'IQAC Meeting and Action Taken Reports', pdf: '/pdfs/icc_policy_doc.pdf' },
+  { label: 'IQAC Minutes 2022', pdf: '/pdfs/iqac_minutes_2022.pdf' },
+  { label: 'IQAC Minutes 2023', pdf: '/pdfs/iqac_minutes_2023.pdf' },
+  { label: 'IQAC Minutes 2024', pdf: '/pdfs/iqac_minutes_2024.pdf' },
 ];
 
 export default function AISHEPage() {
