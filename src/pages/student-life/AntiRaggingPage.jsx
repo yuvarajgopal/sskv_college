@@ -7,12 +7,16 @@ import CTABanner from '../../components/sections/CTABanner';
 const coordinator = { name: 'Dr. P. Meenakshi', qualification: 'M.Com., M.Phil., NET., M.B.A., Ph.D.', role: 'Coordinator — Ragging Redressal Committee & Nodal Officer', dept: 'Department of Commerce (CS)' };
 
 const rules = [
-  'Ragging in any form — physical, verbal, psychological, or online — is strictly prohibited.',
-  'Any act of ragging is punishable under the UGC Regulations on Curbing Ragging in Higher Education Institutions, 2009.',
-  'Students found guilty of ragging will face disciplinary action including suspension, expulsion, and/or police reporting.',
-  'All students must submit an anti-ragging undertaking at the time of admission.',
-  'Parents/Guardians must also submit an undertaking acknowledging the anti-ragging rules.',
-  'The college maintains 24×7 vigilance to ensure a ragging-free campus environment.',
+  'Any form of ragging, done overtly or covertly, is a serious offence. Any student who feels she is ragged will report the matter to the principal.',
+  'Ragging constitutes one or more of any of the following acts:',
+  'Any conduct by any student or students whether by words spoken or written or by an act which has the effect of teasing, treating or handling with rudeness a fresher or any other student.',
+  'Indulging in rowdy or in-disciplined activities by any student or students which causes or is likely to cause annoyance, hardship, physical or psychological harm or to raise fear or apprehension thereof in any fresher or any other student.',
+  'Asking any student to do any act which such student will not in b) Indulging in rowdy or in-disciplined activities by any student or students which causes or is likely to cause annoyance, hardship, physical or psychological harm or to raise fear or apprehension thereof in any fresher or any other student.the ordinary course do and which has the effect of causing or generating a sense of shame, or torment or embarrassment so as to adversely affect the physique or psyche of such fresher or any other student.',
+  'Any act by a senior student that prevents, disrupts or disturbs the regular academic activity of any other student or a fresher.',
+  ' Any act of physical abuse including all variants of it: sexual abuse, homosexual assaults, stripping, forcing obscene and lewd acts, gestures, causing bodily harm or any other danger to health or person.',
+  'Any act or abuse by spoken words, emails, post, public insults which would also include deriving perverted pleasure, vicarious or sadistic thrill from actively or passively participating in the discomfiture to fresher or any other student.',
+'Any act that affects the mental health and self-confidence of a fresher or any other student with or without an intent to derive a sadistic pleasure or showing off power, authority or superiority by a student over any fresher.',
+'Any act of physical or mental abuse (including bullying and exclusion) targeted at another student (fresher or otherwise) on the ground of color, race, religion, caste, ethnicity, gender (including transgender), sexual orientation, appearance, nationality, regional origins, linguistic identity, place of birth, place of residence or economic background.',
 ];
 
 export default function AntiRaggingPage() {
@@ -56,7 +60,8 @@ export default function AntiRaggingPage() {
               <AnimatedSection key={i} delay={i * 0.06}>
                 <div className="flex items-start gap-3 bg-neutral-50 rounded-xl px-4 py-3 border border-neutral-100">
                   <span className="w-6 h-6 rounded-full bg-primary-800 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
-                  <p className="text-sm text-neutral-700 leading-relaxed">{r}</p>
+                  <p className="text-sm text-neutral-700 leading-relaxed">{r} </p>
+               
                 </div>
               </AnimatedSection>
             ))}
@@ -68,6 +73,7 @@ export default function AntiRaggingPage() {
               <h4 className="text-sm font-semibold text-primary-700 mb-3">
                 Anti-Ragging Reports
               </h4>
+              
 
               <div className="flex flex-wrap gap-3">
                 
