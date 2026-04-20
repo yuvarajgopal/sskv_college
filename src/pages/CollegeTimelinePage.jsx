@@ -86,12 +86,12 @@ const events = [
   {
     date: 'April 2021',
     title: 'New Principal Takes Charge',
-    description: 'Dr. S. Rukmani resigned. Dr. K. Thirumamagal took over as Principal from the afternoon of 7 April 2021.',
+    description: 'Dr.S.Rukmani resigned. Dr.K.Thirumamagal took over as a principal from the afternoon of 7 April 2021.',
   },
   {
     date: 'June 2021',
     title: 'EDC Spoke Institution',
-    description: 'College became a Spoke Institution of the University of Madras Entrepreneurial Development Cell, fostering entrepreneurial culture.',
+    description: 'Our college became a spoke institution of the University of Madras Enterpreneurial Development Cell.',
   },
   {
     date: 'January 2022',

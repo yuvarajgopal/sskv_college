@@ -13,11 +13,11 @@ const documents = [
 
 // ✅ Coordinator Data (clean separation — scalable)
 const coordinator = {
-  name: 'MAHALAKSHMI M',
+  name: 'Ms.Ezhilarasi',
   designation: 'Assistant Professor',
-  department: 'Department of Commerce',
-  qualification: 'M.Com., B.Ed., M.Phil.',
-  image: '/images/ed_cell/mahalakshmi.jpg', // 🔁 replace with actual path
+  department: 'Department of Mathematics',
+  qualification: 'M.Sc., M.Phil., B.Ed.',
+  image: '/images/ed_cell/a-ezhilarasi.jpg', // 🔁 replace with actual path
 };
 
 export default function EntrepreneurshipCellPage() {

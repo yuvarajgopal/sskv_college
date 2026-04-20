@@ -20,6 +20,13 @@ const initiatives = [
   { icon: FaGraduationCap, title: 'Career Guidance', desc: 'Career counselling, competitive coaching, and soft skills training.' },
   { icon: FaHandsHelping, title: 'Mentoring Programme', desc: 'One-on-one mentoring by faculty members.' },
 ];
+const coordinator = {
+  name: 'Ms.Ms.mahalakshmi',
+  designation: 'Assistant Professor',
+  department: 'Department of Commerce',
+  qualification: 'M.Com., B.Ed., M.Phil.',
+  image: '/images/ed_cell/mahalakshmi.jpg', // 🔁 replace with actual path
+};
 
 export default function SEDGCellPage() {
   return (
@@ -158,9 +165,35 @@ export default function SEDGCellPage() {
               </a>
 
             </div>
+            <div className="bg-white rounded-2xl shadow-md border border-neutral-200 p-6 flex flex-col md:flex-row items-center gap-6">
+                
+                {/* Image */}
+                <div className="w-32 h-32 rounded-xl overflow-hidden border border-neutral-200">
+                  <img
+                    src={coordinator.image}
+                    alt={coordinator.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Details */}
+                <div className="text-center md:text-left">
+                  <h3 className="text-xl font-bold text-primary-800">{coordinator.name}</h3>
+                  <p className="text-sm text-neutral-600 mt-1">{coordinator.designation}</p>
+                  <p className="text-sm text-neutral-500">{coordinator.department}</p>
+
+                  <div className="mt-3">
+                    <p className="text-xs uppercase text-neutral-400 font-semibold mb-1">Qualification</p>
+                    <p className="text-sm text-neutral-700">{coordinator.qualification}</p>
+                  </div>
+                </div>
+
+              </div>
+            
           </AnimatedSection>
 
         </div>
+        
       </section>
 
       {/* INITIATIVES */}
