@@ -4,7 +4,6 @@ import Hero from '../components/shared/Hero';
 import SectionHeading from '../components/shared/SectionHeading';
 import AnimatedSection from '../components/shared/AnimatedSection';
 import CTABanner from '../components/sections/CTABanner';
-import kalaiselviImg from '../images/faculty/library/kalaiselvi.jpg';
 
 // ── ABOUT ─────────────────────────────────────────────────────────────────────
 const about = {
@@ -33,7 +32,7 @@ const about = {
 
 // ── FACULTY ───────────────────────────────────────────────────────────────────
 const faculty = [
-  { name: 'Dr. E. Kalaiselvi', qualification: 'M.C.A., M.L.I.S., M.Phil., Ph.D.', designation: 'Librarian', photo: '/images/faculty/library/kalaiselvi.JPG' },
+  { name: 'Dr. E. Kalaiselvi', qualification: 'M.C.A., M.L.I.S., M.Phil., Ph.D.', designation: 'Librarian', photo: '/images/faculty/library/kalai_selvi.jpg' },
   { name: 'Ms. A. Liviya Kumari', qualification: 'B.B.A.', designation: 'Clerk', photo: '/images/faculty/library/ms-a-liviya-kumari.jpg' },
 ];
 
