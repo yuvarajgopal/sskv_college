@@ -29,6 +29,8 @@ const heroImages = [
   '/images/home/home_4.png',
   '/images/home/home_5.jpg',
    '/images/home/home_6.png',
+  '/images/home/home_7.jpg',
+  '/images/home/home_8.png',
 ];
 
 const features = [
@@ -48,7 +50,7 @@ const features = [
     icon: FaHandshake,
     title: 'Industry Connections',
     description:
-      '5 active MOUs with industry partners ensuring real-world exposure and placement opportunities.',
+      '7 active MOUs with industry partners ensuring real-world exposure and placement opportunities.',
   },
   {
     icon: FaStar,
@@ -185,7 +187,7 @@ export default function HomePage() {
       <section className="section-padding bg-neutral-50">
         <div className="container-custom mx-auto">
           <SectionHeading title="Academic Programs" />
-          <DepartmentGrid />
+          <DepartmentGrid limit={8} />
         </div>
       </section>
 

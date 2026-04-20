@@ -14,7 +14,7 @@ const BASE_RESUME = '/pdfs/faculty/computer-science/';
 
 const faculty = [
   // Shift I
-  { name: 'R. Ramya',           qualification: 'M.Sc., M.Phil.',    role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}r-ramya.jpg`,      resume: `${BASE_RESUME}r-ramya.pdf` },
+  { name: 'K.R. Ramya',           qualification: 'M.Sc., M.Phil., SET',    role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}r-ramya.jpg`,      resume: `${BASE_RESUME}r-ramya.pdf` },
   { name: 'Ms. V. Suganthi',    qualification: 'M.C.A., M.Phil.',   role: 'Assistant Professor',                    photo: `${BASE_PHOTO}v-suganthi.jpg`,   resume: `${BASE_RESUME}v-suganthi.pdf` },
   // Shift II
   { name: 'U.Aishwarya',        qualification: 'M.C.A., NET',             role: 'Assistant Professor',                    photo: `${BASE_PHOTO}u_ashiwarya.jpg`,  resume: `${BASE_RESUME}u_ashiwarya.pdf` },
@@ -92,14 +92,11 @@ const outcomes = [
 ];
 
 const activityPhotos = [
-  { src: '/images/activities/computer-science/1.jpg', caption: 'Technical Workshop' },
-  { src: '/images/activities/computer-science/2.jpg', caption: 'Coding Competition' },
-  { src: '/images/activities/computer-science/3.jpg', caption: 'Guest Lecture' },
-  { src: '/images/activities/computer-science/4.jpg', caption: 'Project Exhibition' },
-  { src: '/images/activities/computer-science/5.jpg', caption: 'Hackathon' },
-  { src: '/images/activities/computer-science/6.jpg', caption: 'Industry Visit' },
-  { src: '/images/activities/computer-science/7.jpg', caption: 'Seminar on Emerging Technologies' },
-  { src: '/images/activities/computer-science/8.jpg', caption: 'Intercollegiate Tech Fest' },
+  { src: '/images/activities/computer_1/1.jpg', caption: 'Technical Workshop' },
+  { src: '/images/activities/computer_1/2.jpg', caption: 'Coding Competition' },
+  { src: '/images/activities/computer_1/3.jpg', caption: 'Guest Lecture' },
+  { src: '/images/activities/computer_1/4.jpg', caption: 'Project Exhibition' },
+  { src: '/images/activities/computer_1/5.jpg', caption: 'Hackathon' },
 ];
 
 const facultyCount = faculty.length;
@@ -378,7 +375,7 @@ export default function ComputerScienceDepartmentPage() {
       </section>
       <DepartmentNewsletter
         departmentName="Computer Science"
-        pdfHref="/pdfs/newsletter/SSKV_Newsletter_2026.pdf"
+        pdfHref="/pdfs/newsletter/computer_s1.pdf"
       />
 
 

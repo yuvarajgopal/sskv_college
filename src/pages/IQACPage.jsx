@@ -279,6 +279,34 @@ export default function IQACPage() {
           </div>
         </div>
       </section>
+            {/* Minutes of Meetings */}
+      <section className="section-padding bg-primary-900 text-white">
+        <div className="container-custom mx-auto">
+          <SectionHeading
+            title="Minutes of IQAC Meetings"
+            subtitle="Records of IQAC deliberations and decisions"
+            light
+          />
+
+          {/* ✅ NEW BUTTONS ADDED HERE */}
+          <div className="flex flex-wrap gap-3 mb-6">
+            <a href="/pdf/iqac/iqac_minutes_2022.pdf" target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-sm font-semibold">
+              <FaDownload /> IQAC Minutes 2022
+            </a>
+
+            <a href="/pdf/iqac/iqac_minutes_2023.pdf" target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-sm font-semibold">
+              <FaDownload /> IQAC Minutes 2023
+            </a>
+
+            <a href="/pdf/iqac/iqac_minutes_2024.pdf" target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-sm font-semibold">
+              <FaDownload /> IQAC Minutes 2024
+            </a>
+          </div></div>
+          {/* ✅ END */}
+             </section>
 
       {/* Action Taken Reports */}
       <section className="section-padding bg-neutral-50">

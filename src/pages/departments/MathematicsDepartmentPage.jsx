@@ -18,7 +18,7 @@ const faculty = [
   { name: 'A. Ezhilarasi',    qualification: 'M.Sc., M.Phil., B.Ed.',        role: 'Assistant Professor',               photo: `${BASE_PHOTO}a-ezhilarasi.jpg`,    resume: `${BASE_RESUME}a-ezhilarasi.pdf` },
   { name: 'S. Komala',        qualification: 'M.Sc., M.Phil.',               role: 'Assistant Professor',               photo: `${BASE_PHOTO}s-komala.jpg`,        resume: `${BASE_RESUME}s-komala.pdf` },
   { name: 'B. Premalatha',    qualification: 'M.Sc., M.Phil., B.Ed.',        role: 'Assistant Professor',               photo: `${BASE_PHOTO}b-premalatha.jpg`,    resume: `${BASE_RESUME}b-premalatha.pdf` },
-   { name: 'Ms. M. Lavanya',   qualification: 'M.Sc., M.Phil., SET',          role: 'Assistant Professor',               photo: `${BASE_PHOTO}ms-m-lavanya.jpg`,       resume: `${BASE_RESUME}m-lavanya.pdf` },
+   { name: 'Ms. M. Lavanya',   qualification: 'M.Sc., M.Phil., SET',          role: 'Assistant Professor',               photo: `${BASE_PHOTO}ms-m-lavanya.jpg`,       resume: `${BASE_RESUME}lavanya.pdf` },
   { name: 'D.Saraswathi',     qualification: 'M.Sc., M.Phil., SET',          role: 'Assistant Professor',               photo: `${BASE_PHOTO}d_saraswathi.jpg`,     resume: `${BASE_RESUME}d_saraswathi.pdf` },
   { name: 'S.Gayathri',       qualification: 'MSc.,',                        role: 'Assistant Professor',               photo: `${BASE_PHOTO}s_gayathri.jpg`,     resume: `${BASE_RESUME}gayathri.pdf` },
 ];
@@ -332,14 +332,8 @@ export default function MathematicsDepartmentPage() {
             </p>
           </AnimatedSection>
           <ActivityGallery images={[
-                { src: '/images/activities/mathematics/1.jpg', caption: 'Mathematics Quiz Competition' },
-                { src: '/images/activities/mathematics/2.jpg', caption: 'Problem-Solving Workshop' },
-                { src: '/images/activities/mathematics/3.jpg', caption: 'Guest Lecture' },
-                { src: '/images/activities/mathematics/4.jpg', caption: 'Math Model Exhibition' },
-                { src: '/images/activities/mathematics/5.jpg', caption: 'Seminar on Applied Mathematics' },
-                { src: '/images/activities/mathematics/6.jpg', caption: 'Pi Day Celebration' },
-                { src: '/images/activities/mathematics/7.jpg', caption: 'Intercollegiate Competition' },
-                { src: '/images/activities/mathematics/8.jpg', caption: 'Mathematics Association Inauguration' },
+                { src: '/images/activities/maths/1.jpeg', caption: 'Mathematics Quiz Competition' },
+                { src: '/images/activities/maths/2.jpeg', caption: 'Problem-Solving Workshop' },
               ]} color="amber" />
         </div>
       </section>

@@ -312,14 +312,11 @@ export default function BComGeneralShiftIIDepartmentPage() {
           </AnimatedSection>
           <div className="max-w-4xl mx-auto">
             <ActivityGallery images={[
-              { src: '/images/activities/bcom-general-shift-ii/1.jpg', caption: 'Commerce Workshop' },
-              { src: '/images/activities/bcom-general-shift-ii/2.jpg', caption: 'Guest Lecture on Finance' },
-              { src: '/images/activities/bcom-general-shift-ii/3.jpg', caption: 'Accounting Practical' },
-              { src: '/images/activities/bcom-general-shift-ii/4.jpg', caption: 'Banking Seminar' },
-              { src: '/images/activities/bcom-general-shift-ii/5.jpg', caption: 'Business Quiz' },
-              { src: '/images/activities/bcom-general-shift-ii/6.jpg', caption: 'Commerce Fest' },
-              { src: '/images/activities/bcom-general-shift-ii/7.jpg', caption: 'Department Day' },
-              { src: '/images/activities/bcom-general-shift-ii/8.jpg', caption: 'Intercollegiate Event' },
+              { src: '/images/activities/bcom_2/1.jpeg', caption: 'Commerce Workshop' },
+              { src: '/images/activities/bcom_2/2.jpeg', caption: 'Guest Lecture on Finance' },
+              { src: '/images/activities/bcom_2/3.jpeg', caption: 'Accounting Practical' },
+              { src: '/images/activities/bcom_2/4.jpeg', caption: 'Banking Seminar' },
+
             ]} color="amber" />
           </div>
         </div>
@@ -328,7 +325,7 @@ export default function BComGeneralShiftIIDepartmentPage() {
       {/* CTA Banner */}
       <DepartmentNewsletter
         departmentName="B.Com General (Shift II)"
-        pdfHref="/pdfs/newsletter/bcom-shift-II.pdf"
+        pdfHref="/pdfs/newsletter/bcom_g_shift_2.pdf"
       />
 
       <CTABanner

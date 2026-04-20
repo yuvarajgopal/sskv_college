@@ -18,7 +18,7 @@ const faculty = [
   { name: 'K. Thenmozhi',      qualification: 'M.Com., MBA., M.Phil., MA (PM&IR), PG AGM (IIM), NET',     role: 'Assistant Professor',               photo: `${BASE_PHOTO}k-thenmozhi.jpg`,       resume: `${BASE_RESUME}k-thenmozhi.pdf` },
   { name: 'Dr. G. Rajathi',    qualification: 'M.Com., MBA., Ph.D.',                                      role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-g-rajathi.jpg`,      resume: `${BASE_RESUME}dr-g-rajathi.pdf` },
   { name: 'R. Ponmani',        qualification: 'M.Com',                                                    role: 'Assistant Professor',               photo: `${BASE_PHOTO}r-ponmani.jpg`,         resume: `${BASE_RESUME}r-ponmani.pdf` },
-  { name: 'V.Yamini ',        qualification: 'M.Com',                                                    role: 'Assistant Professor',                   photo: `${BASE_PHOTO}yamini.jpg`,   resume: `${BASE_RESUME}yamini.pdf` },
+  { name: 'V.Yamini',          qualification: 'M.Com.,',                                                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}v_yamini.JPG`,       resume: `${BASE_RESUME}Yamini.pdf` },
   // Shift II
   
 ];
@@ -362,16 +362,11 @@ export default function BComGeneralDepartmentPage() {
           </AnimatedSection>
           <div className="max-w-4xl mx-auto">
             <ActivityGallery images={[
-              { src: '/images/bcom_g/bcom_g_img_1.jpeg', caption: 'B.Com (General) Department Activity' },
-              { src: '/images/bcom_g/bcom_g_img_2.jpeg', caption: 'B.Com (General) Department Activity' },
-              { src: '/images/bcom_g/bcom_g_img_3.jpeg', caption: 'B.Com (General) Department Activity' },
-              { src: '/images/bcom_g/bcom_g_img_4.jpeg', caption: 'B.Com (General) Department Activity' },
-              { src: '/images/bcom_g/bcom_g_img_5.jpeg', caption: 'B.Com (General) Department Activity' },
-              { src: '/images/bcom_g/bcom_g_img_6.jpeg', caption: 'B.Com (General) Department Activity' },
-              { src: '/images/bcom_g/bcom_g_img_7.jpeg', caption: 'B.Com (General) Department Activity' },
-              { src: '/images/bcom_g/bcom_g_img_8.jpeg', caption: 'B.Com (General) Department Activity' },
-              { src: '/images/bcom_g/bcom_g_img_9.jpeg', caption: 'B.Com (General) Department Activity' },
-              { src: '/images/bcom_g/bcom_g_img_10.jpeg', caption: 'B.Com (General) Department Activity' },
+              { src: '/images/activities/bcom/1.jpeg', caption: 'B.Com (General) Department Activity' },
+              { src: '/images/activities/bcom/2.jpeg', caption: 'B.Com (General) Department Activity' },
+              { src: '/images/activities/bcom/3.jpeg', caption: 'B.Com (General) Department Activity' },
+              { src: '/images/activities/bcom/4.jpeg', caption: 'B.Com (General) Department Activity' },
+
             ]} color="orange" />
           </div>
         </div>
@@ -380,7 +375,7 @@ export default function BComGeneralDepartmentPage() {
       {/* CTA Banner */}
       <DepartmentNewsletter
         departmentName="B.Com (General)"
-        pdfHref="/pdfs/newsletter/SSKV_Newsletter_2026.pdf"
+        pdfHref="/pdfs/newsletter/bcom_s1.pdf"
       />
 
       <CTABanner

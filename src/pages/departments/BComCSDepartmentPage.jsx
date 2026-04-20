@@ -276,14 +276,14 @@ export default function BComCSDepartmentPage() {
           </AnimatedSection>
           <div className="max-w-4xl mx-auto">
             <ActivityGallery images={[
-              { src: '/images/activities/bcom-cs/1.jpg', caption: 'Corporate Governance Workshop' },
-              { src: '/images/activities/bcom-cs/2.jpg', caption: 'Seminar on Company Law' },
-              { src: '/images/activities/bcom-cs/3.jpg', caption: 'Guest Lecture' },
-              { src: '/images/activities/bcom-cs/4.jpg', caption: 'Computerized Accounting Training' },
-              { src: '/images/activities/bcom-cs/5.jpg', caption: 'Mock Board Meeting' },
-              { src: '/images/activities/bcom-cs/6.jpg', caption: 'Quiz Competition' },
-              { src: '/images/activities/bcom-cs/7.jpg', caption: 'Department Association Day' },
-              { src: '/images/activities/bcom-cs/8.jpg', caption: 'Intercollegiate Event' },
+              { src: '/images/activities/bcom_cs/1.jpg', caption: 'Corporate Governance Workshop' },
+              { src: '/images/activities/bcom_cs/2.jpg', caption: 'Seminar on Company Law' },
+              { src: '/images/activities/bcom_cs/3.jpg', caption: 'Guest Lecture' },
+              { src: '/images/activities/bcom_cs/4.jpg', caption: 'Computerized Accounting Training' },
+              { src: '/images/activities/bcom_cs/5.jpg', caption: 'Mock Board Meeting' },
+              { src: '/images/activities/bcom_cs/6.jpg', caption: 'Quiz Competition' },
+              { src: '/images/activities/bcom_cs/7.jpg', caption: 'Department Association Day' },
+              { src: '/images/activities/bcom_cs/8.jpg', caption: 'Intercollegiate Event' },
             ]} color="sky" />
           </div>
         </div>

@@ -124,7 +124,7 @@ export default function ICCPage() {
                 {/* PDF BUTTON */}
                 <div className="mt-6">
                   <a
-                    href="/pdfs/policies/ugc_internal_complaints.pdf"
+                    href="/pdfs/ugc/ugc_1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-amber-700 hover:bg-amber-800 text-white font-semibold text-sm px-6 py-3 rounded-lg shadow transition duration-300"

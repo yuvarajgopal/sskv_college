@@ -6,10 +6,19 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 
 // ✅ Updated Documents (PDF Links)
 const documents = [
-  { file: '/pdfs/ed-cell/2022-23 ED CELL.pdf', label: '2022-23 ED CELL' },
-  { file: '/pdfs/ed-cell/2023-24 ED CELL.pdf', label: '2023-24 ED CELL' },
-  { file: '/pdfs/ed-cell/2025-26 ED CELL.pdf', label: '2025-26 ED CELL' },
+  { file: '/pdfs/2022_23_ed_cell.pdf', label: '2022-23 ED CELL' },
+  { file: '/pdfs/2023_24_ed_cell.pdf', label: '2023-24 ED CELL' },
+  { file: '/pdfs/2025_26_ed_cell.pdf', label: '2025-26 ED CELL' },
 ];
+
+// ✅ Coordinator Data (clean separation — scalable)
+const coordinator = {
+  name: 'MAHALAKSHMI M',
+  designation: 'Assistant Professor',
+  department: 'Department of Commerce',
+  qualification: 'M.Com., B.Ed., M.Phil.',
+  image: '/images/ed_cell/mahalakshmi.jpg', // 🔁 replace with actual path
+};
 
 export default function EntrepreneurshipCellPage() {
   return (
@@ -68,6 +77,38 @@ export default function EntrepreneurshipCellPage() {
               </p>
             </div>
 
+          </div>
+
+          {/* 🔥 NEW: COORDINATOR SECTION */}
+          <div className="mt-12">
+            <SectionHeading title="ED Cell Coordinator" />
+
+            <AnimatedSection>
+              <div className="bg-white rounded-2xl shadow-md border border-neutral-200 p-6 flex flex-col md:flex-row items-center gap-6">
+                
+                {/* Image */}
+                <div className="w-32 h-32 rounded-xl overflow-hidden border border-neutral-200">
+                  <img
+                    src={coordinator.image}
+                    alt={coordinator.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Details */}
+                <div className="text-center md:text-left">
+                  <h3 className="text-xl font-bold text-primary-800">{coordinator.name}</h3>
+                  <p className="text-sm text-neutral-600 mt-1">{coordinator.designation}</p>
+                  <p className="text-sm text-neutral-500">{coordinator.department}</p>
+
+                  <div className="mt-3">
+                    <p className="text-xs uppercase text-neutral-400 font-semibold mb-1">Qualification</p>
+                    <p className="text-sm text-neutral-700">{coordinator.qualification}</p>
+                  </div>
+                </div>
+
+              </div>
+            </AnimatedSection>
           </div>
 
           {/* ✅ BUTTON SECTION */}

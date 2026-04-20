@@ -57,14 +57,13 @@ const outcomes = [
 ];
 
 const activityPhotos = [
-  { src: '/images/activities/cs-shift-ii/1.jpg', caption: 'Technical Workshop' },
-  { src: '/images/activities/cs-shift-ii/2.jpg', caption: 'Coding Competition' },
-  { src: '/images/activities/cs-shift-ii/3.jpg', caption: 'Guest Lecture' },
-  { src: '/images/activities/cs-shift-ii/4.jpg', caption: 'Project Exhibition' },
-  { src: '/images/activities/cs-shift-ii/5.jpg', caption: 'Hackathon' },
-  { src: '/images/activities/cs-shift-ii/6.jpg', caption: 'Web Development Training' },
-  { src: '/images/activities/cs-shift-ii/7.jpg', caption: 'Department Day' },
-  { src: '/images/activities/cs-shift-ii/8.jpg', caption: 'Intercollegiate Event' },
+  { src: '/images/activities/computer_2/1.jpeg', caption: 'Technical Workshop' },
+  { src: '/images/activities/computer_2/2.jpeg', caption: 'Coding Competition' },
+  { src: '/images/activities/computer_2/3.jpeg', caption: 'Guest Lecture' },
+  { src: '/images/activities/computer_2/4.jpeg', caption: 'Project Exhibition' },
+  { src: '/images/activities/computer_2/5.jpeg', caption: 'Hackathon' },
+  { src: '/images/activities/computer_2/6.jpeg', caption: 'Web Development Training' },
+  { src: '/images/activities/computer_2/7.jpeg', caption: 'Department Day' },
 ];
 
 const facultyCount = faculty.length;

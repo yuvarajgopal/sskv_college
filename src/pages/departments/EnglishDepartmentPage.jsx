@@ -28,8 +28,8 @@ const faculty = [
   { name: 'M.Badhma', qualification: 'MA', role: 'Assistant Professor', photo: `${BASE_PHOTO}m_badhma.JPG`, resume: `${BASE_RESUME}m_badhma.pdf` },
   { name: 'Dr.M.Maragadhashrruthi', qualification: 'M.A., Ph.D.', role: 'Assistant Professor', photo: `${BASE_PHOTO}dr_martha.JPG`, resume: `${BASE_RESUME}dr_maragatha.pdf` },
   { name: 'R. Mirnalini', qualification: 'MA., M.Phil., B.ed., SET., NET', role: 'Assistant Professor', photo: `${BASE_PHOTO}r_mMirnalini.JPG`, resume: `${BASE_RESUME}r. mirnalini.pdf` },
-  { name: 'Ms.Jayapriya ', qualification: 'MA.,Mphil.,NET', role: 'Assistant Professor', photo: `${BASE_PHOTO}p_jJayapriya.JPG`, resume: `${BASE_RESUME}Jayapriya.pdf` },
- {  name: 'K.Bavani', qualification: 'M.A., B.Ed., M.Phil.', role: 'Assistant Professor', photo: `${BASE_PHOTO}k_Bavani.JPG`, resume: `${BASE_RESUME}bhavani_k.pdf`},
+  { name: 'Ms.Jayapriya ', qualification: 'MA.,Mphil.,NET', role: 'Assistant Professor', photo: `${BASE_PHOTO}jayapriya_p.JPG`, resume: `${BASE_RESUME}Jayapriya.pdf`},
+ {  name: 'K.Bavani', qualification: 'M.A., B.Ed., M.Phil.', role: 'Assistant Professor', photo: `${BASE_PHOTO}k_bavani.JPG`, resume: `${BASE_RESUME}bhavani_k.pdf`},
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
@@ -308,13 +308,9 @@ export default function EnglishDepartmentPage() {
           </AnimatedSection>
           <div className="max-w-4xl mx-auto">
             <ActivityGallery images={[
-              { src: '/images/ba_english/eng_img1.jpeg', caption: 'English Department Activity' },
-              { src: '/images/ba_english/eng_img2.jpeg', caption: 'English Department Activity' },
-              { src: '/images/ba_english/eng_img3.jpeg', caption: 'English Department Activity' },
-              { src: '/images/ba_english/eng_img4.jpeg', caption: 'English Department Activity' },
-              { src: '/images/ba_english/eng_img5.jpeg', caption: 'English Department Activity' },
-              { src: '/images/ba_english/eng_img6.jpeg', caption: 'English Department Activity' },
-              { src: '/images/ba_english/eng_img7.jpeg', caption: 'English Department Activity' },
+              { src: '/images/activities/english/1.jpeg', caption: 'English Department Activity' },
+              { src: '/images/activities/english/2.jpeg', caption: 'English Department Activity' },
+              { src: '/images/activities/english/3.jpeg', caption: 'English Department Activity' },
             ]} color="indigo" />
           </div>
         </div>

@@ -65,7 +65,7 @@ export default function HealthFacilitiesPage() {
                 </h4>
 
                 <p className="text-sm text-neutral-600">
-                  B.Com, MBA, PhD
+                 B.com., MBA., MD(acu), PhD., (A.M.) 
                 </p>
               </div>
 

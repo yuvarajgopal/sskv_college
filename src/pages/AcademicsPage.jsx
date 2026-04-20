@@ -1,5 +1,4 @@
-import { FaBookOpen, FaLightbulb, FaCertificate, FaMusic, FaDrum, FaPaintBrush, FaLaptop, FaChartBar, FaUsers, FaFilePdf, FaArrowRight } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { FaBookOpen, FaLightbulb, FaCertificate, FaMusic, FaDrum, FaPaintBrush, FaLaptop, FaChartBar, FaUsers, FaFilePdf } from 'react-icons/fa';
 import Hero from '../components/shared/Hero';
 import SectionHeading from '../components/shared/SectionHeading';
 import AnimatedSection from '../components/shared/AnimatedSection';
@@ -72,47 +71,26 @@ const programmes = [
     ugSyllabus: '/pdfs/bsc_ai_syllabus.pdf', pgSyllabus: null,
   },
 
-  {
+    {
     sl: 10, shift: 'Shift I',
-    ug: 'B.A (Economics)', pg: '–', dept: 'Economics',
+    ug: 'BA(Economics)', pg: '–', dept: 'Economics',
     ugElig: 'Pass any group in HSC.',
     pgElig: '–',
-    ugSyllabus: '/pdfs/ba_economics_syllabus.pdf', pgSyllabus: null,
+    ugSyllabus: '/pdfs/ba_english_syllabus.pdf', pgSyllabus: null,
   },
   {
-    sl: 11, shift: 'Shift I',
+    sl: 10, shift: 'Shift I',
     ug: 'B.A (English)', pg: 'M.A (English)', dept: 'English',
     ugElig: 'Preference to English at HSC.',
     pgElig: 'B.A English or equivalent degree with minimum 50% marks (40% for SC/ST) as per UNOM norms.',
     ugSyllabus: '/pdfs/ba_english_syllabus.pdf', pgSyllabus: null,
   },
   {
-    sl: 12, shift: 'Shift I',
+    sl: 11, shift: 'Shift I',
     ug: 'B.A (Tamil)', pg: 'M.A (Tamil)', dept: 'Tamil',
     ugElig: 'Preference to Tamil at HSC.',
     pgElig: 'B.A Tamil or equivalent degree with minimum 50% marks (40% for SC/ST) as per UNOM norms.',
     ugSyllabus: '/pdfs/tamil-syllabus.pdf', pgSyllabus: null,
-  },
-  {
-    sl: 13, shift: 'Shift II',
-    ug: 'B.Sc (Computer Science)', pg: 'M.Sc (Computer Science)', dept: 'Computer Science',
-    ugElig: 'Mathematics at +2 required.',
-    pgElig: 'B.Sc (Computer Science) or equivalent degree with minimum 50% marks (40% for SC/ST) as per UNOM norms.',
-    ugSyllabus: '/pdfs/bsc_cs_syllabus.pdf', pgSyllabus: null,
-  },
-  {
-    sl: 14, shift: 'Shift II',
-    ug: 'BCA', pg: '–', dept: 'Computer Applications',
-    ugElig: 'Pass HSC with Mathematics / Business Math / CS.',
-    pgElig: '–',
-    ugSyllabus: '/pdfs/bca_syllabus.pdf', pgSyllabus: null,
-  },
-  {
-    sl: 15, shift: 'Shift II',
-    ug: 'B.Com (General)', pg: 'M.Com (General)', dept: 'Commerce',
-    ugElig: 'Must have studied Commerce & Accountancy at HSC.',
-    pgElig: 'B.Com or equivalent degree with minimum 50% marks (40% for SC/ST) from UNOM or any recognized university.',
-    ugSyllabus: '/pdfs/bcom_general.pdf', pgSyllabus: '/pdfs/mcom_syllabus.pdf',
   },
 ];
 
@@ -169,7 +147,7 @@ export default function AcademicsPage() {
     <>
       <Hero
         title="Programmes Offered"
-        subtitle="UG & PG Courses Offered (2025–26) with Eligibility & Syllabus"
+        subtitle="UG & PG Courses Offered (2026–27) with Eligibility & Syllabus"
         height="medium"
         breadcrumb="Academics › Programmes Offered"
         bannerImage={images.academics.banner}
@@ -179,7 +157,7 @@ export default function AcademicsPage() {
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto">
           <SectionHeading
-            title="UG & PG Courses Offered (2025–26)"
+            title="UG & PG Courses Offered (2026–27)"
             subtitle="Eligibility criteria and syllabus links for all programmes"
           />
 
@@ -200,10 +178,10 @@ export default function AcademicsPage() {
                 </thead>
                 <tbody>
                   {programmes.map((p, i) => (
-                    <tr key={p.sl} className={`border-t border-neutral-100 ${p.shift === 'Shift II' ? 'bg-amber-50/40' : i % 2 === 0 ? 'bg-white' : 'bg-neutral-50'} hover:bg-primary-50/50 transition-colors`}>
+                    <tr key={p.sl} className={`border-t border-neutral-100 ${i % 2 === 0 ? 'bg-white' : 'bg-neutral-50'} hover:bg-primary-50/50 transition-colors`}>
                       <td className="px-4 py-3 text-neutral-500 font-heading font-bold">{p.sl}</td>
                       <td className="px-4 py-3 whitespace-nowrap">
-                        <span className={`inline-block px-2 py-0.5 text-xs font-semibold rounded ${p.shift === 'Shift II' ? 'bg-amber-100 text-amber-800' : 'bg-primary-100 text-primary-800'}`}>{p.shift}</span>
+                        <span className="inline-block px-2 py-0.5 bg-primary-100 text-primary-800 text-xs font-semibold rounded">{p.shift}</span>
                       </td>
                       <td className="px-4 py-3 font-semibold text-primary-800">{p.ug}</td>
                       <td className="px-4 py-3 text-neutral-600">{p.pg}</td>
@@ -234,23 +212,18 @@ export default function AcademicsPage() {
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { degree: 'B.Sc. Computer Science', color: '#2ecc71', link: '/departments/computer-science-shift-ii' },
-              { degree: 'BCA', color: '#1abc9c', link: '/departments/bca-shift-ii' },
-              { degree: 'B.Com (General)', color: '#e67e22', link: '/departments/bcom-general-shift-ii' },
+              { degree: 'B.Sc. Computer Science', color: '#2ecc71' },
+              { degree: 'BCA', color: '#1abc9c' },
+              { degree: 'B.Com (General)', color: '#e67e22' },
             ].map((program, index) => (
               <AnimatedSection key={program.degree} delay={index * 0.1}>
-                <Link to={program.link} className="block group">
-                  <div className="bg-white rounded-xl p-6 shadow-lg text-center border-t-4 hover:shadow-xl transition-all duration-300 h-full" style={{ borderColor: program.color }}>
-                    <div className="inline-block px-3 py-1 bg-accent-50 text-accent-700 text-xs font-semibold rounded-full mb-3">
-                      Shift II
-                    </div>
-                    <h3 className="text-lg font-bold text-primary-800 font-heading">{program.degree}</h3>
-                    <p className="text-neutral-500 text-sm mt-2">3 Year Program — Evening Session</p>
-                    <div className="flex items-center justify-center gap-1 mt-4 text-xs font-semibold text-primary-700 group-hover:text-accent-600 transition-colors">
-                      View Department <FaArrowRight className="text-xs" />
-                    </div>
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center border-t-4" style={{ borderColor: program.color }}>
+                  <div className="inline-block px-3 py-1 bg-accent-50 text-accent-700 text-xs font-semibold rounded-full mb-3">
+                    Shift II Available
                   </div>
-                </Link>
+                  <h3 className="text-lg font-bold text-primary-800 font-heading">{program.degree}</h3>
+                  <p className="text-neutral-500 text-sm mt-2">3 Year Program — Evening Session</p>
+                </div>
               </AnimatedSection>
             ))}
           </div>

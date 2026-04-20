@@ -86,15 +86,20 @@ const courses = [
       'To build predictive models and derive insights.',
       'To encourage innovative problem-solving using AI.',
     ],
-    outcomes: [], // removed as requested
+    outcomes: [],
   },
 
+  // ✅ FIXED SECTION
   {
     icon: FaLaptopCode,
-    title: 'Practical Hands on Training courses',
-    short: 'DA-AI',
-    desc: 'Our Practical Hands-on Training Courses are designed to bridge the gap between theoretical knowledge and real-world application.',
-    dept: 'Diploma in Aari Embroidery',
+    title: 'Practical Hands-on Training Courses',
+    short: 'PHT',
+    desc: `Diploma in Aari Embroidery:
+This course is designed for individuals who want to master the art of traditional and modern Aari embroidery through intensive practical training. Students will learn various stitching techniques, design patterns, fabric handling, and finishing methods. The program emphasizes hands-on practice, enabling learners to create high-quality embroidered products and develop the skills needed for self-employment or careers in fashion and textile industries.
+
+Diploma in Tally Accounting:
+This course focuses on building strong accounting and financial management skills using Tally software. Students will gain practical knowledge in bookkeeping, GST, payroll management, and financial reporting. Through real-time exercises and case-based learning, learners will develop the confidence to handle business accounts efficiently and prepare for roles in accounting, finance, and office administration.`,
+    dept: 'Diploma in Aari Embroidery & Tally Accounting',
     color: '#27ae60',
     objectives: [
       'Gain practical exposure through real-world projects and live scenarios..',
@@ -103,21 +108,7 @@ const courses = [
       'Engage in workshops, lab activities, and collaborative learning.',
       'Work on assignments and mini-projects to build a strong portfolio.',
     ],
-    outcomes: [], // removed as requested
-  },
-  {
-    icon: FaLaptopCode,
-    title: 'Tally',
-    short: 'DA-AI',
-    desc: 'Tally course provides practical training in accounting, taxation, and financial management using Tally software. It helps students understand real-time business transactions, GST processes, and bookkeeping methods. This course is ideal for building strong accounting skills and preparing for careers in finance and commerce.',
-    dept: 'Tally',
-    color: '#27ae60',
-    objectives: [
-      'Hands-on experience in recording transactions, ledgers, and financial statements.',
-      'Learn GST billing, returns filing, and tax calculations.',
-      'Develop skills required for jobs like accountant, billing executive, and office admin.',
-    ],
-    outcomes: [], // removed as requested
+    outcomes: [],
   },
 ];
 
@@ -168,11 +159,10 @@ export default function AddOnCoursesPage() {
                       {c.dept}
                     </p>
 
-                    <p className="text-sm text-neutral-600 leading-relaxed mb-3">
+                    <p className="text-sm text-neutral-600 leading-relaxed mb-3 whitespace-pre-line">
                       {c.desc}
                     </p>
 
-                    {/* Learning Objectives */}
                     <div className="mb-2">
                       <h4 className="text-sm font-semibold text-primary-700 mb-1">
                         Learning Objectives
@@ -184,7 +174,6 @@ export default function AddOnCoursesPage() {
                       </ul>
                     </div>
 
-                    {/* Learning Outcomes (only if exists) */}
                     {c.outcomes && c.outcomes.length > 0 && (
                       <div className="mb-2">
                         <h4 className="text-sm font-semibold text-primary-700 mb-1">
@@ -198,7 +187,6 @@ export default function AddOnCoursesPage() {
                       </div>
                     )}
 
-                    {/* Placement Opportunities (Web Designing only) */}
                     {c.placement && (
                       <div className="mb-2">
                         <h4 className="text-sm font-semibold text-primary-700 mb-1">
@@ -212,7 +200,6 @@ export default function AddOnCoursesPage() {
                       </div>
                     )}
 
-                    {/* Benefits to Students (Personality Development only) */}
                     {c.benefits && (
                       <div>
                         <h4 className="text-sm font-semibold text-primary-700 mb-1">

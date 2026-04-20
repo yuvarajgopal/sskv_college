@@ -46,12 +46,11 @@ const outcomes = [
 ];
 
 const activityPhotos = [
-  { src: '/images/bca/bca_1.jpeg', caption: 'BCA Department Activity' },
-  { src: '/images/bca/bca_2.jpeg', caption: 'BCA Department Activity' },
-  { src: '/images/bca/bca_3.jpeg', caption: 'BCA Department Activity' },
-  { src: '/images/bca/bca_4.jpeg', caption: 'BCA Department Activity' },
-  { src: '/images/bca/bca_5.jpeg', caption: 'BCA Department Activity' },
-  { src: '/images/bca/bca_6.jpeg', caption: 'BCA Department Activity' },
+  { src: '/images/activities/bca/1.jpeg', caption: 'BCA Department Activity' },
+  { src: '/images/activities/bca/2.jpeg', caption: 'BCA Department Activity' },
+  { src: '/images/activities/bca/3.jpeg', caption: 'BCA Department Activity' },
+  { src: '/images/activities/bca/4.jpeg', caption: 'BCA Department Activity' },
+
 ];
 
 const facultyCount = faculty.length;

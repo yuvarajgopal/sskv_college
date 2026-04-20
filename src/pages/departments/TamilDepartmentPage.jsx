@@ -21,14 +21,14 @@ const faculty = [
   { name: 'Dr. R. Kannagi',  qualification: 'M.A., M.Phil., Ph.D., NET.',  role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-r-kannagi.jpg`,   resume: `${BASE_RESUME}dr-r-kannagi.pdf` },
   { name: 'Dr. P. Latha',    qualification: 'M.A., M.Phil., Ph.D., NET, SET',   role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-p-latha.jpg`,     resume: `${BASE_RESUME}dr-p-latha.pdf` },
   { name: 'Ms. T. Indrani',      qualification: 'MA,M.ed, NET ',             role: 'Assistant Professor',               photo: `${BASE_PHOTO}t-indrani.jpg`,      resume: `${BASE_RESUME}t-indrani.pdf` },
-  { name: 'ms. U. Revathi',      qualification: 'MA., M.Phil.,  BEd,  NET.',    role: 'Assistant Professor',               photo: `${BASE_PHOTO}u-revathi.jpg`,      resume: `${BASE_RESUME}u-revathi.pdf` },
+  { name: 'Ms. U. Revathi',      qualification: 'MA., M.Phil.,  BEd,  NET.',    role: 'Assistant Professor',               photo: `${BASE_PHOTO}u-revathi.jpg`,      resume: `${BASE_RESUME}u-revathi.pdf` },
   { name: 'Ms. D. Chithra',      qualification: 'MA., M.Phil.,  B.Ed. NET.',  role: 'Assistant Professor',               photo: `${BASE_PHOTO}d-chithra.jpg`,      resume: `${BASE_RESUME}d-chithra.pdf` },
   { name: 'Ms.G. Pavithra',     qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}g-pavithra.jpg`,     resume: `${BASE_RESUME}g-pavithra.pdf` },
   { name: 'Ms. B. Bharathi',     qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}b-bharathi.jpg`,     resume: `${BASE_RESUME}b-bharathi.pdf` },
   { name: 'Ms. V. Yuvalakshmi',  qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}v-yuvalakshmi.jpg`,  resume: `${BASE_RESUME}v-yuvalakshmi.pdf` },
   { name: 'Ms. R. Shenbagam',    qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}r-shenbagam.jpg`,    resume: `${BASE_RESUME}r-shenbagam.pdf` },
   { name: 'Ms. K. Sangeetha',    qualification: 'MA., NET',                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}k-sangeetha.jpg`,    resume: `${BASE_RESUME}k-sangeetha.pdf` },
-   { name: 'D.Tamizharuvi',    qualification: 'M.A.,B.ED.,NET',          role: 'Assistant Professor',               photo: `${BASE_PHOTO}aruvi.jpg`,    resume: `${BASE_RESUME}d._tamizharuvi.pdf` },
+   { name: 'Ms.D.Tamizharuvi',    qualification: 'M.A.,B.ED.,NET',          role: 'Assistant Professor',               photo: `${BASE_PHOTO}aruvi.jpg`,    resume: `${BASE_RESUME}d._tamizharuvi.pdf` },
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
@@ -315,14 +315,13 @@ export default function TamilDepartmentPage() {
             </p>
           </AnimatedSection>
           <ActivityGallery images={[
-                { src: '/images/activities/tamil/1.jpg', caption: 'Tamil Mandram Inauguration' },
-                { src: '/images/activities/tamil/2.jpg', caption: 'Poetry Recitation' },
-                { src: '/images/activities/tamil/3.jpg', caption: 'Tamil Literary Competition' },
-                { src: '/images/activities/tamil/4.jpg', caption: 'Guest Lecture' },
-                { src: '/images/activities/tamil/5.jpg', caption: 'Essay Writing Competition' },
-                { src: '/images/activities/tamil/6.jpg', caption: 'Cultural Programme' },
-                { src: '/images/activities/tamil/7.jpg', caption: 'Tamil Festival Celebration' },
-                { src: '/images/activities/tamil/8.jpg', caption: 'Intercollegiate Competition' },
+                { src: '/images/activities/tamil/1.jpeg', caption: 'Tamil Mandram Inauguration' },
+                { src: '/images/activities/tamil/2.jpeg', caption: 'Poetry Recitation' },
+                { src: '/images/activities/tamil/3.jpeg', caption: 'Tamil Literary Competition' },
+                { src: '/images/activities/tamil/4.jpeg', caption: 'Guest Lecture' },
+                { src: '/images/activities/tamil/5.jpeg', caption: 'Essay Writing Competition' },
+                { src: '/images/activities/tamil/6.jpeg', caption: 'Cultural Programme' },
+
               ]} color="red" />
         </div>
       </section>

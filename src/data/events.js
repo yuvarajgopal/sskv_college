@@ -9,6 +9,11 @@ export const events = [
     title: ' parents teachers meeting - commerce (G) department ',
     description: 'An interactive session to discuss students\’ academic progress, performance, and areas of improvement with parents.',
   },
+    {
+    date: 'April 22 April 24',
+    title: ' Three day International Virtual Workshop ',
+    description: 'Mastering Indian Accounting Standards & Modern Corporate Accounting Practices.',
+  },
   {
     date: 'April 24',
     title: 'Computer Vision Workshopparents teachers meeting computer science department ',

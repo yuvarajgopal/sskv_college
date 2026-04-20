@@ -70,14 +70,11 @@ const outcomes = [
 ];
 
 const activityPhotos = [
-  { src: '/images/activities/cs-ai/1.jpg', caption: 'AI Workshop' },
-  { src: '/images/activities/cs-ai/2.jpg', caption: 'Machine Learning Seminar' },
-  { src: '/images/activities/cs-ai/3.jpg', caption: 'Coding Challenge' },
-  { src: '/images/activities/cs-ai/4.jpg', caption: 'AI Project Exhibition' },
-  { src: '/images/activities/cs-ai/5.jpg', caption: 'Guest Lecture on Data Science' },
-  { src: '/images/activities/cs-ai/6.jpg', caption: 'Python Training' },
-  { src: '/images/activities/cs-ai/7.jpg', caption: 'Tech Symposium' },
-  { src: '/images/activities/cs-ai/8.jpg', caption: 'Intercollegiate AI Competition' },
+  { src: '/images/activities/computer_ai/1.jpeg', caption: 'AI Workshop' },
+  { src: '/images/activities/computer_ai/2.jpeg', caption: 'Machine Learning Seminar' },
+  { src: '/images/activities/computer_ai/3.jpeg', caption: 'Coding Challenge' },
+  { src: '/images/activities/computer_ai/4.jpeg', caption: 'AI Project Exhibition' },
+
 ];
 
 const facultyCount = faculty.length;

@@ -24,7 +24,11 @@ const branches = [
   },
   {
     name: 'Clubs',
-    levels: ['Cell','Coordinators', 'Member Faculty', 'Member Students'],
+    levels: ['Coordinators', 'Member Faculty', 'Member Students'],
+  },
+   {
+    name: 'Cell',
+    levels: ['Coordinators', 'Member Faculty', 'Member Students'],
   },
   {
     name: 'Units',

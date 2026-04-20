@@ -3,8 +3,52 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaChevronLeft, FaChevronRight, FaImage, FaCamera, FaUserGraduate, FaTrophy, FaCalendarAlt } from 'react-icons/fa';
 import Hero from '../components/shared/Hero';
 import SectionHeading from '../components/shared/SectionHeading';
-import { galleryImages } from '../data/gallery';
 import { images } from '../data/media';
+
+// ✅ CATEGORY IMAGES MAPPED (CORE FIX)
+const categoryImages = [
+  // Sports
+  { id: 1, src: '/images/gallery/sports_1.jpeg', alt: 'Sports Event', category: 'sports' },
+  { id: 2, src: '/images/gallery/sports_2.jpeg', alt: 'Sports Event', category: 'sports' },
+   { id: 3, src: '/images/gallery/sports_3.jpeg', alt: 'Sports Event', category: 'sports' },
+  { id: 4, src: '/images/gallery/sports_4.jpeg', alt: 'Sports Event', category: 'sports' },
+  { id: 5, src: '/images/gallery/sports_5.jpeg', alt: 'Sports Event', category: 'sports' },
+   { id: 6, src: '/images/gallery/sports_6.jpeg', alt: 'Sports Event', category: 'sports' },
+  { id: 7, src: '/images/gallery/sports_7.jpeg', alt: 'Sports Event', category: 'sports' },
+  // Festival
+  { id: 8, src: '/images/gallery/festival_1.jpeg', alt: 'Festival Celebration', category: 'festival-celebrations' },
+  { id: 9, src: '/images/gallery/festival_2.jpeg', alt: 'Festival Celebration', category: 'festival-celebrations' },
+
+  // National
+  { id: 10, src: '/images/gallery/national_1.jpeg', alt: 'National Event', category: 'national-events' },
+  { id: 11, src: '/images/gallery/national_2.jpeg', alt: 'National Event', category: 'national-events' },
+  { id: 12, src: '/images/gallery/national_3.jpeg', alt: 'National Event', category: 'national-events' },
+  { id: 13, src: '/images/gallery/national_4.jpeg', alt: 'National Event', category: 'national-events' },
+    { id: 14, src: '/images/gallery/national_5.jpeg', alt: 'National Event', category: 'national-events' },
+
+  // Academic
+  { id: 15, src: '/images/gallery/academic_1.jpeg', alt: 'Academic Event', category: 'academic-events' },
+  { id: 16, src: '/images/gallery/academic_2.jpeg', alt: 'Academic Event', category: 'academic-events' },
+   { id: 17, src: '/images/gallery/academic_3.jpeg', alt: 'Academic Event', category: 'academic-events' },
+  { id: 18, src: '/images/gallery/academic_4.jpeg', alt: 'Academic Event', category: 'academic-events' },
+   { id: 19, src: '/images/gallery/academic_5.jpeg', alt: 'Academic Event', category: 'academic-events' },
+  { id: 20, src: '/images/gallery/academic_6.jpeg', alt: 'Academic Event', category: 'academic-events' },
+   { id: 21, src: '/images/gallery/academic_7.jpeg', alt: 'Academic Event', category: 'academic-events' },
+  { id: 22, src: '/images/gallery/academic_8.jpeg', alt: 'Academic Event', category: 'academic-events' },
+   { id: 23, src: '/images/gallery/academic_9.jpeg', alt: 'Academic Event', category: 'academic-events' },
+  { id: 24, src: '/images/gallery/academic_10.jpeg', alt: 'Academic Event', category: 'academic-events' },
+   { id: 25, src: '/images/gallery/academic_11.jpeg', alt: 'Academic Event', category: 'academic-events' },
+  { id: 26, src: '/images/gallery/academic_12.jpeg', alt: 'Academic Event', category: 'academic-events' },
+   { id: 27, src: '/images/gallery/academic_13.jpeg', alt: 'Academic Event', category: 'academic-events' },
+     { id: 28, src: '/images/gallery/academic_14.jpg', alt: 'Academic Event', category: 'academic-events' },
+   { id: 29, src: '/images/gallery/academic_15.jpg', alt: 'Academic Event', category: 'academic-events' },
+  
+
+  // NSS / YRC
+  { id: 30, src: '/images/gallery/nss_1.jpg', alt: 'NSS Activity', category: 'nss-yrc' },
+  { id: 31, src: '/images/gallery/nss_2.jpeg', alt: 'YRC Activity', category: 'nss-yrc' },
+    { id: 32, src: '/images/gallery/nss_3.jpeg', alt: 'YRC Activity', category: 'nss-yrc' },
+];
 
 const galleryCategories = [
   { id: 'all', label: 'All', icon: FaImage },
@@ -19,9 +63,11 @@ export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
-  const filtered = activeCategory === 'all'
-    ? galleryImages
-    : galleryImages.filter((item) => item.category === activeCategory);
+  // ✅ USE NEW IMAGE SOURCE
+  const filtered =
+    activeCategory === 'all'
+      ? categoryImages
+      : categoryImages.filter((item) => item.category === activeCategory);
 
   function openLightbox(index) {
     setLightboxIndex(index);
@@ -46,19 +92,20 @@ export default function GalleryPage() {
         subtitle="Capturing moments of learning, growth, and celebration"
         height="medium"
         breadcrumb="Gallery"
-        bannerImage={images.gallery.events[0]}
+        bannerImage={images.gallery?.events?.[0]}
       />
 
       {/* Gallery */}
       <section className="section-padding bg-white">
         <div className="container-custom mx-auto">
+          
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-2 mb-10">
             {galleryCategories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold font-body transition-all duration-200 ${
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
                   activeCategory === cat.id
                     ? 'bg-accent-400 text-primary-900'
                     : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'
@@ -71,10 +118,7 @@ export default function GalleryPage() {
           </div>
 
           {/* Photo Grid */}
-          <motion.div
-            layout
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
-          >
+          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             <AnimatePresence mode="popLayout">
               {filtered.map((item, index) => (
                 <motion.div
@@ -93,11 +137,10 @@ export default function GalleryPage() {
                       src={item.src}
                       alt={item.alt}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                      loading="lazy"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-primary-900/0 group-hover:bg-primary-900/40 transition-all duration-300 flex items-end">
-                    <div className="w-full p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-primary-900/0 group-hover:bg-primary-900/40 transition-all flex items-end">
+                    <div className="w-full p-3 translate-y-full group-hover:translate-y-0 transition-transform">
                       <p className="text-white text-sm font-semibold">{item.alt}</p>
                     </div>
                   </div>
@@ -105,6 +148,7 @@ export default function GalleryPage() {
               ))}
             </AnimatePresence>
           </motion.div>
+
         </div>
       </section>
 
@@ -112,85 +156,29 @@ export default function GalleryPage() {
       <AnimatePresence>
         {lightboxIndex !== null && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             className="fixed inset-0 z-[70] bg-primary-900/95 flex items-center justify-center"
             onClick={closeLightbox}
           >
-            {/* Close button */}
-            <button
-              onClick={closeLightbox}
-              className="absolute top-4 right-4 text-white/70 hover:text-white p-3 z-10"
-              aria-label="Close"
-            >
-              <FaTimes className="text-2xl" />
+            <button onClick={closeLightbox} className="absolute top-4 right-4 text-white p-3">
+              <FaTimes />
             </button>
 
-            {/* Prev */}
-            <button
-              onClick={(e) => { e.stopPropagation(); prevImage(); }}
-              className="absolute left-4 text-white/70 hover:text-white p-3 z-10"
-              aria-label="Previous"
-            >
-              <FaChevronLeft className="text-2xl" />
+            <button onClick={(e) => { e.stopPropagation(); prevImage(); }} className="absolute left-4 text-white p-3">
+              <FaChevronLeft />
             </button>
 
-            {/* Image */}
-            <motion.div
-              key={lightboxIndex}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              className="max-w-4xl w-full mx-8"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="aspect-[16/10] rounded-xl overflow-hidden bg-neutral-900">
-                <img
-                  src={filtered[lightboxIndex].src}
-                  alt={filtered[lightboxIndex].alt}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="text-center mt-4">
-                <p className="text-white text-lg font-semibold">{filtered[lightboxIndex].alt}</p>
-                <p className="text-white/60 text-sm mt-2">
-                  {lightboxIndex + 1} / {filtered.length}
-                </p>
-              </div>
-            </motion.div>
+            <div className="max-w-4xl w-full mx-8" onClick={(e) => e.stopPropagation()}>
+              <img src={filtered[lightboxIndex].src} className="w-full rounded-xl" />
+              <p className="text-white text-center mt-3">{filtered[lightboxIndex].alt}</p>
+            </div>
 
-            {/* Next */}
-            <button
-              onClick={(e) => { e.stopPropagation(); nextImage(); }}
-              className="absolute right-4 text-white/70 hover:text-white p-3 z-10"
-              aria-label="Next"
-            >
-              <FaChevronRight className="text-2xl" />
+            <button onClick={(e) => { e.stopPropagation(); nextImage(); }} className="absolute right-4 text-white p-3">
+              <FaChevronRight />
             </button>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Campus Life */}
-      <section className="section-padding bg-neutral-50">
-        <div className="container-custom mx-auto">
-          <SectionHeading
-            title="Campus Life"
-            subtitle="A glimpse into everyday life at SSKV College"
-          />
-          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-lg">
-            <video
-              src="/videos/college_life.mp4"
-              controls
-              className="w-full"
-              preload="metadata"
-            >
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

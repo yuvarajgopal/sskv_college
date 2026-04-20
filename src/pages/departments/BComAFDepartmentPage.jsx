@@ -17,7 +17,7 @@ const faculty = [
   { name: 'Ms. K. Krishnaveni',  qualification: 'M.Com',                               role: 'Assistant Professor',               photo: `${BASE_PHOTO}k-krishnaveni.jpg`,      resume: `${BASE_RESUME}k-krishnaveni.pdf` },
   { name: 'B. Dhivyadharshini',  qualification: 'M.Com',                               role: 'Assistant Professor',               photo: `${BASE_PHOTO}b-dhivyadharshini.jpg`,  resume: `${BASE_RESUME}b-dhivyadharshini.pdf` },
   { name: 'Dr. K.P. Sowmya',     qualification: 'M.Com., Ph.D.',                       role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-kp-sowmya.jpg`,       resume: `${BASE_RESUME}dr-kp-sowmya.pdf` },
-   { name: 'Ms. R. Ramya',     qualification: 'MM.Com.,',                       role: 'Assistant Professor',                      photo: `${BASE_PHOTO}ramaya_1.jpg`,       resume: `${BASE_RESUME}ramaya.pdf` }, 
+   { name: 'Ms. R. Ramya',       qualification: 'MM.Com.,',                            role: 'Assistant Professor',               photo: `${BASE_PHOTO}ramya.jpg`,              resume: `${BASE_RESUME}ramaya.pdf` }, 
   
 ];
 
@@ -312,10 +312,21 @@ export default function BComAFDepartmentPage() {
           </AnimatedSection>
           <div className="max-w-4xl mx-auto">
             <ActivityGallery images={[
-              { src: '/images/bcom_af/bcom_af_1.jpeg', caption: 'B.Com (A&F) Department Activity' },
-              { src: '/images/bcom_af/bcom_af_2.jpeg', caption: 'B.Com (A&F) Department Activity' },
-              { src: '/images/bcom_af/bcom_af_3.jpeg', caption: 'B.Com (A&F) Department Activity' },
-              { src: '/images/bcom_af/bcom_af_4.jpeg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/1.jpg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/2.jpg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/3.jpg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/4.jpg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/5.jpg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/6.jpg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/7.jpg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/8.jpg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/9.jpg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/10.jpg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/11.jpg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/12.jpg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/13.jpg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/14.jpg', caption: 'B.Com (A&F) Department Activity' },
+              { src: '/images/activities/bcom_af/15.jpg', caption: 'B.Com (A&F) Department Activity' },
             ]} color="emerald" />
           </div>
         </div>
