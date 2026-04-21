@@ -6,21 +6,21 @@ import SectionHeading from '../components/shared/SectionHeading';
 
 // ✅ UPDATED DATA FROM IMAGE
 const FEE_DATA = [
-  { id: 1, program: 'B.COM(A&F) - FIRST YEAR', admission: 3100, semester: 16500 },
-  { id: 2, program: 'B.COM(CS) - FIRST YEAR', admission: 3100, semester: 16500 },
-  { id: 3, program: 'B.COM(G) - FIRST YEAR SHIFT I', admission: 3100, semester: 16500 },
-  { id: 4, program: 'B.COM(G) - FIRST YEAR SHIFT II', admission: 3100, semester: 16500 },
-  { id: 5, program: 'BA(ENG) - FIRST YEAR SHIFT II', admission: 3100, semester: 13000 },
-  { id: 6, program: 'BA(TAM) - FIRST YEAR', admission: 3100, semester: 14000 },
-  { id: 7, program: 'BBA - FIRST YEAR', admission: 3350, semester: 14000 },
-  { id: 8, program: 'BCA - FIRST YEAR SHIFT II', admission: 3600, semester: 17500 },
-  { id: 9, program: 'B.SC(CS) - FIRST YEAR SHIFT I', admission: 3600, semester: 17500 },
-  { id: 10, program: 'B.SC(CS) - FIRST YEAR SHIFT II', admission: 3600, semester: 17500 },
-  { id: 11, program: 'B.SC(MATHS) - FIRST YEAR', admission: 3350, semester: 15500 },
-  { id: 12, program: 'M.COM - FIRST YEAR', admission: 3350, semester: 18000 },
-  { id: 13, program: 'MA(TAM) - FIRST YEAR', admission: 3350, semester: 16000 },
-  { id: 14, program: 'BSC(CS WITH AI) - FIRST YEAR', admission: 3600, semester: 18500 },
-  { id: 15, program: 'MA(ENG) - FIRST YEAR', admission: 3350, semester: 18000 },
+  { id: 1, program: 'B.COM(A&F) - FIRST YEAR', admission: 3100, semester: 16700 },
+  { id: 2, program: 'B.COM(CS) - FIRST YEAR', admission: 3100, semester: 16700 },
+  { id: 3, program: 'B.COM(G) - FIRST YEAR SHIFT I', admission: 3100, semester: 16700 },
+  { id: 4, program: 'B.COM(G) - FIRST YEAR SHIFT II', admission: 3100, semester: 16700 },
+  { id: 5, program: 'BA(ENG) - FIRST YEAR SHIFT II', admission: 3100, semester: 13200 },
+  { id: 6, program: 'BA(TAM) - FIRST YEAR', admission: 3100, semester: 14200 },
+  { id: 7, program: 'BBA - FIRST YEAR', admission: 3350, semester: 14200 },
+  { id: 8, program: 'BCA - FIRST YEAR SHIFT II', admission: 3600, semester: 17700 },
+  { id: 9, program: 'B.SC(CS) - FIRST YEAR SHIFT I', admission: 3600, semester: 17700 },
+  { id: 10, program: 'B.SC(CS) - FIRST YEAR SHIFT II', admission: 3600, semester: 17700 },
+  { id: 11, program: 'B.SC(MATHS) - FIRST YEAR', admission: 3350, semester: 15700 },
+  { id: 12, program: 'M.COM - FIRST YEAR', admission: 3350, semester: 18200 },
+  { id: 13, program: 'MA(TAM) - FIRST YEAR', admission: 3350, semester: 16200 },
+  { id: 14, program: 'BSC(CS WITH AI) - FIRST YEAR', admission: 3600, semester: 18700 },
+  { id: 15, program: 'MA(ENG) - FIRST YEAR', admission: 3350, semester: 18200 },
 ];
 
 // helper
