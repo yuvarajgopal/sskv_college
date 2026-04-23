@@ -58,6 +58,7 @@ const primaryLinks = [
             children: [
               { label: 'Tamil', path: '/departments/tamil' },
               { label: 'English', path: '/departments/english' },
+              { label: 'M.A. English', path: '/departments/english?section=programmes-ma' },
               { label: 'Computer Science', path: '/departments/computer-science' },
               { label: 'Mathematics', path: '/departments/mathematics' },
               { label: 'BCA', path: '/departments/bca' },
