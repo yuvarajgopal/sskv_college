@@ -31,7 +31,7 @@ function FacultyPhoto({ src, name, size = 'md' }) {
   const [failed, setFailed] = useState(false);
   const sizeClass = size === 'lg'
     ? 'w-24 h-24 text-4xl'
-    : 'w-14 h-14 text-2xl';
+    : 'w-24 h-24 text-2xl';
 
   if (!failed) {
     return (
@@ -132,13 +132,13 @@ export default function EnglishDepartmentPage() {
               Our faculty are young, vibrant, and energetic. They know the value of literature — as Nabokov once famously said, literature was born on the day when a boy came crying wolf and there was no wolf behind him. Between the wolf in tall grass and the wolf in the tall story there is a shimmering go-between: the Prism of Literature. We the teachers are the go-between the text and the students. As Browning said, &lsquo;Less is More.&rsquo;
             </p>
             <p className="text-neutral-600 leading-relaxed mb-4">
-              <strong>Vision:</strong> Sensitizing students to the values of literary aesthetics — the department envisions bright careers for its major students in diverse fields of human endeavour, producing citizens of the world who break the narrow walls of religion, caste, and creed.
+              <strong>Vision:</strong> The best portions of a good man’s life” are for Wordsworth man’s “little, nameless, unremembered acts/ Of kindness and of love.” This is what great literature is all about and great literature humanizes us as it detoxicates our mind off such human weaknesses as Pride, Greed, Lust, Wrath, Gluttony, Envy, and Sloth (The “seven deadly sins”). A voyage through the writings of great minds is an invitation to reflection & introspection. It is with this vision to sensitizing our students to the values of literary aesthetics that the department of English with the mix of the young, and the very young, and the not too old, in perpetual academic motion, deliberates to translate the written vision into praxis and, therefore, envisions bright careers for its major students in diverse fields of human endeavor and these students at the end of either three years or five will have become fair women without solipsism and the citizens of the world breaking the narrow walls of religion, caste and creed.
             </p>
             <p className="text-neutral-600 leading-relaxed mb-4">
-              <strong>Mission:</strong> To facilitate the communicative competence of every student through interactive classes, periodic screening of quality films, YouTube lectures, and weekly writing sessions — so that each student becomes fluent in spoken and written discourse and fit for any post in her future career.
+              <strong>Mission:</strong> The infinite fecundity of the English Language coupled with the complexity of teaching a foreign language notwithstanding, the department of English strives to facilitate the communicative competence of students particularly at the Part II and unobtrusively at the major level. Today, the importance of communication as a veritable tool for success in employment cannot be gainsaid. Communication includes the three pillars of linguistic, social, and cultural competencies. It is the mission of the department to make every student, who passes through its classrooms, fluent in spoken and written discourses as she spends four semesters with us. Classes are interactive in nature. Periodic screening of quality movies, YouTube lectures on relevant topics, an hour weekly writing classes are activities that inform the philosophy of the department’s pedagogy. This does not mean we treat students as automated robots but as one who are made up of flesh and blood beings who will enjoy a voyage of self sustained diurnal existence in the college and who in the long run will have become competent individuals who will both fill and fit any post that they may seek in their future careers.
             </p>
             <p className="text-neutral-600 leading-relaxed">
-              <strong>Objectives:</strong> Improving language skills is the primary objective. We strive to develop reading, writing, speaking, and listening skills with a focus on practical communication and critical thinking. We promote literary appreciation by introducing students to a diverse range of texts and equip them with the confidence needed to access better opportunities.
+              <strong>Objectives:</strong> Improving language skills is the primary objective of the department. We strive to develop students’ reading, writing, speaking and listening skills in English with a focus on practical communication and critical thinking. We also try to promote literary appreciation by introducing students to a diverse range of literary texts, fostering a love for reading and understanding of the cultural significance of literature. The faculty members equip the students with the language skills and confidence needed to access better job opportunities. By focusing on these objectives, the department of English can make a positive impact on empowering students to communicate effectively, think critically, and access new opportunities.
             </p>
           </AnimatedSection>
         </div>
@@ -314,7 +314,7 @@ export default function EnglishDepartmentPage() {
           <SectionHeading title="Department Activities" subtitle="Events, seminars, and literary engagements" />
           <AnimatedSection>
             <p className="text-neutral-600 leading-relaxed mb-4 max-w-4xl mx-auto">
-              The Department of English at SSKV College of Arts and Science for Women actively promotes language and literary culture through various academic and co-curricular activities. The department organizes seminars, guest lectures, workshops, literary competitions, and cultural programmes to enhance students&rsquo; linguistic skills and literary appreciation. Activities such as Hippocrene (English Association for major students), Pegasus (for Part II students), poetry reading, elocution, essay writing, and drama enrich academic learning. The department also encourages participation in intercollegiate competitions and skill-development programmes for overall personality development.
+              The Department of English at SSKV College organizes literary events, guest lectures, seminars, workshops, and intercollegiate competitions to enhance students' language proficiency, communication skills, and literary appreciation.
             </p>
           </AnimatedSection>
           <ActivityGallery images={[
