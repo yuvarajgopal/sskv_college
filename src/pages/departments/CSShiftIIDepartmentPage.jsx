@@ -13,7 +13,7 @@ const BASE_PHOTO  = '/images/faculty/computer_shift_2/';
 const BASE_RESUME = '/pdfs/faculty/computer-science/';
 
 const faculty = [
-  { name: 'R,Anitha',           qualification: 'M.Sc., M.Phil.',    role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}aniatha.jpg`,      resume: `${BASE_RESUME}anitha_s2.pdf` },
+  { name: 'R,Anitha',           qualification: 'MCA., M.Phil., SET, NET',    role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}aniatha.jpg`,      resume: `${BASE_RESUME}anitha_s2.pdf` },
   { name: 'Dr.C.Sudha',    qualification: 'MCA.,M.Phil.,Ph.D.',   role: 'Assistant Professor',                    photo: `${BASE_PHOTO}sudha.jpg`,   resume: `${BASE_RESUME}sudha.pdf` },
     { name: 'R.Aishwarya',    qualification: 'M.Sc.,BEd.,',   role: 'Assistant Professor',                    photo: `${BASE_PHOTO}Aishwarya.jpg`,   resume: `${BASE_RESUME}r_aishwarya.pdf` }
 ];

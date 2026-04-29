@@ -14,7 +14,7 @@ const BASE_RESUME = '/pdfs/faculty/computer-science/';
 
 const faculty = [
   // Shift I
-  { name: 'K.R. Ramya',           qualification: 'M.Sc., M.Phil., SET',    role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}r-ramya.jpg`,      resume: `${BASE_RESUME}r-ramya.pdf` },
+  { name: 'K.R. Ramya',           qualification: 'M.Sc., M.Phil., (Computer Science) ',    role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}r-ramya.jpg`,      resume: `${BASE_RESUME}r-ramya.pdf` },
   { name: 'Ms. V. Suganthi',    qualification: 'M.C.A., M.Phil.',   role: 'Assistant Professor',                    photo: `${BASE_PHOTO}v-suganthi.jpg`,   resume: `${BASE_RESUME}v-suganthi.pdf` },
   // Shift II
   { name: 'U.Aishwarya',        qualification: 'M.C.A., NET',             role: 'Assistant Professor',                    photo: `${BASE_PHOTO}u_ashiwarya.jpg`,  resume: `${BASE_RESUME}u_ashiwarya.pdf` },

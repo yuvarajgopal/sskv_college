@@ -25,6 +25,8 @@ const faculty = [
   { name: 'R. Mirnalini',           qualification: 'MA., M.Phil., B.Ed., SET., NET', role: 'Assistant Professor',               photo: `${BASE_PHOTO}r_mMirnalini.JPG`,   resume: `${BASE_RESUME}r. mirnalini.pdf` },
   { name: 'Ms. Jayapriya',          qualification: 'MA., M.Phil., NET',              role: 'Assistant Professor',               photo: `${BASE_PHOTO}jayapriya_p.JPG`,     resume: `${BASE_RESUME}Jayapriya.pdf` },
   { name: 'K. Bavani',              qualification: 'M.A., B.Ed., M.Phil.',           role: 'Assistant Professor',               photo: `${BASE_PHOTO}k_bavani.JPG`,        resume: `${BASE_RESUME}bhavani_k.pdf` },
+  { name: 'B. Yamuna',              qualification: 'M.A., B.Ed.,',           role: 'Assistant Professor',               photo: `${BASE_PHOTO}b_yumuna.JPG`,        resume: `${BASE_RESUME}yamuna_b.pdf` },
+  
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {

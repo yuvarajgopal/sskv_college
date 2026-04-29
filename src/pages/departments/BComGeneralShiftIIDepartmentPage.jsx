@@ -9,7 +9,14 @@ import ActivityGallery from '../../components/shared/ActivityGallery';
 import CTABanner from '../../components/sections/CTABanner';
 import DepartmentNewsletter from '../../components/shared/DepartmentNewsletter';
 
-const faculty = [];
+const BASE_PHOTO  = '/images/faculty/bcom-general/';
+const BASE_RESUME = '/pdfs/faculty/bcom-general/';
+
+const faculty = [
+   // Shift II
+  { name: 'D. Pavithra', qualification: 'M.Com.,',  role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}d_pavithra.jpg`, resume: `${BASE_RESUME}d_pavithra.pdf` },
+   
+];
 
 function FacultyPhoto({ src, name, size = 'md' }) {
   const [failed, setFailed] = useState(false);

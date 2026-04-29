@@ -723,7 +723,7 @@ export default function ApplicationFormPage() {
               <FaDownload className="text-accent-500/60 group-hover:text-accent-500 transition-colors flex-shrink-0" />
             </a>
             <a
-              href="/pdfs/prospectus-2025-26.pdf"
+              href="/pdfs/prospectus-2026-27.pdf"
               download
               className="flex items-center gap-3 flex-1 bg-gradient-to-br from-primary-50 to-primary-100/50 border border-primary-200 rounded-xl px-4 py-3.5 hover:from-primary-100 hover:to-primary-50 hover:border-accent-400 hover:shadow-md transition-all group"
             >
@@ -731,7 +731,7 @@ export default function ApplicationFormPage() {
                 <FaFilePdf className="text-accent-400 text-lg" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-bold text-primary-900 font-heading leading-tight">Prospectus 2025–26</p>
+                <p className="text-sm font-bold text-primary-900 font-heading leading-tight">Prospectus 2026–27</p>
                 <p className="text-xs text-primary-600 mt-0.5">Courses, fees & college handbook (PDF)</p>
               </div>
               <FaDownload className="text-accent-500/60 group-hover:text-accent-500 transition-colors flex-shrink-0" />
