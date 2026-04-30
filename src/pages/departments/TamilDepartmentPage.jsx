@@ -16,7 +16,7 @@ const BASE_RESUME = '/pdfs/faculty/tamil/';
 const faculty = [
   { name: 'Dr. B. Valli',    qualification: 'MA., M.Phil., BEd., Ph.D', role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}dr-b-valli.jpg`,    resume: `${BASE_RESUME}dr-b-valli.pdf` },
   { name: 'Ms. M. Arulambigai',  qualification: 'MA., M.Phil., NET',         role: 'Assistant Professor',               photo: `${BASE_PHOTO}m-arulambigai.jpg`,  resume: `${BASE_RESUME}m-arulambigai.pdf` },
-  { name: 'Dr.K. Priya',        qualification: 'MA., M.Phil., SET., NET',   role: 'Assistant Professor',               photo: `${BASE_PHOTO}k-priya.jpg`,        resume: `${BASE_RESUME}k-priya.pdf` },
+  { name: 'Dr.K. Priya',        qualification: 'M.A., M.PHIL., Ph.D., NET & SET',   role: 'Assistant Professor',               photo: `${BASE_PHOTO}k-priya.jpg`,        resume: `${BASE_RESUME}k-priya.pdf` },
   { name: 'Dr. D. Ammu',     qualification: 'M.A., M.Phil., Ph.D., NET.',  role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-d-ammu.jpg`,      resume: `${BASE_RESUME}dr-d-ammu.pdf` },
   { name: 'Dr. R. Kannagi',  qualification: 'M.A., M.Phil., Ph.D., NET.',  role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-r-kannagi.jpg`,   resume: `${BASE_RESUME}dr-r-kannagi.pdf` },
   { name: 'Dr. P. Latha',    qualification: 'M.A., M.Phil., Ph.D., NET, SET',   role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-p-latha.jpg`,     resume: `${BASE_RESUME}dr-p-latha.pdf` },

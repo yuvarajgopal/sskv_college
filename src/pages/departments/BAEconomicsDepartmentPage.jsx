@@ -14,6 +14,7 @@ const BASE_RESUME = '/pdfs/faculty/ba-economics/';
 
 const faculty = [
   // Add faculty members here as they join the department
+   { name: 'Dr.S.Vani',      qualification: 'M.A,.M.phil., Ph.D',        role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}s_vani.jpg`,      resume: `${BASE_RESUME}s_vani.pdf` },
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {

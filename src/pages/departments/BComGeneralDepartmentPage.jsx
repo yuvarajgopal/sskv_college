@@ -17,7 +17,7 @@ const faculty = [
   { name: 'P. Anandhalakshmi', qualification: 'M.Com., M.Phil.',                                          role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}p-anandhalakshmi.jpg`, resume: `${BASE_RESUME}p-anandhalakshmi.pdf` },
   { name: 'K. Thenmozhi',      qualification: 'M.Com., MBA., M.Phil., MA (PM&IR), PG AGM (IIM), NET',     role: 'Assistant Professor',               photo: `${BASE_PHOTO}k-thenmozhi.jpg`,       resume: `${BASE_RESUME}k-thenmozhi.pdf` },
   { name: 'Dr. G. Rajathi',    qualification: 'M.Com., MBA., Ph.D.',                                      role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-g-rajathi.jpg`,      resume: `${BASE_RESUME}dr-g-rajathi.pdf` },
-  { name: 'R. Ponmani',        qualification: 'M.Com',                                                    role: 'Assistant Professor',               photo: `${BASE_PHOTO}r-ponmani.jpg`,         resume: `${BASE_RESUME}r-ponmani.pdf` },
+  { name: 'R. Ponmani',        qualification: 'M.Com (Ph.D. pursuing)',                                   role: 'Assistant Professor',               photo: `${BASE_PHOTO}r-ponmani.jpg`,         resume: `${BASE_RESUME}r-ponmani.pdf` },
   { name: 'V.Yamini',          qualification: 'M.Com.,',                                                  role: 'Assistant Professor',               photo: `${BASE_PHOTO}v_yamini.JPG`,       resume: `${BASE_RESUME}Yamini.pdf` },
   // Shift II
   

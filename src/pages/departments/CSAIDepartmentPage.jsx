@@ -14,7 +14,7 @@ const BASE_RESUME = '/pdfs/faculty/cs-ai/';
 
 const faculty = [
   { name: 'Dr. J. Seethalakshmi', qualification: 'M.C.A., M.Phil., Ph.D.',      role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}seetha_lakshmi.jpeg`, resume: `${BASE_RESUME}dr-j-seethalakshmi.pdf` },
-  { name: 'Dr. V. Vanitha',       qualification: 'M.C.A., M.Phil., Ph.D., NET', role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-v-vanitha.jpg`,        resume: `${BASE_RESUME}dr-v-vanitha.pdf` },
+  { name: 'Dr. V. Vanitha',       qualification: 'MCA.,MPhil.,PhD.,NET.,SET.', role: 'Assistant Professor',               photo: `${BASE_PHOTO}dr-v-vanitha.jpg`,        resume: `${BASE_RESUME}dr-v-vanitha.pdf` },
 ];
 
 function FacultyPhoto({ src, name, size = 'md' }) {

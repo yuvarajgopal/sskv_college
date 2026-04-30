@@ -15,6 +15,7 @@ const BASE_RESUME = '/pdfs/faculty/bca/';
 const faculty = [
   { name: 'Dr. P. Priyadharshini', qualification: 'M.C.A., M.Phil., Ph.D.', role: 'Assistant Professor & HOD (Shift II)', isHod: true, photo: `${BASE_PHOTO}priyadharshini.jpg`, resume: `${BASE_RESUME}priyadharshini.pdf` },
   { name: 'Ms. A. Yazhini',       qualification: 'MCA., NET',               role: 'Assistant Professor',                              photo: `${BASE_PHOTO}yazhini.jpg`,             resume: `${BASE_RESUME}Yazhini.pdf` },
+  { name: 'Ms. V.Suganthi',       qualification: 'MCA., M.Phil',               role: 'Assistant Professor',                              photo: `${BASE_PHOTO}v_suganthi.jpg`,             resume: `${BASE_RESUME}v_suganthi.pdf` },
 ];
 
 const programDetails = [
@@ -63,7 +64,7 @@ function FacultyPhoto({ src, name, size = 'md' }) {
   const [failed, setFailed] = useState(false);
   const sizeClass = size === 'lg'
     ? 'w-24 h-24 text-4xl'
-    : 'w-14 h-14 text-2xl';
+    : 'w-24 h-24 text-2xl';
 
   if (!failed) {
     return (
