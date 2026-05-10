@@ -40,6 +40,7 @@ const reports = [
   { title: 'NSS Special Camp Report 2024', link: '/pdfs/nss/nss_special_camp_2024.pdf' },
   { title: 'NSS Special Camp Report 2025', link: '/pdfs/nss/nss_special_camp_2025.pdf' },
   { title: 'NSS Special Camp Report 2026', link: '/pdfs/nss/nss_special_camp_2025_26.pdf' },
+   { title: 'NSS Newsletter 2026', link: '/pdfs/nss/nss-newletter.pdf' },
 ];
 
 function BulletBlock({ title, items }) {
