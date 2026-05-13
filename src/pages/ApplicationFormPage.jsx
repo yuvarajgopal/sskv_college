@@ -488,7 +488,7 @@ function Step5({ formData, loading, onPay }) {
       <div className="rounded-2xl border-2 border-neutral-200 bg-white p-6">
         <div className="text-center mb-4">
           <p className="text-sm font-semibold text-primary-800">Application Fee (one-time, non-refundable)</p>
-          <p className="text-3xl font-bold text-primary-900 mt-1">₹500</p>
+          <p className="text-3xl font-bold text-primary-900 mt-1">₹300</p>
         </div>
         <div className="flex justify-center mb-4">
           <img
