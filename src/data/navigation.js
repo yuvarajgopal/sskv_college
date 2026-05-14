@@ -144,6 +144,7 @@ export const navLinks = [
       { label: 'Indian Knowledge System',          path: '/student-life/indian-knowledge-system' },
       { label: 'Health Facilities',                path: '/student-life/health-facilities' },
       { label: 'Anti Ragging Cell',                path: '/student-life/anti-ragging' },
+      { label: 'Anti-Sexual Harassment Cell',      path: '/student-life/anti-sexual-harassment-cell' },
       { label: 'Equal Opportunity Cell',           path: '/student-life/equal-opportunity-cell' },
       { label: 'SEDG Cell',                        path: '/student-life/sedg-cell' },
       { label: 'Facilities for Differently Abled', path: '/student-life/differently-abled' },
@@ -159,6 +160,8 @@ export const navLinks = [
       { label: 'Suggestion & Feedback Form',   url: 'https://forms.gle/yQz7exXMn7yWf6928' },
     ],
   },
+
+  { label: 'RTI', path: '/rti' },
 
   {
     label: 'Information and Notices',

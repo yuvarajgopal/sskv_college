@@ -589,6 +589,10 @@ export default function Navbar() {
         {/* Top utility strip: Anti-Ragging / Download App / e-Governance / Feedback / Help Desk */}
         <div>
           <div className="w-full px-3 md:px-6 xl:px-8 2xl:px-12 flex flex-wrap justify-center md:justify-end items-center gap-x-3 md:gap-x-5 gap-y-1 pt-2 pb-1 text-[10px] md:text-[11px] font-body">
+            <Link to="/rti" className="text-white/75 hover:text-accent-400 transition-colors">
+              RTI
+            </Link>
+            <span className="text-white/20">|</span>
             <span className="text-white/75">
               Anti-Ragging Helpline:{' '}
               <a href="tel:18001805522" className="text-accent-400 font-semibold hover:text-accent-300 transition-colors">1800-180-5522</a>

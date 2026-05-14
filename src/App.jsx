@@ -82,6 +82,8 @@ const SkillTrainingBhumiPage = lazy(() => import('./pages/student-life/SkillTrai
 const HandInHandPage = lazy(() => import('./pages/student-life/HandInHandPage'));
 const ERPPage = lazy(() => import('./pages/student-life/ERPPage'));
 const StudentCodeOfConductPage = lazy(() => import('./pages/student-life/StudentCodeOfConductPage'));
+const AntiSexualHarassmentCellPage = lazy(() => import('./pages/student-life/AntiSexualHarassmentCellPage'));
+const RTIPage = lazy(() => import('./pages/RTIPage'));
 // Feedback
 const StudentFeedbackPage = lazy(() => import('./pages/feedback/StudentFeedbackPage'));
 const ParentFeedbackPage = lazy(() => import('./pages/feedback/ParentFeedbackPage'));
@@ -210,6 +212,8 @@ export default function App() {
             <Route path="/student-life/skill-training-hand-in-hand" element={<HandInHandPage />} />
             <Route path="/student-life/erp" element={<ERPPage />} />
             <Route path="/student-life/code-of-conduct" element={<StudentCodeOfConductPage />} />
+            <Route path="/student-life/anti-sexual-harassment-cell" element={<AntiSexualHarassmentCellPage />} />
+            <Route path="/rti" element={<RTIPage />} />
             {/* Feedback */}
             <Route path="/feedback/student"   element={<StudentFeedbackPage />} />
             <Route path="/feedback/parent"    element={<ParentFeedbackPage />} />
