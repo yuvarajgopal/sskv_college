@@ -332,6 +332,11 @@ export default function EnglishDepartmentPage() {
         pdfHref="/pdfs/newsletter/english_newletter.pdf"
       />
 
+        <DepartmentNewsletter
+        departmentName="English"
+        pdfHref="/pdfs/newsletter/english_newletter_2.pdf"
+      />
+
       <CTABanner
         title="Interested in B.A. / M.A. English?"
         subtitle="Apply now and begin your journey into the world of language, literature, and communication."

@@ -34,6 +34,7 @@ export default function Footer() {
                 <div>
                   <div className="font-heading font-bold text-base leading-tight">SSKV College</div>
                   <div className="text-white/60 text-xs">Arts & Science for Women</div>
+                   <div className="text-white/60 text-xs">(Recognised under Section 2(f) of the UGC Act)</div>
                 </div>
               </div>
               <p className="text-white/60 text-xs leading-relaxed mb-4">

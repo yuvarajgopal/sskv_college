@@ -371,8 +371,14 @@ export default function BCADepartmentPage() {
       {/* CTA */}
       <DepartmentNewsletter
         departmentName="BCA"
-        pdfHref="/pdfs/newsletter/bca_shift_1.pdf"
+        pdfHref="/pdfs/newsletter/bca_2_odd.pdf"
       />
+       <DepartmentNewsletter
+        departmentName="BCA"
+        pdfHref="/pdfs/newsletter/bca_2_even.pdf"
+      />
+
+  
 
       <CTABanner
         title="Interested in BCA?"

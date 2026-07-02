@@ -338,6 +338,13 @@ export default function BComAFDepartmentPage() {
         pdfHref="/pdfs/newsletter/bcom_af.pdf"
       />
 
+
+         <DepartmentNewsletter
+        departmentName="B.Com (A&F)"
+        pdfHref="/pdfs/newsletter/bcom_af_even.pdf"
+      />
+
+
       <CTABanner
         title="Interested in B.Com (A&F)?"
         subtitle="Apply now and build the financial expertise that drives today's economy."

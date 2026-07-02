@@ -25,15 +25,25 @@ export default function DepartmentNewsletter({ departmentName, pdfHref, bgClass 
               and student achievements, events, and other notable happenings of the department. Download
               the latest edition to stay updated on our journey.
             </p>
-            <a
-              href={pdfHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-800 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors text-sm"
-            >
-              <FaDownload />
-              Download {headline}
-            </a>
+            <div className="flex flex-wrap justify-center gap-4 mt-6">
+  <a
+    href={pdfHref}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-all duration-300"
+  >
+    Download Newsletter Odd
+  </a>
+
+  <a
+   href={pdfHref}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-all duration-300"
+  >
+    Download Newsletter Even
+  </a>
+</div>
           </div>
         </AnimatedSection>
       </div>

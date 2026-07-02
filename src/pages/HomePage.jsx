@@ -31,6 +31,8 @@ const heroImages = [
    '/images/home/home_6.png',
   '/images/home/home_7.jpg',
   '/images/home/home_8.png',
+  '/images/home/home_9.jpg',
+  '/images/home/home_10.jpg',
 ];
 
 const features = [
@@ -106,7 +108,8 @@ export default function HomePage() {
               SSKV College of Arts &amp; Science for Women
             </h1>
             <p className="text-white/70 text-sm md:text-base mt-1">
-              Empowering Women Through Quality Education — Affiliated to University of Madras, Kanchipuram
+              Empowering Women Through Quality Education — Affiliated to University of Madras, Kanchipuram</p>
+            <p className="text-white/70 text-sm md:text-base mt-1">(Recognised under Section 2(f) of the UGC Act)
             </p>
           </div>
           <div className="flex gap-3 shrink-0">

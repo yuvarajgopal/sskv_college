@@ -330,8 +330,8 @@ export default function CSAIDepartmentPage() {
       <DepartmentNewsletter
         departmentName="Computer Science with AI"
         pdfHref="/pdfs/newsletter/SSKV_Newsletter_2026.pdf"
+         pdfHref="/pdfs/newsletter/ai_even.pdf"
       />
-
 
       <CTABanner
         title="Interested in B.Sc. CS with AI?"

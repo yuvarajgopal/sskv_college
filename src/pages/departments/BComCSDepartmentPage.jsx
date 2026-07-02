@@ -293,7 +293,9 @@ export default function BComCSDepartmentPage() {
       <DepartmentNewsletter
         departmentName="B.Com (CS)"
         pdfHref="/pdfs/newsletter/bcom_cs.pdf"
+         pdfHref="/pdfs/newsletter/bcom_cs_1_even.pdf"
       />
+
 
       <CTABanner
         title="Interested in B.Com (CS)?"

@@ -15,7 +15,7 @@ const BASE_RESUME = '/pdfs/faculty/bba/';
 const faculty = [
   { name: 'P. Revathi',      qualification: 'M.Com., M.Phil., M.B.A., Ph.D., B.Ed.,  SET., NET', role: 'Assistant Professor & HOD', isHod: true, photo: `${BASE_PHOTO}p-revathi.jpg`,      resume: `${BASE_RESUME}p-revathi.pdf` },
   { name: 'S. Janani',       qualification: 'M.B.A',                                     role: 'Assistant Professor',               photo: `${BASE_PHOTO}s-janani.jpg`,       resume: `${BASE_RESUME}s-janani.pdf` },
-  { name: 'S. Kavitha',      qualification: 'M.Com',                                     role: 'Assistant Professor',               photo: `${BASE_PHOTO}s-kavitha.jpg`,      resume: `${BASE_RESUME}s-kavitha.pdf` },
+  { name: 'V. Kavitha',      qualification: 'M.Com',                                     role: 'Assistant Professor',               photo: `${BASE_PHOTO}s-kavitha.jpg`,      resume: `${BASE_RESUME}s-kavitha.pdf` },
   { name: 'Ms.R.KAYALVIZHI', qualification: 'MBA.,',                                     role: 'Assistant Professor',               photo: `${BASE_PHOTO}kayalizhi.jpg`,      resume: `${BASE_RESUME}kayil_bba.pdf` },
 ];
 
@@ -330,6 +330,7 @@ export default function BBADepartmentPage() {
       <DepartmentNewsletter
         departmentName="B.B.A"
         pdfHref="/pdfs/newsletter/bba.pdf"
+         pdfHref="/pdfs/newsletter/bba_1_even.pdf"
       />
 
       <CTABanner

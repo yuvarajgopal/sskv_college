@@ -345,6 +345,10 @@ export default function MathematicsDepartmentPage() {
         pdfHref="/pdfs/newsletter/maths.pdf"
       />
 
+      <DepartmentNewsletter
+        departmentName="Mathematics"
+        pdfHref="/pdfs/newsletter/maths_1.pdf"
+      />
       <CTABanner
         title="Interested in B.Sc. Mathematics?"
         subtitle="Apply now and develop the analytical skills that drive science, technology, and beyond."

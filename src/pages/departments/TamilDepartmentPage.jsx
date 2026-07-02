@@ -327,11 +327,11 @@ export default function TamilDepartmentPage() {
       </section>
 
       {/* CTA */}
-      <DepartmentNewsletter
-        departmentName="Tamil"
-        pdfHref="/pdfs/newsletter/tamil_1.pdf"
-      />
+     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+  <DepartmentNewsletter departmentName="Tamil" pdfHref="/pdfs/newsletter/tamil_1.pdf"
+  pdfHref="/pdfs/newsletter/tamil_1_even.pdf"/>
 
+</div>
       <CTABanner
         title="Interested in B.A. Tamil?"
         subtitle="Apply now and begin your journey into the world's oldest classical language."

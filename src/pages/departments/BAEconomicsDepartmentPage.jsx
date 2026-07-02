@@ -354,8 +354,9 @@ export default function BAEconomicsDepartmentPage() {
       <DepartmentNewsletter
         departmentName="B.A. Economics"
         pdfHref="/pdfs/newsletter/SSKV_Newsletter_2026.pdf"
+         pdfHref="/pdfs/newsletter/ba_eco_2.pdf"
       />
-
+   
 
       <CTABanner
         title="Interested in B.A. Economics?"

@@ -332,7 +332,9 @@ export default function CSShiftIIDepartmentPage() {
       <DepartmentNewsletter
         departmentName="Computer Science (Shift II)"
         pdfHref="/pdfs/newsletter/computer_science_shift_2.pdf"
+        pdfHref="/pdfs/newsletter/bsc_comp_2_even.pdf"
       />
+
 
 
       <CTABanner

@@ -319,6 +319,11 @@ export default function BCAShiftIIDepartmentPage() {
         pdfHref="/pdfs/newsletter/bca_shift_2.pdf"
       />
 
+        <DepartmentNewsletter
+        departmentName="BCA (Shift II)"
+        pdfHref="/pdfs/newsletter/bca_2_even.pdf"
+      />
+
       <CTABanner
         title="Interested in BCA (Shift II)?"
         subtitle="Apply now for the evening programme and begin your journey into IT."

@@ -378,6 +378,11 @@ export default function BComGeneralDepartmentPage() {
         pdfHref="/pdfs/newsletter/bcom_s1.pdf"
       />
 
+           <DepartmentNewsletter
+        departmentName="B.Com (General)"
+        pdfHref="/pdfs/newsletter/bcom_s2.pdf"
+      />
+
       <CTABanner
         title="Interested in B.Com (General)?"
         subtitle="Apply now and build the commercial knowledge and financial skills for a successful career."

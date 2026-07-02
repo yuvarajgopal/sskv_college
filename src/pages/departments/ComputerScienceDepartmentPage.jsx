@@ -378,6 +378,11 @@ export default function ComputerScienceDepartmentPage() {
         pdfHref="/pdfs/newsletter/computer_s1.pdf"
       />
 
+       <DepartmentNewsletter
+        departmentName="Computer Science"
+        pdfHref="/pdfs/newsletter/computer_s2.pdf"
+      />
+
 
       <CTABanner
         title="Interested in B.Sc. Computer Science?"
