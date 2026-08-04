@@ -336,12 +336,7 @@ export default function BComAFDepartmentPage() {
       <DepartmentNewsletter
         departmentName="B.Com (A&F)"
         pdfHref="/pdfs/newsletter/bcom_af.pdf"
-      />
-
-
-         <DepartmentNewsletter
-        departmentName="B.Com (A&F)"
-        pdfHref="/pdfs/newsletter/bcom_af_even.pdf"
+              pdfHref="/pdfs/newsletter/bcom_af_even.pdf"
       />
 
 

@@ -333,12 +333,9 @@ export default function BComGeneralShiftIIDepartmentPage() {
       <DepartmentNewsletter
         departmentName="B.Com General (Shift II)"
         pdfHref="/pdfs/newsletter/bcom_g_shift_2.pdf"
+         pdfHref="/pdfs/newsletter/bcom_g_shift_3.pdf"
       />
 
-   <DepartmentNewsletter
-        departmentName="B.Com General (Shift II)"
-        pdfHref="/pdfs/newsletter/bcom_g_shift_3.pdf"
-      />
       <CTABanner
         title="Interested in B.Com General (Shift II)?"
         subtitle="Apply now for the evening programme in Commerce."

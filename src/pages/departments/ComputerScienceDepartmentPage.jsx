@@ -376,12 +376,10 @@ export default function ComputerScienceDepartmentPage() {
       <DepartmentNewsletter
         departmentName="Computer Science"
         pdfHref="/pdfs/newsletter/computer_s1.pdf"
-      />
-
-       <DepartmentNewsletter
-        departmentName="Computer Science"
         pdfHref="/pdfs/newsletter/computer_s2.pdf"
       />
+
+
 
 
       <CTABanner

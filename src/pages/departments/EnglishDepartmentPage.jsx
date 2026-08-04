@@ -330,12 +330,10 @@ export default function EnglishDepartmentPage() {
       <DepartmentNewsletter
         departmentName="English"
         pdfHref="/pdfs/newsletter/english_newletter.pdf"
+         pdfHref="/pdfs/newsletter/english_newletter_2.pdf"
       />
 
-        <DepartmentNewsletter
-        departmentName="English"
-        pdfHref="/pdfs/newsletter/english_newletter_2.pdf"
-      />
+
 
       <CTABanner
         title="Interested in B.A. / M.A. English?"

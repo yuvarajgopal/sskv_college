@@ -372,12 +372,9 @@ export default function BCADepartmentPage() {
       <DepartmentNewsletter
         departmentName="BCA"
         pdfHref="/pdfs/newsletter/bca_2_odd.pdf"
-      />
-       <DepartmentNewsletter
-        departmentName="BCA"
         pdfHref="/pdfs/newsletter/bca_2_even.pdf"
       />
-
+     
   
 
       <CTABanner

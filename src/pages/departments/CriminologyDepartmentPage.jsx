@@ -318,13 +318,10 @@ export default function CriminologyDepartmentPage() {
       <DepartmentNewsletter
         departmentName="Criminology and Criminal Justice Science"
         pdfHref="/pdfs/newsletter/crimnology.pdf"
-      />
-
-        <DepartmentNewsletter
-        departmentName="Criminology and Criminal Justice Science"
         pdfHref="/pdfs/newsletter/crimnology_1.pdf"
       />
 
+  
 
       <CTABanner
         title="Interested in B.A. Criminology?"
