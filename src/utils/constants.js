@@ -37,6 +37,6 @@ export const COLLEGE_INFO = {
   ],
   email: ['sskvcollege@yahoo.com', 'sskvcollege2007@gmail.com'],
   instagram: 'https://www.instagram.com/sskv_college/',
-  youtube: 'https://www.youtube.com/@sskvcollege',
+  youtube: 'https://www.youtube.com/@SSKVCOLLEGE-',
   website: 'https://www.sskvcollege.com',
 };

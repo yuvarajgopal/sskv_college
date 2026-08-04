@@ -1,47 +1,80 @@
 export const events = [
   {
-    date: 'July 07',
-    title: 'DENTAL CAMP @ UBA VILLAGE (MUSARAVAKKAM)',
-    description: 'A free dental camp was conducted to provide oral health check-ups and create awareness on dental hygiene among villagers.',
+    date: 'August 01 - 09',
+    title: 'Five Days National Level Workshop',
+    description: 'Five Days National Level Workshop - Department of Commerce (General), Shift II.',
   },
   {
-    date: 'July 08',
-    title: ' DENTAL CAMP @ UBA VILLAGE (MELOTTIVAKKAM) ',
-    description: 'A dental health camp was organized to offer free dental screening and promote preventive oral healthcare practices.',
+    date: 'August 01',
+    title: ' Roots to Wisdom: Orientation on Indian Knowledge Systems (IKS Division, Ministry of Education, Govt. of India) ',
+    description: 'Orientation on Indian Knowledge Systems (IKS Division, Ministry of Education, Govt. of India)',
   },
     {
-    date: 'July 09',
-    title: ' DENTAL CAMP @ UBA VILLAGE (SIRUKAVERIPAKKAM)',
-    description: 'A community dental camp was held to provide dental consultations and educate residents on maintaining oral health.',
+    date: 'August 06',
+    title: "Smart Living Through the Internet",
+    description: "One Day Workshop on Smart Living Through the Internet of Things - Department of Computer Science, Shift I",
   },
-  {
-    date: 'July 10',
-    title: 'EYE CAMP @ COLLEGE CAMPUS ',
-    description: 'A free eye camp was organized to screen vision, detect eye disorders, and promote eye health awareness among students and staff.',
+   {
+    date: 'August 08',
+    title: 'International Virtual Conference on Commerce ',
+    description: 'One Day International Virtual Conference on Commerce 2030: Navigating Emerging Trends and Future Horizons - Department of Commerce (Corporate Secretaryship)',
   },
-  {
-    date: 'July 13',
-    title: 'DENTAL CAMP @ COLLEGE CAMPUS',
-    description: 'A dental camp was conducted to provide oral health screening, consultations, and awareness on proper dental care.',
-  },
-  {
-    date: 'July 15',
-    title: "WOMAN EMPOWERMENT PROGRAMME",
-    description: "The programme focused on empowering women through awareness sessions on leadership, education, health, and self-development.",
-  },
-  {
-    date: 'July 29',
-    title: 'SPORTS ELECTION FOR STUDENTS',
-    description: 'A democratic election was conducted to select student representatives for organizing and promoting sports activities.',
-  },
-  {
+
+    {
     date: 'August 12',
-    title: 'NATIONAL LIBRARIAN DAY',
-    description: 'National Librarian Day was celebrated to recognize the valuable contributions of librarians in promoting knowledge and lifelong learning.',
+    title: 'National Library Day Celebration',
+    description: 'National Library Day Celebration',
   },
   {
-    date: 'August 17',
-    title: "COMMERCE (CS) ASSOCIATION INAUGURATION",
-    description: "The Commerce (CS) Association was inaugurated to encourage students' academic, professional, and extracurricular development through various activities.",
+    date: 'August 15',
+    title: 'Independence Day',
+    description: 'Independence Day',
+  },
+  
+    {
+    date: 'August 16, 18, 19, 23 & 24 ',
+    title: ' Six Days Workshop on Full Stack Development',
+    description: 'Six Days Workshop on Full Stack Development - Department of Computer Science & Applications, Shift II',
+  },
+ 
+  {
+    date: 'August 28 to 30',
+    title: 'Entrepreneurship Training',
+    description: 'Three Days Workshop on Women Entrepreneurship Training on Manufacture of Herbal Products - Entrepreneur Development Cell',
+  },
+  {
+    date: 'August 28',
+    title: "Independence Day Seminar",
+    description: "Independence Day Seminar",
+  },
+
+
+  {
+    date: 'August 25',
+    title: "National Seminar - Department of English",
+    description: "TNational Seminar - Department of English",
+  },
+   {
+    date: 'August 25 - 27',
+    title: "Artificial Jewellery Making",
+    description: "Three Days Workshop on Artificial Jewellery Making  Entrepreneur Development Cell",
+  },
+
+ 
+  {
+    date: 'August 29',
+    title: "National Sports Day Celebration",
+    description: "National Sports Day Celebration",
+  },
+   {
+    date: 'August 12',
+    title: "sirukaveripakkam",
+    description: "sirukaveripakkam",
+  },
+
+   {
+    date: 'August 19',
+    title: "Eye Camp",
+    description: "sirukaveripakkam",
   },
 ];
