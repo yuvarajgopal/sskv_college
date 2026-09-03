@@ -33,9 +33,9 @@ const members = [
   { name: 'N. Ramya', designation: 'Assistant Professor, Department of Mathematics', role: 'Faculty Member', contact: '9944561867' },
   { name: 'Mr. T.V. Jaganathan', designation: 'Office Superintendent', role: 'Non-Teaching Member', contact: '9381080510' },
   { name: 'Dr. H. Varalakshmi', designation: 'Health & Safety Officer', role: 'Non-Teaching Member', contact: '8680023003' },
-  { name: 'R. Aarthi', designation: 'II Year AI', role: 'Student Member', contact: '—' },
-  { name: 'M. Thaibunnisa', designation: 'I MA English', role: 'Student Member', contact: '—' },
-  { name: 'J. Ragini', designation: 'II M.Com', role: 'Student Member', contact: '—' },
+  { name: 'R. Aarthi', designation: 'III Year AI', role: 'Student Member', contact: '—' },
+  { name: 'M. Thaibunnisa', designation: 'II MA English', role: 'Student Member', contact: '—' },
+  { name: 'B.Sathiyapriya', designation: 'I M.Com', role: 'Student Member', contact: '—' },
   { name: 'Mr. Pannerselvam', designation: 'Founder – Sarvam Trust', role: 'NGO Member', contact: '9500218240' },
   { name: 'Mr. G. Sridhar', designation: 'Lawyer', role: 'Legal Advisor', contact: '9444087709' },
 ];

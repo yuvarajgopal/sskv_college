@@ -90,6 +90,12 @@ export default function EqualOpportunityCellPage() {
                                 <td className="p-3 font-semibold">Chairperson</td>
                                 <td className="p-3">9994745157</td>
                               </tr>
+                               <tr className="border-t">
+                                <td className="p-3">Ms. M. Lavanya</td>
+                                <td className="p-3">Faculty</td>
+                                <td className="p-3 font-semibold">Faculty Member</td>
+                                <td className="p-3">9940749481</td>
+                              </tr>
                               <tr className="border-t">
                                 <td className="p-3">Ms. M. Mahalakshmi</td>
                                 <td className="p-3">SC/ST Scholarship Coordinator</td>
@@ -97,16 +103,40 @@ export default function EqualOpportunityCellPage() {
                                 <td className="p-3">9566441320</td>
                               </tr>
                               <tr className="border-t">
-                                <td className="p-3">Ms. M. Lavanya</td>
-                                <td className="p-3">Faculty</td>
-                                <td className="p-3 font-semibold">Member</td>
-                                <td className="p-3">9994502098</td>
+                                <td className="p-3">R.K. Ramya</td>
+                                <td className="p-3">HOD, Department of BCA</td>
+                                <td className="p-3 font-semibold">External Member</td>
+                                <td className="p-3">9500218240</td>
                               </tr>
-                              <tr className="border-t">
+                               <tr className="border-t">
                                 <td className="p-3">Mr. Paneerselvam</td>
                                 <td className="p-3">Founder, Sarvam Trust (NGO)</td>
                                 <td className="p-3 font-semibold">External Member</td>
                                 <td className="p-3">9500218240</td>
+                              </tr>
+                               <tr className="border-t">
+                                <td className="p-3">M.Vijayapriya </td>
+                                <td className="p-3">III BCA Shift I </td>
+                                <td className="p-3 font-semibold">Student Member</td>
+                                <td className="p-3"></td>
+                              </tr>
+                                 <tr className="border-t">
+                                <td className="p-3">M.Kayalvizhi</td>
+                                <td className="p-3">III BBA </td>
+                                <td className="p-3 font-semibold">Student Member</td>
+                                <td className="p-3"></td>
+                              </tr>
+                                  <tr className="border-t">
+                                <td className="p-3">R. Nisha</td>
+                                <td className="p-3">II B.Sc Maths</td>
+                                <td className="p-3 font-semibold">Student Member</td>
+                                <td className="p-3"></td>
+                              </tr>
+                                  <tr className="border-t">
+                                <td className="p-3">A.Vaishali </td>
+                                <td className="p-3">I B.Com (A&F)  </td>
+                                <td className="p-3 font-semibold">Student Member</td>
+                                <td className="p-3"></td>
                               </tr>
                             </tbody>
                           </table>

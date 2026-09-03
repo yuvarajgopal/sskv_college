@@ -110,6 +110,12 @@ export default function GrievanceRedressalPage() {
                     <td className="px-4 py-2">Chairperson</td>
                     <td className="px-4 py-2">9994745157</td>
                   </tr>
+                   <tr className="border-t">
+                    <td className="px-4 py-2">R.K. Ramya</td>
+                    <td className="px-4 py-2">HOD, Dept of BCA </td>
+                    <td className="px-4 py-2">Faculty Member</td>
+                    <td className="px-4 py-2">9940749481</td>
+                  </tr>
                   <tr className="border-t">
                     <td className="px-4 py-2">Ms. V. Suganthi</td>
                     <td className="px-4 py-2">HOD, Dept of BCA (Shift II)</td>
@@ -135,8 +141,44 @@ export default function GrievanceRedressalPage() {
                     <td className="px-4 py-2">8973050034</td>
                   </tr>
                   <tr className="border-t">
-                    <td className="px-4 py-2">Ms. S. Aarthi</td>
-                    <td className="px-4 py-2">Student, Dept of AI</td>
+                    <td className="px-4 py-2">Ms. P.Monisha</td>
+                    <td className="px-4 py-2">Student, III B.Com (A&F)</td>
+                    <td className="px-4 py-2">Student Member</td>
+                    <td className="px-4 py-2">—</td>
+                  </tr>
+                    <tr className="border-t">
+                    <td className="px-4 py-2">Ms. B.Sathiyapriya</td>
+                    <td className="px-4 py-2">Student, II M.Com (A&F)</td>
+                    <td className="px-4 py-2">Student Member</td>
+                    <td className="px-4 py-2">—</td>
+                  </tr>
+                   <tr className="border-t">
+                    <td className="px-4 py-2">Ms. S.Krishnapreethi</td>
+                    <td className="px-4 py-2">Student, III B.Com (CS)</td>
+                    <td className="px-4 py-2">Student Member</td>
+                    <td className="px-4 py-2">—</td>
+                  </tr>
+                   <tr className="border-t">
+                    <td className="px-4 py-2">Ms. P.Sharmila</td>
+                    <td className="px-4 py-2">Student, I Maths</td>
+                    <td className="px-4 py-2">Student Member</td>
+                    <td className="px-4 py-2">—</td>
+                  </tr>
+                   <tr className="border-t">
+                    <td className="px-4 py-2">Ms. T.Hasini</td>
+                    <td className="px-4 py-2">Student, I B.Com (G)-SH-II</td>
+                    <td className="px-4 py-2">Student Member</td>
+                    <td className="px-4 py-2">—</td>
+                  </tr>
+                    <tr className="border-t">
+                    <td className="px-4 py-2">Ms. R.Pooja</td>
+                    <td className="px-4 py-2">Student, II BSC CS WITH AI</td>
+                    <td className="px-4 py-2">Student Member</td>
+                    <td className="px-4 py-2">—</td>
+                  </tr>
+                   <tr className="border-t">
+                    <td className="px-4 py-2">Ms. M.Nasiah</td>
+                    <td className="px-4 py-2">Student, II BA English</td>
                     <td className="px-4 py-2">Student Member</td>
                     <td className="px-4 py-2">—</td>
                   </tr>
