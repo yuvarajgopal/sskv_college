@@ -343,7 +343,7 @@ export default function MathematicsDepartmentPage() {
       <DepartmentNewsletter
         departmentName="Mathematics"
         pdfHref="/pdfs/newsletter/maths.pdf"
-             pdfHref="/pdfs/newsletter/maths_1.pdf"
+             pdfHref="/pdfs/newsletter/maths_sh1_even.pdf"
       />
 
      

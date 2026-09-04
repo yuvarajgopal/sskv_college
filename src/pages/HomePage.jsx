@@ -28,11 +28,14 @@ const heroImages = [
   '/images/home/home_3.jpg',
   '/images/home/home_4.png',
   '/images/home/home_5.jpg',
-   '/images/home/home_6.png',
+  '/images/home/home_6.png',
   '/images/home/home_7.jpg',
   '/images/home/home_8.png',
   '/images/home/home_9.jpg',
   '/images/home/home_10.jpg',
+  '/images/home/home_11.jpg',
+  '/images/home/home_12.jpg',
+  '/images/home/home_13.jpg',
 ];
 
 const features = [

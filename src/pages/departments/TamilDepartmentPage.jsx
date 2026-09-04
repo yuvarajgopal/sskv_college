@@ -329,7 +329,7 @@ export default function TamilDepartmentPage() {
       {/* CTA */}
      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
   <DepartmentNewsletter departmentName="Tamil" pdfHref="/pdfs/newsletter/tamil_1.pdf"
-  pdfHref="/pdfs/newsletter/tamil_1_even.pdf"/>
+  pdfHref="/pdfs/newsletter/tamil_sh1_even.pdf"/>
 
 </div>
       <CTABanner
