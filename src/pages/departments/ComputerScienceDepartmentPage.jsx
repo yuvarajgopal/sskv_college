@@ -375,8 +375,8 @@ export default function ComputerScienceDepartmentPage() {
       </section>
       <DepartmentNewsletter
         departmentName="Computer Science"
-        pdfHrefOdd="/pdfs/newsletter/computer_s1.pdf"
-        pdfHrefEven="/pdfs/newsletter/computer_s2.pdf"
+        pdfHrefOdd="/pdfs/newsletter/cs_ns_sh1_odd.pdf"
+        pdfHrefEven="/pdfs/newsletter/cs_ns_sh1_even.pdf"
       />
 
 
