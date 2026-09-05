@@ -316,8 +316,8 @@ export default function BCAShiftIIDepartmentPage() {
       {/* CTA */}
       <DepartmentNewsletter
         departmentName="BCA (Shift II)"
-        pdfHref="/pdfs/newsletter/bca_shift_2.pdf"
-             pdfHref="/pdfs/newsletter/bca_2_even.pdf"
+        pdfHrefOdd="/pdfs/newsletter/bca_shift_2.pdf"
+        pdfHrefEven="/pdfs/newsletter/bca_2_even.pdf"
       />
 
 

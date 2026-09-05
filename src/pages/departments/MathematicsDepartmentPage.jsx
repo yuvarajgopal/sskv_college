@@ -342,8 +342,8 @@ export default function MathematicsDepartmentPage() {
       {/* CTA */}
       <DepartmentNewsletter
         departmentName="Mathematics"
-        pdfHref="/pdfs/newsletter/maths.pdf"
-             pdfHref="/pdfs/newsletter/maths_sh1_even.pdf"
+        pdfHrefOdd="/pdfs/newsletter/maths.pdf"
+        pdfHrefEven="/pdfs/newsletter/maths_sh1_even.pdf"
       />
 
      

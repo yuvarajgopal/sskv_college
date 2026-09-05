@@ -317,8 +317,8 @@ export default function CriminologyDepartmentPage() {
       </section>
       <DepartmentNewsletter
         departmentName="Criminology and Criminal Justice Science"
-        pdfHref="/pdfs/newsletter/crimnology.pdf"
-        pdfHref="/pdfs/newsletter/crimnology_1.pdf"
+        pdfHrefOdd="/pdfs/newsletter/crimnology.pdf"
+        pdfHrefEven="/pdfs/newsletter/crimnology_1.pdf"
       />
 
   

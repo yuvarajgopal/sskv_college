@@ -329,8 +329,8 @@ export default function BBADepartmentPage() {
       {/* CTA Banner */}
       <DepartmentNewsletter
         departmentName="B.B.A"
-        pdfHref="/pdfs/newsletter/bba.pdf"
-         pdfHref="/pdfs/newsletter/bba_1_even.pdf"
+        pdfHrefOdd="/pdfs/newsletter/bba.pdf"
+        pdfHrefEven="/pdfs/newsletter/bba_1_even.pdf"
       />
 
       <CTABanner

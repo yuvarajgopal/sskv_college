@@ -329,8 +329,8 @@ export default function EnglishDepartmentPage() {
 
       <DepartmentNewsletter
         departmentName="English"
-        pdfHref="/pdfs/newsletter/english_newletter.pdf"
-         pdfHref="/pdfs/newsletter/english_newletter_2.pdf"
+        pdfHrefOdd="/pdfs/newsletter/english_newletter.pdf"
+        pdfHrefEven="/pdfs/newsletter/english_newletter_2.pdf"
       />
 
 

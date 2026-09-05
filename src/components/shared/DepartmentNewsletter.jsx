@@ -2,7 +2,7 @@ import { FaDownload, FaClipboardList } from 'react-icons/fa';
 import SectionHeading from './SectionHeading';
 import AnimatedSection from './AnimatedSection';
 
-export default function DepartmentNewsletter({ departmentName, pdfHref, bgClass = 'bg-neutral-50' }) {
+export default function DepartmentNewsletter({ departmentName, pdfHrefOdd, pdfHrefEven, bgClass = 'bg-neutral-50' }) {
   const headline = `${departmentName} Newsletter`;
   return (
     <section id="newsletter" className={`section-padding ${bgClass}`}>
@@ -27,7 +27,7 @@ export default function DepartmentNewsletter({ departmentName, pdfHref, bgClass 
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-6">
   <a
-    href={pdfHref}
+    href={pdfHrefOdd}
     target="_blank"
     rel="noopener noreferrer"
     className="inline-flex items-center justify-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-all duration-300"
@@ -36,7 +36,7 @@ export default function DepartmentNewsletter({ departmentName, pdfHref, bgClass 
   </a>
 
   <a
-   href={pdfHref}
+    href={pdfHrefEven}
     target="_blank"
     rel="noopener noreferrer"
     className="inline-flex items-center justify-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-all duration-300"

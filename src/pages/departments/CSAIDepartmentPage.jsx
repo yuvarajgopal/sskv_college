@@ -329,8 +329,8 @@ export default function CSAIDepartmentPage() {
       </section>
       <DepartmentNewsletter
         departmentName="Computer Science with AI"
-        pdfHref="/pdfs/newsletter/SSKV_Newsletter_2026.pdf"
-         pdfHref="/pdfs/newsletter/cs_ns_sh1_even.pdf"
+        pdfHrefOdd="/pdfs/newsletter/SSKV_Newsletter_2026.pdf"
+        pdfHrefEven="/pdfs/newsletter/cs_ns_sh1_even.pdf"
       />
 
       <CTABanner

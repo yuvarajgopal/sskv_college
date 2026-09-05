@@ -375,8 +375,8 @@ export default function BComGeneralDepartmentPage() {
       {/* CTA Banner */}
       <DepartmentNewsletter
         departmentName="B.Com (General)"
-        pdfHref="/pdfs/newsletter/bcom_s1.pdf"
-         pdfHref="/pdfs/newsletter/bcom_s2.pdf"
+        pdfHrefOdd="/pdfs/newsletter/bcom_s1.pdf"
+        pdfHrefEven="/pdfs/newsletter/bcom_s2.pdf"
       />
 
     

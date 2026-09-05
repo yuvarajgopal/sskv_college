@@ -353,8 +353,8 @@ export default function BAEconomicsDepartmentPage() {
       </section>
       <DepartmentNewsletter
         departmentName="B.A. Economics"
-        pdfHref="/pdfs/newsletter/SSKV_Newsletter_2026.pdf"
-         pdfHref="/pdfs/newsletter/ba_eco_2.pdf"
+        pdfHrefOdd="/pdfs/newsletter/SSKV_Newsletter_2026.pdf"
+        pdfHrefEven="/pdfs/newsletter/ba_eco_2.pdf"
       />
    
 
